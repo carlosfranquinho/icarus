@@ -1,12 +1,12 @@
 .ccchildpages {
-  -moz-box-sizing   : border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing        : border-box;
-  margin            : 0 !important;
-  padding           : 0 !important;
-  clear             : both;
-  display           : block;
-  width             : 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  clear: both;
+  display: block;
+  width: 100%;
 }
 
 .cc-meta-info {
@@ -15,7 +15,7 @@
 
 a.ccpage_title_link {
   text-decoration: inherit !important;
-  color          : inherit !important;
+  color: inherit !important;
 }
 
 a.ccpage_linked_thumb img {
@@ -23,13 +23,13 @@ a.ccpage_linked_thumb img {
 }
 
 .ccchildpage {
-  -moz-box-sizing   : border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing        : border-box;
-  margin            : 1em 1%;
-  padding           : 0.75em 2%;
-  display           : block;
-  float             : left;
+  box-sizing: border-box;
+  margin: 1em 1%;
+  padding: 0.75em 2%;
+  display: block;
+  float: left;
 }
 
 .ccpages_excerpt,
@@ -39,7 +39,7 @@ a.ccpage_linked_thumb img {
 
 .ccpages_excerpt {
   display: block;
-  margin : 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -49,7 +49,7 @@ a.ccpage_linked_thumb img {
 
 .cclast {
   margin: 1em 1% 1em 0;
-  float : right;
+  float: right;
 }
 
 .onecol .ccchildpage {
@@ -83,8 +83,8 @@ a.ccpage_linked_thumb img {
  * Navigation links
  */
 .ccpages_nav {
-  display   : block;
-  clear     : both;
+  display: block;
+  clear: both;
   text-align: center;
 }
 
@@ -97,10 +97,10 @@ a.ccpage_linked_thumb img {
  */
 .cc-child-pages-thumb {
   max-width: 100%;
-  height   : auto;
-  display  : block;
-  margin   : 10px auto;
-  clear    : both;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  clear: both;
 }
 
 /*
@@ -112,7 +112,7 @@ a.ccpage_linked_thumb img {
 .twocol ul.ccchildpages_list li ul,
 .threecol ul.ccchildpages_list li ul,
 .fourcol ul.ccchildpages_list li ul {
-  margin-left : 0.5em;
+  margin-left: 0.5em;
   padding-left: 0.5em;
 }
 
@@ -120,23 +120,22 @@ a.ccpage_linked_thumb img {
 .threecol ul.ccchildpages_list li ul li,
 .fourcol ul.ccchildpages_list li ul li {
   display: list-item;
-  width  : 100%;
-  float  : none;
+  width: 100%;
+  float: none;
 }
 
 /*
  * Media Queries
  */
 @media screen and (min-width: 761px) {
-
   /*
 	 * List items
 	 */
   .twocol ul.ccchildpages_list li,
   .threecol ul.ccchildpages_list li,
   .fourcol ul.ccchildpages_list li {
-    margin-left   : 0;
-    margin-right  : 2%;
+    margin-left: 0;
+    margin-right: 2%;
     vertical-align: top;
   }
 
@@ -145,9 +144,9 @@ a.ccpage_linked_thumb img {
     float: left;
   }
 
-  .twocol ul.ccchildpages_list li:nth-child(2n+3),
-  .threecol ul.ccchildpages_list li:nth-child(3n+4),
-  .fourcol ul.ccchildpages_list li:nth-child(4n+5) {
+  .twocol ul.ccchildpages_list li:nth-child(2n + 3),
+  .threecol ul.ccchildpages_list li:nth-child(3n + 4),
+  .fourcol ul.ccchildpages_list li:nth-child(4n + 5) {
     clear: both;
   }
 
@@ -163,11 +162,10 @@ a.ccpage_linked_thumb img {
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
-
   /* Undo rules we are not interested in for lower resolutions */
   .fourcol .cclast {
     margin: 1em 1%;
-    float : left;
+    float: left;
   }
 
   .fourcol .ccfirst {
@@ -181,10 +179,10 @@ a.ccpage_linked_thumb img {
 
   .fourcol .ccchildpage:nth-child(3n) {
     margin: 1em 1% 1em 0;
-    float : right;
+    float: right;
   }
 
-  .fourcol .ccchildpage:nth-child(3n+1) {
+  .fourcol .ccchildpage:nth-child(3n + 1) {
     clear: both;
   }
 
@@ -194,8 +192,8 @@ a.ccpage_linked_thumb img {
   .twocol ul.ccchildpages_list li,
   .threecol ul.ccchildpages_list li,
   .fourcol ul.ccchildpages_list li {
-    margin-left   : 0;
-    margin-right  : 5%;
+    margin-left: 0;
+    margin-right: 5%;
     vertical-align: top;
   }
 
@@ -204,9 +202,9 @@ a.ccpage_linked_thumb img {
     float: left;
   }
 
-  .twocol ul.ccchildpages_list li:nth-child(2n+3),
-  .threecol ul.ccchildpages_list li:nth-child(3n+4),
-  .fourcol ul.ccchildpages_list li:nth-child(3n+4) {
+  .twocol ul.ccchildpages_list li:nth-child(2n + 3),
+  .threecol ul.ccchildpages_list li:nth-child(3n + 4),
+  .fourcol ul.ccchildpages_list li:nth-child(3n + 4) {
     clear: both;
   }
 
@@ -218,12 +216,11 @@ a.ccpage_linked_thumb img {
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) {
-
   /* Undo rules we are not interested in for lower resolutions */
   .threecol .cclast,
   .fourcol .cclast {
     margin: 1em 1%;
-    float : left;
+    float: left;
   }
 
   .threecol .ccfirst,
@@ -240,11 +237,11 @@ a.ccpage_linked_thumb img {
   .threecol .ccchildpage:nth-child(2n),
   .fourcol .ccchildpage:nth-child(2n) {
     margin: 1em 1% 1em 0;
-    float : right;
+    float: right;
   }
 
-  .threecol .ccchildpage:nth-child(2n+1),
-  .fourcol .ccchildpage:nth-child(2n+1) {
+  .threecol .ccchildpage:nth-child(2n + 1),
+  .fourcol .ccchildpage:nth-child(2n + 1) {
     clear: both;
   }
 
@@ -254,8 +251,8 @@ a.ccpage_linked_thumb img {
   .twocol ul.ccchildpages_list li,
   .threecol ul.ccchildpages_list li,
   .fourcol ul.ccchildpages_list li {
-    margin-left   : 0;
-    margin-right  : 7%;
+    margin-left: 0;
+    margin-right: 7%;
     vertical-align: top;
   }
 
@@ -266,21 +263,20 @@ a.ccpage_linked_thumb img {
     float: left;
   }
 
-  .twocol ul.ccchildpages_list li:nth-child(2n+3),
-  .threecol ul.ccchildpages_list li:nth-child(2n+3),
-  .fourcol ul.ccchildpages_list li:nth-child(2n+3) {
+  .twocol ul.ccchildpages_list li:nth-child(2n + 3),
+  .threecol ul.ccchildpages_list li:nth-child(2n + 3),
+  .fourcol ul.ccchildpages_list li:nth-child(2n + 3) {
     clear: both;
   }
 }
 
 @media screen and (max-width: 320px) {
-
   /* Undo rules we are not interested in for lower resolutions */
   .twocol .cclast,
   .threecol .cclast,
   .fourcol .cclast {
     margin: 1em 1%;
-    float : left;
+    float: left;
   }
 
   .twocol .ccfirst,
@@ -303,11 +299,11 @@ a.ccpage_linked_thumb img {
  */
 .ccclearfix:after {
   visibility: hidden;
-  display   : block;
-  font-size : 0;
-  content   : " ";
-  clear     : both;
-  height    : 0;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .ccclearfix {
