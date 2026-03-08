@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+ogType: article
+---
+<div class="container">
+  <nav aria-label="Caminho" style="font-size:0.85rem; color: var(--cor-texto-suave); margin-bottom:1.5rem;">
+    <a href="/">Início</a> ›
+    {% if grupo == "diurnas" %}
+    <a href="/borboletas-diurnas/">Borboletas diurnas</a> ›
+    <a href="/borboletas-diurnas/{{ familia | lower }}/">{{ familia }}</a>
+    {% elif grupo == "noturnas" %}
+    <a href="/borboletas-noturnas/">Borboletas noturnas</a> ›
+    <a href="/borboletas-noturnas/{{ familia | lower }}/">{{ familia }}</a>
+    {% endif %}
+    › <em>{{ nome_cientifico }}</em>
+  </nav>
+
+  <article>
+    <header class="especie-cabecalho">
+      <h1 class="especie-nome-cientifico">{{ nome_cientifico }}</h1>
+      {% if nome_comum %}<p class="especie-nome-comum">{{ nome_comum }}</p>{% endif %}
+    </header>
+
+    <div class="especie-grid">
+      {% if imagem %}
+      <div>
+        <img class="especie-imagem" src="{{ imagem }}" alt="{{ nome_cientifico }}" loading="lazy">
+      </div>
+      {% endif %}
+      <div class="especie-dados">
+        <table>
+          <tbody>
+            <tr><td>Família</td><td>{{ familia }}</td></tr>
+            {% if subfamilia %}<tr><td>Subfamília</td><td>{{ subfamilia }}</td></tr>{% endif %}
+            {% if grupo %}<tr><td>Grupo</td><td>{{ grupo }}</td></tr>{% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="post-corpo">
+      {{ content | safe }}
+    </div>
+  </article>
+</div>

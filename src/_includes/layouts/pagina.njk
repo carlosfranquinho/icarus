@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+  <div class="conteudo-central">
+    <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cor-borda); padding-bottom:1rem;">
+      <h1>{{ title }}</h1>
+    </header>
+    <div class="pagina-conteudo">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>

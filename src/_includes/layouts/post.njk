@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+ogType: article
+---
+<div class="container">
+  <div class="conteudo-central">
+    <article>
+      <header class="post-cabecalho">
+        <h1>{{ title }}</h1>
+        <div class="post-meta">
+          {% if date %}
+          <span class="post-meta-item">
+            <time datetime="{{ date | htmlDateString }}">{{ date | dataPortugues }}</time>
+          </span>
+          {% endif %}
+          {% if local %}
+          <span class="post-meta-item">📍 {{ local }}</span>
+          {% endif %}
+          {% if categoria %}
+          <span class="categoria-badge badge-{{ categoria }}">{{ categoria }}</span>
+          {% endif %}
+        </div>
+      </header>
+
+      {% if imagem %}
+      <img class="post-imagem-destaque" src="{{ imagem }}" alt="{{ title }}" loading="lazy">
+      {% endif %}
+
+      <div class="post-corpo">
+        {{ content | safe }}
+      </div>
+
+      {% if tags and tags.length %}
+      <div class="tag-lista">
+        {% for tag in tags %}
+        <span class="tag">{{ tag | replace("-", " ") }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</div>

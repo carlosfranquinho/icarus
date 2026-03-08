@@ -1,0 +1,43 @@
+---
+layout: layouts/post.njk
+title: "30ª sessão de observação de borboletas diurnas"
+date: 2021-07-10
+descricao: "Dois anos volvidos desde a nossa última caminhada para observação de borboletas, e aproveitando uma trégua na situação pandémica que atravessamos, o grupo decidiu sair do seu casulo e pôr-se à estrada."
+categoria: diurnas
+local: "Chão do Falcão, Alqueidão da Serra, Porto de Mós"
+imagem: /imagens/2021/07/IMG_5722.jpg
+permalink: /2021/07/10/30a-sessao-de-observacao-de-borboletas-diurnas/
+---
+
+![](/imagens/2021/07/GOPR0973.jpg)
+
+Grupo de participantes, junto ao miradouro jurássico do Chão do Falcão
+
+Dois anos volvidos desde [a nossa última caminhada para observação de borboletas](/2019/07/27/29a-sessao-de-observacao-de-borboletas-diurnas/), e aproveitando uma trégua na situação pandémica que atravessamos, o grupo decidiu sair do seu casulo e pôr-se à estrada.
+
+O nosso destino foi o Chão do Falcão, junto a Alqueidão da Serra, em Porto de Mós. Apesar da progressiva humanização da paisagem (pequenos campos agrícolas, eucaliptais e, mais recentemente, a instalação de inúmeros aerogeradores), a zona ainda mantém uma vegetação autóctone caraterística das zonas calcárias. Efetivamente, a aridez dos solos e os declives acentuados não convidam a uma intervenção humana excessiva, poupando-se assim a biodiversidade do local.
+
+![](/imagens/2021/07/paisagembaluga.jpg)
+
+Paisagem do Chão do Falcão. © Henrique Baluga.
+
+O dia escolhido revelou-se particularmente quente e soalheiro, quebrando o enguiço de um verão que tarda em instalar-se em definitivo.
+
+Na primeira paragem, junto ao miradouro jurássico, um vento fraco mas persistente dificultava a vida quer aos bichos quer aos fotógrafos. Ainda assim, por ali foi possível observar algumas espécies, com destaque para a *Melanargia lachesis* que surgiu em grande número.
+
+![](/imagens/2021/07/IMG_20210704_103132.jpg)
+
+Já a caminho do segundo ponto de paragem, logo verificámos um aumento considerável de borboletas a esvoaçar pelos trilhos. Não só as *Melanargias* mas também *Colias* e *Gonepteryx*. Parecia ser um bom prenúncio.
+
+Durante uma curta caminhada pela zona, avistámos várias espécies e os cliques das máquinas raramente paravam por muito tempo.
+
+![](/imagens/2021/07/hugo3.jpg)
+![](/imagens/2021/07/hugo2.jpg)
+![](/imagens/2021/07/toni1.jpg)
+![](/imagens/2021/07/paulo1.jpg)
+![](/imagens/2021/07/carlos1.jpg)
+![](/imagens/2021/07/hugo1.jpg)
+![](/imagens/2021/07/dina3.jpg)
+![](/imagens/2021/07/dina2.jpg)
+
+Depois dos confinamentos, dos adiamentos e das incertezas quanto ao futuro, o Chão do Falcão com fragrância de aromáticas a cada novo passo, foi uma lufada de ar fresco para todos. Um local a que voltaremos, certamente!

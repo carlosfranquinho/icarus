@@ -1,0 +1,13 @@
+<article class="card-especie">
+  {% if especie.data.imagem %}
+  <a href="{{ especie.url }}" tabindex="-1" aria-hidden="true">
+    <img class="card-especie-img" src="{{ especie.data.imagem }}" alt="{{ especie.data.nome_cientifico }}" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="card-especie-corpo">
+    <h3><a href="{{ especie.url }}">{{ especie.data.nome_cientifico }}</a></h3>
+    {% if especie.data.nome_comum %}
+    <p class="card-especie-comum">{{ especie.data.nome_comum }}</p>
+    {% endif %}
+  </div>
+</article>

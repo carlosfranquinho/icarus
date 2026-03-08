@@ -1,0 +1,438 @@
+/* ===================================================
+   Grupo icarus — CSS principal
+   Design minimalista, natureza/ciência
+   =================================================== */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Alegreya+SC:wght@400;500;700&display=swap');
+
+/* --- Custom Properties --- */
+:root {
+  --cor-primaria: #2d5a1b;
+  --cor-primaria-escura: #1e3d12;
+  --cor-primaria-clara: #4a7f2e;
+  --cor-fundo: #f8f5ef;
+  --cor-fundo-card: #ffffff;
+  --cor-texto: #3d3d3d;
+  --cor-texto-suave: #666666;
+  --cor-borda: #d4cfc4;
+  --cor-destaque: #8b4513;
+  --fonte-corpo: 'Alegreya', Georgia, serif;
+  --fonte-cabecalho: 'Alegreya SC', Georgia, serif;
+  --tamanho-base: 18px;
+  --linha: 1.7;
+  --raio: 4px;
+  --sombra: 0 2px 8px rgba(0,0,0,0.08);
+  --sombra-hover: 0 4px 16px rgba(0,0,0,0.14);
+  --largura-max: 1100px;
+  --largura-conteudo: 750px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #1a1f16;
+    --cor-fundo-card: #232b1d;
+    --cor-texto: #e8e4da;
+    --cor-texto-suave: #a0a89a;
+    --cor-borda: #3a4a30;
+    --cor-primaria: #5a9e3a;
+    --cor-primaria-clara: #7abf55;
+  }
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: var(--tamanho-base); scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: var(--linha);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--cor-primaria); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.2s; }
+a:hover { text-decoration-color: currentColor; }
+
+/* --- Tipografia --- */
+h1, h2, h3, h4 { font-family: var(--fonte-cabecalho); line-height: 1.25; color: var(--cor-primaria-escura); }
+h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.6rem; margin: 2rem 0 1rem; }
+h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; }
+p { margin-bottom: 1.25rem; }
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+/* --- Layout --- */
+.container { max-width: var(--largura-max); margin: 0 auto; padding: 0 1.25rem; }
+.conteudo-central { max-width: var(--largura-conteudo); margin: 0 auto; }
+main { flex: 1; padding: 2rem 0 4rem; }
+
+/* --- Navegação --- */
+.nav-principal {
+  background: var(--cor-primaria-escura);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo img { height: 44px; width: auto; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: var(--raio);
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-lista {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-lista a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-family: var(--fonte-cabecalho);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  border-radius: var(--raio);
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-lista a:hover, .nav-lista a[aria-current="page"] {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .nav-toggle { display: flex; }
+  .nav-lista {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--cor-primaria-escura);
+    flex-direction: column;
+    padding: 0.5rem 0 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .nav-lista.aberta { display: flex; }
+  .nav-lista a { padding: 0.75rem 1.5rem; border-radius: 0; }
+}
+
+/* --- Hero (homepage) --- */
+.hero {
+  background: linear-gradient(135deg, var(--cor-primaria-escura), var(--cor-primaria));
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 1.5rem; }
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: var(--raio);
+}
+
+/* --- Cards de posts --- */
+.grelha-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card-post {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-post:hover { box-shadow: var(--sombra-hover); transform: translateY(-2px); }
+
+.card-post-img { width: 100%; height: 180px; object-fit: cover; }
+
+.card-post-corpo { padding: 1.1rem 1.25rem 1.25rem; }
+
+.card-post-meta {
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 0.4rem;
+  font-family: var(--fonte-cabecalho);
+}
+
+.card-post h3 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+.card-post h3 a { color: inherit; text-decoration: none; }
+.card-post h3 a:hover { color: var(--cor-primaria); }
+
+.card-post-resumo { font-size: 0.9rem; color: var(--cor-texto-suave); margin: 0; }
+
+.categoria-badge {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  font-size: 0.72rem;
+  font-family: var(--fonte-cabecalho);
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  text-transform: lowercase;
+  margin-left: 0.4rem;
+}
+
+.badge-diurnas { background: #e8f4d0; color: #2d5a1b; }
+.badge-noturnas { background: #1a1a2e; color: #a0a0d0; }
+.badge-observacoes { background: #fff3cd; color: #856404; }
+.badge-noticias { background: #d1ecf1; color: #0c5460; }
+
+/* --- Cards de espécies --- */
+.grelha-especies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.card-especie {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-especie:hover { box-shadow: var(--sombra-hover); transform: translateY(-2px); }
+
+.card-especie-img { width: 100%; height: 160px; object-fit: cover; }
+
+.card-especie-corpo { padding: 0.9rem 1rem 1rem; }
+
+.card-especie h3 {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0 0 0.2rem;
+  font-family: var(--fonte-corpo);
+}
+
+.card-especie h3 a { color: inherit; text-decoration: none; }
+.card-especie h3 a:hover { color: var(--cor-primaria); }
+
+.card-especie-comum { font-size: 0.82rem; color: var(--cor-texto-suave); margin: 0; }
+
+/* --- Cards de família --- */
+.grelha-familias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card-familia {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  transition: box-shadow 0.2s;
+}
+
+.card-familia:hover { box-shadow: var(--sombra-hover); }
+.card-familia h2 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+.card-familia h2 a { color: inherit; text-decoration: none; }
+.card-familia h2 a:hover { color: var(--cor-primaria); }
+.card-familia p { font-size: 0.88rem; color: var(--cor-texto-suave); margin: 0; }
+
+/* --- Post individual --- */
+.post-cabecalho {
+  border-bottom: 2px solid var(--cor-borda);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave);
+  margin: 1rem 0;
+  font-family: var(--fonte-cabecalho);
+}
+
+.post-meta-item { display: flex; align-items: center; gap: 0.4rem; }
+
+.post-imagem-destaque {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  margin-bottom: 2rem;
+}
+
+.post-corpo { line-height: 1.85; }
+.post-corpo img { border-radius: var(--raio); margin: 1.5rem auto; box-shadow: var(--sombra); }
+.post-corpo figure { margin: 2rem 0; text-align: center; }
+.post-corpo figcaption { font-size: 0.82rem; color: var(--cor-texto-suave); margin-top: 0.5rem; font-style: italic; }
+.post-corpo h2 { border-bottom: 1px solid var(--cor-borda); padding-bottom: 0.3rem; }
+.post-corpo ul, .post-corpo ol { margin: 0 0 1.25rem 1.5rem; }
+.post-corpo li { margin-bottom: 0.3rem; }
+.post-corpo blockquote {
+  border-left: 3px solid var(--cor-primaria);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background: rgba(45, 90, 27, 0.06);
+  font-style: italic;
+}
+
+/* --- Ficha de espécie --- */
+.especie-cabecalho { margin-bottom: 2rem; }
+.especie-nome-cientifico { font-size: 2rem; font-style: italic; }
+.especie-nome-comum { font-size: 1.1rem; color: var(--cor-texto-suave); font-family: var(--fonte-corpo); font-weight: normal; margin-top: 0.25rem; }
+
+.especie-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) { .especie-grid { grid-template-columns: 1fr; } }
+
+.especie-imagem { border-radius: var(--raio); box-shadow: var(--sombra); }
+
+.especie-dados {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+}
+
+.especie-dados table { width: 100%; border-collapse: collapse; }
+.especie-dados td { padding: 0.4rem 0; vertical-align: top; }
+.especie-dados td:first-child { font-weight: 700; width: 40%; color: var(--cor-texto-suave); font-size: 0.88rem; font-family: var(--fonte-cabecalho); }
+
+/* --- Listagem de atividades --- */
+.lista-posts { list-style: none; }
+
+.lista-post-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--cor-borda);
+  align-items: start;
+}
+
+.lista-post-data { font-family: var(--fonte-cabecalho); color: var(--cor-texto-suave); font-size: 0.88rem; white-space: nowrap; min-width: 80px; }
+.lista-post-titulo { font-family: var(--fonte-cabecalho); font-size: 1.05rem; }
+.lista-post-titulo a { color: inherit; text-decoration: none; }
+.lista-post-titulo a:hover { color: var(--cor-primaria); }
+.lista-post-resumo { font-size: 0.88rem; color: var(--cor-texto-suave); margin-top: 0.25rem; }
+
+/* --- Secções da homepage --- */
+.secao-homepage { margin: 3rem 0; }
+.secao-homepage h2 { margin-bottom: 1.5rem; border-bottom: 2px solid var(--cor-primaria); padding-bottom: 0.5rem; display: inline-block; }
+
+.ver-mais { display: inline-block; margin-top: 1.5rem; padding: 0.5rem 1.25rem; background: var(--cor-primaria); color: white; text-decoration: none; border-radius: var(--raio); font-family: var(--fonte-cabecalho); transition: background 0.2s; }
+.ver-mais:hover { background: var(--cor-primaria-escura); }
+
+/* --- Página estática --- */
+.pagina-conteudo { line-height: 1.85; }
+.pagina-conteudo h2 { border-bottom: 1px solid var(--cor-borda); padding-bottom: 0.3rem; }
+.pagina-conteudo ul, .pagina-conteudo ol { margin: 0 0 1.25rem 1.5rem; }
+
+/* --- Rodapé --- */
+.rodape {
+  background: var(--cor-primaria-escura);
+  color: rgba(255,255,255,0.75);
+  padding: 2rem 0;
+  margin-top: auto;
+  font-size: 0.88rem;
+}
+
+.rodape-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rodape a { color: rgba(255,255,255,0.85); }
+.rodape a:hover { color: white; }
+
+/* --- Utilitários --- */
+.titulo-secao { font-size: 1.8rem; margin-bottom: 0.25rem; }
+.subtitulo { color: var(--cor-texto-suave); font-size: 1rem; margin-bottom: 2rem; font-family: var(--fonte-corpo); font-weight: normal; }
+
+.tag-lista { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+.tag { font-size: 0.78rem; padding: 0.2em 0.6em; background: rgba(45, 90, 27, 0.1); color: var(--cor-primaria); border-radius: 20px; font-family: var(--fonte-cabecalho); font-style: italic; }
+
+.paginacao { display: flex; justify-content: center; gap: 0.5rem; margin-top: 3rem; }
+.paginacao a { padding: 0.4rem 0.8rem; border: 1px solid var(--cor-borda); border-radius: var(--raio); text-decoration: none; }
+.paginacao a:hover { background: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
+
+.familia-topo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.familia-topo h1 { margin: 0; }
+.familia-topo .num-especies { font-size: 0.9rem; color: var(--cor-texto-suave); }

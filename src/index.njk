@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: "Borboletas da Marinha Grande e Leiria"
+---
+<section class="hero">
+  <div class="container">
+    <h1>{{ site.nome }}</h1>
+    <p>{{ site.descricao }}</p>
+    <a href="/atividades/" class="ver-mais">Ver atividades</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="secao-homepage">
+    <h2>Últimas atividades</h2>
+    <div class="grelha-posts">
+      {% for post in collections.posts | slice(0, 6) %}
+      {% set post = post %}
+      {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+    <a href="/atividades/" class="ver-mais">Todas as atividades</a>
+  </section>
+
+  <section class="secao-homepage">
+    <h2>Borboletas diurnas</h2>
+    <p>Fichas de identificação das espécies diurnas (Rhopalocera) observadas na nossa região.</p>
+    <div class="grelha-familias">
+      {% for familia in collections.familiasDiurnas %}
+      <div class="card-familia">
+        <h2><a href="{{ familia.url }}">{{ familia.data.title }}</a></h2>
+        {% set count = 0 %}
+        {% for esp in collections.especiesDiurnas %}
+          {% if esp.data.familia == familia.data.title %}{% set count = count + 1 %}{% endif %}
+        {% endfor %}
+        <p>{{ familia.data.descricao or "" }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <a href="/borboletas-diurnas/" class="ver-mais">Ver todas as famílias</a>
+  </section>
+
+</div>

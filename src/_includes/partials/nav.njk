@@ -1,0 +1,19 @@
+<nav class="nav-principal" aria-label="Navegação principal">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="{{ site.nome }}">
+        <img src="{{ site.logo }}" alt="{{ site.nome }}" height="44">
+      </a>
+      <button class="nav-toggle" aria-controls="nav-lista" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-lista" id="nav-lista">
+        {% for item in navegacao %}
+        <li>
+          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titulo }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

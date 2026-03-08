@@ -1,0 +1,19 @@
+<article class="card-post">
+  {% if post.data.imagem %}
+  <a href="{{ post.url }}" tabindex="-1" aria-hidden="true">
+    <img class="card-post-img" src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="card-post-corpo">
+    <p class="card-post-meta">
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
+      {% if post.data.categoria %}
+      <span class="categoria-badge badge-{{ post.data.categoria }}">{{ post.data.categoria }}</span>
+      {% endif %}
+    </p>
+    <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    {% if post.data.descricao %}
+    <p class="card-post-resumo">{{ post.data.descricao }}</p>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: "Borboletas noturnas"
+descricao: "Fichas de identificação das borboletas noturnas (Heterocera) observadas na Marinha Grande, Leiria, Batalha e Porto de Mós."
+permalink: /borboletas-noturnas/
+---
+<div class="container">
+  <header style="margin-bottom:2rem;">
+    <h1 class="titulo-secao">Borboletas noturnas</h1>
+    <p class="subtitulo">Heterocera — fichas de identificação por família</p>
+  </header>
+
+  <div class="grelha-familias">
+    {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
+    <div class="card-familia">
+      <h2><a href="{{ familia.url }}">{{ familia.data.title }}</a></h2>
+      {% if familia.data.descricao %}<p>{{ familia.data.descricao }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <h2 style="margin-top:3rem;">Todas as espécies</h2>
+  <div class="grelha-especies">
+    {% for especie in collections.especiesNoturnas %}
+    {% set especie = especie %}
+    {% include "partials/especie-card.njk" %}
+    {% endfor %}
+  </div>
+</div>
