@@ -3,6 +3,7 @@ layout: layouts/familia.njk
 tipo: familia
 title: "Noctuidae"
 grupo: noturnas
-descricao: "A maior família da ordem Lepidoptera, inclui espécies muito diversas, em tamanho e comportamento. A maioria são cinzentas ou acastanhadas..."
+imagem: /imagens/2021/04/mbrassicae-scaled.jpg
+descricao: "A maior família de lepidópteros, com espécies muito diversas em tamanho e padrão."
 permalink: /borboletas-noturnas/noctuidae/
 ---

@@ -28,6 +28,14 @@ module.exports = function (eleventyConfig) {
     return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
   });
 
+  // Filter: filtra uma collection por família
+  eleventyConfig.addFilter("porFamilia", (colecao, familia) => {
+    return (colecao || []).filter((item) => item.data && item.data.familia === familia);
+  });
+
+  // Filter: slice genérico
+  eleventyConfig.addFilter("slice", (arr, n) => (arr || []).slice(0, n));
+
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi

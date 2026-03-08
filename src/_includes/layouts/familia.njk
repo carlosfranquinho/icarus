@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 <div class="container">
-  <nav aria-label="Caminho" style="font-size:0.85rem; color: var(--cor-texto-suave); margin-bottom:1.5rem;">
+  <nav class="breadcrumb" aria-label="Caminho">
     <a href="/">Início</a> ›
     {% if grupo == "diurnas" %}
     <a href="/borboletas-diurnas/">Borboletas diurnas</a>
@@ -12,27 +12,40 @@ layout: layouts/base.njk
     › {{ title }}
   </nav>
 
-  <div class="familia-topo">
+  <header class="familia-header">
+    {% if imagem %}
+    <div class="familia-hero" style="background-image: url('{{ imagem }}')">
+      <div class="familia-hero-overlay">
+        <h1>{{ title }}</h1>
+      </div>
+    </div>
+    {% else %}
     <h1 class="titulo-secao">{{ title }}</h1>
-    {% if especies.length %}
-    <span class="num-especies">{{ especies.length }} espécie{% if especies.length != 1 %}s{% endif %}</span>
     {% endif %}
-  </div>
+  </header>
 
   {% if content and content | trim %}
-  <div class="pagina-conteudo" style="margin-bottom:2rem;">
+  <div class="pagina-conteudo familia-descricao">
     {{ content | safe }}
   </div>
   {% endif %}
 
+  {% if grupo == "diurnas" %}
+    {% set especiesAqui = collections.especiesDiurnas | porFamilia(title) %}
+  {% else %}
+    {% set especiesAqui = collections.especiesNoturnas | porFamilia(title) %}
+  {% endif %}
+
+  {% if especiesAqui.length %}
+  <p class="num-especies-texto">
+    {{ especiesAqui.length }} espécie{% if especiesAqui.length != 1 %}s{% endif %} registada{% if especiesAqui.length != 1 %}s{% endif %}
+  </p>
   <div class="grelha-especies">
-    {% for especie in collections.especiesDiurnas if especie.data.familia == title %}
-    {% set especie = especie %}
-    {% include "partials/especie-card.njk" %}
-    {% endfor %}
-    {% for especie in collections.especiesNoturnas if especie.data.familia == title %}
-    {% set especie = especie %}
+    {% for especie in especiesAqui %}
     {% include "partials/especie-card.njk" %}
     {% endfor %}
   </div>
+  {% else %}
+  <p class="sem-especies">Ainda não há fichas de espécies para esta família.</p>
+  {% endif %}
 </div>

@@ -5,25 +5,26 @@ descricao: "Fichas de identificação das borboletas noturnas (Heterocera) obser
 permalink: /borboletas-noturnas/
 ---
 <div class="container">
-  <header style="margin-bottom:2rem;">
+  <header class="pagina-cabecalho">
     <h1 class="titulo-secao">Borboletas noturnas</h1>
     <p class="subtitulo">Heterocera — fichas de identificação por família</p>
   </header>
 
-  <div class="grelha-familias">
+  <div class="grelha-familias-fichas">
     {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
-    <div class="card-familia">
-      <h2><a href="{{ familia.url }}">{{ familia.data.title }}</a></h2>
-      {% if familia.data.descricao %}<p>{{ familia.data.descricao }}</p>{% endif %}
-    </div>
-    {% endfor %}
-  </div>
-
-  <h2 style="margin-top:3rem;">Todas as espécies</h2>
-  <div class="grelha-especies">
-    {% for especie in collections.especiesNoturnas %}
-    {% set especie = especie %}
-    {% include "partials/especie-card.njk" %}
+    {% set nespecies = collections.especiesNoturnas | porFamilia(familia.data.title) %}
+    <a href="{{ familia.url }}" class="card-familia-ficha">
+      {% if familia.data.imagem %}
+      <div class="card-familia-ficha-img" style="background-image: url('{{ familia.data.imagem }}')"></div>
+      {% else %}
+      <div class="card-familia-ficha-img card-familia-ficha-img--vazio"></div>
+      {% endif %}
+      <div class="card-familia-ficha-corpo">
+        <h2>{{ familia.data.title }}</h2>
+        <p class="card-familia-ficha-num">{{ nespecies.length }} espécie{% if nespecies.length != 1 %}s{% endif %}</p>
+        {% if familia.data.descricao %}<p class="card-familia-ficha-desc">{{ familia.data.descricao }}</p>{% endif %}
+      </div>
+    </a>
     {% endfor %}
   </div>
 </div>

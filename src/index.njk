@@ -3,42 +3,105 @@ layout: layouts/base.njk
 title: "Borboletas da Marinha Grande e Leiria"
 ---
 <section class="hero">
-  <div class="container">
-    <h1>{{ site.nome }}</h1>
-    <p>{{ site.descricao }}</p>
-    <a href="/atividades/" class="ver-mais">Ver atividades</a>
+  <div class="container hero-inner">
+    <div class="hero-texto">
+      <h1>{{ site.nome }}</h1>
+      <p>{{ site.descricao }}</p>
+      <div class="hero-botoes">
+        <a href="/borboletas-diurnas/" class="btn-hero btn-primario">Borboletas diurnas</a>
+        <a href="/borboletas-noturnas/" class="btn-hero btn-secundario">Borboletas noturnas</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="{{ site.imagem_padrao }}" alt="Grupo icarus" loading="eager">
+    </div>
   </div>
 </section>
 
 <div class="container">
 
-  <section class="secao-homepage">
-    <h2>Últimas atividades</h2>
-    <div class="grelha-posts">
-      {% for post in collections.posts | slice(0, 6) %}
-      {% set post = post %}
-      {% include "partials/post-card.njk" %}
-      {% endfor %}
-    </div>
-    <a href="/atividades/" class="ver-mais">Todas as atividades</a>
-  </section>
+  <div class="homepage-grid">
 
-  <section class="secao-homepage">
-    <h2>Borboletas diurnas</h2>
-    <p>Fichas de identificação das espécies diurnas (Rhopalocera) observadas na nossa região.</p>
-    <div class="grelha-familias">
-      {% for familia in collections.familiasDiurnas %}
-      <div class="card-familia">
-        <h2><a href="{{ familia.url }}">{{ familia.data.title }}</a></h2>
-        {% set count = 0 %}
-        {% for esp in collections.especiesDiurnas %}
-          {% if esp.data.familia == familia.data.title %}{% set count = count + 1 %}{% endif %}
-        {% endfor %}
-        <p>{{ familia.data.descricao or "" }}</p>
+    <section class="secao-homepage">
+      <div class="secao-header">
+        <h2><span class="badge-tipo badge-diurnas-lg">☀</span> Sessões diurnas</h2>
+        <a href="/atividades/" class="ver-mais-link">ver todas →</a>
       </div>
-      {% endfor %}
+      <ul class="lista-posts-home">
+        {% for post in collections.postsDiurnas | slice(5) %}
+        <li>
+          <a href="{{ post.url }}">
+            {% if post.data.imagem %}
+            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+            {% endif %}
+            <div>
+              <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
+              <strong>{{ post.data.title }}</strong>
+              {% if post.data.local %}<span class="local">{{ post.data.local }}</span>{% endif %}
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="secao-homepage">
+      <div class="secao-header">
+        <h2><span class="badge-tipo badge-noturnas-lg">☾</span> Sessões noturnas</h2>
+        <a href="/atividades/" class="ver-mais-link">ver todas →</a>
+      </div>
+      <ul class="lista-posts-home">
+        {% for post in collections.postsNoturnas | slice(5) %}
+        <li>
+          <a href="{{ post.url }}">
+            {% if post.data.imagem %}
+            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+            {% endif %}
+            <div>
+              <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
+              <strong>{{ post.data.title }}</strong>
+              {% if post.data.local %}<span class="local">{{ post.data.local }}</span>{% endif %}
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+
+  <section class="secao-familias">
+    <div class="secao-header">
+      <h2>Fichas de espécies</h2>
     </div>
-    <a href="/borboletas-diurnas/" class="ver-mais">Ver todas as famílias</a>
+    <div class="familias-dois-grupos">
+      <div>
+        <h3 class="grupo-titulo">☀ Diurnas</h3>
+        <div class="grelha-familias-home">
+          {% for familia in collections.familiasDiurnas | sort(false, false, 'data.title') %}
+          <a href="{{ familia.url }}" class="card-familia-home">
+            {% if familia.data.imagem %}
+            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="lazy">
+            {% endif %}
+            <span>{{ familia.data.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <h3 class="grupo-titulo">☾ Noturnas</h3>
+        <div class="grelha-familias-home">
+          {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
+          <a href="{{ familia.url }}" class="card-familia-home">
+            {% if familia.data.imagem %}
+            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="lazy">
+            {% endif %}
+            <span>{{ familia.data.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </section>
 
 </div>
