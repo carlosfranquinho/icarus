@@ -1,7 +1,7 @@
 <article class="card-post">
   {% if post.data.imagem %}
   <a href="{{ post.url }}" tabindex="-1" aria-hidden="true">
-    <img class="card-post-img" src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+    {% image post.data.imagem, post.data.title, "card-post-img" %}
   </a>
   {% endif %}
   <div class="card-post-corpo">

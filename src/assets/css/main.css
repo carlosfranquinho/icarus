@@ -3,44 +3,51 @@
    Design minimalista, natureza/ciência
    =================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Alegreya+SC:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 /* --- Custom Properties --- */
 :root {
-  --verde:        #2d5a1b;
-  --verde-escuro: #1e3d12;
-  --verde-claro:  #4a8a28;
-  --verde-bg:     #eef5e8;
-  --creme:        #f8f5ef;
+  --verde:        #06b6d4; /* Cyan primary */
+  --verde-escuro: #0891b2;
+  --verde-claro:  #22d3ee;
+  --verde-bg:     #ecfeff;
+  --creme:        #fcfbf9; /* Soft cream white */
   --branco:       #ffffff;
-  --cinza-texto:  #2a2a2a;
-  --cinza-suave:  #5a5a5a;
-  --cinza-borda:  #ddd8ce;
-  --cinza-bg:     #f2f0ec;
-  --laranja:      #c85a00;
-  --fonte-corpo:  'Alegreya', Georgia, serif;
-  --fonte-sc:     'Alegreya SC', Georgia, serif;
-  --raio:         6px;
-  --raio-lg:      12px;
-  --sombra-s:     0 1px 3px rgba(0,0,0,0.08);
-  --sombra-m:     0 3px 12px rgba(0,0,0,0.10);
-  --sombra-lg:    0 6px 24px rgba(0,0,0,0.14);
+  --cinza-texto:  #1e293b;
+  --cinza-suave:  #64748b;
+  --cinza-borda:  #e2e8f0;
+  --cinza-bg:     #f1f5f9;
+  --laranja:      #f59e0b;
+  --fonte-corpo:  'Inter', sans-serif;
+  --fonte-sc:     'Outfit', sans-serif;
+  --raio:         12px;
+  --raio-lg:      20px;
+  --sombra-s:     0 4px 6px -1px rgba(0,0,0,0.05);
+  --sombra-m:     0 10px 15px -3px rgba(0,0,0,0.08);
+  --sombra-lg:    0 20px 25px -5px rgba(0,0,0,0.12);
+  --transicao:    all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --raio:         12px;
+  --raio-lg:      20px;
+  --sombra-s:     0 4px 6px -1px rgba(0,0,0,0.05);
+  --sombra-m:     0 10px 15px -3px rgba(0,0,0,0.08);
+  --sombra-lg:    0 20px 25px -5px rgba(0,0,0,0.12);
+  --transicao:    all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --largura-max:  1140px;
   --largura-art:  740px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --creme:       #161b12;
-    --branco:      #1e2619;
-    --cinza-texto: #e4dfd4;
-    --cinza-suave: #9a9a8a;
-    --cinza-borda: #2e3a28;
-    --cinza-bg:    #1a201a;
-    --verde-bg:    #1a2615;
-    --verde:       #5aaa38;
-    --verde-claro: #7acc55;
-    --verde-escuro:#3d7525;
+    --creme:       #f5f4f0; /* Soft cream also in dark mode */
+    --branco:      #ffffff;
+    --cinza-texto: #1e293b;
+    --cinza-suave: #64748b;
+    --cinza-borda: #e2e8f0;
+    --cinza-bg:    #f1f5f9;
+    --verde-bg:    #ecfeff;
+    --verde:       #06b6d4;
+    --verde-claro: #22d3ee;
+    --verde-escuro:#0891b2;
   }
 }
 
@@ -82,14 +89,22 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 
 /* --- Navegação --- */
 .nav-principal {
-  background: var(--verde-escuro);
+  background: var(--branco);
+  border-bottom: 1px solid var(--cinza-borda);
   position: sticky; top: 0; z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+/* No home transparente ao topo */
+.is-home .nav-principal:not(.scrolled) {
+  background: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
 }
 .nav-inner {
   display: flex; align-items: center;
   justify-content: space-between;
-  height: 62px; gap: 1rem;
+  height: 70px; gap: 1rem;
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 42px; width: auto; }
@@ -102,17 +117,27 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 .nav-toggle span { display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px; }
 .nav-lista { list-style: none; display: flex; }
 .nav-lista a {
-  display: block; padding: .45rem .85rem;
-  color: rgba(255,255,255,.88);
+  display: block; padding: .5rem 1rem;
+  color: var(--cinza-texto);
   text-decoration: none;
   font-family: var(--fonte-sc);
-  font-size: .88rem; letter-spacing: .03em;
+  font-weight: 500;
+  font-size: .95rem; letter-spacing: .02em;
   border-radius: var(--raio);
-  transition: background .15s, color .15s;
+  transition: all .2s;
+}
+/* Letras brancas na nav transparente da home */
+.is-home .nav-principal:not(.scrolled) .nav-lista a {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.is-home .nav-principal:not(.scrolled) .nav-lista a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 .nav-lista a:hover,
 .nav-lista a[aria-current="page"] {
-  background: rgba(255,255,255,.15); color: #fff;
+  background: var(--verde-bg); color: var(--verde-escuro);
 }
 @media (max-width: 680px) {
   .nav-toggle { display: flex; }
@@ -129,9 +154,30 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 }
 
 /* --- Hero --- */
+.is-home main {
+  padding-top: 0;
+}
 .hero {
-  background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde) 100%);
-  color: #fff; padding: 3.5rem 0;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -70px; /* Pull up behind the 70px navbar */
+  padding-top: 70px; /* Push content down so it is centered correctly */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(8, 145, 178, 0.25) 0%, rgba(6, 182, 212, 0.1) 100%);
+  z-index: 1;
+}
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 .hero-inner {
   display: grid;
@@ -154,7 +200,7 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   transition: opacity .15s, transform .15s;
 }
 .btn-hero:hover { opacity: .88; transform: translateY(-1px); }
-.btn-primario  { background: #fff; color: var(--verde-escuro); }
+.btn-primario  { background: #fff; color: var(--verde-escuro); box-shadow: var(--sombra-m); }
 .btn-secundario { background: rgba(255,255,255,.18); color: #fff; border: 1.5px solid rgba(255,255,255,.5); }
 .hero-img-wrap img {
   border-radius: var(--raio-lg);
@@ -171,7 +217,7 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 }
 @media (max-width: 760px) { .homepage-grid { grid-template-columns: 1fr; } }
 
-.secao-homepage { }
+/* Secao Homepage (Removed empty ruleset) */
 .secao-header {
   display: flex; align-items: baseline;
   justify-content: space-between;
@@ -352,8 +398,9 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 }
 .post-corpo { line-height: 1.85; }
 .post-corpo img {
-  border-radius: var(--raio); margin: 1.5rem auto;
+  border-radius: var(--raio);
   box-shadow: var(--sombra-m);
+  max-width: 100%;
 }
 .post-corpo figure { margin: 2rem 0; text-align: center; }
 .post-corpo figcaption { font-size: .8rem; color: var(--cinza-suave); margin-top: .4rem; font-style: italic; }
@@ -367,23 +414,159 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   font-style: italic; border-radius: 0 var(--raio) var(--raio) 0;
 }
 
-/* --- Ficha de espécie --- */
-.especie-cabecalho { margin-bottom: 1.5rem; }
-.especie-nome-cientifico { font-size: 1.8rem; font-style: italic; font-family: var(--fonte-corpo); }
-.especie-nome-comum { font-size: 1rem; color: var(--cinza-suave); font-weight: normal; margin-top: .2rem; }
+/* --- Ficha de espécie (Página Individual) --- */
+.especie-wrapper { margin-top: 1rem; }
 .especie-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2rem; margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; 
+  align-items: start;
+  margin-bottom: 3.5rem;
 }
-@media (max-width: 580px) { .especie-grid { grid-template-columns: 1fr; } }
-.especie-imagem { border-radius: var(--raio-lg); box-shadow: var(--sombra-m); }
-.especie-dados {
-  background: var(--branco); border: 1px solid var(--cinza-borda);
-  border-radius: var(--raio-lg); padding: 1.25rem;
+@media (max-width: 860px) {
+  .especie-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
-.especie-dados table { width: 100%; border-collapse: collapse; }
-.especie-dados td { padding: .4rem 0; vertical-align: top; font-size: .9rem; }
-.especie-dados td:first-child { font-weight: 700; width: 40%; color: var(--cinza-suave); font-size: .82rem; font-family: var(--fonte-sc); }
+
+/* Coluna 1: Foto foco */
+.especie-col-imagem { position: sticky; top: 100px; }
+.especie-imagem { 
+  width: 100%; border-radius: var(--raio-lg); 
+  box-shadow: var(--sombra-lg); 
+  object-fit: cover; max-height: 500px;
+}
+
+/* Coluna 2: Dados e Cabeçalho */
+.especie-cabecalho { margin-bottom: 2rem; }
+.especie-nome-cientifico { font-size: 2.2rem; font-style: italic; font-family: var(--fonte-sc); color: var(--verde-escuro); margin-bottom: 0.2rem;}
+.autoridade-cientifica {
+  font-size: 1.1rem;
+  font-style: normal;
+  color: var(--cinza-suave);
+  font-family: var(--fonte-corpo);
+  display: block;
+  margin-top: 0.2rem;
+}
+.especie-nome-comum { font-size: 1.15rem; color: var(--cinza-texto); font-weight: 500; font-family: var(--fonte-sc); margin-top: 0.5rem; }
+
+.especie-resumo-intro {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cinza-texto);
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--verde);
+}
+
+.especie-dados-ficha {
+  background: var(--branco); 
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--raio-lg); 
+  padding: 1.5rem 1.8rem;
+  box-shadow: var(--sombra-s);
+}
+.dado-linha { 
+  display: flex; 
+  justify-content: space-between; 
+  padding: 0.8rem 0; 
+  border-bottom: 1px solid var(--cinza-borda);
+}
+.dado-linha:last-child { border-bottom: none; padding-bottom: 0; }
+.dado-linha:first-child { padding-top: 0; }
+.dado-label { 
+  font-weight: 600; 
+  color: var(--cinza-suave); 
+  font-size: 0.88rem; 
+  font-family: var(--fonte-sc); 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.dado-valor { font-size: 1rem; color: var(--cinza-texto); font-weight: 500; }
+
+/* Corpo da Ficha (Distribuição, notas) */
+.content-especie { max-width: 800px; margin: 0 auto; margin-top: 4rem;}
+.content-especie h2 { font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--verde-escuro); }
+.content-especie h3 { font-size: 1.2rem; margin-top: 2rem; color: var(--cinza-texto); }
+.content-especie p { font-size: 1.05rem; }
+
+/* Wrapper gerado p/ legendas */
+.especie-figura {
+  margin: 2.5rem auto;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-s);
+  overflow: hidden;
+  display: block; /* to allow margins to center */
+}
+.especie-figura img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  border-radius: var(--raio);
+}
+.especie-legenda {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1.2rem;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.7);
+  pointer-events: none;
+}
+
+/* Float map to the right */
+.mapa-distribuicao {
+  float: right;
+  width: 300px !important;
+  margin: 0 0 1.5rem 2rem !important;
+  box-shadow: var(--sombra-s) !important;
+  border-radius: var(--raio-lg);
+  clear: right;
+}
+@media (max-width: 600px) {
+  .mapa-distribuicao { float: none; width: 100% !important; margin: 1rem 0 !important; }
+}
+
+/* Espécies Semelhantes UI */
+.especies-relacionadas-grelha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0 3rem;
+}
+.content-especie .especies-relacionadas-grelha a img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  border: 3px solid var(--branco);
+  box-shadow: var(--sombra-m);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.especies-relacionadas-grelha a {
+  text-decoration: none;
+  text-align: center;
+  width: 140px;
+  color: var(--cinza-texto);
+}
+.especies-relacionadas-grelha a p {
+  font-size: 0.85rem;
+  font-family: var(--fonte-sc);
+  font-weight: 500;
+  margin: 0;
+}
+.especies-relacionadas-grelha a:hover img {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-lg);
+  border-color: var(--verde-claro);
+}
 
 /* --- Listagem de atividades --- */
 .lista-posts { list-style: none; }

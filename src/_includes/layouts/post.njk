@@ -23,7 +23,7 @@ ogType: article
       </header>
 
       {% if imagem %}
-      <img class="post-imagem-destaque" src="{{ imagem }}" alt="{{ title }}" loading="lazy">
+      {% image imagem, title, "post-imagem-destaque" %}
       {% endif %}
 
       <div class="post-corpo">

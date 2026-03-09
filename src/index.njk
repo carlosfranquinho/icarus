@@ -2,18 +2,15 @@
 layout: layouts/base.njk
 title: "Borboletas da Marinha Grande e Leiria"
 ---
-<section class="hero">
-  <div class="container hero-inner">
+<section class="hero" style="background-image: url('{{ site.imagem_padrao }}'); background-size: cover; background-position: center;">
+  <div class="container hero-inner" style="grid-template-columns: 1fr; text-align: center; max-width: 800px;">
     <div class="hero-texto">
-      <h1>{{ site.nome }}</h1>
-      <p>{{ site.descricao }}</p>
-      <div class="hero-botoes">
-        <a href="/borboletas-diurnas/" class="btn-hero btn-primario">Borboletas diurnas</a>
-        <a href="/borboletas-noturnas/" class="btn-hero btn-secundario">Borboletas noturnas</a>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">{{ site.nome }}</h1>
+      <p style="font-size: 1.25rem; opacity: 1; margin-bottom: 2rem; color: #f8fafc;">{{ site.descricao }}</p>
+      <div class="hero-botoes" style="justify-content: center; gap: 1rem;">
+        <a href="/borboletas-diurnas/" class="btn-hero btn-primario" style="padding: 0.75rem 1.5rem; font-size: 1.05rem;">Borboletas diurnas</a>
+        <a href="/borboletas-noturnas/" class="btn-hero btn-secundario" style="padding: 0.75rem 1.5rem; font-size: 1.05rem;">Borboletas noturnas</a>
       </div>
-    </div>
-    <div class="hero-img-wrap">
-      <img src="{{ site.imagem_padrao }}" alt="Grupo icarus" loading="eager">
     </div>
   </div>
 </section>
@@ -32,7 +29,7 @@ title: "Borboletas da Marinha Grande e Leiria"
         <li>
           <a href="{{ post.url }}">
             {% if post.data.imagem %}
-            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+            {% image post.data.imagem, post.data.title %}
             {% endif %}
             <div>
               <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
@@ -55,7 +52,7 @@ title: "Borboletas da Marinha Grande e Leiria"
         <li>
           <a href="{{ post.url }}">
             {% if post.data.imagem %}
-            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}" loading="lazy">
+            {% image post.data.imagem, post.data.title %}
             {% endif %}
             <div>
               <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
@@ -81,7 +78,7 @@ title: "Borboletas da Marinha Grande e Leiria"
           {% for familia in collections.familiasDiurnas | sort(false, false, 'data.title') %}
           <a href="{{ familia.url }}" class="card-familia-home">
             {% if familia.data.imagem %}
-            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="lazy">
+            {% image familia.data.imagem, familia.data.title %}
             {% endif %}
             <span>{{ familia.data.title }}</span>
           </a>
@@ -94,7 +91,7 @@ title: "Borboletas da Marinha Grande e Leiria"
           {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
           <a href="{{ familia.url }}" class="card-familia-home">
             {% if familia.data.imagem %}
-            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="lazy">
+            {% image familia.data.imagem, familia.data.title %}
             {% endif %}
             <span>{{ familia.data.title }}</span>
           </a>

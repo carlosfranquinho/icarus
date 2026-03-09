@@ -2,19 +2,19 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Zerynthia rumina"
+autoridade: "(Linnaeus, 1758)"
 familia: Papilionidae
 subfamilia: Parnassiinae
 grupo: diurnas
 imagem: /imagens/2020/07/rumina_i1.jpg
 descricao: "A Zerynthia rumina é uma borboleta de tamanho médio com cores muito vistosas, onde predominam o branco a creme claro, negro e vermelho."
 permalink: /borboletas-diurnas/papilionidae/zerynthia-rumina/
+links_externos:
+  - url: "https://lepidoptera.eu/species/3518"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Zerynthia_Rumina"
+    nome: "lepiforum.de"
 ---
-
-## *Zerynthia rumina* (Linnaeus, 1758)
-
-**Família:** [Papilionidae](/borboletas-diurnas/papilionidae/)
-
-**Subfamília:** Parnassiinae
 
 A *Zerynthia rumina* é uma borboleta de tamanho médio com cores muito vistosas, onde predominam o branco a creme claro, negro e vermelho.
 
@@ -47,8 +47,6 @@ Os indivíduos mais velhos vão perdendo as escamas de cores mais vivas, sendo f
 **Região**: relativamente rara na faixa litoral. Comum, chegando a ser pontualmente muito abundante, no interior.
 
 ![](/imagens/2020/07/zrumina.png)
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/3518), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Zerynthia_Rumina)
 
 ![Zerynthia rumina, adulto](/imagens/2020/07/rumina_i1.jpg)
 

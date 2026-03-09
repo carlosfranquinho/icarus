@@ -42,7 +42,19 @@ layout: layouts/base.njk
   </p>
   <div class="grelha-especies">
     {% for especie in especiesAqui %}
-    {% include "partials/especie-card.njk" %}
+    <article class="card-especie">
+      {% if especie.data.imagem %}
+      <a href="{{ especie.url }}" tabindex="-1" aria-hidden="true">
+        {% image especie.data.imagem, especie.data.nome_cientifico, "card-especie-img" %}
+      </a>
+      {% endif %}
+      <div class="card-especie-corpo">
+        <h3><a href="{{ especie.url }}">{{ especie.data.nome_cientifico }}</a></h3>
+        {% if especie.data.nome_comum %}
+        <p class="card-especie-comum">{{ especie.data.nome_comum }}</p>
+        {% endif %}
+      </div>
+    </article>
     {% endfor %}
   </div>
   {% else %}

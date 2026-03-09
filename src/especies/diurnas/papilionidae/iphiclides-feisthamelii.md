@@ -2,19 +2,21 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Iphiclides feisthamelii"
+autoridade: "(Duponchel, 1832)"
 familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
 imagem: /imagens/2020/07/feisthamelii1.jpg
 descricao: "A Iphiclides feisthamelii possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior."
 permalink: /borboletas-diurnas/papilionidae/iphiclides-feisthamelii/
+especies_semelhantes:
+  - "Papilio machaon"
+links_externos:
+  - url: "https://lepidoptera.eu/species/6525"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Iphiclides_Feisthamelii"
+    nome: "lepiforum.de"
 ---
-
-## *Iphiclides feisthamelii* (Duponchel, 1832)
-
-**Família:** [Papilionidae](/borboletas-diurnas/papilionidae/)
-
-**Subfamília:** Papilioninae
 
 A *Iphiclides feisthamelii* possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior. As impressionantes caudas e o típico voo planado da espécie são inconfundíveis.
 
@@ -51,14 +53,6 @@ Tal como outras espécies da família Papilionidae, possuem um mecanismo de defe
 **Região**: presente em todos os concelhos
 
 ![](/imagens/2020/07/ifeisthamelii2.png)
-
-### Espécies semelhantes
-
-[![Papilio machaon](/imagens/2020/06/1.jpg)](/borboletas-diurnas/papilionidae/papilio-machaon/ "Papilio machaon")
-
-***Papilio machaon***
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/6525), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Iphiclides_Feisthamelii)
 
 ![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii1.jpg)
 

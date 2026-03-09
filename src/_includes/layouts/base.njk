@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="/imagens/logo/icarus_logo3.png" type="image/png">
 </head>
-<body>
+<body class="{% if page.url == '/' %}is-home{% endif %}">
 
   {% include "partials/nav.njk" %}
 

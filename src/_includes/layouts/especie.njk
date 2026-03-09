@@ -15,31 +15,88 @@ ogType: article
     › <em>{{ nome_cientifico }}</em>
   </nav>
 
-  <article>
-    <header class="especie-cabecalho">
-      <h1 class="especie-nome-cientifico">{{ nome_cientifico }}</h1>
-      {% if nome_comum %}<p class="especie-nome-comum">{{ nome_comum }}</p>{% endif %}
-    </header>
-
+  <article class="especie-wrapper">
     <div class="especie-grid">
-      {% if imagem %}
-      <div>
-        <img class="especie-imagem" src="{{ imagem }}" alt="{{ nome_cientifico }}" loading="lazy">
+      <!-- Coluna da Esquerda: Imagem -->
+      <div class="especie-col-imagem">
+        {% if imagem %}
+          {% image imagem, nome_cientifico, "especie-imagem" %}
+        {% endif %}
       </div>
-      {% endif %}
-      <div class="especie-dados">
-        <table>
-          <tbody>
-            <tr><td>Família</td><td>{{ familia }}</td></tr>
-            {% if subfamilia %}<tr><td>Subfamília</td><td>{{ subfamilia }}</td></tr>{% endif %}
-            {% if grupo %}<tr><td>Grupo</td><td>{{ grupo }}</td></tr>{% endif %}
-          </tbody>
-        </table>
+      
+      <!-- Coluna da Direita: Dados -->
+      <div class="especie-col-dados">
+        <header class="especie-cabecalho">
+          <h1 class="especie-nome-cientifico">{{ nome_cientifico }}{% if autoridade %}<span class="autoridade-cientifica"> {{autoridade}}</span>{% endif %}</h1>
+          {% if nome_comum %}<p class="especie-nome-comum">{{ nome_comum }}</p>{% endif %}
+        </header>
+        
+        <div class="especie-dados-ficha">
+          <div class="dado-linha">
+            <span class="dado-label">Família</span>
+            <span class="dado-valor"><a href="/borboletas-{{ grupo }}/{{ familia | lower }}/">{{ familia }}</a></span>
+          </div>
+          {% if subfamilia %}
+          <div class="dado-linha">
+            <span class="dado-label">Subfamília</span>
+            <span class="dado-valor">{{ subfamilia }}</span>
+          </div>
+          {% endif %}
+          {% if descricao %}
+          <div class="dado-linha" style="display:block; padding-top:1rem; margin-top:0.5rem;">
+            <p class="dado-valor" style="text-align:left; font-weight:400; font-size:0.95rem; line-height:1.6; color:var(--cinza-texto); margin:0;">{{ descricao }}</p>
+          </div>
+          {% endif %}
+        </div>
       </div>
     </div>
 
-    <div class="post-corpo">
+    <!-- Conteúdo principal text-heavy -->
+    <div class="post-corpo content-especie">
       {{ content | safe }}
     </div>
+
+    {% if especies_semelhantes and especies_semelhantes.length > 0 %}
+    <div class="secao-especies-semelhantes">
+      <h2>Espécies semelhantes</h2>
+      <div class="grelha-especies">
+        {% for nome_esp in especies_semelhantes %}
+          {% set esp_encontrada = null %}
+          {% for esp in collections.especies %}
+            {% if esp.data.nome_cientifico == nome_esp %}
+              {% set esp_encontrada = esp %}
+            {% endif %}
+          {% endfor %}
+          
+          {% if esp_encontrada %}
+          <article class="card-especie">
+            {% if esp_encontrada.data.imagem %}
+            <a href="{{ esp_encontrada.url }}" tabindex="-1" aria-hidden="true">
+              {% image esp_encontrada.data.imagem, esp_encontrada.data.nome_cientifico, "card-especie-img" %}
+            </a>
+            {% endif %}
+            <div class="card-especie-corpo">
+              <h3><a href="{{ esp_encontrada.url }}">{{ esp_encontrada.data.nome_cientifico }}</a></h3>
+              {% if esp_encontrada.data.nome_comum %}
+              <p class="card-especie-comum">{{ esp_encontrada.data.nome_comum }}</p>
+              {% endif %}
+            </div>
+          </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if links_externos and links_externos.length > 0 %}
+    <div class="secao-links-externos" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-claro);">
+      <h2>Ver também / Links</h2>
+      <ul style="list-style-type: none; padding: 0; display:flex; gap:1rem; flex-wrap:wrap;">
+        {% for link in links_externos %}
+        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:0.5rem 1rem; background:var(--branco); border-radius:30px; border:1px solid var(--cinza-claro); font-size:0.95rem; font-weight:500;">↗ {{ link.nome }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </article>
 </div>

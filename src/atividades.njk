@@ -2,7 +2,11 @@
 layout: layouts/base.njk
 title: "Atividades"
 descricao: "Registo das saídas e sessões de observação de borboletas do Grupo icarus."
-permalink: /atividades/
+pagination:
+  data: collections.posts
+  size: 15
+  alias: postsPage
+permalink: "/atividades/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 <div class="container">
   <header style="margin-bottom:2rem;">
@@ -11,7 +15,7 @@ permalink: /atividades/
   </header>
 
   <ul class="lista-posts">
-    {% for post in collections.posts %}
+    {% for post in postsPage %}
     <li class="lista-post-item">
       <div class="lista-post-data">
         <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
@@ -28,4 +32,19 @@ permalink: /atividades/
     </li>
     {% endfor %}
   </ul>
+
+  {% if pagination.hrefs.length > 1 %}
+  <nav class="paginacao" aria-labelledby="paginacao-label">
+    <h2 id="paginacao-label" class="sr-only" style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;">Páginas</h2>
+    <ul style="display: flex; list-style: none; gap: 0.5rem; justify-content: center; margin-top: 2rem;">
+      {% if pagination.href.previous %}
+        <li><a class="btn-hero btn-secundario has-black-color" href="{{ pagination.href.previous }}" style="border-color: var(--cinza-borda); color: var(--cinza-texto);">← Anterior</a></li>
+      {% endif %}
+      
+      {% if pagination.href.next %}
+        <li><a class="btn-hero btn-secundario has-black-color" href="{{ pagination.href.next }}" style="border-color: var(--cinza-borda); color: var(--cinza-texto);">Seguinte →</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
 </div>

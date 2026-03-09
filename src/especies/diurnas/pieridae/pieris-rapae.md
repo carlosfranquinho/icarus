@@ -2,19 +2,22 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pieris rapae"
+autoridade: "(Linnaeus, 1758)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/prapae.jpg
 descricao: "A Pieris rapae é uma borboleta da família Pieridae, perfeitamente adaptada às paisagens humanizadas e com uma distribuição muito alargada."
 permalink: /borboletas-diurnas/pieridae/pieris-rapae/
+especies_semelhantes:
+  - "Pieris brassicae"
+  - "Pieris napi"
+links_externos:
+  - url: "https://lepidoptera.eu/species/10"
+    nome: "lepidoptera.eu"
+  - url: "https://www.lepiforum.de/lepiwiki.pl?Pieris_Rapae"
+    nome: "lepiforum.de"
 ---
-
-## *Pieris rapae* (Linnaeus, 1758)
-
-**Família:** [Pieridae](/borboletas-diurnas/pieridae/)
-
-**Subfamília:** Pierinae
 
 A **Pieris rapae** é uma borboleta da família Pieridae, perfeitamente adaptada às paisagens humanizadas.
 
@@ -43,18 +46,6 @@ A **Pieris rapae** é uma borboleta da família Pieridae, perfeitamente adaptada
 **Região**: todos os concelhos em diferentes habitats
 
 ![](/imagens/2020/07/prapae.png)
-
-### Espécies semelhantes
-
-[![Pieris brassicae](/imagens/2020/07/pbrassicae_i1.jpg)](/borboletas-diurnas/pieridae/pieris-brassicae/ "Pieris brassicae")
-
-***Pieris brassicae***
-
-[![Pieris napi](/imagens/2020/07/pnapi_i1.jpg)](/borboletas-diurnas/pieridae/pieris-napi/ "Pieris napi")
-
-***Pieris napi***
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/10), [lepiforum.de](https://www.lepiforum.de/lepiwiki.pl?Pieris_Rapae)
 
 ![Pieris rapae, adulto](/imagens/2020/07/prapae.jpg)
 

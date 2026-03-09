@@ -2,19 +2,21 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Papilio machaon"
+autoridade: "Linnaeus, 1758"
 familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
 imagem: /imagens/2020/06/1.jpg
 descricao: "A Papilio machaon é uma borboleta grande que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul."
 permalink: /borboletas-diurnas/papilionidae/papilio-machaon/
+especies_semelhantes:
+  - "Iphiclides feisthamelii"
+links_externos:
+  - url: "http://www.lepidoptera.eu/show.php?ID=5&country=PT"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon"
+    nome: "lepiforum.de"
 ---
-
-## *Papilio machaon* Linnaeus, 1758
-
-**Família:** [Papilionidae](/borboletas-diurnas/papilionidae/)
-
-**Subfamília:** Papilioninae
 
 A *Papilio machaon* é uma borboleta grande e vistosa que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul ao longo da margem.
 
@@ -59,14 +61,6 @@ As lagartas crisalidam entre a vegetação e a cor da crisálida pode variar do 
 **Região**: presente em todos os concelhos e habitats
 
 ![Mapa de distribuição de P. machaon na região](/imagens/2020/07/pmachaon-7.png)
-
-### Espécies semelhantes
-
-[![Iphiclides feisthamelii](/imagens/2020/07/feisthamelii1.jpg)](/borboletas-diurnas/papilionidae/iphiclides-feisthamelii/ "Iphiclides feisthamelii")
-
-***Iphiclides feisthamelii***
-
-**Ver também:**[lepidoptera.eu](http://www.lepidoptera.eu/show.php?ID=5&country=PT), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon)
 
 ![Papilio machaon, adulto](/imagens/2020/06/1.jpg)
 

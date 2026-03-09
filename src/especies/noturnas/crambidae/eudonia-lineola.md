@@ -2,18 +2,13 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eudonia lineola"
+autoridade: "(CURTIS, 1827)"
 familia: Crambidae
 subfamilia: Scopariinae
 grupo: noturnas
 imagem: /imagens/2021/04/elineola-scaled.jpg
 permalink: /borboletas-noturnas/crambidae/eudonia-lineola/
 ---
-
-## *Eudonia lineola* (CURTIS, 1827)
-
-**Família:** [Crambidae](/borboletas-noturnas/crambidae/)
-
-**Subfamília:** Scopariinae
 
 ### Guia rápido
 
@@ -36,7 +31,3 @@ permalink: /borboletas-noturnas/crambidae/eudonia-lineola/
 **Portugal:**
 
 **Região**:
-
-### Espécies semelhantes
-
-**Ver também:**

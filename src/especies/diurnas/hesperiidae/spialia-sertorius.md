@@ -2,19 +2,21 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Spialia sertorius"
+autoridade: "(Hoffmannsegg, 1804)"
 familia: Hesperiidae
 subfamilia: Pyrginae
 grupo: diurnas
 imagem: /imagens/2020/07/spialia_i1.jpg
 descricao: "A Spialia sertorius é uma pequena borboleta da família Hesperiidae que ocorre na região."
 permalink: /borboletas-diurnas/hesperiidae/spialia-sertorius/
+especies_semelhantes:
+  - "Muschampia proto"
+links_externos:
+  - url: "https://lepidoptera.eu/species/114"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Spialia_Sertorius"
+    nome: "lepiforum.de"
 ---
-
-## *Spialia sertorius (Hoffmannsegg, 1804)*
-
-**Família:** [Hesperiidae](/borboletas-diurnas/hesperiidae/)
-
-**Subfamília:** Pyrginae
 
 A *Spialia sertorius* é uma pequena borboleta da família Hesperiidae.
 
@@ -43,14 +45,6 @@ A *Spialia sertorius* é uma pequena borboleta da família Hesperiidae.
 **Região**: aparentemente, mais comum nos concelhos do interior
 
 ![Mapa de distribuição de Spialia sertorius na região](/imagens/2020/07/ssertorius.png)
-
-### Espécies semelhantes
-
-[![Muschampia proto](/imagens/2020/07/mproto_i1.jpg)](/borboletas-diurnas/hesperiidae/muschampia-proto/ "Muschampia proto")
-
-***Muschampia proto***
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/114), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Spialia_Sertorius)
 
 ![Spialia sertorius, adulto.](/imagens/2020/07/spialia_i1.jpg)
 

@@ -2,19 +2,23 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Euchloe crameri"
+autoridade: "Butler, 1869"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/ecrameri_i1.jpg
 descricao: "A Euchloe crameri é uma borboleta da família Pieridae."
 permalink: /borboletas-diurnas/pieridae/euchloe-crameri/
+especies_semelhantes:
+  - "Euchloe tagis"
+  - "Pontia daplidice"
+  - "Anthocharis cardamines"
+links_externos:
+  - url: "http://www.lepidoptera.eu/show.php?ID=5&country=PT"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon"
+    nome: "lepiforum.de"
 ---
-
-## *Euchloe crameri* Butler, 1869
-
-**Família:** [Pieridae](/borboletas-diurnas/pieridae/)
-
-**Subfamília:** Pierinae
 
 A *Euchloe crameri* é uma borboleta da família Pieridae.
 
@@ -41,22 +45,6 @@ A *Euchloe crameri* é uma borboleta da família Pieridae.
 **Portugal:** Presente em todo o país
 
 **Região**: presente em todos os concelhos
-
-### Espécies semelhantes
-
-[![Euchloe tagis](/imagens/2020/07/etagis_i1.jpg)](/borboletas-diurnas/pieridae/euchloe-tagis/ "Euchloe tagis")
-
-***Euchloe tagis***
-
-[![Pontia daplidice](/imagens/2021/02/pdaplidice1.jpg)](/borboletas-diurnas/pieridae/pontia-daplidice/ "Pontia daplidice")
-
-***Pontia daplidice***
-
-[![Anthocharis cardamines](/imagens/2020/07/acardamines_i1.jpg)](/borboletas-diurnas/pieridae/anthocharis-cardamines/ "Anthocharis cardamines")
-
-***Anthocharis cardamines***
-
-**Ver também:**[lepidoptera.eu](http://www.lepidoptera.eu/show.php?ID=5&country=PT), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon)
 
 ![Euchloe crameri, adulto](/imagens/2020/07/ecrameri_i1.jpg)
 

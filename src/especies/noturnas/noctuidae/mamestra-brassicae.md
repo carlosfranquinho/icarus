@@ -2,18 +2,13 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mamestra brassicae"
+autoridade: "(LINNAEUS, 1758)"
 familia: Noctuidae
 subfamilia: Hadeninae
 grupo: noturnas
 imagem: /imagens/2021/04/mbrassicae-scaled.jpg
 permalink: /borboletas-noturnas/noctuidae/mamestra-brassicae/
 ---
-
-## *Mamestra brassicae* (LINNAEUS, 1758)
-
-**Família:** [Noctuidae](/borboletas-noturnas/noctuidae/)
-
-**Subfamília:** Hadeninae
 
 ### Guia rápido
 
@@ -36,7 +31,3 @@ permalink: /borboletas-noturnas/noctuidae/mamestra-brassicae/
 **Portugal:**
 
 **Região**:
-
-### Espécies semelhantes
-
-**Ver também:**

@@ -2,19 +2,19 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Carcharodus alceae"
+autoridade: "(Esper, [1780])"
 familia: Hesperiidae
 subfamilia: Pyrginae
 grupo: diurnas
 imagem: /imagens/2020/07/calceae_i1.jpg
 descricao: "A Carcharodus alceae é uma pequena borboleta da família Hesperiidae. Em Portugal aparece também uma espécie gémea, a Carcharodus tripolina."
 permalink: /borboletas-diurnas/hesperiidae/carcharodus-alceae/
+links_externos:
+  - url: "https://lepidoptera.eu/species/100"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Carcharodus_Alceae"
+    nome: "lepiforum.de"
 ---
-
-## *Carcharodus alceae (Esper, [1780])*
-
-**Família:** [Hesperiidae](/borboletas-diurnas/hesperiidae/)
-
-**Subfamília:** Pyrginae
 
 A *Carcharodus alceae* é uma pequena borboleta da família Hesperiidae. Em Portugal aparece também uma espécie gémea, a ***Carcharodus tripolina* (VERITY, 1925)**, indistinguível da primeira pela mera análise do padrão alar. Até que a análise genética das populações desvende a distribuição das espécies, não é possível afirmar, com certeza, qual das duas ocorre na nossa região.
 
@@ -43,8 +43,6 @@ A *Carcharodus alceae* é uma pequena borboleta da família Hesperiidae. Em Port
 **Região**: Presente em todos os concelhos
 
 ![](/imagens/2020/07/calceae.png)
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/100), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Carcharodus_Alceae)
 
 ![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i1.jpg)
 

@@ -2,18 +2,13 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Calophasia almoravida"
+autoridade: "DE GRASLIN, 1863"
 familia: Noctuidae
 subfamilia: Oncocnemidinae
 grupo: noturnas
 imagem: /imagens/2021/04/calmoravida-scaled.jpg
 permalink: /borboletas-noturnas/noctuidae/calophasia-almoravida/
 ---
-
-## *Calophasia almoravida* DE GRASLIN, 1863
-
-**Família:** [Noctuidae](/borboletas-noturnas/noctuidae/)
-
-**Subfamília:** Oncocnemidinae
 
 ### Guia rápido
 
@@ -36,7 +31,3 @@ permalink: /borboletas-noturnas/noctuidae/calophasia-almoravida/
 **Portugal:**
 
 **Região**:
-
-### Espécies semelhantes
-
-**Ver também:**

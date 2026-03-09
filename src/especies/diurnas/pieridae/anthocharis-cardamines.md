@@ -2,19 +2,19 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Anthocharis cardamines"
+autoridade: "(Linnaeus, 1758)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/acardamines_i1.jpg
 descricao: "A Anthocharis cardamines é uma borboleta da família Pieridae. O macho da espécie tem as pontas das asas laranja."
 permalink: /borboletas-diurnas/pieridae/anthocharis-cardamines/
+links_externos:
+  - url: "https://lepidoptera.eu/species/20"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Anthocharis_Cardamines"
+    nome: "lepiforum.de"
 ---
-
-## *Anthocharis cardamines* (Linnaeus, 1758)
-
-**Família:** [Pieridae](/borboletas-diurnas/pieridae/)
-
-**Subfamília:** Pierinae
 
 A **Anthocharis cardamines** é uma borboleta da família Pieridae. O macho da espécie tem as pontas das asas laranja.
 
@@ -43,8 +43,6 @@ A **Anthocharis cardamines** é uma borboleta da família Pieridae. O macho da e
 **Região**: relativamente incomum, mas pontualmente abundante em galerias ripícolas bem preservadas
 
 ![distribuição regional de Anthocharis cardamines](/imagens/2020/07/acardamines.png)
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/20), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Anthocharis_Cardamines)
 
 ![](/imagens/2020/07/acardamines_i1.jpg)
 

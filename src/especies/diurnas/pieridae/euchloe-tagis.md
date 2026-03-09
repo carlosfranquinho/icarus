@@ -2,19 +2,22 @@
 layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Euchloe tagis"
+autoridade: "(Hübner, 1804)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/etagis_i1.jpg
 descricao: "A Euchloe tagis é uma borboleta pouco comum, da família Pieridae."
 permalink: /borboletas-diurnas/pieridae/euchloe-tagis/
+especies_semelhantes:
+  - "Euchloe crameri"
+  - "Anthocharis cardamines"
+links_externos:
+  - url: "https://lepidoptera.eu/species/5067"
+    nome: "lepidoptera.eu"
+  - url: "http://www.lepiforum.de/lepiwiki.pl?Iberochloe_Tagis"
+    nome: "lepiforum.de"
 ---
-
-## *Euchloe tagis* (Hübner, 1804)
-
-**Família:** [Pieridae](/borboletas-diurnas/pieridae/)
-
-**Subfamília:** Pierinae
 
 A *Euchloe tagis* é uma borboleta pouco comum, da família Pieridae.
 
@@ -44,19 +47,7 @@ A *Euchloe tagis* é uma borboleta pouco comum, da família Pieridae.
 
 ![mapa de distribuição de Euchloe tagis na região](/imagens/2020/07/etagis.png)
 
-### Espécies semelhantes
-
 crameri, daplidice, cardamines
-
-[![Euchloe crameri](/imagens/2020/07/ecrameri_i1.jpg)](/borboletas-diurnas/pieridae/euchloe-crameri/ "Euchloe crameri")
-
-***Euchloe crameri***
-
-[![Anthocharis cardamines](/imagens/2020/07/acardamines_i1.jpg)](/borboletas-diurnas/pieridae/anthocharis-cardamines/ "Anthocharis cardamines")
-
-***Anthocharis cardamines***
-
-**Ver também:**[lepidoptera.eu](https://lepidoptera.eu/species/5067), [lepiforum.de](http://www.lepiforum.de/lepiwiki.pl?Iberochloe_Tagis)
 
 ![Euchloe tagis, adulto](/imagens/2020/07/etagis_i1.jpg)
 
