@@ -5,8 +5,14 @@ async function imageShortcode(src, alt, className = "", sizes = "100vw") {
   if(alt === undefined) {
     throw new Error(`Missing \`alt\` on myImage from: ${src}`);
   }
-  
-  // Handling relative src paths like /imagens/... 
+
+  // SVGs não precisam de otimização
+  if (src.endsWith(".svg")) {
+    const classAttr = className ? ` class="${className}"` : "";
+    return `<img src="${src}" alt="${alt}"${classAttr} loading="lazy" decoding="async">`;
+  }
+
+  // Handling relative src paths like /imagens/...
   let imageSrc = src;
   if (src.startsWith("/")) {
     imageSrc = path.join(__dirname, src);
