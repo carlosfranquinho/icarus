@@ -13,18 +13,28 @@ permalink: /borboletas-diurnas/
   <div class="grelha-familias-fichas">
     {% for familia in collections.familiasDiurnas | sort(false, false, 'data.title') %}
     {% set nespecies = collections.especiesDiurnas | porFamilia(familia.data.title) %}
+    {% if familia.data.placeholder %}
+    <div class="card-familia-ficha card-familia-ficha--placeholder">
+    {% else %}
     <a href="{{ familia.url }}" class="card-familia-ficha">
-      {% if familia.data.imagem %}
-      <div class="card-familia-ficha-img" style="background-image: url('{{ familia.data.imagem }}')"></div>
-      {% else %}
-      <div class="card-familia-ficha-img card-familia-ficha-img--vazio"></div>
-      {% endif %}
+    {% endif %}
+      <div class="card-familia-ficha-img"{% if familia.data.cor_thumb %} style="background-color: {{ familia.data.cor_thumb }}"{% endif %}>
+        {% if familia.data.imagem %}<img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}"{% if familia.data.thumb_size %} style="width: {{ familia.data.thumb_size }}"{% endif %}>{% endif %}
+      </div>
       <div class="card-familia-ficha-corpo">
         <h2>{{ familia.data.title }}</h2>
+        {% if familia.data.placeholder %}
+        <p class="card-familia-ficha-num">em breve</p>
+        {% else %}
         <p class="card-familia-ficha-num">{{ nespecies.length }} espécie{% if nespecies.length != 1 %}s{% endif %}</p>
+        {% endif %}
         {% if familia.data.descricao %}<p class="card-familia-ficha-desc">{{ familia.data.descricao }}</p>{% endif %}
       </div>
+    {% if familia.data.placeholder %}
+    </div>
+    {% else %}
     </a>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

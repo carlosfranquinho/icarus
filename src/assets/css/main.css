@@ -95,11 +95,18 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   box-shadow: 0 1px 3px rgba(0,0,0,.05);
   transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
-/* No home transparente ao topo */
 .is-home .nav-principal:not(.scrolled) {
   background: transparent;
   border-bottom-color: transparent;
   box-shadow: none;
+}
+.is-home .nav-principal:not(.scrolled) .nav-lista a {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.is-home .nav-principal:not(.scrolled) .nav-lista a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 .nav-inner {
   display: flex; align-items: center;
@@ -107,14 +114,14 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   height: 70px; gap: 1rem;
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-logo img { height: 42px; width: auto; }
+.nav-logo img { height: 38px; width: auto; }
 .nav-toggle {
   display: none; background: none;
-  border: 1.5px solid rgba(255,255,255,.5);
+  border: 1.5px solid var(--cinza-borda);
   border-radius: var(--raio); padding: .3rem .45rem;
   cursor: pointer; flex-direction: column; gap: 5px;
 }
-.nav-toggle span { display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px; }
+.nav-toggle span { display: block; width: 20px; height: 2px; background: var(--cinza-texto); border-radius: 2px; }
 .nav-lista { list-style: none; display: flex; }
 .nav-lista a {
   display: block; padding: .5rem 1rem;
@@ -125,15 +132,6 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   font-size: .95rem; letter-spacing: .02em;
   border-radius: var(--raio);
   transition: all .2s;
-}
-/* Letras brancas na nav transparente da home */
-.is-home .nav-principal:not(.scrolled) .nav-lista a {
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-}
-.is-home .nav-principal:not(.scrolled) .nav-lista a:hover {
-  background: rgba(255,255,255,0.2);
-  color: #fff;
 }
 .nav-lista a:hover,
 .nav-lista a[aria-current="page"] {
@@ -232,31 +230,31 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 .ver-mais-link:hover { color: var(--verde); }
 
 /* Lista de posts na homepage */
-.lista-posts-home { list-style: none; }
-.lista-posts-home li + li { border-top: 1px solid var(--cinza-borda); }
+.lista-posts-home { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
 .lista-posts-home a {
-  display: flex; gap: .75rem; align-items: flex-start;
-  padding: .75rem 0; text-decoration: none; color: inherit;
-  transition: background .1s;
+  display: flex; gap: .85rem; align-items: center;
+  padding: .6rem .75rem; text-decoration: none; color: inherit;
+  border-radius: var(--raio); transition: background .15s;
 }
+.lista-posts-home a:hover { background: var(--verde-bg); }
 .lista-posts-home a:hover strong { color: var(--verde); }
 .lista-posts-home img {
-  width: 68px; height: 52px;
-  object-fit: cover; border-radius: var(--raio);
-  flex-shrink: 0;
+  width: 76px; height: 56px;
+  object-fit: cover; border-radius: 10px;
+  flex-shrink: 0; box-shadow: var(--sombra-s);
 }
 .lista-posts-home time {
-  display: block; font-size: .75rem;
+  display: block; font-size: .72rem;
   color: var(--cinza-suave); font-family: var(--fonte-sc);
-  margin-bottom: .15rem;
+  margin-bottom: .2rem; letter-spacing: .02em;
 }
 .lista-posts-home strong {
-  display: block; font-size: .92rem;
+  display: block; font-size: .9rem;
   font-family: var(--fonte-sc); color: var(--cinza-texto);
-  line-height: 1.3;
+  line-height: 1.3; font-weight: 600;
 }
 .lista-posts-home .local {
-  display: block; font-size: .78rem;
+  display: block; font-size: .75rem;
   color: var(--cinza-suave); margin-top: .15rem;
 }
 
@@ -313,10 +311,17 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   transition: box-shadow .2s, transform .2s;
 }
 .card-familia-ficha:hover { box-shadow: var(--sombra-lg); transform: translateY(-3px); }
+.card-familia-ficha--placeholder { cursor: default; pointer-events: none; opacity: .7; }
+.card-familia-ficha--placeholder:hover { box-shadow: var(--sombra-s); transform: none; }
 .card-familia-ficha-img {
-  height: 180px;
-  background-size: cover; background-position: center;
+  height: 160px;
+  display: flex; align-items: center; justify-content: center;
   background-color: var(--cinza-bg);
+  overflow: hidden;
+}
+.card-familia-ficha-img img {
+  width: 62%;
+  transform: rotate(5deg);
 }
 .card-familia-ficha-img--vazio {
   background-image: linear-gradient(135deg, var(--verde-bg), var(--cinza-bg));
@@ -338,17 +343,20 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 /* --- Página de família (hero + espécies) --- */
 .familia-header { margin-bottom: 2rem; }
 .familia-hero {
-  height: 240px; border-radius: var(--raio-lg);
-  background-size: cover; background-position: center;
-  display: flex; align-items: flex-end;
-  overflow: hidden;
+  height: 200px; border-radius: var(--raio-lg);
+  background-color: var(--cinza-bg);
+  display: flex; align-items: center;
+  overflow: hidden; position: relative;
 }
-.familia-hero-overlay {
-  width: 100%;
-  background: linear-gradient(transparent, rgba(0,0,0,.65));
-  padding: 1.5rem;
+.familia-hero-titulo {
+  padding: 1.5rem 2rem; position: relative; z-index: 1;
 }
-.familia-hero-overlay h1 { color: #fff; margin: 0; font-size: 1.8rem; }
+.familia-hero-titulo h1 { margin: 0; font-size: 1.8rem; color: var(--cinza-texto); }
+.familia-hero-img {
+  position: absolute; right: 0;
+  height: 90%; width: auto;
+  transform: rotate(15deg);
+}
 .num-especies-texto { color: var(--cinza-suave); font-size: .88rem; margin-bottom: 1.5rem; }
 .sem-especies { color: var(--cinza-suave); font-style: italic; }
 .familia-descricao { margin-bottom: 1.5rem; color: var(--cinza-suave); }
@@ -401,6 +409,7 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   border-radius: var(--raio);
   box-shadow: var(--sombra-m);
   max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 .post-corpo figure { margin: 2rem 0; text-align: center; }
 .post-corpo figcaption { font-size: .8rem; color: var(--cinza-suave); margin-top: .4rem; font-style: italic; }
@@ -569,18 +578,31 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 }
 
 /* --- Listagem de atividades --- */
-.lista-posts { list-style: none; }
-.lista-post-item {
-  display: grid; grid-template-columns: 90px 1fr;
-  gap: 1.25rem; padding: 1.1rem 0;
-  border-bottom: 1px solid var(--cinza-borda);
-  align-items: start;
+.lista-posts { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
+.lista-post-card {
+  display: flex; align-items: stretch;
+  background: var(--branco); border: 1px solid var(--cinza-borda);
+  border-radius: var(--raio-lg); overflow: hidden;
+  box-shadow: var(--sombra-s);
+  transition: box-shadow .2s, transform .2s;
+  text-decoration: none; color: inherit;
 }
-.lista-post-data { font-family: var(--fonte-sc); color: var(--cinza-suave); font-size: .82rem; }
-.lista-post-titulo { font-family: var(--fonte-sc); font-size: 1rem; }
-.lista-post-titulo a { color: var(--cinza-texto); text-decoration: none; }
-.lista-post-titulo a:hover { color: var(--verde); }
-.lista-post-resumo { font-size: .85rem; color: var(--cinza-suave); margin-top: .2rem; }
+.lista-post-card:hover { box-shadow: var(--sombra-m); transform: translateY(-2px); }
+.lista-post-card-img { width: 140px; flex-shrink: 0; }
+.lista-post-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lista-post-card-corpo {
+  padding: .9rem 1.25rem;
+  display: flex; flex-direction: column; justify-content: center; gap: .2rem;
+}
+.lista-post-card-meta { display: flex; align-items: center; gap: .5rem; }
+.lista-post-card-meta time { font-size: .76rem; color: var(--cinza-suave); font-family: var(--fonte-sc); }
+.lista-post-card-titulo { font-family: var(--fonte-sc); font-size: 1rem; font-weight: 600; color: var(--cinza-texto); margin: 0; }
+.lista-post-card:hover .lista-post-card-titulo { color: var(--verde); }
+.lista-post-card-resumo { font-size: .84rem; color: var(--cinza-suave); line-height: 1.5; margin: 0; }
+.lista-post-card-local { font-size: .78rem; color: var(--cinza-suave); font-style: italic; margin: 0; }
+@media (max-width: 520px) {
+  .lista-post-card-img { width: 90px; }
+}
 
 /* Badges de categoria */
 .categoria-badge {

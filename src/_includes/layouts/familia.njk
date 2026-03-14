@@ -14,10 +14,11 @@ layout: layouts/base.njk
 
   <header class="familia-header">
     {% if imagem %}
-    <div class="familia-hero" style="background-image: url('{{ imagem }}')">
-      <div class="familia-hero-overlay">
+    <div class="familia-hero"{% if cor_thumb %} style="background-color: {{ cor_thumb }}"{% endif %}>
+      <div class="familia-hero-titulo">
         <h1>{{ title }}</h1>
       </div>
+      <img class="familia-hero-img" src="{{ imagem }}" alt="{{ title }}">
     </div>
     {% else %}
     <h1 class="titulo-secao">{{ title }}</h1>

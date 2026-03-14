@@ -5,7 +5,7 @@
   "facebook": "https://www.facebook.com/groups/grupo.icarus",
   "autor": "Carlos Franquinho",
   "lingua": "pt-PT",
-  "logo": "/imagens/logo/icarus_logo3.png",
-  "logo_transparente": "/imagens/logo/icarus_logo1.png",
+  "logo": "/assets/logo/logo-icarus-dark.svg",
+  "logo_light": "/assets/logo/logo-icarus-light.svg",
   "imagem_padrao": "/imagens/2020/07/icarus4op.jpg"
 }

@@ -1,17 +1,17 @@
 ---
 layout: layouts/base.njk
-title: "Atividades"
-descricao: "Registo das saídas e sessões de observação de borboletas do Grupo icarus."
+title: "Sessões diurnas"
+descricao: "Registo das saídas e caminhadas de observação de borboletas diurnas do Grupo icarus."
 pagination:
-  data: collections.posts
+  data: collections.postsDiurnas
   size: 15
   alias: postsPage
-permalink: "/atividades/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "/atividades/diurnas/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 <div class="container">
   <header style="margin-bottom:2rem;">
-    <h1 class="titulo-secao">Atividades</h1>
-    <p class="subtitulo">{{ collections.posts.length }} registos de saídas e sessões de observação</p>
+    <h1 class="titulo-secao">Sessões diurnas</h1>
+    <p class="subtitulo">{{ collections.postsDiurnas.length }} registos de saídas e caminhadas</p>
   </header>
 
   <ul class="lista-posts">
@@ -50,7 +50,6 @@ permalink: "/atividades/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumb
       {% if pagination.href.previous %}
         <li><a class="btn-hero btn-secundario has-black-color" href="{{ pagination.href.previous }}" style="border-color: var(--cinza-borda); color: var(--cinza-texto);">← Anterior</a></li>
       {% endif %}
-      
       {% if pagination.href.next %}
         <li><a class="btn-hero btn-secundario has-black-color" href="{{ pagination.href.next }}" style="border-color: var(--cinza-borda); color: var(--cinza-texto);">Seguinte →</a></li>
       {% endif %}
