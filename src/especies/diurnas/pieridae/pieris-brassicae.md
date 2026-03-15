@@ -33,7 +33,6 @@ A **Pieris brassicae** é uma borboleta da família Pieridae, perfeitamente adap
 
 **Período de voo em Portugal:** de fevereiro a novembro, em três ou quatro gerações
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=213180226&format=image)
 
 ### Distribuição
 

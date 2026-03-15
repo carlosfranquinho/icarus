@@ -457,14 +457,6 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 }
 .especie-nome-comum { font-size: 1.15rem; color: var(--cinza-texto); font-weight: 500; font-family: var(--fonte-sc); margin-top: 0.5rem; }
 
-.especie-resumo-intro {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--cinza-texto);
-  padding-left: 0.5rem;
-  border-left: 3px solid var(--verde);
-}
 
 .especie-dados-ficha {
   background: var(--branco); 
@@ -492,7 +484,7 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
 .dado-valor { font-size: 1rem; color: var(--cinza-texto); font-weight: 500; }
 
 /* Corpo da Ficha (Distribuição, notas) */
-.content-especie { max-width: 800px; margin: 0 auto; margin-top: 4rem;}
+.content-especie { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda); }
 .content-especie h2 { font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--verde-escuro); }
 .content-especie h3 { font-size: 1.2rem; margin-top: 2rem; color: var(--cinza-texto); }
 .content-especie p { font-size: 1.05rem; }
@@ -529,14 +521,13 @@ main         { flex: 1; padding: 2.5rem 0 5rem; }
   pointer-events: none;
 }
 
-/* Float map to the right */
+/* Mapa de distribuição: flutua à esquerda do texto */
 .mapa-distribuicao {
-  float: right;
-  width: 300px !important;
-  margin: 0 0 1.5rem 2rem !important;
+  float: left;
+  width: 280px !important;
+  margin: 0.25rem 2rem 1.5rem 0 !important;
   box-shadow: var(--sombra-s) !important;
-  border-radius: var(--raio-lg);
-  clear: right;
+  border-radius: var(--raio);
 }
 @media (max-width: 600px) {
   .mapa-distribuicao { float: none; width: 100% !important; margin: 1rem 0 !important; }

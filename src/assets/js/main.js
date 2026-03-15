@@ -33,29 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
   allImages.forEach(img => {
     if (img.src.includes(".png") || img.src.includes("map")) {
       img.classList.add("mapa-distribuicao");
-    } else {
-      const pContainer = img.closest("p");
-      if (pContainer && !pContainer.closest('.especies-relacionadas-grelha')) {
-        const figure = document.createElement("figure");
-        figure.className = "especie-figura";
-      }
     }
   });
 
-  const fichaNode = document.querySelector(".especie-dados-ficha");
-  const paragrafos = Array.from(isEspecie.querySelectorAll("p"));
-  let i = 0;
-  while (i < paragrafos.length) {
-    let text = paragrafos[i].textContent.trim();
-    if (text.length > 30 && text.indexOf("A ") === 0) {
-      if (fichaNode && text.length < 500) {
-        const cloneInfo = paragrafos[i].cloneNode(true);
-        cloneInfo.className = "especie-resumo-intro";
-        fichaNode.insertAdjacentElement('afterend', cloneInfo);
-        paragrafos[i].remove();
-      }
-      break;
+  // Mover o mapa de distribuição para ao lado do texto da secção Distribuição
+  const mapa = isEspecie.querySelector(".mapa-distribuicao");
+  if (mapa) {
+    const h3Dist = Array.from(isEspecie.querySelectorAll("h3"))
+      .find(h => h.textContent.includes("Distribuição"));
+    if (h3Dist) {
+      const pMapa = mapa.closest("p");
+      h3Dist.insertAdjacentElement("afterend", mapa);
+      if (pMapa && !pMapa.textContent.trim()) pMapa.remove();
     }
-    i++;
   }
+
 });

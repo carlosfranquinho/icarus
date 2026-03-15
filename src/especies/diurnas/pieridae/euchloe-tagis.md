@@ -33,7 +33,6 @@ A *Euchloe tagis* é uma borboleta pouco comum, da família Pieridae.
 
 **Período de voo em Portugal:** de fevereiro a maio
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=2117679749&format=image)
 
 ### Distribuição
 

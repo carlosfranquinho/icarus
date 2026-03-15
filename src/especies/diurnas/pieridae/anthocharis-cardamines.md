@@ -30,7 +30,6 @@ A **Anthocharis cardamines** é uma borboleta da família Pieridae. O macho da e
 
 **Período de voo em Portugal:** uma única geração primaveril
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=1827619308&format=image)
 
 ### Distribuição
 

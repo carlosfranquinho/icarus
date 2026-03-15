@@ -34,7 +34,6 @@ A *Euchloe crameri* é uma borboleta da família Pieridae.
 
 **Período de voo em Portugal:** em duas gerações, de janeiro a junho
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=1889803711&format=image)
 
 ### Distribuição
 

@@ -30,7 +30,6 @@ A **Leptidea sinapis** é uma pequena borboleta branca da família Pieridae.
 
 **Período de voo em Portugal:** março a agosto, em duas ou três gerações
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=1691493968&format=image)
 
 ### Distribuição
 

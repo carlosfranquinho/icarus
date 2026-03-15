@@ -7,7 +7,7 @@ familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
 imagem: /imagens/2020/07/feisthamelii1.jpg
-descricao: "A Iphiclides feisthamelii possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior."
+descricao: "A Iphiclides feisthamelii possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior. As impressionantes caudas e o típico voo planado da espécie são inconfundíveis."
 permalink: /borboletas-diurnas/papilionidae/iphiclides-feisthamelii/
 especies_semelhantes:
   - "Papilio machaon"
@@ -17,8 +17,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Iphiclides_Feisthamelii"
     nome: "lepiforum.de"
 ---
-
-A *Iphiclides feisthamelii* possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior. As impressionantes caudas e o típico voo planado da espécie são inconfundíveis.
 
 No nosso país é possível observar a espécie durante praticamente todo o ano. Existem duas gerações (uma na primavera e outra no verão), sendo aparentemente mais abundante durante o período estival.
 
@@ -40,7 +38,6 @@ Tal como outras espécies da família Papilionidae, possuem um mecanismo de defe
 
 **Período de voo em Portugal:** em duas gerações, de fevereiro a novembro
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=1392167278&format=image)
 
 ### Distribuição
 

@@ -32,7 +32,6 @@ A **Muschampia proto** é uma pequena borboleta da família Hesperiidae.
 
 **Período de voo em Portugal:** de abril a novembro, numa geração, sendo mais frequente no final da primavera
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=2136623810&format=image)
 
 ### Distribuição
 

@@ -34,7 +34,6 @@ Os indivíduos mais velhos vão perdendo as escamas de cores mais vivas, sendo f
 
 **Período de voo em Portugal:** janeiro a junho
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=553855551&format=image)
 
 ### Distribuição
 

@@ -48,7 +48,6 @@ As lagartas crisalidam entre a vegetação e a cor da crisálida pode variar do 
 
 **Período de voo em Portugal:** em gerações sucessivas, de fevereiro a dezembro
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=184657450&format=image)
 
 ### Distribuição
 

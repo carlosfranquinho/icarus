@@ -33,7 +33,6 @@ A **Pieris rapae** é uma borboleta da família Pieridae, perfeitamente adaptada
 
 **Período de voo em Portugal:** todo o ano, em gerações sucessivas
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=636728221&format=image)
 
 ### Distribuição
 

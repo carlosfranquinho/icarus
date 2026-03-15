@@ -30,7 +30,6 @@ A *Carcharodus alceae* é uma pequena borboleta da família Hesperiidae. Em Port
 
 **Período de voo em Portugal:** duas ou três gerações, de março a outubro
 
-![](https://docs.google.com/spreadsheets/d/e/2PACX-1vR6pchHiRjWKCwqQqn-G7hnTp8OyrfbvZ5WXokHG8McthhP2G7TpI3iopZSHMa2rEZeVmcH-cd6Fqmu/pubchart?oid=1085869945&format=image)
 
 ### Distribuição
 
