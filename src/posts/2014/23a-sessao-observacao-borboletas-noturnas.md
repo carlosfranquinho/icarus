@@ -9,4 +9,4 @@ imagem: /imagens/2014/07/23.jpg
 permalink: /2014/07/19/23a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/10469321_263384653850504_3133567218110052319_n.jpg)
+![](/imagens/2017/02/10469321_263384653850504_3133567218110052319_n.jpg)

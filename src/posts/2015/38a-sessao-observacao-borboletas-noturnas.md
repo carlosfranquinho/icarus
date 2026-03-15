@@ -9,4 +9,4 @@ imagem: /imagens/2015/10/38.jpg
 permalink: /2015/10/03/38a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/IMG_8197.jpg)
+![](/imagens/2017/02/IMG_8197.jpg)

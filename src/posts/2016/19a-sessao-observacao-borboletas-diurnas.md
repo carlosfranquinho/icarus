@@ -9,6 +9,6 @@ imagem: /imagens/2016/07/19.jpg
 permalink: /2016/07/16/19a-sessao-observacao-borboletas-diurnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/13692891_1109058192520690_2779736542046208208_o.jpg)
+![](/imagens/2017/02/13692891_1109058192520690_2779736542046208208_o.jpg)
 
 A aventura deste dia continuou com uma [visita ao Algar do Pena](/2016/07/16/visita-ao-algar-do-pena/).

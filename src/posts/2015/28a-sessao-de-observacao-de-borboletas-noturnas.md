@@ -13,7 +13,7 @@ Com o (quase) regresso da primavera, regressam também as atividades do nosso gr
 
 Infelizmente, nesta primeira noite de busca, a “Pavonia” não nos brindou com a sua presença. A noite amena, o ambiente descontraído e o regresso do grupo à ação, foram fatores suficientes para nos animar durante as três horas que durou a sessão.
 
-![O ambiente desta noite. © JM Gonçalves 2015](https://mg.borboletas.net/imagens/2015/03/11034174_811162125641303_7094444823587441076_n.jpg)
+![O ambiente desta noite. © JM Gonçalves 2015](/imagens/2015/03/11034174_811162125641303_7094444823587441076_n.jpg)
 
 O ambiente desta noite. © JM Gonçalves 2015
 

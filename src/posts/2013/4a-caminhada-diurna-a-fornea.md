@@ -11,7 +11,7 @@ permalink: /2013/08/24/4a-caminhada-diurna-a-fornea/
 
 A Fórnea é um gigantesco anfiteatro natural escavado no calcário da Serra dos Candeeiros. Foi o destino escolhido para a nossa 4ª caminhada de observação de borboletas diurnas.
 
-![](https://mg.borboletas.net/imagens/2013/08/1186992_164184060437231_1566816623_n.jpg)
+![](/imagens/2013/08/1186992_164184060437231_1566816623_n.jpg)
 ![]()
 ![]()
 ![]()

@@ -9,4 +9,4 @@ imagem: /imagens/2016/05/18.jpg
 permalink: /2016/05/22/18a-sessao-observacao-borboletas-diurnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/DSC_5190.jpg)
+![](/imagens/2017/02/DSC_5190.jpg)

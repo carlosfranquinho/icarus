@@ -9,6 +9,6 @@ imagem: /imagens/2015/03/12.jpg
 permalink: /2015/03/29/12a-sessao-observacao-borboletas-diurnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/IMG_5793.jpg)
+![](/imagens/2017/02/IMG_5793.jpg)
 
-![](https://mg.borboletas.net/imagens/2017/02/IMG_5813.jpg)
+![](/imagens/2017/02/IMG_5813.jpg)

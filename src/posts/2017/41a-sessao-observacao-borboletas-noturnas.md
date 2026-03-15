@@ -11,7 +11,7 @@ permalink: /2017/02/25/41a-sessao-observacao-borboletas-noturnas/
 
 Uma noite de fevereiro que se revelou mais amena que o previsto, com as temperaturas a rondarem os 11ºC embora, de tempos a tempos, soprasse uma ligeira brisa mais fresca. A sessão teve uma duração aproximada de quatro horas, entre as 20h00m e as 24h00m, mas grande maioria das borboletas surgiu durante a primeira hora da noite.
 
-![](https://mg.borboletas.net/imagens/2017/02/17016804_1713273775366068_4161933736515173459_o.jpg)
+![](/imagens/2017/02/17016804_1713273775366068_4161933736515173459_o.jpg)
 
 
 ---

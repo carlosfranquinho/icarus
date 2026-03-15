@@ -13,11 +13,11 @@ Como vem sendo habitual, o nosso grupo aderiu, uma vez mais, às [Noites Europei
 
 ## O ambiente
 
-![o ambiente](https://mg.borboletas.net/imagens/2014/07/Pessoal-3.jpg)
+![o ambiente](/imagens/2014/07/Pessoal-3.jpg)
 
-![carlos](https://mg.borboletas.net/imagens/2014/07/10464068_671456729611844_4968576326017463324_n-1.jpg)
+![carlos](/imagens/2014/07/10464068_671456729611844_4968576326017463324_n-1.jpg)
 
-![o ambiente](https://mg.borboletas.net/imagens/2014/07/Pessoal-4.jpg)
+![o ambiente](/imagens/2014/07/Pessoal-4.jpg)
 
 ## As borboletas
 

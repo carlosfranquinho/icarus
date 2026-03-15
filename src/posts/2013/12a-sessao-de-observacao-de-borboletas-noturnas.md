@@ -17,7 +17,7 @@ Na quarta noite das [European Moth Nights](http://euromothnights.uw.hu/) 2013, i
 
 - *Arnia nervosalis* Guenée, 1849
 
-![Arnia nervosalis](https://mg.borboletas.net/imagens/2013/07/IMG_3333.jpg)
+![Arnia nervosalis](/imagens/2013/07/IMG_3333.jpg)
 
 Arnia nervosalis
 
@@ -25,7 +25,7 @@ Arnia nervosalis
 
 - *Euproctis chrysorrhoea* (Linnaeus, 1758)
 
-![Euproctis chrysorrhoea](https://mg.borboletas.net/imagens/2013/07/IMG_3280.jpg)
+![Euproctis chrysorrhoea](/imagens/2013/07/IMG_3280.jpg)
 
 Euproctis chrysorrhoea
 
@@ -35,7 +35,7 @@ Euproctis chrysorrhoea
 - *Pachycnemia hippocastanaria* (Hübner, 1799)
 - *Rhodometra sacraria* (Linnaeus, 1767)
 
-![Rhodometra sacraria](https://mg.borboletas.net/imagens/2013/07/IMG_3362.jpg)
+![Rhodometra sacraria](/imagens/2013/07/IMG_3362.jpg)
 
 Rhodometra sacraria
 
@@ -43,7 +43,7 @@ Rhodometra sacraria
 
 - *Psilogaster loti* (Ochsenheimer, 1810)
 
-![Psilogaster loti](https://mg.borboletas.net/imagens/2013/07/IMG_3277.jpg)
+![Psilogaster loti](/imagens/2013/07/IMG_3277.jpg)
 
 Psilogaster loti
 
@@ -58,7 +58,7 @@ Psilogaster loti
 - *Noctua pronuba* (Linnaeus, 1758)
 - *Peridroma saucia* (Hübner, 1808)
 
-![Agrotis alexandriensis](https://mg.borboletas.net/imagens/2013/07/IMG_3309.jpg)
+![Agrotis alexandriensis](/imagens/2013/07/IMG_3309.jpg)
 
 Agrotis alexandriensis
 

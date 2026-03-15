@@ -42,23 +42,23 @@ A contabilidade final desta sessão aponta para cerca de 20 espécies observadas
 - **Pyralidae:**
   - *Endotricha flammealis* (Denis & Schiffermüller, 1775)
 
-![S. lutea](https://mg.borboletas.net/imagens/2013/05/IMG_0944.jpg)
+![S. lutea](/imagens/2013/05/IMG_0944.jpg)
 
 *Spilosoma lutea* (Hufnagel, 1766)
 
-![Scopula imitaria (Hübner, 1799)](https://mg.borboletas.net/imagens/2013/05/IMG_0851-001.jpg)
+![Scopula imitaria (Hübner, 1799)](/imagens/2013/05/IMG_0851-001.jpg)
 
 *Scopula imitaria* (Hübner, 1799)
 
-![Psilogaster loti (Ochsenheimer, 1810)](https://mg.borboletas.net/imagens/2013/05/IMG_0859-001.jpg)
+![Psilogaster loti (Ochsenheimer, 1810)](/imagens/2013/05/IMG_0859-001.jpg)
 
 *Psilogaster loti* (Ochsenheimer, 1810)
 
-![Hadena sancta (Staudinger, 1859)](https://mg.borboletas.net/imagens/2013/05/IMG_0941-001.jpg)
+![Hadena sancta (Staudinger, 1859)](/imagens/2013/05/IMG_0941-001.jpg)
 
 *Hadena sancta* (Staudinger, 1859)
 
-![A processionária dos pinheiros: Thaumetopoea pityocampa (Treitschke, 1834)](https://mg.borboletas.net/imagens/2013/05/IMG_0852-001.jpg)
+![A processionária dos pinheiros: Thaumetopoea pityocampa (Treitschke, 1834)](/imagens/2013/05/IMG_0852-001.jpg)
 
 A processionária dos pinheiros: *Thaumetopoea pityocampa* (Treitschke, 1834)
 

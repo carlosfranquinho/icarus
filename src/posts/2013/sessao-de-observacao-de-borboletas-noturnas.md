@@ -15,11 +15,11 @@ O ponto escolhido para a sessão foi o Pinhal Manso, no centro do Pinhal do Rei.
 
 Os 14 participantes nesta atividade foram chegando ao longo da noite, trazendo consigo animação suficiente para nos fazerem esquecer o frio.
 
-![A Ivone e o Armando tentam capturar mais uma borboleta, sob o olhar atento dos restantes participantes.](https://mg.borboletas.net/imagens/2013/02/921545_559893307366115_644928557_o.jpg)
+![A Ivone e o Armando tentam capturar mais uma borboleta, sob o olhar atento dos restantes participantes.](/imagens/2013/02/921545_559893307366115_644928557_o.jpg)
 
 A Ivone e o Armando capturam mais uma borboleta, sob o olhar atento dos restantes participantes. © Aurélio Rosa Diniz
 
-![O bolo verde servido pela Leonor foi um dos pontos altos da noite.](https://mg.borboletas.net/imagens/2013/02/903793_559894147366031_215144750_o.jpg)
+![O bolo verde servido pela Leonor foi um dos pontos altos da noite.](/imagens/2013/02/903793_559894147366031_215144750_o.jpg)
 
 O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
 
@@ -51,14 +51,14 @@ O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
 - **Notodontidae:**
   - *Harpyia milhauseri* (Fabricius, 1775)
 
-![Campaea honoraria (Denis & Schiffermüller, 1775)](https://mg.borboletas.net/imagens/2013/04/IMG_0337-002.jpg)
+![Campaea honoraria (Denis & Schiffermüller, 1775)](/imagens/2013/04/IMG_0337-002.jpg)
 
 *Campaea honoraria* (Denis & Schiffermüller, 1775)
 
-![Agrotis ipsilon (Hufnagel, 1766)](https://mg.borboletas.net/imagens/2013/04/IMG_0421-001.jpg)
+![Agrotis ipsilon (Hufnagel, 1766)](/imagens/2013/04/IMG_0421-001.jpg)
 
 Agrotis ipsilon (Hufnagel, 1766)
 
-![Harpyia milhauseri (Fabricius, 1775)](https://mg.borboletas.net/imagens/2013/04/IMG_0395.jpg)
+![Harpyia milhauseri (Fabricius, 1775)](/imagens/2013/04/IMG_0395.jpg)
 
 Harpyia milhauseri (Fabricius, 1775)

@@ -15,27 +15,27 @@ Esta sessão, que contou com 7 participantes, teve inicio às 20h00m e terminou 
 
 O local escolhido foi junto à base da duna onde se situa o “[Pombal do Rei](http://opinhaldorei.blogspot.pt/2012/03/o-pombal-do-rei.html)“:
 
-![O local](https://mg.borboletas.net/imagens/2014/03/pombal.jpg)
+![O local](/imagens/2014/03/pombal.jpg)
 
 O local
 
 ## O ambiente
 
-![Estranhas luzes na noite...](https://mg.borboletas.net/imagens/2014/03/1015377_802842183078714_550185483_o.jpg)
+![Estranhas luzes na noite...](/imagens/2014/03/1015377_802842183078714_550185483_o.jpg)
 
 Estranhas luzes na noite…
 
-![Uns trabalham, outros supervisionam. ;-)](https://mg.borboletas.net/imagens/2014/03/IMG_0885-001.jpg)
+![Uns trabalham, outros supervisionam. ;-)](/imagens/2014/03/IMG_0885-001.jpg)
 
 Uns trabalham, outros supervisionam. 😉
 
 ---
 
-![Esta já não escapa.](https://mg.borboletas.net/imagens/2014/03/IMG_0890.jpg)
+![Esta já não escapa.](/imagens/2014/03/IMG_0890.jpg)
 
 Esta já não escapa.
 
-![Que piquenique mais estranho!](https://mg.borboletas.net/imagens/2014/03/IMG_0876-001.jpg)
+![Que piquenique mais estranho!](/imagens/2014/03/IMG_0876-001.jpg)
 
 Que piquenique mais estranho!
 
@@ -48,7 +48,7 @@ No final da noite, contabilizamos cerca de 20 espécies diferentes. Veremos o qu
 - *Thyatira batis* (Linnaeus, 1758)
 - *Watsonalla uncinula* (Borkhausen, 1790)
 
-![Tiatira batis](https://mg.borboletas.net/imagens/2014/03/IMG_1055.jpg)
+![Tiatira batis](/imagens/2014/03/IMG_1055.jpg)
 
 Tiatira batis
 
@@ -67,7 +67,7 @@ Tiatira batis
 - *Petrophora chlorosata* (Scopoli, 1763)
 - *Rhoptria asperaria* (Hübner, 1817)
 
-![Lycia hirtaria](https://mg.borboletas.net/imagens/2014/03/IMG_0933.jpg)
+![Lycia hirtaria](/imagens/2014/03/IMG_0933.jpg)
 
 Lycia hirtaria
 
@@ -80,7 +80,7 @@ Lycia hirtaria
 - *Conistra staudingeri* (Graslin, 1863)
 - *Orthosia gothica* (Linnaeus, 1758)
 
-![Orthosia gothica](https://mg.borboletas.net/imagens/2014/03/IMG_0961.jpg)
+![Orthosia gothica](/imagens/2014/03/IMG_0961.jpg)
 
 Orthosia gothica
 

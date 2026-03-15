@@ -9,4 +9,4 @@ imagem: /imagens/2014/08/10.jpg
 permalink: /2014/08/16/10a-sessao-observacao-borboletas-diurnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/IMG_4036.jpg)
+![](/imagens/2017/02/IMG_4036.jpg)

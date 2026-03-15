@@ -11,7 +11,7 @@ permalink: /2013/09/14/5a-caminhada-diurna-coentral/
 
 Este dia começou cedo, com o encontro marcado às 08h00m no Parque da Cerca. Por volta das 10h00m estávamos na aldeia do Coentral, na Serra da Lousã.
 
-![](https://mg.borboletas.net/imagens/2013/09/DSC_1526.jpg)
+![](/imagens/2013/09/DSC_1526.jpg)
 
 ## Caminhada pela Ribeira das Quelhas
 

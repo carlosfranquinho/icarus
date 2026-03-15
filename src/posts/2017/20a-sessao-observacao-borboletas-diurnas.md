@@ -13,7 +13,7 @@ Num soalheiro dia de março, com as temperaturas a rondarem os 25ºC, realizamos
 
 Mesmo sem o elevado número de borboletas que o excelente dia prometia, foi possível avistar 11 ou 12 espécies, algumas delas já em número considerável, revelando a chegada da primavera.
 
-![](https://mg.borboletas.net/imagens/2017/03/DSC_7290-001.jpg)
+![](/imagens/2017/03/DSC_7290-001.jpg)
 
 - **Papilionidae**
   - *[Papilio machaon](http://mg.borboletas.net/borboletas-diurnas/papilionidae/papilio-machaon/): 2*

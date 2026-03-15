@@ -13,9 +13,9 @@ A nossa 4ª sessão de observação de borboletas noturnas realizou-se no dia 17
 
 ## O ambiente e os participantes
 
-![](https://mg.borboletas.net/imagens/2012/08/255206_423896914314214_1942199669_n.jpg)
-![](https://mg.borboletas.net/imagens/2012/08/424323_423896300980942_974319850_n.jpg)
-![](https://mg.borboletas.net/imagens/2012/08/1025410_390569717714085_170972394_o.jpg)
+![](/imagens/2012/08/255206_423896914314214_1942199669_n.jpg)
+![](/imagens/2012/08/424323_423896300980942_974319850_n.jpg)
+![](/imagens/2012/08/1025410_390569717714085_170972394_o.jpg)
 
 ## As borboletas
 

@@ -13,8 +13,8 @@ A nossa 5ª sessão de observação de borboletas noturnas contou com 7 particip
 
 ## O ambiente
 
-![](https://mg.borboletas.net/imagens/2012/10/30998_449200838450488_1119374249_n.jpg)
-![](https://mg.borboletas.net/imagens/2012/10/379154_449200791783826_1280914115_n.jpg)
+![](/imagens/2012/10/30998_449200838450488_1119374249_n.jpg)
+![](/imagens/2012/10/379154_449200791783826_1280914115_n.jpg)
 
 ## As borboletas
 
@@ -23,7 +23,7 @@ A nossa 5ª sessão de observação de borboletas noturnas contou com 7 particip
 - *Arnia nervosalis* Guenée, 1849
 - *Mecyna asinalis* (Hübner, 1819)
 
-![Arnia nervosalis](https://mg.borboletas.net/imagens/2012/10/IMG_8740.jpg)
+![Arnia nervosalis](/imagens/2012/10/IMG_8740.jpg)
 
 Arnia nervosalis
 
@@ -32,7 +32,7 @@ Arnia nervosalis
 - *Eilema caniola* (Hübner, 1808)
 - *Lithosia quadra* (Linnaeus, 1758)
 
-![Lithosia quadra](https://mg.borboletas.net/imagens/2012/10/IMG_8752.jpg)
+![Lithosia quadra](/imagens/2012/10/IMG_8752.jpg)
 
 Lithosia quadra
 
@@ -44,7 +44,7 @@ Lithosia quadra
 - *Peribatodes rhomboidaria* (Denis & Schiffermüller, 1775)
 - *Rhoptria asperaria* (Hübner, 1817)
 
-![Menophra abruptaria](https://mg.borboletas.net/imagens/2012/10/IMG_8730.jpg)
+![Menophra abruptaria](/imagens/2012/10/IMG_8730.jpg)
 
 Menophra abruptaria
 
@@ -57,11 +57,11 @@ Menophra abruptaria
 - *Polymixis argillaceago* (Hübner, 1822)
 - *Pseudenargia ulicis* (Staudinger, 1859)
 
-![Ammopolia witzenmanni](https://mg.borboletas.net/imagens/2012/10/IMG_8716-001.jpg)
+![Ammopolia witzenmanni](/imagens/2012/10/IMG_8716-001.jpg)
 
 Ammopolia witzenmanni
 
-![Polymixis argillaceago](https://mg.borboletas.net/imagens/2012/10/IMG_8756.jpg)
+![Polymixis argillaceago](/imagens/2012/10/IMG_8756.jpg)
 
 Polymixis argillaceago
 

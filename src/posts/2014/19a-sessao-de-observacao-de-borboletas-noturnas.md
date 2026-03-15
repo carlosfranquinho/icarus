@@ -9,4 +9,4 @@ imagem: /imagens/2020/06/19.jpg
 permalink: /2014/05/31/19a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
-![](https://mg.borboletas.net/imagens/2017/02/10306732_636735246417326_1682858577325545801_n.jpg)
+![](/imagens/2017/02/10306732_636735246417326_1682858577325545801_n.jpg)

@@ -19,11 +19,11 @@ Enquanto é tempo, partimos à descoberta deste local mágico!
 
 No que a borboletas diz respeito, o destaque vai para a *Zygaena fausta*, uma espécie marcadamente calcícola que, na nossa região, parece aparecer apenas na zona do Lapedo e na Serra do Sicó.
 
-![Zygaena fausta](https://mg.borboletas.net/imagens/2014/07/IMG_2907-001.jpg)
+![Zygaena fausta](/imagens/2014/07/IMG_2907-001.jpg)
 
 Zygaena fausta
 
-![Zygaena fausta](https://mg.borboletas.net/imagens/2014/07/10556990_927426560617464_4613197657189129966_o.jpg)
+![Zygaena fausta](/imagens/2014/07/10556990_927426560617464_4613197657189129966_o.jpg)
 
 Zygaena fausta
 
