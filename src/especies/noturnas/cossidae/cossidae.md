@@ -6,7 +6,6 @@ grupo: noturnas
 imagem: /assets/silhuetas/cossidae.svg
 cor_thumb: "#8a6438"
 thumb_size: "80%"
-placeholder: true
-permalink: false
+permalink: /borboletas-noturnas/cossidae/
 descricao: "Borboletas robustas cujas lagartas vivem no interior de troncos e ramos de árvores."
 ---

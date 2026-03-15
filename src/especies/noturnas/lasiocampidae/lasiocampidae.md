@@ -5,7 +5,6 @@ title: "Lasiocampidae"
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 cor_thumb: "#a07840"
-placeholder: true
-permalink: false
+permalink: /borboletas-noturnas/lasiocampidae/
 descricao: "Borboletas robustas e peludas, cujas lagartas vivem frequentemente em grupos sobre plantas."
 ---

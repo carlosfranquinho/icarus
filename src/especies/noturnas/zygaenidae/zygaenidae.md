@@ -6,7 +6,6 @@ grupo: noturnas
 imagem: /assets/silhuetas/zygaenidae.svg
 cor_thumb: "#b85252"
 thumb_size: "70%"
-placeholder: true
-permalink: false
+permalink: /borboletas-noturnas/zygaenidae/
 descricao: "Borboletas frequentemente diurnas e coloridas, muitas vezes com manchas vermelhas sobre fundo escuro."
 ---

@@ -6,7 +6,6 @@ grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 cor_thumb: "#4a6644"
 thumb_size: "57%"
-placeholder: true
-permalink: false
+permalink: /borboletas-noturnas/geometridae/
 descricao: "Borboletas geralmente esguias com asas largas e postura plana em repouso."
 ---
