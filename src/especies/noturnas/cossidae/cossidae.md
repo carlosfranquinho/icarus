@@ -8,5 +8,5 @@ cor_thumb: "#8a6438"
 thumb_size: "80%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Borboletas robustas cujas lagartas vivem no interior de troncos e ramos de árvores."
 ---

@@ -8,5 +8,5 @@ cor_thumb: "#d4a020"
 thumb_size: "65%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Borboletas de corpo esguio que imitam vespas, muitas vezes ativas durante o dia."
 ---

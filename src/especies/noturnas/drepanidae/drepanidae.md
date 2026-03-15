@@ -8,5 +8,5 @@ cor_thumb: "#c9a84c"
 thumb_size: "80%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Borboletas com asas anteriores com pontas curvadas em forma de gancho."
 ---

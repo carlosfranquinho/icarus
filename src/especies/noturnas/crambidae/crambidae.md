@@ -6,6 +6,6 @@ grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 cor_thumb: "#e8d99a"
 thumb_size: "52%"
-descricao: "Família diversa que inclui as mariposas de relva e muitas espécies de pequenas dimensões."
+descricao: "Pequenas borboletas, muito diversas, incluindo as chamadas mariposas de relva."
 permalink: /borboletas-noturnas/crambidae/
 ---

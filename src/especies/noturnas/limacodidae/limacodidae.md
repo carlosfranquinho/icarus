@@ -8,5 +8,5 @@ cor_thumb: "#7aa07c"
 thumb_size: "75%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Pequenas borboletas de asas arredondadas, conhecidas pelas suas lagartas achatadas semelhantes a lesmas."
 ---

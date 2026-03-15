@@ -8,5 +8,5 @@ cor_thumb: "#b85252"
 thumb_size: "70%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Borboletas frequentemente diurnas e coloridas, muitas vezes com manchas vermelhas sobre fundo escuro."
 ---

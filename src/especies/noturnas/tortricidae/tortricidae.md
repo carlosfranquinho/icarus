@@ -8,5 +8,5 @@ cor_thumb: "#7a8c3e"
 thumb_size: "70%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Pequenas borboletas frequentemente associadas a plantas, cujas lagartas enrolam folhas para se proteger."
 ---

@@ -7,5 +7,5 @@ imagem: /assets/silhuetas/erebidae.svg
 cor_thumb: "#4a2f4a"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Grande família de borboletas muito diversas, incluindo muitas espécies de cores discretas."
 ---

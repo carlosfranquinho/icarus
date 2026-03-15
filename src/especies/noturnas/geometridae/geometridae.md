@@ -8,5 +8,5 @@ cor_thumb: "#4a6644"
 thumb_size: "57%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Borboletas geralmente esguias com asas largas e postura plana em repouso."
 ---

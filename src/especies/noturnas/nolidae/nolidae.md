@@ -8,5 +8,5 @@ cor_thumb: "#b0bac4"
 thumb_size: "65%"
 placeholder: true
 permalink: false
-descricao: ""
+descricao: "Pequenas borboletas discretas, frequentemente de cores claras e padrões simples."
 ---
