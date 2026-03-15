@@ -5,6 +5,7 @@ date: 2014-03-30
 descricao: "Água Formosa, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Água Formosa, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/03/17.jpg
 permalink: /2014/03/30/17a-sessao-de-observacao-de-borboletas-noturnas/
 ---

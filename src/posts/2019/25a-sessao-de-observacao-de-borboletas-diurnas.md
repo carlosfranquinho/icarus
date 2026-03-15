@@ -5,6 +5,7 @@ date: 2019-03-24
 descricao: "Lagoa da Ervedeira, Coimbrão, Leiria e Foz do Lis, Vieira de Leiria, Marinha Grande"
 categoria: diurnas
 local: "Lagoa da Ervedeira, Coimbrão, Leiria e Foz do Lis, Vieira de Leiria, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2020/06/25.jpg
 permalink: /2019/03/24/25a-sessao-de-observacao-de-borboletas-diurnas/
 ---

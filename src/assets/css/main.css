@@ -605,7 +605,6 @@ main {
 
 .card-familia-ficha-img img {
   width: 62%;
-  transform: rotate(5deg);
 }
 
 .card-familia-ficha-img--vazio {
@@ -714,6 +713,12 @@ main {
   object-fit: cover;
 }
 
+.card-especie-img[src$=".svg"] {
+  object-fit: contain;
+  padding: 0.75rem;
+  background: var(--cinza-bg);
+}
+
 .card-especie-corpo {
   padding: .85rem 1rem .95rem;
 }
@@ -744,9 +749,20 @@ main {
 
 /* --- Post individual --- */
 .post-cabecalho {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
   border-bottom: 2px solid var(--cinza-borda);
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
+}
+
+.post-cabecalho-img {
+  flex: 0 0 42%;
+}
+
+.post-cabecalho-info {
+  flex: 1;
 }
 
 .post-meta {
@@ -767,11 +783,20 @@ main {
 
 .post-imagem-destaque {
   width: 100%;
-  max-height: 460px;
+  max-height: 300px;
   object-fit: cover;
   border-radius: var(--raio-lg);
-  margin-bottom: 2rem;
   box-shadow: var(--sombra-m);
+}
+
+@media (max-width: 600px) {
+  .post-cabecalho {
+    flex-direction: column;
+  }
+  .post-cabecalho-img {
+    flex: none;
+    width: 100%;
+  }
 }
 
 .post-corpo {
@@ -790,11 +815,16 @@ main {
   text-align: center;
 }
 
-.post-corpo figcaption {
-  font-size: .8rem;
+.post-figura img {
+  margin-bottom: 0;
+}
+
+.post-figura figcaption {
+  font-size: .75rem;
   color: var(--cinza-suave);
-  margin-top: .4rem;
+  margin-top: .3rem;
   font-style: italic;
+  text-align: right;
 }
 
 .post-corpo h2 {
@@ -852,6 +882,14 @@ main {
   box-shadow: var(--sombra-lg);
   object-fit: cover;
   max-height: 500px;
+}
+
+.especie-imagem[src$=".svg"] {
+  object-fit: contain;
+  padding: 2rem;
+  background: var(--cinza-bg);
+  box-shadow: var(--sombra-s);
+  max-height: 300px;
 }
 
 /* Coluna 2: Dados e Cabeçalho */

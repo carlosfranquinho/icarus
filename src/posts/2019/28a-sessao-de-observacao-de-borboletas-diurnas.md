@@ -5,6 +5,7 @@ date: 2019-05-25
 descricao: "Vale do Lapedo, Caranguejeira, Leiria, e Mata da Curvachia, Arrabal, Leiria"
 categoria: diurnas
 local: "Vale do Lapedo, Caranguejeira, Leiria, e Mata da Curvachia, Arrabal, Leiria"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2020/06/28.jpg
 permalink: /2019/05/25/28a-sessao-de-observacao-de-borboletas-diurnas/
 ---

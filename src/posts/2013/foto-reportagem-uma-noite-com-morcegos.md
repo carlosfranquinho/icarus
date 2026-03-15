@@ -4,6 +4,7 @@ title: "Foto-reportagem - Uma noite com morcegos"
 date: 2013-08-04
 descricao: "Vale dos Pirilampos, Pinhal do Rei, Marinha Grande"
 categoria: observações
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/08/morcegos.jpg
 permalink: /2013/08/04/foto-reportagem-uma-noite-com-morcegos/
 ---

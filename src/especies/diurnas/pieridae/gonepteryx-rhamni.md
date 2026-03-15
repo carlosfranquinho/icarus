@@ -9,3 +9,26 @@ imagem: /assets/silhuetas/pieridae.svg
 placeholder: true
 permalink: /borboletas-diurnas/pieridae/gonepteryx-rhamni/
 ---
+
+### Guia rápido
+
+**Nome comum:** 
+
+**Envergadura:** 
+
+**Plantas hospedeiras:** 
+
+**Habitat:** 
+
+**Período de voo em Portugal:** 
+
+
+### Distribuição
+
+**Global:** 
+
+**Europa:** 
+
+**Portugal:** 
+
+**Região:** 

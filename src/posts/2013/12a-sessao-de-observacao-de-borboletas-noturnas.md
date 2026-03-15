@@ -5,6 +5,7 @@ date: 2013-07-14
 descricao: "Praia das Pedras Negras, Marinha Grande"
 categoria: noturnas
 local: "Praia das Pedras Negras, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/07/12.jpg
 permalink: /2013/07/14/12a-sessao-de-observacao-de-borboletas-noturnas/
 ---

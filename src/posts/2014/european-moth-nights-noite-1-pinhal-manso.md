@@ -5,6 +5,7 @@ date: 2014-07-17
 descricao: "Relato da primeira noite das Noites Europeias de Borboletas Noturnas (European Moth Nights), dinamizadas pelo grupo Borboletas da Marinha Grande."
 categoria: noturnas
 local: "Pinhal Manso, no Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/07/21.jpg
 permalink: /2014/07/17/european-moth-nights-noite-1-pinhal-manso/
 ---

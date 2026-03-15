@@ -5,6 +5,7 @@ date: 2014-05-31
 descricao: "Samouco, Marinha Grande"
 categoria: noturnas
 local: "Samouco, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2020/06/19.jpg
 permalink: /2014/05/31/19a-sessao-de-observacao-de-borboletas-noturnas/
 ---

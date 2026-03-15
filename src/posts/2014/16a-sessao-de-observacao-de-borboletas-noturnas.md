@@ -5,6 +5,7 @@ date: 2014-03-13
 descricao: "Pombal do Rei, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Pombal do Rei, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/03/16.jpg
 permalink: /2014/03/13/16a-sessao-de-observacao-de-borboletas-noturnas/
 ---

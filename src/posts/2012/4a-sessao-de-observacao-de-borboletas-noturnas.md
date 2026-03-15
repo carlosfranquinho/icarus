@@ -5,6 +5,7 @@ date: 2012-08-18
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2012/08/4.jpg
 permalink: /2012/08/18/4a-sessao-de-observacao-de-borboletas-noturnas/
 ---

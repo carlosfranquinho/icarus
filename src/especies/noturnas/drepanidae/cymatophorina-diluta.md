@@ -8,3 +8,26 @@ imagem: /assets/silhuetas/drepanidae.svg
 placeholder: true
 permalink: /borboletas-noturnas/drepanidae/cymatophorina-diluta/
 ---
+
+### Guia rápido
+
+**Nome comum:** 
+
+**Envergadura:** 
+
+**Plantas hospedeiras:** 
+
+**Habitat:** 
+
+**Período de voo em Portugal:** 
+
+
+### Distribuição
+
+**Global:** 
+
+**Europa:** 
+
+**Portugal:** 
+
+**Região:** 

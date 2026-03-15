@@ -5,6 +5,7 @@ date: 2016-09-03
 descricao: "Ribeira da Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Ribeira da Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2016/09/40.jpg
 permalink: /2016/09/03/40a-sessao-observacao-borboletas-noturnas/
 ---

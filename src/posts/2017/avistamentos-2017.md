@@ -4,6 +4,7 @@ title: "Avistamentos 2017"
 date: 2017-03-29
 descricao: "Este é um passatempo realizado anualmente através das fotos enviadas para o nosso grupo. Pretende premiar (simbolicamente) o maior número de primeiros avistamentos de cada ano, relativamente a espécies diurnas, na região do Pinhal Litoral. Papilionidae Ler mais…"
 categoria: observações
+participantes: "Carlos Franquinho"
 permalink: /2017/03/29/avistamentos-2017/
 ---
 

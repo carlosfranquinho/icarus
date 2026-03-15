@@ -5,6 +5,7 @@ date: 2014-07-20
 descricao: "Vale da Felícia, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Vale da Felícia, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/07/24.jpg
 permalink: /2014/07/20/24a-sessao-observacao-borboletas-noturnas/
 ---

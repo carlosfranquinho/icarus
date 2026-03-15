@@ -5,13 +5,14 @@ date: 2021-07-10
 descricao: "Dois anos volvidos desde a nossa última caminhada para observação de borboletas, e aproveitando uma trégua na situação pandémica que atravessamos, o grupo decidiu sair do seu casulo e pôr-se à estrada."
 categoria: diurnas
 local: "Chão do Falcão, Alqueidão da Serra, Porto de Mós"
+participantes: "Alexandrina Morgado, António Graça, Carlos Franquinho, Dina Correia, Dina Fortunato, Henrique Baluga, Hugo Areal,Leonor Ramos, Patrícia Grilo, Paulo Simões, Sónia Duarte"
 imagem: /imagens/2021/07/IMG_5722.jpg
 permalink: /2021/07/10/30a-sessao-de-observacao-de-borboletas-diurnas/
 ---
 
 ![](/imagens/2021/07/GOPR0973.jpg)
 
-Grupo de participantes, junto ao miradouro jurássico do Chão do Falcão
+*Grupo de participantes, junto ao miradouro jurássico do Chão do Falcão*
 
 Dois anos volvidos desde [a nossa última caminhada para observação de borboletas](/2019/07/27/29a-sessao-de-observacao-de-borboletas-diurnas/), e aproveitando uma trégua na situação pandémica que atravessamos, o grupo decidiu sair do seu casulo e pôr-se à estrada.
 
@@ -19,7 +20,7 @@ O nosso destino foi o Chão do Falcão, junto a Alqueidão da Serra, em Porto de
 
 ![](/imagens/2021/07/paisagembaluga.jpg)
 
-Paisagem do Chão do Falcão. © Henrique Baluga.
+*Paisagem do Chão do Falcão. © Henrique Baluga.*
 
 O dia escolhido revelou-se particularmente quente e soalheiro, quebrando o enguiço de um verão que tarda em instalar-se em definitivo.
 

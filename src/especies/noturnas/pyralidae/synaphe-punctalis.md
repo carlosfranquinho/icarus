@@ -8,3 +8,26 @@ imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true
 permalink: /borboletas-noturnas/pyralidae/synaphe-punctalis/
 ---
+
+### Guia rápido
+
+**Nome comum:** 
+
+**Envergadura:** 
+
+**Plantas hospedeiras:** 
+
+**Habitat:** 
+
+**Período de voo em Portugal:** 
+
+
+### Distribuição
+
+**Global:** 
+
+**Europa:** 
+
+**Portugal:** 
+
+**Região:** 

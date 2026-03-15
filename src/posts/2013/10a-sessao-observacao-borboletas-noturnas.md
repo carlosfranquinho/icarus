@@ -5,6 +5,7 @@ date: 2013-07-12
 descricao: "Margens do Lis, Vieira de Leiria, Marinha Grande"
 categoria: noturnas
 local: "Margens do Lis, Vieira de Leiria, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/07/10.jpg
 permalink: /2013/07/12/10a-sessao-observacao-borboletas-noturnas/
 ---

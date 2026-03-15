@@ -4,6 +4,7 @@ title: "11as Noites Europeias de Borboletas Noturnas"
 date: 2014-07-06
 descricao: "As Noites Europeias de Borboletas Noturnas (European Moth Nights) são um evento anual, organizado pela Sociedade Entomológica de Lucerna (Suiça) e pela Sociedade Lepidopterológica da Hungria. Celebrando este ano a sua 11ª edição, este evento pretende Ler mais…"
 categoria: noticias
+participantes: "Carlos Franquinho"
 permalink: /2014/07/06/11as-noites-europeias-de-borboletas-noturnas/
 ---
 

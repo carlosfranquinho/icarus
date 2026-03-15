@@ -5,6 +5,7 @@ date: 2013-04-20
 descricao: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/04/6-scaled.jpg
 permalink: /2013/04/20/sessao-de-observacao-de-borboletas-noturnas/
 ---

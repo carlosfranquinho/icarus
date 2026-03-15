@@ -24,6 +24,35 @@ if (nav && document.body.classList.contains('is-home')) {
   });
 }
 
+// Rotacao aleatoria das silhuetas nos cards de familia
+document.querySelectorAll('.card-familia-ficha-img img').forEach(img => {
+  const deg = (Math.random() * 20 - 10).toFixed(1);
+  img.style.transform = `rotate(${deg}deg)`;
+});
+
+// Legendas nas fotos dos posts (parágrafo em itálico a seguir a imagem → figcaption)
+document.addEventListener("DOMContentLoaded", () => {
+  const corpo = document.querySelector(".post-corpo");
+  if (!corpo) return;
+
+  corpo.querySelectorAll("p > img").forEach(img => {
+    const pImg = img.closest("p");
+    const nextEl = pImg.nextElementSibling;
+    const figure = document.createElement("figure");
+    figure.className = "post-figura";
+    pImg.parentNode.insertBefore(figure, pImg);
+    figure.appendChild(img);
+    pImg.remove();
+    if (nextEl && nextEl.tagName === "P" &&
+        nextEl.children.length === 1 && nextEl.children[0].tagName === "EM") {
+      const figcaption = document.createElement("figcaption");
+      figcaption.innerHTML = nextEl.children[0].innerHTML;
+      figure.appendChild(figcaption);
+      nextEl.remove();
+    }
+  });
+});
+
 // Formatacao do conteudo das especies
 document.addEventListener("DOMContentLoaded", () => {
   const isEspecie = document.querySelector(".content-especie");

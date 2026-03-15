@@ -5,6 +5,7 @@ date: 2015-06-28
 descricao: "Vale dos Poios, Redinha, Pombal"
 categoria: diurnas
 local: "Vale dos Poios, Redinha, Pombal"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2015/06/15.jpg
 permalink: /2015/06/28/15a-sessao-observacao-borboletas-diurnas/
 ---

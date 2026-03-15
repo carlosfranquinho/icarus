@@ -5,6 +5,7 @@ date: 2014-04-14
 descricao: "Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/04/7.jpg
 permalink: /2014/04/14/7a-caminhada-diurna-serra-da-pevide/
 ---

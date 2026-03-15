@@ -4,6 +4,7 @@ title: "Nova espécie diurna: Pieris napi"
 date: 2014-03-23
 descricao: "Durante a 6ª caminhada diurna do nosso grupo, nas margens do Liz, avistámos uma Pieris napi (Linnaeus, 1758). O número de espécies diurnas confirmadas no concelho marinhense sobe, desta forma, para as 36. Apesar de se Ler mais…"
 categoria: noticias
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/03/IMG_1262-8.jpg
 permalink: /2014/03/23/nova-especie-diurna-pieris-napi/
 ---

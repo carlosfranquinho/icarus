@@ -5,6 +5,7 @@ date: 2015-05-16
 descricao: "Albergaria, Marinha Grande"
 categoria: noturnas
 local: "Albergaria, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2015/05/33.jpg
 permalink: /2015/05/16/33a-sessao-observacao-borboletas-noturnas/
 ---

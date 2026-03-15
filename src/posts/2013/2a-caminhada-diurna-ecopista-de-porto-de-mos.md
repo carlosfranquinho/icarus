@@ -5,6 +5,7 @@ date: 2013-06-01
 descricao: "Ecopista, Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Ecopista, Serra da Pevide, Porto de Mós"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/06/2.jpg
 permalink: /2013/06/01/2a-caminhada-diurna-ecopista-de-porto-de-mos/
 ---

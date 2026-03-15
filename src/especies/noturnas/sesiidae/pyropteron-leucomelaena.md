@@ -8,3 +8,26 @@ imagem: /assets/silhuetas/sesiidae.svg
 placeholder: true
 permalink: /borboletas-noturnas/sesiidae/pyropteron-leucomelaena/
 ---
+
+### Guia rápido
+
+**Nome comum:** 
+
+**Envergadura:** 
+
+**Plantas hospedeiras:** 
+
+**Habitat:** 
+
+**Período de voo em Portugal:** 
+
+
+### Distribuição
+
+**Global:** 
+
+**Europa:** 
+
+**Portugal:** 
+
+**Região:** 

@@ -5,6 +5,7 @@ date: 2017-03-18
 descricao: "Alcanadas, Batalha"
 categoria: diurnas
 local: "Alcanadas, Batalha"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2017/03/20.jpg
 permalink: /2017/03/18/20a-sessao-observacao-borboletas-diurnas/
 ---

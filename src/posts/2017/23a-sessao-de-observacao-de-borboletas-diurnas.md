@@ -5,6 +5,7 @@ date: 2017-11-19
 descricao: "Samouco, Pinhal do Rei, Marinha Grande"
 categoria: diurnas
 local: "Samouco, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2020/06/23.jpg
 permalink: /2017/11/19/23a-sessao-de-observacao-de-borboletas-diurnas/
 ---

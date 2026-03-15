@@ -5,6 +5,7 @@ date: 2013-09-14
 descricao: "Ribeira das Quelhas, Coentral, Castanheira de Pêra"
 categoria: diurnas
 local: "Ribeira das Quelhas, Coentral, Castanheira de Pêra"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/09/5.jpg
 permalink: /2013/09/14/5a-caminhada-diurna-coentral/
 ---

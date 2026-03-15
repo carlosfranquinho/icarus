@@ -5,6 +5,7 @@ date: 2015-09-27
 descricao: "Margens do Zêzere, Pedrógão Pequeno, Sertã"
 categoria: diurnas
 local: "Margens do Zêzere, Pedrógão Pequeno, Sertã"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2015/09/17.jpg
 permalink: /2015/09/27/17a-sessao-observacao-borboletas-diurnas/
 ---

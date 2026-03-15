@@ -5,6 +5,7 @@ date: 2016-07-16
 descricao: "Lapa dos Pocilgões, Cabeço das Pombas, São Bento, Porto de Mós"
 categoria: diurnas
 local: "Lapa dos Pocilgões, Cabeço das Pombas, São Bento, Porto de Mós"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2016/07/19.jpg
 permalink: /2016/07/16/19a-sessao-observacao-borboletas-diurnas/
 ---

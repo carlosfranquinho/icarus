@@ -4,6 +4,7 @@ title: "Nova espécie diurna: Callophrys avis"
 date: 2013-04-17
 descricao: "Embora já suspeitasse da ocorrência desta espécie, apenas hoje confirmei, de facto, a sua presença no Pinhal do Rei. Com esta confirmação, o número de espécies de lepidópteros diurnos no concelho da Marinha Grande sobe Ler mais…"
 categoria: noticias
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/03/IMG_0154.jpg
 permalink: /2013/04/17/nova-especie-diurna-callophrys-avis/
 ---

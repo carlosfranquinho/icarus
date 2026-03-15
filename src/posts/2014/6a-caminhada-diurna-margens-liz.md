@@ -5,6 +5,7 @@ date: 2014-03-25
 descricao: "Margens do Lis, Vieira de Leiria, Marinha Grande"
 categoria: diurnas
 local: "Margens do Lis, Vieira de Leiria, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/03/6.jpg
 permalink: /2014/03/25/6a-caminhada-diurna-margens-liz/
 ---

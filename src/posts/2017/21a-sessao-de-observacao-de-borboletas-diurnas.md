@@ -5,6 +5,7 @@ date: 2017-04-23
 descricao: "Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2020/06/21.jpg
 permalink: /2017/04/23/21a-sessao-de-observacao-de-borboletas-diurnas/
 ---

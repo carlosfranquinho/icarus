@@ -5,6 +5,7 @@ date: 2012-06-18
 descricao: "Rio Tinto, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Rio Tinto, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2012/06/3.jpg
 permalink: /2012/06/18/3a-sessao-de-observacao-de-borboletas-noturnas/
 ---

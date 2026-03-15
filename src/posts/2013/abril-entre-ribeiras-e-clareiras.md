@@ -5,6 +5,7 @@ date: 2013-04-14
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: diurnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2013/04/1.jpg
 permalink: /2013/04/14/abril-entre-ribeiras-e-clareiras/
 ---

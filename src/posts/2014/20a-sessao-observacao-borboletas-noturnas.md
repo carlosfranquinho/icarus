@@ -5,6 +5,7 @@ date: 2014-06-28
 descricao: "Crastinha, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Crastinha, Pinhal do Rei, Marinha Grande"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/06/20.jpg
 permalink: /2014/06/28/20a-sessao-observacao-borboletas-noturnas/
 ---

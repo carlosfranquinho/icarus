@@ -5,6 +5,7 @@ date: 2014-07-18
 descricao: "Ribeira do Mogo, Chiqueda, Alcobaça"
 categoria: noturnas
 local: "Ribeira do Mogo, Chiqueda, Alcobaça"
+participantes: "Carlos Franquinho"
 imagem: /imagens/2014/07/22.jpg
 permalink: /2014/07/18/22a-sessao-observacao-borboletas-noturnas/
 ---
