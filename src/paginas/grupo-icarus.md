@@ -15,6 +15,13 @@ Tratando-se de uma zona relativamente mal estudada, a investigação das borbole
 
 O nosso principal objetivo é o registo das espécies que ocorrem na zona do Pinhal Litoral. Assim, durante os meses mais propícios (geralmente entre Março e Outubro) realizamos diversas atividades para observação de borboletas diurnas e noturnas. Estes encontros, divulgados no nosso [grupo do Facebook](https://www.facebook.com/groups/grupo.icarus), tanto podem consistir numa sessão de "armadilhagem luminosa" (para as borboletas noturnas) como numa pequena caminhada (para as borboletas diurnas). Tanto os novos membros como os não membros são convidados a participar. O único requisito é a paixão pela natureza e o interesse pelas borboletas!
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/VnOlehRifLg"
+          title="7 anos do Grupo icarus"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+
 ![Caminhadas para observação de borboletas é mais uma das atividades dinamizadas pelo grupo icarus](/imagens/2020/06/sessao_diurna.jpg)
 
 Neste site poderá encontrar um guia fotográfico para todas as espécies de borboletas confirmadas para a nossa região. Apesar de ser um trabalho em progresso e em constante atualização, caso pretenda participar com os seus registos ou fotografias poderá fazê-lo desde já.

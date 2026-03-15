@@ -1103,8 +1103,9 @@ main {
 }
 
 .lista-post-card-img {
-  width: 140px;
+  width: 260px;
   flex-shrink: 0;
+  aspect-ratio: 4 / 3;
 }
 
 .lista-post-card-img img {
@@ -1162,7 +1163,7 @@ main {
 
 @media (max-width: 520px) {
   .lista-post-card-img {
-    width: 90px;
+    width: 100px;
   }
 }
 
@@ -1219,6 +1220,26 @@ main {
 .pagina-conteudo ul,
 .pagina-conteudo ol {
   margin: 0 0 1.1rem 1.5rem;
+}
+
+/* --- Embed de vídeo responsivo --- */
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-m);
+  margin: 2rem 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* --- Rodapé --- */
