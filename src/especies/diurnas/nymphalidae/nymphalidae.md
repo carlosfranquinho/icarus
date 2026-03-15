@@ -5,7 +5,6 @@ title: "Nymphalidae"
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 cor_thumb: "#f0b87a"
-placeholder: true
-permalink: false
-descricao: ""
+permalink: /borboletas-diurnas/nymphalidae/
+descricao: "Grande família de borboletas muito diversas, incluindo muitas das espécies mais conhecidas."
 ---
