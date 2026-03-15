@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+title: Observações
+descricao: Registo de todas as observações de campo do Grupo icarus.
+permalink: /observacoes/
+---
+<div class="container">
+  <header style="margin-bottom: 2rem;">
+    <h1>Observações</h1>
+    <p style="color: var(--cinza-suave);">Registo de campo do Grupo icarus — {{ observacoes.length }} observações.</p>
+  </header>
+
+  {% if observacoes.length %}
+  <div style="margin-bottom: 1.5rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <label for="filtro-especie" style="font-size:0.9rem; font-weight:500;">Filtrar por espécie:</label>
+    <select id="filtro-especie" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
+      <option value="">— todas —</option>
+      {% set especiesVistas = [] %}
+      {% for obs in observacoes | sort(false, false, "nome_cientifico") %}
+        {% if obs.nome_cientifico not in especiesVistas %}
+          {% set especiesVistas = especiesVistas.concat([obs.nome_cientifico]) %}
+          <option value="{{ obs.nome_cientifico }}">{{ obs.nome_cientifico }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+    <span id="contagem-obs" style="font-size:0.85rem; color:var(--cinza-suave);"></span>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table id="tabela-obs" style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--cinza-borda);">
+          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Data</th>
+          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Espécie</th>
+          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Quadrícula</th>
+          <th style="text-align:right; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Qtd.</th>
+          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% set obsSorted = observacoes | sort(true, false, "data") %}
+        {% for obs in obsSorted %}
+        <tr class="linha-obs" data-especie="{{ obs.nome_cientifico }}" style="border-bottom:1px solid var(--cinza-borda);">
+          <td style="padding:0.5rem 0.75rem; white-space:nowrap;">{{ obs.data }}</td>
+          <td style="padding:0.5rem 0.75rem;">
+            {% set espEncontrada = null %}
+            {% for esp in collections.especies %}
+              {% if esp.data.nome_cientifico == obs.nome_cientifico %}
+                {% set espEncontrada = esp %}
+              {% endif %}
+            {% endfor %}
+            {% if espEncontrada %}
+              <a href="{{ espEncontrada.url }}"><em>{{ obs.nome_cientifico }}</em></a>
+            {% else %}
+              <em>{{ obs.nome_cientifico }}</em>
+            {% endif %}
+          </td>
+          <td style="padding:0.5rem 0.75rem;"><code style="font-size:0.85em; background:var(--cinza-bg); padding:0.1em 0.4em; border-radius:4px;">{{ obs.utm1k if obs.utm1k else "—" }}</code></td>
+          <td style="padding:0.5rem 0.75rem; text-align:right;">{{ obs.quantidade if obs.quantidade else 1 }}</td>
+          <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">{{ obs.notas if obs.notas else "—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    (function () {
+      const sel = document.getElementById('filtro-especie');
+      const linhas = document.querySelectorAll('.linha-obs');
+      const contagem = document.getElementById('contagem-obs');
+
+      function filtrar() {
+        const v = sel.value;
+        let n = 0;
+        linhas.forEach(function (tr) {
+          const show = !v || tr.dataset.especie === v;
+          tr.style.display = show ? '' : 'none';
+          if (show) n++;
+        });
+        contagem.textContent = v ? n + ' observação' + (n !== 1 ? 'ões' : '') : '';
+      }
+
+      sel.addEventListener('change', filtrar);
+      filtrar();
+    })();
+  </script>
+  {% else %}
+  <p style="color:var(--cinza-suave); font-style:italic;">Ainda não há observações registadas.</p>
+  {% endif %}
+</div>

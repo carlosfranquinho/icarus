@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registar Observação — Grupo icarus</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; color: #0e7490; }
+  .subtitulo { color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; }
+  .secao { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .secao h2 { font-size: 1rem; font-weight: 600; color: #0e7490; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .campo { display: flex; flex-direction: column; gap: 0.3rem; }
+  .campo.largo { grid-column: 1 / -1; }
+  label { font-size: 0.82rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; }
+  input, select, textarea {
+    padding: 0.5rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 8px;
+    font-size: 0.95rem; font-family: inherit; background: #f8fafc; color: #1e293b;
+    transition: border-color 0.2s;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #06b6d4; background: #fff; }
+  textarea { resize: vertical; min-height: 70px; }
+  .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.25rem;
+    border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-primario { background: #06b6d4; color: #fff; }
+  .btn-primario:hover { background: #0891b2; }
+  .btn-secundario { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+  .btn-secundario:hover { background: #e2e8f0; }
+  .btn-perigo { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+  .btn-perigo:hover { background: #fca5a5; }
+  .acoes { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
+  .utm-box { display: flex; gap: 0.75rem; align-items: flex-end; }
+  .utm-box input { flex: 1; }
+  #utm-resultado { font-family: monospace; font-size: 1rem; font-weight: 700; color: #0e7490;
+    background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px;
+    padding: 0.5rem 0.75rem; min-width: 110px; text-align: center; }
+  .gps-status { font-size: 0.8rem; color: #64748b; margin-top: 0.3rem; }
+  .badge { display: inline-block; background: #06b6d4; color: #fff; font-size: 0.75rem;
+    font-weight: 700; border-radius: 99px; padding: 0.1em 0.6em; margin-left: 0.4rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 1rem; }
+  th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid #e2e8f0;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #64748b; }
+  td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #f1f5f9; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .vazio { color: #94a3b8; font-style: italic; text-align: center; padding: 1.5rem; }
+  .export-area { background: #0f172a; color: #e2e8f0; font-family: monospace; font-size: 0.8rem;
+    border-radius: 8px; padding: 1rem; white-space: pre; overflow-x: auto; max-height: 300px;
+    overflow-y: auto; display: none; margin-top: 1rem; }
+  .msg-sucesso { background: #d1fae5; border: 1px solid #6ee7b7; color: #065f46;
+    border-radius: 8px; padding: 0.6rem 1rem; font-size: 0.9rem; display: none; margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Registar Observação</h1>
+  <p class="subtitulo">Grupo icarus — Ferramenta local (não deployada). Os dados são guardados no browser e exportados para <code>src/_data/observacoes.json</code>.</p>
+
+  <!-- FORMULÁRIO -->
+  <div class="secao">
+    <h2>Nova observação</h2>
+    <form id="form-obs" novalidate>
+      <div class="grid">
+        <div class="campo largo">
+          <label for="f-especie">Espécie (nome científico) *</label>
+          <input type="text" id="f-especie" list="lista-especies" placeholder="ex: Iphiclides feisthamelii" required autocomplete="off">
+          <datalist id="lista-especies">
+            <option value="Abraxas pantaria">
+            <option value="Acherontia atropos">
+            <option value="Aglais io">
+            <option value="Agrius convolvuli">
+            <option value="Anthocharis cardamines">
+            <option value="Aporia crataegi">
+            <option value="Argynnis paphia">
+            <option value="Aricia cramera">
+            <option value="Autographa gamma">
+            <option value="Cacyreus marshalli">
+            <option value="Carcharodus alceae">
+            <option value="Celastrina argiolus">
+            <option value="Coenonympha pamphilus">
+            <option value="Colias croceus">
+            <option value="Cupido minimus">
+            <option value="Danaus plexippus">
+            <option value="Euchloe crameri">
+            <option value="Gonepteryx cleopatra">
+            <option value="Gonepteryx rhamni">
+            <option value="Hesperia comma">
+            <option value="Hipparchia semele">
+            <option value="Iphiclides feisthamelii">
+            <option value="Issoria lathonia">
+            <option value="Lampides boeticus">
+            <option value="Lasiommata megera">
+            <option value="Leptotes pirithous">
+            <option value="Limenitis reducta">
+            <option value="Lysandra bellargus">
+            <option value="Maniola jurtina">
+            <option value="Melanargia lachesis">
+            <option value="Nymphalis antiopa">
+            <option value="Ochlodes sylvanus">
+            <option value="Papilio machaon">
+            <option value="Pararge aegeria">
+            <option value="Pieris brassicae">
+            <option value="Pieris napi">
+            <option value="Pieris rapae">
+            <option value="Platycelia avellana">
+            <option value="Polygonia c-album">
+            <option value="Pontia daplidice">
+            <option value="Pyronia bathseba">
+            <option value="Pyronia cecilia">
+            <option value="Pyronia tithonus">
+            <option value="Satyrium esculi">
+            <option value="Spialia sertorius">
+            <option value="Strymon melinus">
+            <option value="Thymelicus acteon">
+            <option value="Thymelicus sylvestris">
+            <option value="Vanessa atalanta">
+            <option value="Vanessa cardui">
+            <option value="Zerynthia rumina">
+          </datalist>
+        </div>
+
+        <div class="campo">
+          <label for="f-data">Data *</label>
+          <input type="date" id="f-data" required>
+        </div>
+
+        <div class="campo">
+          <label for="f-hora">Hora</label>
+          <input type="time" id="f-hora">
+        </div>
+
+        <div class="campo">
+          <label for="f-quantidade">Quantidade</label>
+          <input type="number" id="f-quantidade" min="1" value="1">
+        </div>
+
+        <div class="campo">
+          <label for="f-observador">Observador</label>
+          <input type="text" id="f-observador" value="Carlos Franquinho">
+        </div>
+      </div>
+
+      <!-- Localização -->
+      <div style="margin-top: 1.25rem;">
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:flex-end; margin-bottom:0.75rem;">
+          <div class="campo" style="flex:1; min-width:140px;">
+            <label for="f-lat">Latitude</label>
+            <input type="number" id="f-lat" step="0.000001" placeholder="39.741234">
+          </div>
+          <div class="campo" style="flex:1; min-width:140px;">
+            <label for="f-lon">Longitude</label>
+            <input type="number" id="f-lon" step="0.000001" placeholder="-8.934567">
+          </div>
+          <button type="button" class="btn btn-secundario" id="btn-gps" onclick="usarGPS()">📍 Usar GPS</button>
+        </div>
+        <div class="gps-status" id="gps-status"></div>
+        <div style="margin-top: 0.75rem; display:flex; align-items:center; gap:1rem;">
+          <div class="campo" style="flex:1; max-width:280px;">
+            <label>Quadrícula UTM 1×1km</label>
+            <div class="utm-box">
+              <div id="utm-resultado">—</div>
+              <button type="button" class="btn btn-secundario" onclick="calcularUTM()">Calcular</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="campo" style="margin-top: 1rem;">
+        <label for="f-notas">Notas</label>
+        <textarea id="f-notas" placeholder="Ex: 1 indivíduo em voo, comportamento de territorialidade..."></textarea>
+      </div>
+
+      <div class="acoes">
+        <button type="submit" class="btn btn-primario">+ Adicionar observação</button>
+        <button type="button" class="btn btn-secundario" onclick="limparFormulario()">Limpar</button>
+      </div>
+    </form>
+    <div class="msg-sucesso" id="msg-sucesso">Observação adicionada!</div>
+  </div>
+
+  <!-- LISTA DE OBSERVAÇÕES -->
+  <div class="secao">
+    <h2>Observações nesta sessão <span class="badge" id="contador">0</span></h2>
+    <div style="overflow-x:auto;">
+      <table id="tabela-obs">
+        <thead>
+          <tr>
+            <th>ID</th><th>Data</th><th>Espécie</th><th>Quadrícula</th><th>Qtd.</th><th>Notas</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-obs">
+          <tr><td colspan="7" class="vazio">Nenhuma observação ainda.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="acoes" style="margin-top:1.25rem;">
+      <button type="button" class="btn btn-primario" onclick="copiarJSON()">📋 Copiar JSON</button>
+      <button type="button" class="btn btn-primario" onclick="downloadJSON()">⬇ Download JSON</button>
+      <button type="button" class="btn btn-secundario" onclick="carregarExistente()">📂 Carregar observacoes.json</button>
+      <input type="file" id="input-ficheiro" accept=".json" style="display:none" onchange="importarFicheiro(event)">
+      <button type="button" class="btn btn-perigo" onclick="limparTudo()">🗑 Limpar tudo</button>
+    </div>
+    <pre class="export-area" id="export-area"></pre>
+    <div class="msg-sucesso" id="msg-copiado" style="display:none;">JSON copiado para a área de transferência!</div>
+  </div>
+</div>
+
+<script>
+// ── UTM Zone 29N (WGS84) ──────────────────────────────────────────────────
+const UTM_A = 6378137.0;
+const UTM_E2 = 0.00669437999014;
+const UTM_K0 = 0.9996;
+const UTM_LON0 = -9 * Math.PI / 180; // central meridian zone 29
+
+// Column letters for zone 29 (zone mod 3 = 2 → J-R, no O)
+const COL_LETTERS = ['J','K','L','M','N','P','Q','R'];
+// Row letters for odd zone (zone 29 is odd → start at A)
+const ROW_LETTERS = ['A','B','C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V'];
+
+function latLonToUTM29N(lat, lon) {
+  const phi = lat * Math.PI / 180;
+  const lam = lon * Math.PI / 180;
+  const e2p = UTM_E2 / (1 - UTM_E2);
+  const N = UTM_A / Math.sqrt(1 - UTM_E2 * Math.sin(phi) ** 2);
+  const T = Math.tan(phi) ** 2;
+  const C = e2p * Math.cos(phi) ** 2;
+  const A = Math.cos(phi) * (lam - UTM_LON0);
+  const e2 = UTM_E2;
+  const M = UTM_A * (
+    (1 - e2/4 - 3*e2**2/64 - 5*e2**3/256) * phi
+    - (3*e2/8 + 3*e2**2/32 + 45*e2**3/1024) * Math.sin(2*phi)
+    + (15*e2**2/256 + 45*e2**3/1024) * Math.sin(4*phi)
+    - (35*e2**3/3072) * Math.sin(6*phi)
+  );
+  const E = 500000 + UTM_K0 * N * (
+    A + (1-T+C)*A**3/6 + (5-18*T+T**2+72*C-58*e2p)*A**5/120
+  );
+  const Ncoord = UTM_K0 * (
+    M + N * Math.tan(phi) * (
+      A**2/2 + (5-T+9*C+4*C**2)*A**4/24 + (61-58*T+T**2+600*C-330*e2p)*A**6/720
+    )
+  );
+  return { E, N: Ncoord };
+}
+
+function utmToMGRS1k(lat, lon) {
+  const { E, N } = latLonToUTM29N(lat, lon);
+  const colIdx = Math.floor(E / 100000) - 1; // 0-indexed (100km=1→0, 200km=2→1, ...)
+  if (colIdx < 0 || colIdx >= COL_LETTERS.length) return null;
+  const colLetter = COL_LETTERS[colIdx];
+  const rowIdx = Math.floor(N / 100000) % ROW_LETTERS.length;
+  const rowLetter = ROW_LETTERS[rowIdx];
+  const squareE = Math.floor((E % 100000) / 1000);
+  const squareN = Math.floor((N % 100000) / 1000);
+  return colLetter + rowLetter + String(squareE).padStart(2,'0') + String(squareN).padStart(2,'0');
+}
+
+// ── Estado ────────────────────────────────────────────────────────────────
+let observacoes = JSON.parse(localStorage.getItem('icarus_obs') || '[]');
+let proximoId = parseInt(localStorage.getItem('icarus_nextid') || '1', 10);
+
+function guardarEstado() {
+  localStorage.setItem('icarus_obs', JSON.stringify(observacoes));
+  localStorage.setItem('icarus_nextid', String(proximoId));
+}
+
+// ── Formulário ───────────────────────────────────────────────────────────
+document.getElementById('f-data').value = new Date().toISOString().slice(0,10);
+
+document.getElementById('f-lat').addEventListener('input', atualizarUTM);
+document.getElementById('f-lon').addEventListener('input', atualizarUTM);
+
+function atualizarUTM() {
+  const lat = parseFloat(document.getElementById('f-lat').value);
+  const lon = parseFloat(document.getElementById('f-lon').value);
+  if (!isNaN(lat) && !isNaN(lon) && lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180) {
+    const utm = utmToMGRS1k(lat, lon);
+    document.getElementById('utm-resultado').textContent = utm || '—';
+  } else {
+    document.getElementById('utm-resultado').textContent = '—';
+  }
+}
+
+function calcularUTM() {
+  atualizarUTM();
+}
+
+function usarGPS() {
+  const status = document.getElementById('gps-status');
+  status.textContent = 'A obter localização GPS…';
+  if (!navigator.geolocation) { status.textContent = 'Geolocalização não suportada.'; return; }
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      document.getElementById('f-lat').value = pos.coords.latitude.toFixed(6);
+      document.getElementById('f-lon').value = pos.coords.longitude.toFixed(6);
+      atualizarUTM();
+      status.textContent = 'GPS obtido (precisão: ' + Math.round(pos.coords.accuracy) + 'm)';
+    },
+    function(err) { status.textContent = 'Erro GPS: ' + err.message; }
+  );
+}
+
+document.getElementById('form-obs').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const especie = document.getElementById('f-especie').value.trim();
+  const data = document.getElementById('f-data').value;
+  if (!especie || !data) { alert('Preencha pelo menos a espécie e a data.'); return; }
+
+  const lat = parseFloat(document.getElementById('f-lat').value);
+  const lon = parseFloat(document.getElementById('f-lon').value);
+  const temCoords = !isNaN(lat) && !isNaN(lon);
+  const utm = temCoords ? utmToMGRS1k(lat, lon) : null;
+
+  const obs = {
+    id: 'obs-' + String(proximoId).padStart(3,'0'),
+    nome_cientifico: especie,
+    data: data,
+    hora: document.getElementById('f-hora').value || null,
+    latitude: temCoords ? parseFloat(lat.toFixed(6)) : null,
+    longitude: temCoords ? parseFloat(lon.toFixed(6)) : null,
+    utm1k: utm || null,
+    observador: document.getElementById('f-observador').value.trim() || null,
+    notas: document.getElementById('f-notas').value.trim() || null,
+    quantidade: parseInt(document.getElementById('f-quantidade').value, 10) || 1
+  };
+
+  // Remove campos nulos
+  Object.keys(obs).forEach(k => { if (obs[k] === null || obs[k] === '') delete obs[k]; });
+
+  observacoes.push(obs);
+  proximoId++;
+  guardarEstado();
+  renderizarTabela();
+
+  // Mostrar confirmação
+  const msg = document.getElementById('msg-sucesso');
+  msg.style.display = 'block';
+  setTimeout(() => { msg.style.display = 'none'; }, 2500);
+
+  // Limpar campos (manter data, hora, observador, coords)
+  document.getElementById('f-especie').value = '';
+  document.getElementById('f-notas').value = '';
+  document.getElementById('f-quantidade').value = '1';
+});
+
+function limparFormulario() {
+  document.getElementById('form-obs').reset();
+  document.getElementById('f-data').value = new Date().toISOString().slice(0,10);
+  document.getElementById('utm-resultado').textContent = '—';
+  document.getElementById('f-observador').value = 'Carlos Franquinho';
+  document.getElementById('gps-status').textContent = '';
+}
+
+// ── Tabela ───────────────────────────────────────────────────────────────
+function renderizarTabela() {
+  const tbody = document.getElementById('tbody-obs');
+  document.getElementById('contador').textContent = observacoes.length;
+
+  if (!observacoes.length) {
+    tbody.innerHTML = '<tr><td colspan="7" class="vazio">Nenhuma observação ainda.</td></tr>';
+    return;
+  }
+
+  const sorted = [...observacoes].sort((a,b) => (b.data||'').localeCompare(a.data||''));
+  tbody.innerHTML = sorted.map(function(obs) {
+    return `<tr>
+      <td><code style="font-size:0.8em;">${esc(obs.id||'')}</code></td>
+      <td>${esc(obs.data||'')}</td>
+      <td><em>${esc(obs.nome_cientifico||'')}</em></td>
+      <td><code style="font-size:0.8em;">${esc(obs.utm1k||'—')}</code></td>
+      <td style="text-align:right;">${obs.quantidade||1}</td>
+      <td style="color:#64748b; font-size:0.85em;">${esc(obs.notas||'—').substring(0,60)}</td>
+      <td><button type="button" onclick="remover('${esc(obs.id||'')}')
+" style="background:none; border:none; cursor:pointer; color:#dc2626; font-size:1.1rem;" title="Remover">×</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function remover(id) {
+  if (!confirm('Remover observação ' + id + '?')) return;
+  observacoes = observacoes.filter(o => o.id !== id);
+  guardarEstado();
+  renderizarTabela();
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Export ───────────────────────────────────────────────────────────────
+function gerarJSON() {
+  return JSON.stringify(observacoes, null, 2);
+}
+
+function copiarJSON() {
+  const json = gerarJSON();
+  mostrarExport(json);
+  navigator.clipboard.writeText(json).then(function() {
+    const msg = document.getElementById('msg-copiado');
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 2500);
+  }).catch(function() {
+    alert('Não foi possível copiar automaticamente. Copie o texto da caixa abaixo.');
+  });
+}
+
+function downloadJSON() {
+  const json = gerarJSON();
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'observacoes.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function mostrarExport(json) {
+  const area = document.getElementById('export-area');
+  area.textContent = json;
+  area.style.display = 'block';
+}
+
+function carregarExistente() {
+  document.getElementById('input-ficheiro').click();
+}
+
+function importarFicheiro(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const dados = JSON.parse(e.target.result);
+      if (!Array.isArray(dados)) { alert('Ficheiro inválido: esperado array JSON.'); return; }
+      if (dados.length > 0 && confirm('Carregar ' + dados.length + ' observações do ficheiro? (substitui as actuais)')) {
+        observacoes = dados;
+        // Recalcular próximo ID
+        const ids = observacoes.map(o => o.id || '').filter(id => id.startsWith('obs-')).map(id => parseInt(id.replace('obs-',''),10)).filter(n => !isNaN(n));
+        proximoId = ids.length ? Math.max(...ids) + 1 : 1;
+        guardarEstado();
+        renderizarTabela();
+      }
+    } catch(err) {
+      alert('Erro ao ler ficheiro: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+function limparTudo() {
+  if (confirm('Apagar TODAS as observações da sessão? Esta acção não pode ser desfeita.')) {
+    observacoes = [];
+    proximoId = 1;
+    guardarEstado();
+    renderizarTabela();
+    document.getElementById('export-area').style.display = 'none';
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
+renderizarTabela();
+</script>
+</body>
+</html>

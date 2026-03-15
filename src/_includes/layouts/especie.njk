@@ -23,14 +23,14 @@ ogType: article
           <img src="{{ imagem }}" alt="{{ nome_cientifico }}" class="especie-imagem">
         {% endif %}
       </div>
-      
+
       <!-- Coluna da Direita: Dados -->
       <div class="especie-col-dados">
         <header class="especie-cabecalho">
           <h1 class="especie-nome-cientifico">{{ nome_cientifico }}{% if autoridade %}<span class="autoridade-cientifica"> {{autoridade}}</span>{% endif %}</h1>
           {% if nome_comum %}<p class="especie-nome-comum">{{ nome_comum }}</p>{% endif %}
         </header>
-        
+
         <div class="especie-dados-ficha">
           <div class="dado-linha">
             <span class="dado-label">Família</span>
@@ -56,6 +56,155 @@ ogType: article
       {{ content | safe }}
     </div>
 
+    <!-- ── Observações ───────────────────────────────────────────── -->
+    {% set obsEspecie = observacoes | observacoesPorEspecie(nome_cientifico) %}
+    {% if obsEspecie.length %}
+    <!-- Leaflet CSS — deve vir antes do div do mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <div class="secao-observacoes" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
+      <h2>Observações registadas ({{ obsEspecie.length }})</h2>
+
+      <div class="obs-graficos" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start; margin: 1.5rem 0;">
+
+        <!-- Fenograma -->
+        <div class="obs-fenograma">
+          <p style="font-size:0.8rem; color:var(--cinza-suave); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Fenograma</p>
+          {{ obsEspecie | svgFenograma | safe }}
+        </div>
+
+        <!-- Mapa Leaflet -->
+        <div class="obs-mapa" style="flex:1; min-width:260px; max-width:480px;">
+          <p style="font-size:0.8rem; color:var(--cinza-suave); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Distribuição UTM 1×1km</p>
+          <div id="mapa-especie" style="height:260px; border-radius:8px; border:1px solid var(--cinza-borda);"></div>
+        </div>
+      </div>
+
+      <!-- Tabela -->
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--cinza-borda);">
+              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Data</th>
+              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Hora</th>
+              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Quadrícula</th>
+              <th style="text-align:right; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Qtd.</th>
+              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Observador</th>
+              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obs in obsEspecie | sort(true, false, "data") %}
+            <tr style="border-bottom:1px solid var(--cinza-borda);">
+              <td style="padding:0.5rem 0.75rem; white-space:nowrap;">{{ obs.data }}</td>
+              <td style="padding:0.5rem 0.75rem;">{{ obs.hora if obs.hora else "—" }}</td>
+              <td style="padding:0.5rem 0.75rem;"><code style="font-size:0.85em; background:var(--cinza-bg); padding:0.1em 0.4em; border-radius:4px;">{{ obs.utm1k if obs.utm1k else "—" }}</code></td>
+              <td style="padding:0.5rem 0.75rem; text-align:right;">{{ obs.quantidade if obs.quantidade else 1 }}</td>
+              <td style="padding:0.5rem 0.75rem;">{{ obs.observador if obs.observador else "—" }}</td>
+              <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">{{ obs.notas if obs.notas else "—" }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    (function () {
+      // Dados das observações (gerados em build-time)
+      var OBS = {{ obsEspecie | dump | safe }};
+
+      // ── Inverse UTM Zone 29N → WGS84 ──────────────────────────────
+      var A = 6378137.0, E2 = 0.00669437999014, K0 = 0.9996;
+      var LON0 = -9 * Math.PI / 180;
+
+      function utmToLatLon(E, N) {
+        var e1 = (1 - Math.sqrt(1 - E2)) / (1 + Math.sqrt(1 - E2));
+        var e2p = E2 / (1 - E2);
+        var M = N / K0;
+        var mu = M / (A * (1 - E2/4 - 3*Math.pow(E2,2)/64 - 5*Math.pow(E2,3)/256));
+        var phi1 = mu
+          + (3*e1/2 - 27*Math.pow(e1,3)/32) * Math.sin(2*mu)
+          + (21*Math.pow(e1,2)/16 - 55*Math.pow(e1,4)/32) * Math.sin(4*mu)
+          + (151*Math.pow(e1,3)/96) * Math.sin(6*mu)
+          + (1097*Math.pow(e1,4)/512) * Math.sin(8*mu);
+        var N1 = A / Math.sqrt(1 - E2*Math.pow(Math.sin(phi1),2));
+        var T1 = Math.pow(Math.tan(phi1),2);
+        var C1 = e2p * Math.pow(Math.cos(phi1),2);
+        var R1 = A*(1-E2) / Math.pow(1-E2*Math.pow(Math.sin(phi1),2), 1.5);
+        var D = (E - 500000) / (N1 * K0);
+        var lat = phi1 - (N1*Math.tan(phi1)/R1) * (
+          Math.pow(D,2)/2
+          - (5+3*T1+10*C1-4*Math.pow(C1,2)-9*e2p)*Math.pow(D,4)/24
+          + (61+90*T1+298*C1+45*Math.pow(T1,2)-252*e2p-3*Math.pow(C1,2))*Math.pow(D,6)/720
+        );
+        var lon = LON0 + (
+          D
+          - (1+2*T1+C1)*Math.pow(D,3)/6
+          + (5-2*C1+28*T1-3*Math.pow(C1,2)+8*e2p+24*Math.pow(T1,2))*Math.pow(D,5)/120
+        ) / Math.cos(phi1);
+        return [lat * 180/Math.PI, lon * 180/Math.PI];
+      }
+
+      // ── Converter código UTM1k para bounds [[sw],[ne]] ─────────────
+      // Constantes para zona 29 e Portugal (ciclo de 4,000,000m)
+      var COL = {J:0,K:1,L:2,M:3,N:4,P:5,Q:6,R:7};
+      var ROW = {A:0,B:1,C:2,D:3,E:4,F:5,G:6,H:7,J:8,K:9,L:10,M:11,N:12,P:13,Q:14,R:15,S:16,T:17,U:18,V:19};
+      var N_CYCLE = 4000000; // Portugal está no ciclo 4,000,000–6,000,000m
+
+      function utm1kToBounds(code) {
+        if (!code || code.length < 6) return null;
+        var colIdx = COL[code[0]];
+        var rowIdx = ROW[code[1]];
+        if (colIdx === undefined || rowIdx === undefined) return null;
+        var sqE = parseInt(code.substring(2, 4), 10);
+        var sqN = parseInt(code.substring(4, 6), 10);
+        var E_sw = (colIdx + 1) * 100000 + sqE * 1000;
+        var N_sw = N_CYCLE + rowIdx * 100000 + sqN * 1000;
+        var sw = utmToLatLon(E_sw, N_sw);
+        var ne = utmToLatLon(E_sw + 1000, N_sw + 1000);
+        return [sw, ne];
+      }
+
+      // ── Inicializar mapa ───────────────────────────────────────────
+      var map = L.map('mapa-especie');
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 18
+      }).addTo(map);
+
+      // Agrupar por quadrícula
+      var squares = {};
+      OBS.forEach(function(obs) {
+        if (obs.utm1k) {
+          squares[obs.utm1k] = (squares[obs.utm1k] || 0) + (obs.quantidade || 1);
+        }
+      });
+
+      var allBounds = [];
+      Object.keys(squares).forEach(function(code) {
+        var bounds = utm1kToBounds(code);
+        if (!bounds) return;
+        allBounds.push(bounds[0], bounds[1]);
+        L.rectangle(bounds, {
+          color: '#0891b2',
+          weight: 1.5,
+          fillColor: '#06b6d4',
+          fillOpacity: 0.45
+        }).bindTooltip(
+          '<strong>' + code + '</strong><br>' + squares[code] + ' indivíduo' + (squares[code] !== 1 ? 's' : ''),
+          { sticky: true }
+        ).addTo(map);
+      });
+
+      if (allBounds.length) {
+        map.fitBounds(allBounds, { padding: [30, 30], maxZoom: 14 });
+      }
+    })();
+    </script>
+    {% endif %}
+
     {% if especies_semelhantes and especies_semelhantes.length > 0 %}
     <div class="secao-especies-semelhantes">
       <h2>Espécies semelhantes</h2>
@@ -67,7 +216,7 @@ ogType: article
               {% set esp_encontrada = esp %}
             {% endif %}
           {% endfor %}
-          
+
           {% if esp_encontrada %}
           <article class="card-especie">
             {% if esp_encontrada.data.imagem %}
