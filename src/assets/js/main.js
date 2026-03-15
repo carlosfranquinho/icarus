@@ -48,4 +48,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Converter pares imagem + parágrafo seguinte em <figure> + <figcaption>
+  isEspecie.querySelectorAll("p > img:not(.mapa-distribuicao)").forEach(img => {
+    const pImg = img.closest("p");
+    const nextEl = pImg.nextElementSibling;
+    const wrap = document.createElement("div");
+    wrap.className = "especie-figura-wrap";
+    const figure = document.createElement("figure");
+    figure.className = "especie-figura";
+    pImg.parentNode.insertBefore(wrap, pImg);
+    wrap.appendChild(figure);
+    figure.appendChild(img);
+    pImg.remove();
+    if (nextEl && nextEl.tagName === "P" && !nextEl.querySelector("img")) {
+      const figcaption = document.createElement("figcaption");
+      figcaption.innerHTML = nextEl.innerHTML;
+      figure.appendChild(figcaption);
+      nextEl.remove();
+    }
+  });
+
 });
