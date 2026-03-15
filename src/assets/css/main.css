@@ -84,6 +84,12 @@ img {
   display: block;
 }
 
+/* O plugin de otimização envolve img em <picture>; display:contents
+   torna-o transparente ao layout, restaurando o comportamento original */
+picture {
+  display: contents;
+}
+
 a {
   color: var(--verde);
   text-decoration: underline;
@@ -168,6 +174,7 @@ main {
   z-index: 100;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
   transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+  overflow: visible;
 }
 
 .is-home .nav-principal:not(.scrolled) {
@@ -192,16 +199,20 @@ main {
   justify-content: space-between;
   height: 70px;
   gap: 1rem;
+  overflow: visible;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
+  align-self: flex-start;
   text-decoration: none;
+  overflow: visible;
+  padding-right: 6px;
 }
 
 .nav-logo img {
-  height: 38px;
+  height: 90px;
   width: auto;
 }
 
@@ -807,6 +818,7 @@ main {
   border-radius: var(--raio);
   box-shadow: var(--sombra-m);
   max-width: 100%;
+  height: auto;
   margin-bottom: 1.5rem;
 }
 
@@ -1005,8 +1017,8 @@ main {
 
 .especie-figura img {
   display: block;
-  max-width: 100%;
-  max-height: 600px;
+  width: 100%;
+  height: auto;
   margin: 0;
   border-radius: 0;
   box-shadow: none;

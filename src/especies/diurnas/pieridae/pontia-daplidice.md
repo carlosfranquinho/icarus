@@ -44,7 +44,7 @@ A **Pontia daplidice** é uma borboleta da família Pieridae.
 
 **Região**: presente em todos os concelhos
 
-![](/imagens/2021/02/pdaplidice.png)
+![mapa de distribuição de Pontia daplidice na região](/imagens/2021/02/pdaplidice.png)
 
 ![](/imagens/2021/02/pdaplidice1.jpg)
 

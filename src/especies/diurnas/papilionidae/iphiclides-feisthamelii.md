@@ -49,7 +49,7 @@ Tal como outras espécies da família Papilionidae, possuem um mecanismo de defe
 
 **Região**: presente em todos os concelhos
 
-![](/imagens/2020/07/ifeisthamelii2.png)
+![mapa de distribuição de Iphiclides feisthamelii na região](/imagens/2020/07/ifeisthamelii2.png)
 
 ![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii1.jpg)
 

@@ -1,56 +1,5 @@
-const Image = require("@11ty/eleventy-img");
-const path = require("path");
-
-async function imageShortcode(src, alt, className = "", sizes = "100vw") {
-  if(alt === undefined) {
-    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-  }
-
-  // SVGs não precisam de otimização
-  if (src.endsWith(".svg")) {
-    const classAttr = className ? ` class="${className}"` : "";
-    return `<img src="${src}" alt="${alt}"${classAttr} loading="lazy" decoding="async">`;
-  }
-
-  // Handling relative src paths like /imagens/...
-  let imageSrc = src;
-  if (src.startsWith("/")) {
-    imageSrc = path.join(__dirname, src);
-  }
-
-  try {
-    let metadata = await Image(imageSrc, {
-      widths: [300, 600, 1200],
-      formats: ["avif", "webp", "jpeg"],
-      outputDir: "./_site/img/",
-      urlPath: "/img/"
-    });
-
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: "lazy",
-      decoding: "async",
-    };
-    if (className) {
-      imageAttributes.class = className;
-    }
-
-    return Image.generateHTML(metadata, imageAttributes);
-  } catch (e) {
-    console.error(`Aviso: Falha ao otimizar a imagem ${src}. Fallback HTML usado. erro: ${e.message}`);
-    const classAttr = className ? ` class="${className}"` : "";
-    return `<img src="${src}" alt="${alt}"${classAttr} loading="lazy" decoding="async">`;
-  }
-}
-
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
-  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
-  
   // Passthrough copies
-  eleventyConfig.addPassthroughCopy("imagens");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 

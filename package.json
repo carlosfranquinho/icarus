@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Grupo icarus - Borboletas da Marinha Grande e Leiria",
   "scripts": {
-    "build": "eleventy",
+    "build": "ELEVENTY_RUN_MODE=build eleventy",
     "serve": "eleventy --serve",
     "clean": "rm -rf _site"
   },

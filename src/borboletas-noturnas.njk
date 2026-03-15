@@ -19,7 +19,7 @@ permalink: /borboletas-noturnas/
     <a href="{{ familia.url }}" class="card-familia-ficha">
     {% endif %}
       <div class="card-familia-ficha-img"{% if familia.data.cor_thumb %} style="background-color: {{ familia.data.cor_thumb }}"{% endif %}>
-        {% if familia.data.imagem %}<img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}"{% if familia.data.thumb_size %} style="width: {{ familia.data.thumb_size }}"{% endif %}>{% endif %}
+        {% if familia.data.imagem %}<img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="eager"{% if familia.data.thumb_size %} style="width: {{ familia.data.thumb_size }}"{% endif %}>{% endif %}
       </div>
       <div class="card-familia-ficha-corpo">
         <h2>{{ familia.data.title }}</h2>

@@ -20,7 +20,7 @@ permalink: "/atividades/diurnas/{% if pagination.pageNumber > 0 %}{{ pagination.
       <a href="{{ post.url }}" class="lista-post-card">
         {% if post.data.imagem %}
         <div class="lista-post-card-img">
-          {% image post.data.imagem, post.data.title %}
+          <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}">
         </div>
         {% endif %}
         <div class="lista-post-card-corpo">

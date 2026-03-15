@@ -1,7 +1,7 @@
 <article class="card-especie">
   {% if especie.data.imagem %}
   <a href="{{ especie.url }}" tabindex="-1" aria-hidden="true">
-    {% image especie.data.imagem, especie.data.nome_cientifico, "card-especie-img" %}
+    <img src="{{ especie.data.imagem }}" alt="{{ especie.data.nome_cientifico }}" class="card-especie-img">
   </a>
   {% endif %}
   <div class="card-especie-corpo">

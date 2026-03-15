@@ -18,7 +18,7 @@ layout: layouts/base.njk
       <div class="familia-hero-titulo">
         <h1>{{ title }}</h1>
       </div>
-      <img class="familia-hero-img" src="{{ imagem }}" alt="{{ title }}">
+      <img class="familia-hero-img" src="{{ imagem }}" alt="{{ title }}" loading="eager">
     </div>
     {% else %}
     <h1 class="titulo-secao">{{ title }}</h1>
@@ -46,7 +46,7 @@ layout: layouts/base.njk
     <article class="card-especie">
       {% if especie.data.imagem %}
       <a href="{{ especie.url }}" tabindex="-1" aria-hidden="true">
-        {% image especie.data.imagem, especie.data.nome_cientifico, "card-especie-img" %}
+        <img src="{{ especie.data.imagem }}" alt="{{ especie.data.nome_cientifico }}" class="card-especie-img">
       </a>
       {% endif %}
       <div class="card-especie-corpo">

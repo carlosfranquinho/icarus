@@ -41,7 +41,7 @@ A *Carcharodus alceae* é uma pequena borboleta da família Hesperiidae. Em Port
 
 **Região**: Presente em todos os concelhos
 
-![](/imagens/2020/07/calceae.png)
+![mapa de distribuição de Carcharodus alceae na região](/imagens/2020/07/calceae.png)
 
 ![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i1.jpg)
 

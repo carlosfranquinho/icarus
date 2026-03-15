@@ -8,7 +8,7 @@ ogType: article
       <header class="post-cabecalho">
         {% if imagem %}
         <div class="post-cabecalho-img">
-          {% image imagem, title, "post-imagem-destaque" %}
+          <img src="{{ imagem }}" alt="{{ title }}" class="post-imagem-destaque">
         </div>
         {% endif %}
         <div class="post-cabecalho-info">
