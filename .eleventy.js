@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
   // Passthrough copies
+  eleventyConfig.addPassthroughCopy("imagens");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 
