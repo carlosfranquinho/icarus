@@ -56,28 +56,24 @@ ogType: article
       {{ content | safe }}
     </div>
 
-    <!-- ── Observações ───────────────────────────────────────────── -->
+    <!-- ── Fenograma e mapa regional (movidos por JS para a secção correcta) -->
     {% set obsEspecie = observacoes | observacoesPorEspecie(nome_cientifico) %}
+    {% if obsEspecie.length %}
+    <div id="fenograma-regional" style="display:none; margin: 1rem 0 1.5rem;">
+      <p><strong>Fenograma Regional:</strong></p>
+      {{ obsEspecie | svgFenograma | safe }}
+    </div>
+    <div id="mapa-regional-container">
+      <div id="mapa-especie" style="height:350px; border-radius:8px; border:1px solid var(--cinza-borda);"></div>
+    </div>
+    {% endif %}
+
+    <!-- ── Observações ───────────────────────────────────────────── -->
     {% if obsEspecie.length %}
     <!-- Leaflet CSS — deve vir antes do div do mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <div class="secao-observacoes" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
       <h2>Observações registadas ({{ obsEspecie.length }})</h2>
-
-      <div class="obs-graficos" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start; margin: 1.5rem 0;">
-
-        <!-- Fenograma -->
-        <div class="obs-fenograma">
-          <p style="font-size:0.8rem; color:var(--cinza-suave); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Fenograma</p>
-          {{ obsEspecie | svgFenograma | safe }}
-        </div>
-
-        <!-- Mapa Leaflet -->
-        <div class="obs-mapa" style="flex:1; min-width:260px; max-width:480px;">
-          <p style="font-size:0.8rem; color:var(--cinza-suave); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Distribuição UTM 1×1km</p>
-          <div id="mapa-especie" style="height:260px; border-radius:8px; border:1px solid var(--cinza-borda);"></div>
-        </div>
-      </div>
 
       <!-- Tabela -->
       <div style="overflow-x:auto;">
@@ -168,10 +164,16 @@ ogType: article
       }
 
       // ── Inicializar mapa ───────────────────────────────────────────
-      var map = L.map('mapa-especie');
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 18
+      var AREA_ESTUDO = [[39.45, -9.12], [39.92, -8.60]];
+      var map = L.map('mapa-especie', {
+        maxBounds: AREA_ESTUDO,
+        maxBoundsViscosity: 1.0,
+        minZoom: 9
+      });
+      map.fitBounds(AREA_ESTUDO);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 19
       }).addTo(map);
 
       // Agrupar por quadrícula
@@ -201,6 +203,7 @@ ogType: article
       if (allBounds.length) {
         map.fitBounds(allBounds, { padding: [30, 30], maxZoom: 14 });
       }
+      window.mapaEspecie = map;
     })();
     </script>
     {% endif %}

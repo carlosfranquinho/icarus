@@ -64,26 +64,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const isEspecie = document.querySelector(".content-especie");
   if (!isEspecie) return;
 
-  // Deteção de mapas de distribuição: antes usava img.src.includes(".png"),
-  // mas após a otimização os src são JPEG. Usa-se o alt text como critério.
-  const allImages = isEspecie.querySelectorAll("img");
-  allImages.forEach(img => {
-    const alt = img.alt.toLowerCase();
-    if (alt.includes("mapa") || alt.includes("distribuiç") || alt.includes("distribui")) {
-      img.classList.add("mapa-distribuicao");
+  // Mover fenograma regional para depois do parágrafo "Período de voo em Portugal"
+  const fenograma = document.getElementById('fenograma-regional');
+  if (fenograma) {
+    const strongPeriodo = Array.from(isEspecie.querySelectorAll('strong'))
+      .find(el => el.textContent.includes('Período de voo em Portugal'));
+    if (strongPeriodo) {
+      const pPeriodo = strongPeriodo.closest('p');
+      if (pPeriodo) {
+        pPeriodo.after(fenograma);
+        fenograma.style.display = '';
+      }
     }
-  });
+  }
 
-  // Mover o mapa de distribuição para ao lado do texto da secção Distribuição
-  const mapaImg = isEspecie.querySelector(".mapa-distribuicao");
-  if (mapaImg) {
-    const mapa = (mapaImg.parentElement.tagName === "PICTURE") ? mapaImg.parentElement : mapaImg;
-    const h3Dist = Array.from(isEspecie.querySelectorAll("h3"))
-      .find(h => h.textContent.includes("Distribuição"));
-    if (h3Dist) {
-      const pMapa = mapa.closest("p");
-      h3Dist.insertAdjacentElement("afterend", mapa);
-      if (pMapa && !pMapa.textContent.trim()) pMapa.remove();
+  // Mover mapa de distribuição para a secção Distribuição
+  const h3Dist = Array.from(isEspecie.querySelectorAll("h3"))
+    .find(h => h.textContent.includes("Distribuição"));
+  if (h3Dist) {
+    const mapaContainer = document.getElementById("mapa-regional-container");
+    if (mapaContainer) {
+      // Temos mapa dinâmico: remover imagem estática (se existir) e inserir mapa Leaflet
+      isEspecie.querySelectorAll("img").forEach(img => {
+        const alt = img.alt.toLowerCase();
+        if (alt.includes("mapa") || alt.includes("distribuiç") || alt.includes("distribui")) {
+          const p = img.closest("p");
+          if (p) p.remove(); else img.remove();
+        }
+      });
+      h3Dist.insertAdjacentElement("afterend", mapaContainer);
+      if (window.mapaEspecie) setTimeout(() => window.mapaEspecie.invalidateSize(), 50);
+    } else {
+      // Sem mapa dinâmico: mover imagem estática
+      isEspecie.querySelectorAll("img").forEach(img => {
+        const alt = img.alt.toLowerCase();
+        if (alt.includes("mapa") || alt.includes("distribuiç") || alt.includes("distribui")) {
+          const el = (img.parentElement.tagName === "PICTURE") ? img.parentElement : img;
+          const pMapa = el.closest("p");
+          h3Dist.insertAdjacentElement("afterend", el);
+          if (pMapa && !pMapa.textContent.trim()) pMapa.remove();
+        }
+      });
     }
   }
 

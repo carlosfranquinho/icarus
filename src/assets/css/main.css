@@ -1055,11 +1055,26 @@ main {
   border-radius: var(--raio);
 }
 
+#mapa-regional-container {
+  float: left;
+  width: 280px;
+  margin: 0.25rem 2rem 1.5rem 0;
+  box-shadow: var(--sombra-s);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
 @media (max-width: 600px) {
   .mapa-distribuicao {
     float: none;
     width: 100% !important;
     margin: 1rem 0 !important;
+  }
+
+  #mapa-regional-container {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
   }
 }
 
