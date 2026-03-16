@@ -20,7 +20,7 @@ ogType: article
       <!-- Coluna da Esquerda: Imagem -->
       <div class="especie-col-imagem">
         {% if imagem %}
-          <img src="{{ imagem }}" alt="{{ nome_cientifico }}" class="especie-imagem">
+          {% image imagem, nome_cientifico, "especie-imagem" %}
         {% endif %}
       </div>
 
@@ -221,7 +221,7 @@ ogType: article
           <article class="card-especie">
             {% if esp_encontrada.data.imagem %}
             <a href="{{ esp_encontrada.url }}" tabindex="-1" aria-hidden="true">
-              <img src="{{ esp_encontrada.data.imagem }}" alt="{{ esp_encontrada.data.nome_cientifico }}" class="card-especie-img">
+              {% image esp_encontrada.data.imagem, esp_encontrada.data.nome_cientifico, "card-especie-img", "(max-width: 600px) 100vw, 300px" %}
             </a>
             {% endif %}
             <div class="card-especie-corpo">

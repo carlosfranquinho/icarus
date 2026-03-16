@@ -20,7 +20,7 @@ permalink: "/atividades/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumb
       <a href="{{ post.url }}" class="lista-post-card">
         {% if post.data.imagem %}
         <div class="lista-post-card-img">
-          <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}">
+          {% image post.data.imagem, post.data.title, "", "(max-width: 600px) 100vw, 300px" %}
         </div>
         {% endif %}
         <div class="lista-post-card-corpo">

@@ -1,4 +1,39 @@
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
+
+async function imageShortcode(src, alt, className = "", sizes = "100vw") {
+  if (!src) return "";
+
+  // SVGs: não processar, devolver <img> simples
+  if (src.endsWith(".svg")) {
+    const classAttr = className ? ` class="${className}"` : "";
+    return `<img src="${src}" alt="${alt || ""}"${classAttr} loading="lazy" decoding="async">`;
+  }
+
+  let imageSrc = src;
+  if (src.startsWith("/")) {
+    imageSrc = path.join(__dirname, src);
+  }
+
+  try {
+    const metadata = await Image(imageSrc, {
+      widths: [300, 600, 1200],
+      formats: ["avif", "webp", "jpeg"],
+      outputDir: "./_site/img/",
+      urlPath: "/img/",
+    });
+    const attrs = { alt: alt || "", sizes, loading: "lazy", decoding: "async" };
+    if (className) attrs.class = className;
+    return Image.generateHTML(metadata, attrs);
+  } catch (e) {
+    console.error(`Aviso: falha ao otimizar ${src}: ${e.message}`);
+    const classAttr = className ? ` class="${className}"` : "";
+    return `<img src="${src}" alt="${alt || ""}"${classAttr} loading="lazy" decoding="async">`;
+  }
+}
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("imagens");
   eleventyConfig.addPassthroughCopy("src/assets");

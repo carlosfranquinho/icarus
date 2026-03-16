@@ -29,7 +29,7 @@ title: "Borboletas da Marinha Grande e Leiria"
         <li>
           <a href="{{ post.url }}">
             {% if post.data.imagem %}
-            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}">
+            {% image post.data.imagem, post.data.title, "", "(max-width: 480px) 100vw, 200px" %}
             {% endif %}
             <div>
               <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
@@ -52,7 +52,7 @@ title: "Borboletas da Marinha Grande e Leiria"
         <li>
           <a href="{{ post.url }}">
             {% if post.data.imagem %}
-            <img src="{{ post.data.imagem }}" alt="{{ post.data.title }}">
+            {% image post.data.imagem, post.data.title, "", "(max-width: 480px) 100vw, 200px" %}
             {% endif %}
             <div>
               <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dataPortugues }}</time>
@@ -78,7 +78,7 @@ title: "Borboletas da Marinha Grande e Leiria"
           {% for familia in collections.familiasDiurnas | sort(false, false, 'data.title') %}
           <a href="{{ familia.url }}" class="card-familia-home">
             {% if familia.data.imagem %}
-            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}">
+            {% image familia.data.imagem, familia.data.title, "", "(max-width: 480px) 100vw, 150px" %}
             {% endif %}
             <span>{{ familia.data.title }}</span>
           </a>
@@ -91,7 +91,7 @@ title: "Borboletas da Marinha Grande e Leiria"
           {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
           <a href="{{ familia.url }}" class="card-familia-home">
             {% if familia.data.imagem %}
-            <img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}">
+            {% image familia.data.imagem, familia.data.title, "", "(max-width: 480px) 100vw, 150px" %}
             {% endif %}
             <span>{{ familia.data.title }}</span>
           </a>
