@@ -216,6 +216,18 @@ main {
   width: auto;
 }
 
+.nav-logo .logo-light {
+  display: none;
+}
+
+.is-home .nav-principal:not(.scrolled) .logo-dark {
+  display: none;
+}
+
+.is-home .nav-principal:not(.scrolled) .logo-light {
+  display: block;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -238,11 +250,12 @@ main {
 .nav-lista {
   list-style: none;
   display: flex;
+  padding-top: 26px;
 }
 
 .nav-lista a {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem 1rem .3rem;
   color: var(--cinza-texto);
   text-decoration: none;
   font-family: var(--fonte-sc);
@@ -804,6 +817,7 @@ main {
   .post-cabecalho {
     flex-direction: column;
   }
+
   .post-cabecalho-img {
     flex: none;
     width: 100%;
