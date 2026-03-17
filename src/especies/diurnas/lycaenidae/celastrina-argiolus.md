@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Celastrina argiolus"
 familia: Lycaenidae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Polyommatinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

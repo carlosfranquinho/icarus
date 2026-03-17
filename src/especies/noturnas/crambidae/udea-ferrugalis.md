@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Udea ferrugalis"
 familia: Crambidae
+subfamilia: "Spilomelinae"
+autoridade: "Hübner, 1796"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

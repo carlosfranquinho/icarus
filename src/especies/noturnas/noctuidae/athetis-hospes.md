@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Athetis hospes"
 familia: Noctuidae
+subfamilia: "Condicinae"
+autoridade: "(Freyer, 1831) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

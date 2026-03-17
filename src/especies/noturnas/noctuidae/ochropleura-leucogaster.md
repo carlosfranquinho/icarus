@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Ochropleura leucogaster"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Freyer"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

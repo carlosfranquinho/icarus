@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Colias croceus"
 familia: Pieridae
+autoridade: "(Geoffroy, 1785) "
 subfamilia: Coliadinae
 grupo: diurnas
 imagem: /assets/silhuetas/pieridae.svg

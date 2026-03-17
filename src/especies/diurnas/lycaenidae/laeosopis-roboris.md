@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Laeosopis roboris"
 familia: Lycaenidae
+autoridade: "(Esper, 1790) "
 subfamilia: Theclinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

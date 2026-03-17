@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lenisa geminipuncta"
 familia: Noctuidae
+subfamilia: "Xyleninae"
+autoridade: "Haworth, 1809"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

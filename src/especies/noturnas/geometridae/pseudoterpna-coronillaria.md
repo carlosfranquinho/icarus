@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pseudoterpna coronillaria"
 familia: Geometridae
+subfamilia: "Geometrinae"
+autoridade: "(Hübner) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

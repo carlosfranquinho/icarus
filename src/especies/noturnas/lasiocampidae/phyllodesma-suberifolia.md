@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Phyllodesma suberifolia"
 familia: Lasiocampidae
+subfamilia: "Lasiocampinae"
+autoridade: "(Duponchel, 1842) "
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 placeholder: true

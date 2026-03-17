@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eilema sororcula"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Hufnagel, 1767) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Parascotia nisseni"
 familia: Erebidae
+subfamilia: "Erebinae"
+autoridade: "Turati, 1905"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

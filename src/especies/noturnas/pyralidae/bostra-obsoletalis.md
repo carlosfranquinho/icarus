@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Bostra obsoletalis"
 familia: Pyralidae
+subfamilia: "Ennominae"
+autoridade: "(Mann, 1864) "
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Melanargia lachesis"
 familia: Nymphalidae
+autoridade: "Hübner, 1790"
 subfamilia: Satyrinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

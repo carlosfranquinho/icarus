@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea aversata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

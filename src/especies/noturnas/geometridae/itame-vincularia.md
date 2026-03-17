@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Itame vincularia"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Hübner, 1813) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

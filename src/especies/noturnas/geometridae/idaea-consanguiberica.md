@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea consanguiberica"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "Rezbanyai-Reser & Hermosa, 1992"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

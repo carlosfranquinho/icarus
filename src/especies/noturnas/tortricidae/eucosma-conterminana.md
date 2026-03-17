@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eucosma conterminana"
 familia: Tortricidae
+subfamilia: "Olethreutinae"
+autoridade: "(Guenée, 1845) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

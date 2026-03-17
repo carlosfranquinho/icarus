@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hysterophora maculosana"
 familia: Tortricidae
+subfamilia: "Cochylinae"
+autoridade: "(Haworth, 1811) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

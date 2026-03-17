@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Macrothylacia digramma"
 familia: Lasiocampidae
+subfamilia: "Lasiocampinae"
+autoridade: "Meade-Waldo, 1906"
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 placeholder: true

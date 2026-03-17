@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eugnorisma glareosa"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Esper, 1788"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Angustalius malacellus"
 familia: Crambidae
+subfamilia: "Crambinae"
+autoridade: "(Duponchel, 1836) "
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Arnia nervosalis"
 familia: Crambidae
+subfamilia: "Crambinae"
+autoridade: "Guenée, 1849"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

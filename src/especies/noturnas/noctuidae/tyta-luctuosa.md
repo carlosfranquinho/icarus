@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Tyta luctuosa"
 familia: Noctuidae
+subfamilia: "Acontiinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

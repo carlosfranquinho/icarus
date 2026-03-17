@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea subsericeata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Haworth, 1809) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

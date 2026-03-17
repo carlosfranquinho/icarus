@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hyperlais siccalis"
 familia: Crambidae
+subfamilia: "Scopariinae"
+autoridade: "Guenée, 1854"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

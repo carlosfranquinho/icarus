@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Gerinia honoraria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Denis & Schiffermüller, 1775) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

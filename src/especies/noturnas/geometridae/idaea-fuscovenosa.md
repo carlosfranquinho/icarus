@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea fuscovenosa"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Goeze, 1781) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

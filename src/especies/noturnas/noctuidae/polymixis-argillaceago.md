@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Polymixis argillaceago"
 familia: Noctuidae
+subfamilia: "Xyleninae"
+autoridade: "Hübner, 1822"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

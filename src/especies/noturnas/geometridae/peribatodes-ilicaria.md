@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Peribatodes ilicaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Geyer) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

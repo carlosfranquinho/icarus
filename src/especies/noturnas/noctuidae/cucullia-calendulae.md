@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cucullia calendulae"
 familia: Noctuidae
+subfamilia: "Cuculliinae"
+autoridade: "Treitschke, 1835"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

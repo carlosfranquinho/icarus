@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mythimna albipuncta"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Gaede, 1916"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

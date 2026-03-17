@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Drymonia querna"
 familia: Notodontidae
+subfamilia: "Notodontinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/notodontidae.svg
 placeholder: true

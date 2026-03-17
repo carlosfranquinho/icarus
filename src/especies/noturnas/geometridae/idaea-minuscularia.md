@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea minuscularia"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Ribbe, 1912) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

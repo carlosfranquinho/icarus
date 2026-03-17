@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pyronia cecilia"
 familia: Nymphalidae
+autoridade: "Vallantin, 1894"
 subfamilia: Satyrinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

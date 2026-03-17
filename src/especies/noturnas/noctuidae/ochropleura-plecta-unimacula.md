@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Ochropleura plecta unimacula"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Staudinger, 1859"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

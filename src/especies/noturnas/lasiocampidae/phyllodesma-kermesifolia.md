@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Phyllodesma kermesifolia"
 familia: Lasiocampidae
+subfamilia: "Lasiocampinae"
+autoridade: "(de Lajonquière, 1960) "
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 placeholder: true

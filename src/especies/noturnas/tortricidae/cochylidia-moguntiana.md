@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cochylidia moguntiana"
 familia: Tortricidae
+subfamilia: "Cochylinae"
+autoridade: "(Rössler, 1864) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

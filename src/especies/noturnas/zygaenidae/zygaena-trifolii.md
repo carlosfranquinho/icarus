@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Zygaena trifolii"
 familia: Zygaenidae
+subfamilia: "Zygaeninae"
+autoridade: "(Esper, 1783) "
 grupo: noturnas
 imagem: /assets/silhuetas/zygaenidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Endotricha flammealis"
 familia: Pyralidae
+subfamilia: "Pyralinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

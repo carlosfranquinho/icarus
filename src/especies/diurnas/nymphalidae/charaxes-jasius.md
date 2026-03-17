@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Charaxes jasius"
 familia: Nymphalidae
+autoridade: "(Linnaeus, 1767) "
 subfamilia: Charaxinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

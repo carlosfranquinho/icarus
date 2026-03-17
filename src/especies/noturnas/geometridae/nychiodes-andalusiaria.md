@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Nychiodes andalusiaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "Staudinger, 1892"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

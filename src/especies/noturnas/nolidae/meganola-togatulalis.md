@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Meganola togatulalis"
 familia: Nolidae
+subfamilia: "Nolinae"
+autoridade: "Hübner"
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

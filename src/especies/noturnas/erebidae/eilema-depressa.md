@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eilema depressa"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Esper, 1786) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

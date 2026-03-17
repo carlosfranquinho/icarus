@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Orthonama obstipata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Fabricius, 1794) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

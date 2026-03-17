@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Elaphria venustula"
 familia: Noctuidae
+subfamilia: "Condicinae"
+autoridade: "(Hübner, 1790) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

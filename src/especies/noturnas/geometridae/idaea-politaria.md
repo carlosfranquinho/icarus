@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea politaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Hübner) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

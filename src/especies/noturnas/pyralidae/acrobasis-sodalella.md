@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Acrobasis sodalella"
 familia: Pyralidae
+subfamilia: "Phycitinae"
+autoridade: "Zeller, 1848"
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

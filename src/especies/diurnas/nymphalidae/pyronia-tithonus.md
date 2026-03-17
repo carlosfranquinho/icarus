@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pyronia tithonus"
 familia: Nymphalidae
+autoridade: "(Linnaeus, 1771) "
 subfamilia: Satyrinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

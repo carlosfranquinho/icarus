@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Gonepteryx rhamni"
 familia: Pieridae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Coliadinae
 grupo: diurnas
 imagem: /assets/silhuetas/pieridae.svg

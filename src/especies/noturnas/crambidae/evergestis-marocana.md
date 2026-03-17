@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Evergestis marocana"
 familia: Crambidae
+subfamilia: "Glaphyriinae"
+autoridade: "Lucas, 1956"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

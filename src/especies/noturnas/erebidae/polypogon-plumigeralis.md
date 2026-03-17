@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Polypogon plumigeralis"
 familia: Erebidae
+subfamilia: "Herminiinae"
+autoridade: "(Hübner, 1825) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

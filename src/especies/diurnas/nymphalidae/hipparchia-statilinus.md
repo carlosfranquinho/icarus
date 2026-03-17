@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hipparchia statilinus"
 familia: Nymphalidae
+autoridade: "Hufnagel, 1766"
 subfamilia: Satyrinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

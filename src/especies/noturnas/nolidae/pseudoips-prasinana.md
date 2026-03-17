@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pseudoips prasinana"
 familia: Nolidae
+subfamilia: "Chloephorinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Agrotis catalaunensis"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "(Millière, 1873) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

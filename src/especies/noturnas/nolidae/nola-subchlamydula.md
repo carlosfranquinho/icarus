@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Nola subchlamydula"
 familia: Nolidae
+subfamilia: "Nolinae"
+autoridade: "Staudinger, 1870"
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Chesias isabella"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "Schawerda, 1915"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

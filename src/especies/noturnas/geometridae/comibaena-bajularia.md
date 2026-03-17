@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Comibaena bajularia"
 familia: Geometridae
+subfamilia: "Geometrinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

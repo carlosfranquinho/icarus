@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Spilarctia lutea"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Hufnagel, 1766) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

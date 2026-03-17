@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Aricia cramera"
 familia: Lycaenidae
+autoridade: "(Eschscholtz, 1821) "
 subfamilia: Polyommatinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

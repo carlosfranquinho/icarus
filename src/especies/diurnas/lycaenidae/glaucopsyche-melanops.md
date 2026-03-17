@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Glaucopsyche melanops"
 familia: Lycaenidae
+autoridade: "(Boisduval, 1829) "
 subfamilia: Polyommatinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

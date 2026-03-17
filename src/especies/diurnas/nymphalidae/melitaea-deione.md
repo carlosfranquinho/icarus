@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Melitaea deione"
 familia: Nymphalidae
+autoridade: "(Geyer, 1832) "
 subfamilia: Nymphalinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mimas tiliae"
 familia: Sphingidae
+subfamilia: "Smerinthinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/sphingidae.svg
 placeholder: true

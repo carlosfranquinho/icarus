@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Crocallis dardoinaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "Donzel, 1840"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

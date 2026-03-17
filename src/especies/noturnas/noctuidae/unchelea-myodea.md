@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Unchelea myodea"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "(Rambur, 1858) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

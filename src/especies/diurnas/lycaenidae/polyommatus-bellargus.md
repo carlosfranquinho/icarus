@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Polyommatus bellargus"
 familia: Lycaenidae
+autoridade: "(Rottemburg, 1775) "
 subfamilia: Polyommatinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

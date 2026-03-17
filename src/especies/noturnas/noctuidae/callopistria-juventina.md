@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Callopistria juventina"
 familia: Noctuidae
+subfamilia: "Condicinae"
+autoridade: "(Stoll, 1782) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

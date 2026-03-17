@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Catarhoe basochesiata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Duponchel, 1831) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

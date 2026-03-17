@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea bigladiata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "Herbulot, 1975"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

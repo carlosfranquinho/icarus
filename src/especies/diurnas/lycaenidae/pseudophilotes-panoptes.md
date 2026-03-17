@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pseudophilotes panoptes"
 familia: Lycaenidae
+autoridade: "(Hübner, 1813) "
 subfamilia: Polyommatinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

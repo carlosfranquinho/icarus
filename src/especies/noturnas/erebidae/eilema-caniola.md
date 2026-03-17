@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eilema caniola"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Hübner, 1808) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

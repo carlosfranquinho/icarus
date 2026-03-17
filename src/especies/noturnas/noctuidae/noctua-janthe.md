@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Noctua janthe"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Borkhausen, 1792"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

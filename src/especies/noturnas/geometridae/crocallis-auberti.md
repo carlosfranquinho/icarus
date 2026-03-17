@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Crocallis auberti"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "Oberthür, 1883"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

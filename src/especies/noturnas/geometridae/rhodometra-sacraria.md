@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Rhodometra sacraria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Linnaeus, 1767) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

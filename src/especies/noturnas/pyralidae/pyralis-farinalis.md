@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pyralis farinalis"
 familia: Pyralidae
+subfamilia: "Pyralinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

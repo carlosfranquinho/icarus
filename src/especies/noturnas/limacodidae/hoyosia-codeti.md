@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hoyosia codeti"
 familia: Limacodidae
+subfamilia: "Limacodinae"
+autoridade: "(Oberthür, 1883) "
 grupo: noturnas
 imagem: /assets/silhuetas/limacodidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Menophra abruptaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Thunberg, 1792) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

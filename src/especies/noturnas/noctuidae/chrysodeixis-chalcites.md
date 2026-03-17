@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Chrysodeixis chalcites"
 familia: Noctuidae
+subfamilia: "Plusiinae"
+autoridade: "(Esper, 1789) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

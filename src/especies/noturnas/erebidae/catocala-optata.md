@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Catocala optata"
 familia: Erebidae
+subfamilia: "Erebinae"
+autoridade: "Godart, 1825"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

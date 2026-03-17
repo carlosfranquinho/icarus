@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea straminata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Borkhausen, 1794) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

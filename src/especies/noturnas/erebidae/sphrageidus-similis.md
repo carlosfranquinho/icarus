@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Sphrageidus similis"
 familia: Erebidae
+subfamilia: "Lymantriinae"
+autoridade: "Füssly, 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

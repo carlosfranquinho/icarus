@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Agrochola ruticilla"
 familia: Noctuidae
+subfamilia: "Xyleninae"
+autoridade: "(Esper, 1791) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

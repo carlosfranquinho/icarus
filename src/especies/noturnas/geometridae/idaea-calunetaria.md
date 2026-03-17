@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea calunetaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Staudinger, 1859) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Gonepteryx cleopatra"
 familia: Pieridae
+autoridade: "(Linnaeus, 1767) "
 subfamilia: Coliadinae
 grupo: diurnas
 imagem: /assets/silhuetas/pieridae.svg

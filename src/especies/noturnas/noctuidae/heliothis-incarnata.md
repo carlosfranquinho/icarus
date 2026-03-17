@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Heliothis incarnata"
 familia: Noctuidae
+subfamilia: "Heliothinae"
+autoridade: "Freyer, 1838"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

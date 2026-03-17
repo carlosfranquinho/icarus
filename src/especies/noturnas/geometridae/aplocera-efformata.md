@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Aplocera efformata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Guenée) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

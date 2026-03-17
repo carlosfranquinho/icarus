@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Agrotis puta"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "(Hübner, 1803) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

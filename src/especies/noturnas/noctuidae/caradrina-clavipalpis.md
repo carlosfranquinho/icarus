@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Caradrina clavipalpis"
 familia: Noctuidae
+subfamilia: "Condicinae"
+autoridade: "(Scopoli, 1763) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Meganola albula"
 familia: Nolidae
+subfamilia: "Nolinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

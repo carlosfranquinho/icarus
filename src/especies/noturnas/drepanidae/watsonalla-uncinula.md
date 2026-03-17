@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Watsonalla uncinula"
 familia: Drepanidae
+subfamilia: "Drepaninae"
+autoridade: "(Borkhausen, 1790) "
 grupo: noturnas
 imagem: /assets/silhuetas/drepanidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Anerastia lotella"
 familia: Pyralidae
+subfamilia: "Phycitinae"
+autoridade: "Hübner, 1813"
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

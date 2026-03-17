@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Macdunnoughia confusa"
 familia: Noctuidae
+subfamilia: "Plusiinae"
+autoridade: "(Stephens, 1850) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

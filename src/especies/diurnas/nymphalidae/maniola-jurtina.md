@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Maniola jurtina"
 familia: Nymphalidae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Satyrinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lacanobia oleracea"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mecyna asinalis"
 familia: Crambidae
+subfamilia: "Pyraustinae"
+autoridade: "Hübner, 1819"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

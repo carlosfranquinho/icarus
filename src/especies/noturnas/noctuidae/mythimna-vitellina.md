@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mythimna vitellina"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Hübner, 1808"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

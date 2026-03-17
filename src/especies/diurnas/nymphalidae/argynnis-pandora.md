@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Argynnis pandora"
 familia: Nymphalidae
+autoridade: "(Denis & Schiffermüller, 1775) "
 subfamilia: Heliconiinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

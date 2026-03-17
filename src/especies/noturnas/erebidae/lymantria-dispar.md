@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lymantria dispar"
 familia: Erebidae
+subfamilia: "Lymantriinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

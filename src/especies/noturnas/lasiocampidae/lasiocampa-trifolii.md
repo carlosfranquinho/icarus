@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lasiocampa trifolii"
 familia: Lasiocampidae
+subfamilia: "Lasiocampinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 placeholder: true

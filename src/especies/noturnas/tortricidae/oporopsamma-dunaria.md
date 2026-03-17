@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Oporopsamma dunaria"
 familia: Tortricidae
+subfamilia: "Olethreutinae"
+autoridade: "Sumpich, 2011"
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

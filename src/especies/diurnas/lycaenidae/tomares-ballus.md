@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Tomares ballus"
 familia: Lycaenidae
+autoridade: "(Fabricius, 1787) "
 subfamilia: Theclinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

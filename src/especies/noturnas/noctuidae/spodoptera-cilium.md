@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Spodoptera cilium"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Guenée, 1852"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

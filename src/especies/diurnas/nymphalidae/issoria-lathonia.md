@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Issoria lathonia"
 familia: Nymphalidae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Heliconiinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

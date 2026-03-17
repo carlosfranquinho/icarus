@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Leucania joannisi"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Boursin & Rungs, 1952"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

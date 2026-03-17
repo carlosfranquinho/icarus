@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Scotopteryx peribolata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Hübner, 1817) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea mustelata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Gumppenberg, 1892) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

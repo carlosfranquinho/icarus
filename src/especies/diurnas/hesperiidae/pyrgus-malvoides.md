@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pyrgus malvoides"
 familia: Hesperiidae
+autoridade: "(Elwes & Edwards, 1897) "
 subfamilia: Pyrginae
 grupo: diurnas
 imagem: /assets/silhuetas/hesperiidae.svg

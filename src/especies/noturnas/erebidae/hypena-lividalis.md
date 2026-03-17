@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hypena lividalis"
 familia: Erebidae
+autoridade: "(Hübner, 1790) "
+subfamilia: "Herminiinae"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

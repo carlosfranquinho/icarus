@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Satyrium esculi"
 familia: Lycaenidae
+autoridade: "(Hübner, 1804) "
 subfamilia: Theclinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

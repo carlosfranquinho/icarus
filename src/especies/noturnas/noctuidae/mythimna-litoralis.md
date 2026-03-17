@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mythimna litoralis"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Curtis, 1827"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

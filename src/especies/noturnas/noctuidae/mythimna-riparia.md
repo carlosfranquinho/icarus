@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mythimna riparia"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "(Rambur, 1829) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

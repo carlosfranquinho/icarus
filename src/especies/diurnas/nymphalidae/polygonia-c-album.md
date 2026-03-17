@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Polygonia c-album"
 familia: Nymphalidae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Nymphalinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

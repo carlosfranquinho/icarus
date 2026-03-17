@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Chloroclystis v-ata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Haworth, 1809) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

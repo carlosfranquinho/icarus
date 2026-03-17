@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eupithecia dodoneata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "Guenée"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

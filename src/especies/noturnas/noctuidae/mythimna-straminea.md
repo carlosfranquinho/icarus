@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Mythimna straminea"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "Treitschke, 1825"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cydia pomonella"
 familia: Tortricidae
+subfamilia: "Olethreutinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

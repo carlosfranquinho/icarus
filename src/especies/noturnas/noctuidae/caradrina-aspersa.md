@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Caradrina aspersa"
 familia: Noctuidae
+subfamilia: "Condicinae"
+autoridade: "Rambur, 1834"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

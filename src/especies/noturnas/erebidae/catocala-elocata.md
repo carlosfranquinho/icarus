@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Catocala elocata"
 familia: Erebidae
+subfamilia: "Erebinae"
+autoridade: "Esper"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

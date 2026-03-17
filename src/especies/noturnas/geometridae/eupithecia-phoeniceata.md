@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eupithecia phoeniceata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Rambur, 1834) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Rivula sericealis"
 familia: Erebidae
+autoridade: "(Scopoli, 1763) "
+subfamilia: "Rivulinae"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

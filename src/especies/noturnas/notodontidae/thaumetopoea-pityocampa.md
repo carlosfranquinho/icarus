@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thaumetopoea pityocampa"
 familia: Notodontidae
+autoridade: "(Denis & Schiffermüller) , 1776"
+subfamilia: "Thaumetopoeinae"
 grupo: noturnas
 imagem: /assets/silhuetas/notodontidae.svg
 placeholder: true

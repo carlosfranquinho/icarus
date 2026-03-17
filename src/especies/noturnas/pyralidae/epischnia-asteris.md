@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Epischnia asteris"
 familia: Pyralidae
+subfamilia: "Phycitinae"
+autoridade: "Staudinger, 1870"
 grupo: noturnas
 imagem: /assets/silhuetas/pyralidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Acronicta auricoma"
 familia: Noctuidae
+subfamilia: "Acronictinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

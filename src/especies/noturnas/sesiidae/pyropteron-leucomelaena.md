@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Pyropteron leucomelaena"
 familia: Sesiidae
+subfamilia: "Sesiinae"
+autoridade: "(Zeller, 1847) "
 grupo: noturnas
 imagem: /assets/silhuetas/sesiidae.svg
 placeholder: true

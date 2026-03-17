@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lycophotia erythrina"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Herrich-Schäffer"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

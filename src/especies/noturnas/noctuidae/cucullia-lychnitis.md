@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cucullia lychnitis"
 familia: Noctuidae
+subfamilia: "Cuculliinae"
+autoridade: "Rambur, 1833"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

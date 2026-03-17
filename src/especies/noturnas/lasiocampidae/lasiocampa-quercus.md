@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lasiocampa quercus"
 familia: Lasiocampidae
+subfamilia: "Lasiocampinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/lasiocampidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Chesias rufata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "(Fabricius, 1775) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

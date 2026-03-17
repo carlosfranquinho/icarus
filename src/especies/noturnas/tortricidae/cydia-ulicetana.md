@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cydia ulicetana"
 familia: Tortricidae
+subfamilia: "Olethreutinae"
+autoridade: "(Haworth, 1811) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

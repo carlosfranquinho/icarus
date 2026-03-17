@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Autographa gamma"
 familia: Noctuidae
+subfamilia: "Plusiinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

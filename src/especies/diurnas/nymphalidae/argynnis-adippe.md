@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Argynnis adippe"
 familia: Nymphalidae
+autoridade: "Schiffermuller, 1775"
 subfamilia: Heliconiinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

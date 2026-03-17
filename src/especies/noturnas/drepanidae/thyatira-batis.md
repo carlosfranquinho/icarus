@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thyatira batis"
 familia: Drepanidae
+subfamilia: "Thyatirinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/drepanidae.svg
 placeholder: true

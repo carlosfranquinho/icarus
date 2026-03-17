@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea lutulentaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Staudinger, 1892) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

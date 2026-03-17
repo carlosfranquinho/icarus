@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Callophrys avis"
 familia: Lycaenidae
+autoridade: "Chapman, 1909"
 subfamilia: Theclinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

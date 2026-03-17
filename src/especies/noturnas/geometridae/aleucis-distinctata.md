@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Aleucis distinctata"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Herrich-Schäffer, 1839) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

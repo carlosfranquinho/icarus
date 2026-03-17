@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Chrysodeixis acuta"
 familia: Noctuidae
+autoridade: "(Walker) "
+subfamilia: "Plusiinae"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

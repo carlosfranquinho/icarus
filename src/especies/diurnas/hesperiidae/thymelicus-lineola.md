@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thymelicus lineola"
 familia: Hesperiidae
+autoridade: "(Ochsenheimer, 1808) "
 subfamilia: Hesperiinae
 grupo: diurnas
 imagem: /assets/silhuetas/hesperiidae.svg

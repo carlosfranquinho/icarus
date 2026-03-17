@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Helicoverpa armigera"
 familia: Noctuidae
+subfamilia: "Heliothinae"
+autoridade: "(Hübner, 1808) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

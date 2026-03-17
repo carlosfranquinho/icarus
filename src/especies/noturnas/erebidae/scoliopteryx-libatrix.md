@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Scoliopteryx libatrix"
 familia: Erebidae
+subfamilia: "Erebinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

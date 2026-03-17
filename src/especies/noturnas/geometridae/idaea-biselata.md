@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea biselata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Hufnagel, 1767) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

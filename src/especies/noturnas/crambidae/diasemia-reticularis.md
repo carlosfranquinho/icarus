@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Diasemia reticularis"
 familia: Crambidae
+subfamilia: "Pyraustinae"
+autoridade: "Linnaeus, 1761"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

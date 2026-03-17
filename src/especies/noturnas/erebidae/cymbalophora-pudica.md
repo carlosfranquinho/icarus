@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cymbalophora pudica"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Esper, 1784) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

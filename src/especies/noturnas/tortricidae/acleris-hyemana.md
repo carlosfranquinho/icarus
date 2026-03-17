@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Acleris hyemana"
 familia: Tortricidae
+subfamilia: "Tortricinae"
+autoridade: "(Haworth, 1811) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

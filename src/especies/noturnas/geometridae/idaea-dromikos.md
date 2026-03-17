@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea dromikos"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "Hausmann, 2004"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

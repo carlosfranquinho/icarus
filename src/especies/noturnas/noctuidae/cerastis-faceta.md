@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cerastis faceta"
 familia: Noctuidae
+subfamilia: "Noctuinae"
+autoridade: "Treitschke, 1835"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

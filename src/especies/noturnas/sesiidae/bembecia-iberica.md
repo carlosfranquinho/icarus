@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Bembecia iberica"
 familia: Sesiidae
+subfamilia: "Sesiinae"
+autoridade: "Špatenka, 1992"
 grupo: noturnas
 imagem: /assets/silhuetas/sesiidae.svg
 placeholder: true

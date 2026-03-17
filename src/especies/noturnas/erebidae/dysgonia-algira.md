@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Dysgonia algira"
 familia: Erebidae
+subfamilia: "Erebinae"
+autoridade: "Linnaeus, 1767"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Adactylotis gesticularia"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Hübner, 1817) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

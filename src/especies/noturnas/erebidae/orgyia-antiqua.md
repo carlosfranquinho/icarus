@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Orgyia antiqua"
 familia: Erebidae
+subfamilia: "Lymantriinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

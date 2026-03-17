@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Ochlodes sylvanus"
 familia: Hesperiidae
+autoridade: "(Esper, 1777) "
 subfamilia: Hesperiinae
 grupo: diurnas
 imagem: /assets/silhuetas/hesperiidae.svg

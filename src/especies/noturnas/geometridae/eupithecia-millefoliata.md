@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eupithecia millefoliata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "Rössler, 1866"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

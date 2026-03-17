@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eupithecia cocciferata"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "Millière, 1864"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

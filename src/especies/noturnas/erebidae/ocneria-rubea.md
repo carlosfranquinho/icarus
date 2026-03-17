@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Ocneria rubea"
 familia: Erebidae
+subfamilia: "Lymantriinae"
+autoridade: "(Denis & Schiffermüller) , 1775"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

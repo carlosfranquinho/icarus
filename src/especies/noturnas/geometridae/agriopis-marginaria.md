@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Agriopis marginaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Fabricius) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

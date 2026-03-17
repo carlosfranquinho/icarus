@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hemithea aestivaria"
 familia: Geometridae
+subfamilia: "Geometrinae"
+autoridade: "(Hübner, 1799) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

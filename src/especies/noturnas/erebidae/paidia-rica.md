@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Paidia rica"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Freyer, 1858) "
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

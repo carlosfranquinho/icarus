@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Bena bicolorana"
 familia: Nolidae
+subfamilia: "Plusiinae"
+autoridade: "(Füssly, 1775) "
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

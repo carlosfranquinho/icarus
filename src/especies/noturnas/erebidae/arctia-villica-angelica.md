@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Arctia villica angelica"
 familia: Erebidae
+subfamilia: "Arctiinae"
+autoridade: "(Staudinger, 1871)"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true

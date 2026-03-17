@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Scopula imitaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Hübner, 1799) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

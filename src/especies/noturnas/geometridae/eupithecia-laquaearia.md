@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Eupithecia laquaearia"
 familia: Geometridae
+subfamilia: "Larentiinae"
+autoridade: "Herrich-Schäffer, 1848"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

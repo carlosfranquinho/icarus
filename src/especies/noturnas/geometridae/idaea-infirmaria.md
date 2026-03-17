@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea infirmaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Rambur, 1833) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Opisthograptis luteolata"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

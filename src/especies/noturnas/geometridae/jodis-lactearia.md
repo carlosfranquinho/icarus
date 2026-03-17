@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Jodis lactearia"
 familia: Geometridae
+subfamilia: "Geometrinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

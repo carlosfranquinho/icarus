@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Xenochlorodes olympiaria"
 familia: Geometridae
+subfamilia: "Geometrinae"
+autoridade: "(Herrich-Schäffer, 1852) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

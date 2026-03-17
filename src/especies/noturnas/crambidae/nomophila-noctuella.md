@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Nomophila noctuella"
 familia: Crambidae
+subfamilia: "Spilomelinae"
+autoridade: "(Denis & Schiffermüller) "
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

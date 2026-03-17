@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Sesamia nonagrioides"
 familia: Noctuidae
+subfamilia: "Hadeninae"
+autoridade: "(Lefèbvre, 1827) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

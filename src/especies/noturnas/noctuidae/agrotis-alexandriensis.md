@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Agrotis alexandriensis"
 familia: Noctuidae
+autoridade: "Bethune-Baker, 1894"
+subfamilia: "Noctuinae"
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

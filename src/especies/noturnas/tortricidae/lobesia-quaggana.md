@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lobesia quaggana"
 familia: Tortricidae
+subfamilia: "Olethreutinae"
+autoridade: "(Mann, 1855) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

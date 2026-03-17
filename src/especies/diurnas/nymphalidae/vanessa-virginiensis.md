@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Vanessa virginiensis"
 familia: Nymphalidae
+autoridade: "(Drury, 1773) "
 subfamilia: Nymphalinae
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg

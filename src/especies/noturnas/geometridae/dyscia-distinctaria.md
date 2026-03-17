@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Dyscia distinctaria"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Bang-Haas, 1910) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea efflorata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "Zeller, 1849"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

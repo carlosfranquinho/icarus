@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thymelicus sylvestris"
 familia: Hesperiidae
+autoridade: "(Poda, 1761) "
 subfamilia: Hesperiinae
 grupo: diurnas
 imagem: /assets/silhuetas/hesperiidae.svg

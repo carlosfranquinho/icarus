@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Palpita vitrealis"
 familia: Crambidae
+subfamilia: "Spilomelinae"
+autoridade: "Rossi, 1794"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

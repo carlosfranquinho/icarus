@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Phalera bucephala"
 familia: Notodontidae
+subfamilia: "Phalerinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/notodontidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Lozotaenia cupidinana"
 familia: Tortricidae
+subfamilia: "Tortricinae"
+autoridade: "(Staudinger, 1859) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Loxostege scutalis"
 familia: Crambidae
+subfamilia: "Pyraustinae"
+autoridade: "Hübner, 1813"
 grupo: noturnas
 imagem: /assets/silhuetas/crambidae.svg
 placeholder: true

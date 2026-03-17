@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Stegania trimaculata"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Villers, 1789) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

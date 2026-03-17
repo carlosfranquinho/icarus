@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Hypomecis punctinalis"
 familia: Geometridae
+subfamilia: "Ennominae"
+autoridade: "(Scopoli, 1763) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

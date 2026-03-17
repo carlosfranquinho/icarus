@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea eugeniata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Dardoin & Millière, 1872) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

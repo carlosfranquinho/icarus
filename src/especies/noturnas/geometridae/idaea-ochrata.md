@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea ochrata"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Scopoli, 1763) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

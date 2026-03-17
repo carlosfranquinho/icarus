@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Brithys crini"
 familia: Noctuidae
+subfamilia: "Arctiinae"
+autoridade: "(Fabricius, 1775) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

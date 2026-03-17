@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Timandra comae"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "Schmidt, 1931"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Stauropus fagi"
 familia: Notodontidae
+subfamilia: "Stauropinae"
+autoridade: "(Linnaeus, 1758) "
 grupo: noturnas
 imagem: /assets/silhuetas/notodontidae.svg
 placeholder: true

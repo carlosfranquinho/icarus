@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Rhodostrophia calabra"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Petagna, 1786) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Trichoplusia ni"
 familia: Noctuidae
+subfamilia: "Plusiinae"
+autoridade: "(Hübner) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

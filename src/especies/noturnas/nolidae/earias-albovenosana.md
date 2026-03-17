@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Earias albovenosana"
 familia: Nolidae
+subfamilia: "Chloephorinae"
+autoridade: "Oberthür, 1917"
 grupo: noturnas
 imagem: /assets/silhuetas/nolidae.svg
 placeholder: true

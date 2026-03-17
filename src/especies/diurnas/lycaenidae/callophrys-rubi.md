@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Callophrys rubi"
 familia: Lycaenidae
+autoridade: "(Linnaeus, 1758) "
 subfamilia: Theclinae
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg

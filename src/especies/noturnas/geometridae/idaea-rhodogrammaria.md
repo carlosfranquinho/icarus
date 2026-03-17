@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Idaea rhodogrammaria"
 familia: Geometridae
+subfamilia: "Sterrhinae"
+autoridade: "(Püngeler, 1913) "
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true

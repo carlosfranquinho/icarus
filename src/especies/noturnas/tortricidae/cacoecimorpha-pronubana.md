@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Cacoecimorpha pronubana"
 familia: Tortricidae
+subfamilia: "Tortricinae"
+autoridade: "(Hübner, 1796-1799) "
 grupo: noturnas
 imagem: /assets/silhuetas/tortricidae.svg
 placeholder: true

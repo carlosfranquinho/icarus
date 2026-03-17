@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thalpophila vitalba"
 familia: Noctuidae
+subfamilia: "Xyleninae"
+autoridade: "(Freyer, 1834) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

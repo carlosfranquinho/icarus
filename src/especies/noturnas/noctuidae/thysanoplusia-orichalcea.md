@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Thysanoplusia orichalcea"
 familia: Noctuidae
+subfamilia: "Plusiinae"
+autoridade: "(Fabricius, 1775) "
 grupo: noturnas
 imagem: /assets/silhuetas/noctuidae.svg
 placeholder: true

@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Saturnia pavonia"
 familia: Saturniidae
+subfamilia: "Saturniinae"
+autoridade: "Linnaeus, 1758"
 grupo: noturnas
 imagem: /assets/silhuetas/saturniidae.svg
 placeholder: true

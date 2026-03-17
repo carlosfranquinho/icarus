@@ -3,6 +3,8 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Gymnoscelis rufifasciata"
 familia: Geometridae
+autoridade: "(Haworth, 1809) "
+subfamilia: "Larentiinae"
 grupo: noturnas
 imagem: /assets/silhuetas/geometridae.svg
 placeholder: true
