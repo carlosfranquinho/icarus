@@ -1,6 +1,8 @@
 ---
 layout: layouts/base.njk
 ogType: article
+extraCSS:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
 ---
 <div class="container">
   <nav aria-label="Caminho" style="font-size:0.85rem; color: var(--cor-texto-suave); margin-bottom:1.5rem;">
@@ -70,8 +72,6 @@ ogType: article
 
     <!-- ── Observações ───────────────────────────────────────────── -->
     {% if obsEspecie.length %}
-    <!-- Leaflet CSS — deve vir antes do div do mapa -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <div class="secao-observacoes" style="clear:both; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
       <h2>Observações registadas ({{ obsEspecie.length }})</h2>
 

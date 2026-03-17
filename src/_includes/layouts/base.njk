@@ -72,6 +72,8 @@
   <!-- Anti-flash: aplicar tema guardado antes de renderizar -->
   <script>(function(){var t=localStorage.getItem('icarus-tema');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="stylesheet" href="/assets/css/main.css">
+  {% if extraCSS %}{% for cssUrl in extraCSS %}<link rel="stylesheet" href="{{ cssUrl }}">
+  {% endfor %}{% endif %}
   <link rel="icon" href="/assets/logo/logo-icarus.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/logo/logo-icarus.svg">
 </head>

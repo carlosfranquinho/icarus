@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Pesquisa
+descricao: Pesquisar no site do Grupo icarus — espécies, actividades e observações.
+permalink: /pesquisa/
+extraCSS:
+  - /pagefind/pagefind-ui.css
+---
+<div class="container">
+  <header style="margin-bottom: 2rem;">
+    <h1>Pesquisa</h1>
+    <p style="color: var(--cinza-suave);">Pesquisar espécies, actividades e conteúdos do site.</p>
+  </header>
+
+  <div id="pesquisa"></div>
+</div>
+
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    new PagefindUI({
+      element: '#pesquisa',
+      showSubResults: false,
+      translations: {
+        placeholder: 'Pesquisar…',
+        zero_results: 'Sem resultados para [SEARCH_TERM]',
+        many_results: '[COUNT] resultados para [SEARCH_TERM]',
+        one_result: '1 resultado para [SEARCH_TERM]',
+        alt_search: 'Sem resultados para [SEARCH_TERM]. A mostrar resultados para [DIFFERENT_TERM]',
+        search_suggestion: 'Sem resultados para [SEARCH_TERM]. Tente pesquisar por [DIFFERENT_TERMS]',
+        searching: 'A pesquisar [SEARCH_TERM]…'
+      }
+    });
+  });
+</script>
