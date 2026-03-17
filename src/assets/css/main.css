@@ -44,6 +44,11 @@
     --verde: #22d3ee;
     --verde-claro: #67e8f9;
     --verde-escuro: #06b6d4;
+    --pagefind-ui-primary: #06b6d4;
+    --pagefind-ui-text: #e2e8f0;
+    --pagefind-ui-background: #1e2028;
+    --pagefind-ui-border: #2d3748;
+    --pagefind-ui-tag: #2a2d36;
   }
 }
 
@@ -58,6 +63,11 @@ html[data-theme="dark"] {
   --verde: #22d3ee;
   --verde-claro: #67e8f9;
   --verde-escuro: #06b6d4;
+  --pagefind-ui-primary: #06b6d4;
+  --pagefind-ui-text: #e2e8f0;
+  --pagefind-ui-background: #1e2028;
+  --pagefind-ui-border: #2d3748;
+  --pagefind-ui-tag: #2a2d36;
 }
 
 /* --- Reset & Base --- */
