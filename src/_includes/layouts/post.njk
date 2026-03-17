@@ -5,7 +5,7 @@ ogType: article
 <div class="container">
   <div class="conteudo-central">
     <article>
-      {% if imagem %}<span hidden data-pagefind-meta="image" content="{{ imagem }}"></span>{% endif %}
+      {% if imagem %}<img src="{{ imagem }}" alt="" data-pagefind-meta="image[src]" style="position:absolute;width:0;height:0;overflow:hidden;">{% endif %}
       <header class="post-cabecalho">
         {% if imagem %}
         <div class="post-cabecalho-img">
