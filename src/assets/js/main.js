@@ -129,4 +129,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Paginação da tabela de observações (20 por página)
+  const tbody = document.getElementById('obs-tbody');
+  const paginacao = document.getElementById('obs-paginacao');
+  if (tbody && paginacao) {
+    const linhas = Array.from(tbody.querySelectorAll('tr'));
+    const POR_PAG = 20;
+    if (linhas.length > POR_PAG) {
+      let pagina = 0;
+      const total = Math.ceil(linhas.length / POR_PAG);
+      const info = document.getElementById('obs-info');
+      const btnAnt = document.getElementById('obs-ant');
+      const btnSeg = document.getElementById('obs-seg');
+
+      function mostrar(p) {
+        linhas.forEach((tr, i) => {
+          tr.style.display = (i >= p * POR_PAG && i < (p + 1) * POR_PAG) ? '' : 'none';
+        });
+        const de = p * POR_PAG + 1;
+        const ate = Math.min((p + 1) * POR_PAG, linhas.length);
+        info.textContent = `${de}–${ate} de ${linhas.length}`;
+        btnAnt.disabled = p === 0;
+        btnSeg.disabled = p === total - 1;
+      }
+
+      btnAnt.addEventListener('click', () => { pagina--; mostrar(pagina); });
+      btnSeg.addEventListener('click', () => { pagina++; mostrar(pagina); });
+      paginacao.style.display = 'flex';
+      mostrar(0);
+    }
+  }
+
 });

@@ -72,12 +72,12 @@ ogType: article
     {% if obsEspecie.length %}
     <!-- Leaflet CSS — deve vir antes do div do mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <div class="secao-observacoes" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
+    <div class="secao-observacoes" style="clear:both; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
       <h2>Observações registadas ({{ obsEspecie.length }})</h2>
 
       <!-- Tabela -->
       <div style="overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+        <table id="obs-tabela" style="width:100%; border-collapse:collapse; font-size:0.88rem;">
           <thead>
             <tr style="border-bottom:2px solid var(--cinza-borda);">
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Data</th>
@@ -88,7 +88,7 @@ ogType: article
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="obs-tbody">
             {% for obs in obsEspecie | sort(true, false, "data") %}
             <tr style="border-bottom:1px solid var(--cinza-borda);">
               <td style="padding:0.5rem 0.75rem; white-space:nowrap;">{{ obs.data }}</td>
@@ -101,6 +101,11 @@ ogType: article
             {% endfor %}
           </tbody>
         </table>
+      </div>
+      <div id="obs-paginacao" style="display:none; align-items:center; justify-content:flex-end; gap:1rem; margin-top:0.75rem; font-size:0.88rem; color:var(--cinza-suave);">
+        <button id="obs-ant" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">← Anteriores</button>
+        <span id="obs-info"></span>
+        <button id="obs-seg" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">Seguintes →</button>
       </div>
     </div>
 
