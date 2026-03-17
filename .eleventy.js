@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("imagens");
+  eleventyConfig.addPassthroughCopy("src/assets/places");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 

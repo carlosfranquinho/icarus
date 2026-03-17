@@ -163,14 +163,30 @@ ogType: article
         return [sw, ne];
       }
 
+      // ── Perímetro da área de estudo ────────────────────────────────
+      function carregarPerimetro(map) {
+        fetch('/assets/places/concelhos.geojson')
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            L.geoJSON(data, {
+              style: {
+                color: '#15803d',
+                weight: 1,
+                fillOpacity: 0
+              }
+            }).addTo(map);
+          });
+      }
+
       // ── Inicializar mapa ───────────────────────────────────────────
-      var AREA_ESTUDO = [[39.45, -9.12], [39.92, -8.60]];
+      var AREA_ESTUDO = [[39.46, -9.05], [39.88, -8.61]];
       var map = L.map('mapa-especie', {
         maxBounds: AREA_ESTUDO,
         maxBoundsViscosity: 1.0,
         minZoom: 9
       });
       map.fitBounds(AREA_ESTUDO);
+carregarPerimetro(map);
       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>',
         maxZoom: 19
@@ -200,9 +216,6 @@ ogType: article
         ).addTo(map);
       });
 
-      if (allBounds.length) {
-        map.fitBounds(allBounds, { padding: [30, 30], maxZoom: 14 });
-      }
       window.mapaEspecie = map;
     })();
     </script>
