@@ -1292,6 +1292,10 @@ button:disabled {
   .lista-post-card-img {
     width: 100px;
   }
+
+  .lista-post-card-resumo {
+    display: none;
+  }
 }
 
 /* Badges de categoria */
