@@ -435,6 +435,12 @@ html[data-theme="light"] .tema-toggle .icon-lua { display: block; }
   flex-wrap: wrap;
 }
 
+button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
 .btn-hero {
   padding: .55rem 1.25rem;
   border-radius: var(--raio);
