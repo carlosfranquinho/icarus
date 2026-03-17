@@ -5,7 +5,7 @@ date: 2014-07-17
 descricao: "Relato da primeira noite das Noites Europeias de Borboletas Noturnas (European Moth Nights), dinamizadas pelo grupo Borboletas da Marinha Grande."
 categoria: noturnas
 local: "Pinhal Manso, no Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões, Pedro Alves"
 imagem: /imagens/2014/07/21.jpg
 permalink: /2014/07/17/european-moth-nights-noite-1-pinhal-manso/
 ---

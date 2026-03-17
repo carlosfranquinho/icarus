@@ -5,7 +5,7 @@ date: 2012-06-15
 descricao: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Carla Liberato, Carlos Franquinho, Fernanda Grácio, Ivone Santo, Ricardo Machado"
 imagem: /imagens/2012/06/1.jpg
 permalink: /2012/06/15/1a-sessao-de-observacao-de-borboletas-noturnas/
 ---

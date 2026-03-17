@@ -5,7 +5,7 @@ date: 2016-05-22
 descricao: "Vale dos Poios, Redinha, Pombal"
 categoria: diurnas
 local: "Vale dos Poios, Redinha, Pombal"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, António Graça, Carlos Franquinho, Carlos Silva, Dina Fortunato, Henrique Baluga, Júlia, Leonor Santos, Nelson Ascenso, Renato Baluga, Rui"
 imagem: /imagens/2016/05/18.jpg
 permalink: /2016/05/22/18a-sessao-observacao-borboletas-diurnas/
 ---

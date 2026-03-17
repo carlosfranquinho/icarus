@@ -5,7 +5,7 @@ date: 2018-08-26
 descricao: "Tremelgo, Marinha Grande"
 categoria: diurnas
 local: "Tremelgo, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, António Graça, Ascensão Marques, Carlos Franquinho, Dina Correia, Dina Fortunato, Henrique Baluga, Hugo Areal, José Manuel (Ascensão), Luísa Fonseca, Paulo Simões, Pedro Claro, Rodrigo Claro"
 imagem: /imagens/2020/06/24.jpg
 permalink: /2018/08/26/24a-sessao-de-observacao-de-borboletas-diurnas/
 ---

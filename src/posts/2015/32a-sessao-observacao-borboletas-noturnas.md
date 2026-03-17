@@ -5,7 +5,7 @@ date: 2015-04-18
 descricao: "Vale da Felícia, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Vale da Felícia, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Carlos Silva, Cristina Gomes, Dina Correia, Gonçalo Lemos, Henrique Baluga, Hugo Areal, Ivone Santo, Paulo Simões"
 imagem: /imagens/2015/04/32.jpg
 permalink: /2015/04/18/32a-sessao-observacao-borboletas-noturnas/
 ---

@@ -5,7 +5,7 @@ date: 2015-03-21
 descricao: "Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Ribeira da Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Carlos Franquinho, Dina Correia, Gonçalo Lemos, Henrique Baluga, Hugo Areal, Paulo Simões"
 imagem: /imagens/2015/03/31.jpg
 permalink: /2015/03/21/31a-sessao-observacao-borboletas-noturnas/
 ---

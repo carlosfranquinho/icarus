@@ -5,7 +5,7 @@ date: 2013-07-11
 descricao: "Albergaria, Marinha Grande"
 categoria: noturnas
 local: "Albergaria, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2013/07/9.jpg
 permalink: /2013/07/11/9a-sessao-de-observacao-de-borboletas-noturnas/
 ---

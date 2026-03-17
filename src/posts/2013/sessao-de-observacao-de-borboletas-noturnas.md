@@ -5,7 +5,7 @@ date: 2013-04-20
 descricao: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Aurélio Diniz, Carla Liberato, Carlos Franquinho, Cristina Dinis, Fernanda Grácio, Ivone Santo, José Gonçalves, Leonor Santos, Ricardo Machado, Rómulo Arrais"
 imagem: /imagens/2013/04/6-scaled.jpg
 permalink: /2013/04/20/sessao-de-observacao-de-borboletas-noturnas/
 ---

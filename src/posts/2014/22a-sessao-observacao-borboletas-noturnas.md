@@ -5,7 +5,7 @@ date: 2014-07-18
 descricao: "Ribeira do Mogo, Chiqueda, Alcobaça"
 categoria: noturnas
 local: "Ribeira do Mogo, Chiqueda, Alcobaça"
-participantes: "Carlos Franquinho"
+participantes: "Alda (Chiqueda), Alexandrina Morgado, Ana Rita Gonçalves, António, Carlos Franquinho, Carlos Silva, Dina Correia, Felisbela Morgado, Hugo Areal, Irene (Chiqueda), Isaías Ferreira, Paulo B. (Chiqueda), Sofia Quaresma"
 imagem: /imagens/2014/07/22.jpg
 permalink: /2014/07/18/22a-sessao-observacao-borboletas-noturnas/
 ---

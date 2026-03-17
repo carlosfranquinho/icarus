@@ -5,7 +5,7 @@ date: 2012-10-31
 descricao: "Samouco, Marinha Grande"
 categoria: noturnas
 local: "Samouco, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Gonçalo Lemos, Ivone Santo, José Gonçalves"
 imagem: /imagens/2012/10/5.jpg
 permalink: /2012/10/31/5a-sessao-de-observacao-de-borboletas-noturnas/
 ---

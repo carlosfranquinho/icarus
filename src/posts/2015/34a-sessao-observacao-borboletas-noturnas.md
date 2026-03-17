@@ -5,7 +5,7 @@ date: 2015-06-20
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Albino Costa, Alexandrina Morgado, Armando Neto, Ascensão Marques, Carlos Franquinho, Cristóvão Costa, Dina Fortunato, Henrique Baluga, Hugo Areal, Ivone Santo, José Gonçalves, Leonor Santos, Licínia Pedrosa, Renato Baluga, Ricardo Morais, Sónia Duarte"
 imagem: /imagens/2015/06/34.jpg
 permalink: /2015/06/20/34a-sessao-observacao-borboletas-noturnas/
 ---

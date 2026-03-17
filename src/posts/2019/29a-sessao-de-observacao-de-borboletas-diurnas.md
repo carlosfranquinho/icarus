@@ -5,7 +5,7 @@ date: 2019-07-27
 descricao: "Ribeira do Arneiro, Maceira, Leiria"
 categoria: diurnas
 local: "Ribeira do Arneiro, Maceira, Leiria"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Carlos Franquinho, Henrique Baluga, Ivone Santo"
 imagem: /imagens/2020/06/vlcsnap-2020-06-29-22h43m18s094.jpg
 permalink: /2019/07/27/29a-sessao-de-observacao-de-borboletas-diurnas/
 ---

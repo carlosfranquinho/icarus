@@ -5,7 +5,7 @@ date: 2015-09-06
 descricao: "Buraco Roto, Reguengo do Fetal, Batalha"
 categoria: diurnas
 local: "Buraco Roto, Reguengo do Fetal, Batalha"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, António Graça, Armando Neto, Carlos Franquinho, Dina Fortunato, Henrique Baluga, Ivone Santo, José Gonçalves, Renato Baluga"
 imagem: /imagens/2015/09/16.jpg
 permalink: /2015/09/06/16a-sessao-observacao-borboletas-diurnas/
 ---

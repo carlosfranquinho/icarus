@@ -5,7 +5,7 @@ date: 2013-05-11
 descricao: "Crastinha, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Crastinha, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Cristina Gomes, Felisbela Morgado, Gonçalo Lemos, Hugo Areal, Ivone Santo, José Gonçalves"
 imagem: /imagens/2013/05/7.jpg
 permalink: /2013/05/11/sessao-de-observacao-de-borboletas-noturnas-em-maio/
 ---

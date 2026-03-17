@@ -5,7 +5,7 @@ date: 2015-05-31
 descricao: "Fórnea, Alcaria, Porto de Mós"
 categoria: diurnas
 local: "Fórnea, Alcaria, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Anne Nogueira, António (f. Anne), Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Fortunato, Felisbela Morgado, Henrique Baluga, Leonor Santos, Maria Matos, Renato Baluga"
 imagem: /imagens/2015/05/14.jpg
 permalink: /2015/05/31/14a-sessao-observacao-borboletas-diurnas/
 ---

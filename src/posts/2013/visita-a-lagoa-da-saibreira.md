@@ -5,7 +5,7 @@ date: 2013-07-27
 descricao: "Lagoa da Saibreira, Pinhal do Rei, Marinha Grande"
 categoria: diurnas
 local: "Lagoa da Saibreira, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Armando Neto, Carlos Franquinho, Hugo Areal, José Gonçalves, Paulo Simões"
 imagem: /imagens/2013/07/saibreira.jpg
 permalink: /2013/07/27/visita-a-lagoa-da-saibreira/
 ---

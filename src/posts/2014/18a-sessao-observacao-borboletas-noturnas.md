@@ -5,7 +5,7 @@ date: 2014-04-30
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Cristina Gomes, Dina Correia, Eduardo, Gonçalo Lemos, Hugo Areal, Ivone Santo, José Artur, José Gonçalves, Paulo Simões"
 imagem: /imagens/2014/04/18.jpg
 permalink: /2014/04/30/18a-sessao-observacao-borboletas-noturnas/
 ---

@@ -5,7 +5,7 @@ date: 2013-06-01
 descricao: "Ecopista, Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Ecopista, Serra da Pevide, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Carlos Franquinho, Dina Correia, Felisbela Morgado, Hugo Areal, Ivone Santo, José Gonçalves"
 imagem: /imagens/2013/06/2.jpg
 permalink: /2013/06/01/2a-caminhada-diurna-ecopista-de-porto-de-mos/
 ---

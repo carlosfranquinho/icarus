@@ -5,7 +5,7 @@ date: 2017-03-18
 descricao: "Alcanadas, Batalha"
 categoria: diurnas
 local: "Alcanadas, Batalha"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, António Graça, Carlos Franquinho, Carlos Silva, Dina Correia, Dina Fortunato, Henrique Baluga, Hugo Areal, João Nunes, Paulo Simões, Renato Baluga"
 imagem: /imagens/2017/03/20.jpg
 permalink: /2017/03/18/20a-sessao-observacao-borboletas-diurnas/
 ---

@@ -5,7 +5,7 @@ date: 2019-05-12
 descricao: "Pia do Urso, São Mamede, Batalha e Poldje de Mira, Porto de Mós"
 categoria: diurnas
 local: "Pia do Urso, São Mamede, Batalha e Poldje, Mira, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Henrique Baluga, Luísa Fonseca, Renato Baluga"
 imagem: /imagens/2019/05/27.jpg
 permalink: /2019/05/12/27a-sessao-de-observacao-de-borboletas-diurnas/
 ---

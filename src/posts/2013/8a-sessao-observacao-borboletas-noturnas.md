@@ -5,7 +5,7 @@ date: 2013-06-15
 descricao: "Ponte Nova, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Ponte Nova, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Fernanda Grácio, Hugo Areal, Ivone Santo, José Gonçalves"
 imagem: /imagens/2013/06/8.jpg
 permalink: /2013/06/15/8a-sessao-observacao-borboletas-noturnas/
 ---

@@ -5,7 +5,7 @@ date: 2013-07-14
 descricao: "Praia das Pedras Negras, Marinha Grande"
 categoria: noturnas
 local: "Praia das Pedras Negras, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2013/07/12.jpg
 permalink: /2013/07/14/12a-sessao-de-observacao-de-borboletas-noturnas/
 ---

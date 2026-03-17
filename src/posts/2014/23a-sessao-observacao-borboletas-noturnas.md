@@ -5,7 +5,7 @@ date: 2014-07-19
 descricao: "Vale do Lapedo, Santa Eufémia, Leiria"
 categoria: noturnas
 local: "Vale do Lapedo, Santa Eufémia, Leiria"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Carlos Franquinho, Dina Correia, Felisbela Morgado, Hugo Areal, Idalina (Lapedo), Inês (Lapedo), Lucinda (Lapedo), Nuno (Lapedo), Paulo Simões, Rita Martins, Sabrina (Lapedo)"
 imagem: /imagens/2014/07/23.jpg
 permalink: /2014/07/19/23a-sessao-observacao-borboletas-noturnas/
 ---

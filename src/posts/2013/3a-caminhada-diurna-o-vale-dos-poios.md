@@ -5,7 +5,7 @@ date: 2013-07-06
 descricao: "Vale dos Poios, Redinha, Pombal"
 categoria: diurnas
 local: "Vale dos Poios, Redinha, Pombal"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Dina Correia, Hugo Areal, Isaías Ferreira, José Gonçalves, Paulo Simões, Vítor Oliveira"
 imagem: /imagens/2013/07/3.jpg
 permalink: /2013/07/06/3a-caminhada-diurna-o-vale-dos-poios/
 ---

@@ -5,7 +5,7 @@ date: 2017-08-26
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, António Graça, Armando Neto, Carlos Franquinho, Dina Fortunato, Hugo Areal"
 imagem: /imagens/2020/06/43.jpg
 permalink: /2017/08/26/43a-sessao-de-observacao-de-borboletas-noturnas/
 ---

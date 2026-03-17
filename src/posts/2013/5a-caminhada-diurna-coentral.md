@@ -5,7 +5,7 @@ date: 2013-09-14
 descricao: "Ribeira das Quelhas, Coentral, Castanheira de Pêra"
 categoria: diurnas
 local: "Ribeira das Quelhas, Coentral, Castanheira de Pêra"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2013/09/5.jpg
 permalink: /2013/09/14/5a-caminhada-diurna-coentral/
 ---

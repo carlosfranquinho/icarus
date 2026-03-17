@@ -5,7 +5,7 @@ date: 2013-07-12
 descricao: "Margens do Lis, Vieira de Leiria, Marinha Grande"
 categoria: noturnas
 local: "Margens do Lis, Vieira de Leiria, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Cristina Gomes, Dina Correia, Gonçalo Lemos, Hugo Areal, Isaías Ferreira, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2013/07/10.jpg
 permalink: /2013/07/12/10a-sessao-observacao-borboletas-noturnas/
 ---

@@ -5,7 +5,7 @@ date: 2013-08-24
 descricao: "Fórnea, Alcaria, Porto de Mós"
 categoria: diurnas
 local: "Fórnea, Alcaria, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões, Ricardo Machado"
 imagem: /imagens/2013/08/4.jpg
 permalink: /2013/08/24/4a-caminhada-diurna-a-fornea/
 ---

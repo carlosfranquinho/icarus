@@ -5,7 +5,7 @@ date: 2017-04-23
 descricao: "Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Fortunato, Felisbela Morgado, Henrique Baluga, José Gonçalves, Luísa Fonseca, Nelson da Felisbela, Paulo Simões, Pedro Claro, Rodrigo Claro"
 imagem: /imagens/2020/06/21.jpg
 permalink: /2017/04/23/21a-sessao-de-observacao-de-borboletas-diurnas/
 ---

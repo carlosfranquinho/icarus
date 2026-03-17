@@ -5,7 +5,7 @@ date: 2014-07-21
 descricao: "Rio Tinto, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Rio Tinto, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Aurélio Diniz, Carlos Franquinho, Dalila, Fernanda Grácio, Fernando (EMN Felicia), Ivone Santo, José Gonçalves"
 imagem: /imagens/2014/07/25.jpg
 permalink: /2014/07/21/25a-sessao-observacao-borboletas-noturnas/
 ---

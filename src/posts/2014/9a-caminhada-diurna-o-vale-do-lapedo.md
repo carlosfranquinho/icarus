@@ -5,7 +5,7 @@ date: 2014-07-13
 descricao: "A caminhada do grupo Borboletas da Marinha Grande pelo Vale do Lapedo."
 categoria: diurnas
 local: "Vale do Lapedo, Santa Eufémia, Leiria"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Felisbela Morgado, Fernanda Grácio, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2014/07/9.jpg
 permalink: /2014/07/13/9a-caminhada-diurna-o-vale-do-lapedo/
 ---

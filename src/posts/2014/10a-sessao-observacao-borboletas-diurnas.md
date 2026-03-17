@@ -5,7 +5,7 @@ date: 2014-08-16
 descricao: "Parque Natural de Montesinho, Bragança"
 categoria: diurnas
 local: "Parque Natural de Montesinho, Bragança"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Natália F. (Montesinho), Ulisses (Montesinho)"
 imagem: /imagens/2014/08/10.jpg
 permalink: /2014/08/16/10a-sessao-observacao-borboletas-diurnas/
 ---

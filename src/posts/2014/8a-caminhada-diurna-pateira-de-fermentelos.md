@@ -5,7 +5,7 @@ date: 2014-06-15
 descricao: "Caminhada do grupo Borboletas da Marinha Grande pela Pateira de Fermentelos, em Aveiro."
 categoria: diurnas
 local: "Pateira de Fermentelos, Óis da Ribeira, Águeda"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Carlos Silva, Cristina Dinis, Felisbela Morgado, Fernanda Grácio, José Gonçalves, Paulo Simões, Tatiana Moreira"
 imagem: /imagens/2014/06/8.jpg
 permalink: /2014/06/15/8a-caminhada-diurna-pateira-de-fermentelos/
 ---
