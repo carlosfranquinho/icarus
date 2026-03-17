@@ -18,6 +18,7 @@ extraCSS:
   </nav>
 
   <article class="especie-wrapper">
+    {% if imagem %}<span hidden data-pagefind-meta="image" content="{{ imagem }}"></span>{% endif %}
     <div class="especie-grid">
       <!-- Coluna da Esquerda: Imagem -->
       <div class="especie-col-imagem">
