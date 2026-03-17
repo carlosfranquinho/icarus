@@ -145,13 +145,6 @@ const chavesDuplicado = new Set(
     .map(o => `${o.data}|${o.nome_cientifico}|${o.utm1k}`)
 );
 
-// Último ID existente
-const ultimoId = obsAtuais.reduce((max, o) => {
-  const n = parseInt((o.id || '').replace('obs-', ''), 10);
-  return isNaN(n) ? max : Math.max(max, n);
-}, 0);
-
-let proxId = ultimoId + 1;
 const novas = [];
 
 // Contadores para relatório
@@ -206,7 +199,6 @@ for (const row of csvRows) {
 
   // Construir observação
   const obs = {
-    id:              `obs-${String(proxId++).padStart(3, '0')}`,
     nome_cientifico: especie,
     data:            row.observed_on,
     utm1k,
@@ -258,5 +250,5 @@ if (!APPLY) {
 
 // Escrever
 const todasObs = [...obsAtuais, ...novas];
-fs.writeFileSync(OBS_FILE, JSON.stringify(todasObs, null, 4) + '\n', 'utf8');
+fs.writeFileSync(OBS_FILE, JSON.stringify(todasObs) + '\n', 'utf8');
 console.log(`✓ observacoes.json actualizado: ${obsAtuais.length} + ${novas.length} = ${todasObs.length} observações\n`);

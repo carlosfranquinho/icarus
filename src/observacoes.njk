@@ -7,68 +7,28 @@ permalink: /observacoes/
 <div class="container">
   <header style="margin-bottom: 2rem;">
     <h1>Observações</h1>
-    <p style="color: var(--cinza-suave);">Registo de campo do Grupo icarus — {{ observacoes.length }} observações.</p>
+    <p style="color: var(--cinza-suave);">Registo de campo do Grupo icarus.</p>
   </header>
 
-  {% if observacoes.length %}
-
-  {# Construir lookup nome_cientifico → familia a partir da colecção #}
-  {% set familiaMap = [] %}
-  {% for esp in collections.especies %}
-    {% if esp.data.tipo == "especie" %}
-      {% set familiaMap = familiaMap.concat([{ nome: esp.data.nome_cientifico, familia: esp.data.familia }]) %}
-    {% endif %}
-  {% endfor %}
-
   <div style="margin-bottom: 1.5rem; display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap;">
-
     <label for="filtro-especie" class="visually-hidden">Filtrar por espécie</label>
     <select id="filtro-especie" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
       <option value="">Todas as espécies</option>
-      {% set especiesVistas = [] %}
-      {% for obs in observacoes | sort(false, false, "nome_cientifico") %}
-        {% if obs.nome_cientifico not in especiesVistas %}
-          {% set especiesVistas = especiesVistas.concat([obs.nome_cientifico]) %}
-          <option value="{{ obs.nome_cientifico }}">{{ obs.nome_cientifico }}</option>
-        {% endif %}
-      {% endfor %}
     </select>
 
     <label for="filtro-familia" class="visually-hidden">Filtrar por família</label>
     <select id="filtro-familia" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
       <option value="">Todas as famílias</option>
-      {% set familiasVistas = [] %}
-      {% for item in familiaMap | sort(false, false, "familia") %}
-        {% if item.familia and item.familia not in familiasVistas %}
-          {% set familiasVistas = familiasVistas.concat([item.familia]) %}
-          <option value="{{ item.familia }}">{{ item.familia }}</option>
-        {% endif %}
-      {% endfor %}
     </select>
 
     <label for="filtro-ano" class="visually-hidden">Filtrar por ano</label>
     <select id="filtro-ano" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
       <option value="">Todos os anos</option>
-      {% set anosVistos = [] %}
-      {% for obs in observacoes | sort(true, false, "data") %}
-        {% set ano = obs.data | truncate(4, true, "") %}
-        {% if ano not in anosVistos %}
-          {% set anosVistos = anosVistos.concat([ano]) %}
-          <option value="{{ ano }}">{{ ano }}</option>
-        {% endif %}
-      {% endfor %}
     </select>
 
     <label for="filtro-observador" class="visually-hidden">Filtrar por observador</label>
     <select id="filtro-observador" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
       <option value="">Todos os observadores</option>
-      {% set obsVistas = [] %}
-      {% for obs in observacoes | sort(false, false, "observador") %}
-        {% if obs.observador and obs.observador not in obsVistas %}
-          {% set obsVistas = obsVistas.concat([obs.observador]) %}
-          <option value="{{ obs.observador }}">{{ obs.observador }}</option>
-        {% endif %}
-      {% endfor %}
     </select>
 
     <button id="limpar-filtros" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:none; color:var(--cinza-suave); cursor:pointer; display:none;">✕ Limpar</button>
@@ -88,45 +48,22 @@ permalink: /observacoes/
           <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
         </tr>
       </thead>
-      <tbody>
-        {% set obsSorted = observacoes | sort(true, false, "data") %}
-        {% for obs in obsSorted %}
-          {# Lookup família #}
-          {% set familiaObs = "" %}
-          {% set urlEsp = null %}
-          {% for esp in collections.especies %}
-            {% if esp.data.nome_cientifico == obs.nome_cientifico %}
-              {% if esp.data.tipo == "especie" %}{% set familiaObs = esp.data.familia %}{% endif %}
-              {% set urlEsp = esp.url %}
-            {% endif %}
-          {% endfor %}
-        <tr class="linha-obs"
-            data-especie="{{ obs.nome_cientifico }}"
-            data-familia="{{ familiaObs }}"
-            data-ano="{{ obs.data | truncate(4, true, '') }}"
-            data-observador="{{ obs.observador if obs.observador else '' }}"
-            style="border-bottom:1px solid var(--cinza-borda);">
-          <td style="padding:0.5rem 0.75rem; white-space:nowrap;">{{ obs.data }}</td>
-          <td style="padding:0.5rem 0.75rem;">
-            {% if urlEsp %}
-              <a href="{{ urlEsp }}"><em>{{ obs.nome_cientifico }}</em></a>
-            {% else %}
-              <em>{{ obs.nome_cientifico }}</em>
-            {% endif %}
-          </td>
-          <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">{{ familiaObs if familiaObs else "—" }}</td>
-          <td style="padding:0.5rem 0.75rem;"><code style="font-size:0.85em; background:var(--cinza-bg); padding:0.1em 0.4em; border-radius:4px;">{{ obs.utm1k if obs.utm1k else "—" }}</code></td>
-          <td style="padding:0.5rem 0.75rem; text-align:right;">{{ obs.quantidade if obs.quantidade else 1 }}</td>
-          <td style="padding:0.5rem 0.75rem;">{{ obs.observador if obs.observador else "—" }}</td>
-          <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">{{ obs.notas if obs.notas else "—" }}</td>
+      <tbody id="obs-tbody">
+        <tr id="obs-loading">
+          <td colspan="7" style="padding:2rem; text-align:center; color:var(--cinza-suave); font-style:italic;">A carregar observações…</td>
         </tr>
-        {% endfor %}
       </tbody>
     </table>
   </div>
 
   <div id="sem-resultados" style="display:none; padding:2rem; text-align:center; color:var(--cinza-suave); font-style:italic;">
     Nenhuma observação corresponde aos filtros seleccionados.
+  </div>
+
+  <div id="paginacao" style="display:none; margin-top:1rem; display:flex; gap:0.5rem; align-items:center; justify-content:center; flex-wrap:wrap;">
+    <button id="pag-anterior" style="padding:0.35rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.85rem; background:none; cursor:pointer;">‹ Anterior</button>
+    <span id="pag-info" style="font-size:0.85rem; color:var(--cinza-suave);"></span>
+    <button id="pag-seguinte" style="padding:0.35rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.85rem; background:none; cursor:pointer;">Seguinte ›</button>
   </div>
 
   <!-- Totais por espécie (visível quando filtros activos) -->
@@ -136,83 +73,195 @@ permalink: /observacoes/
   </div>
 
   <script>
-    (function () {
-      var selEspecie = document.getElementById('filtro-especie');
-      var selFamilia = document.getElementById('filtro-familia');
-      var selAno = document.getElementById('filtro-ano');
-      var selObservador = document.getElementById('filtro-observador');
-      var btnLimpar = document.getElementById('limpar-filtros');
-      var linhas = document.querySelectorAll('.linha-obs');
-      var contagem = document.getElementById('contagem-obs');
-      var semResultados = document.getElementById('sem-resultados');
-      var totaisDiv = document.getElementById('totais-especie');
-      var totaisLista = document.getElementById('totais-lista');
+  (function () {
+    var ESPECIE_URLS = {{ collections.especies | especieUrlsJson | safe }};
+    var FAMILIA_MAP  = {{ collections.especies | familiaMapJson | safe }};
 
-      function filtrar() {
-        var vEsp = selEspecie.value;
-        var vFam = selFamilia.value;
-        var vAno = selAno.value;
-        var vObs = selObservador.value;
-        var temFiltro = vEsp || vFam || vAno || vObs;
+    var PAGE_SIZE = 50;
+    var allData = [];
+    var filteredData = [];
+    var currentPage = 0;
 
-        btnLimpar.style.display = temFiltro ? '' : 'none';
+    var selEspecie    = document.getElementById('filtro-especie');
+    var selFamilia    = document.getElementById('filtro-familia');
+    var selAno        = document.getElementById('filtro-ano');
+    var selObservador = document.getElementById('filtro-observador');
+    var btnLimpar     = document.getElementById('limpar-filtros');
+    var contagemEl    = document.getElementById('contagem-obs');
+    var semResultados = document.getElementById('sem-resultados');
+    var tbody         = document.getElementById('obs-tbody');
+    var paginacao     = document.getElementById('paginacao');
+    var pagInfo       = document.getElementById('pag-info');
+    var pagAnterior   = document.getElementById('pag-anterior');
+    var pagSeguinte   = document.getElementById('pag-seguinte');
+    var totaisDiv     = document.getElementById('totais-especie');
+    var totaisLista   = document.getElementById('totais-lista');
 
-        var visiveis = 0;
+    function addOption(select, value, label) {
+      var opt = document.createElement('option');
+      opt.value = value;
+      opt.textContent = label || value;
+      select.appendChild(opt);
+    }
+
+    function populateSelects(data) {
+      var especies    = new Set();
+      var familias    = new Set();
+      var anos        = new Set();
+      var observadors = new Set();
+      data.forEach(function (o) {
+        if (o.nome_cientifico) especies.add(o.nome_cientifico);
+        var fam = FAMILIA_MAP[o.nome_cientifico];
+        if (fam) familias.add(fam);
+        if (o.data) anos.add(o.data.substring(0, 4));
+        if (o.observador) observadors.add(o.observador);
+      });
+      Array.from(especies).sort().forEach(function (v) { addOption(selEspecie, v); });
+      Array.from(familias).sort().forEach(function (v) { addOption(selFamilia, v); });
+      Array.from(anos).sort().reverse().forEach(function (v) { addOption(selAno, v); });
+      Array.from(observadors).sort().forEach(function (v) { addOption(selObservador, v); });
+    }
+
+    function renderPage() {
+      var start = currentPage * PAGE_SIZE;
+      var slice = filteredData.slice(start, start + PAGE_SIZE);
+      var frag  = document.createDocumentFragment();
+
+      slice.forEach(function (o) {
+        var tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid var(--cinza-borda)';
+
+        var familia = FAMILIA_MAP[o.nome_cientifico] || '';
+        var url     = ESPECIE_URLS[o.nome_cientifico];
+        var qtd     = o.quantidade || 1;
+
+        var nomeHtml = url
+          ? '<a href="' + url + '"><em>' + esc(o.nome_cientifico) + '</em></a>'
+          : '<em>' + esc(o.nome_cientifico) + '</em>';
+
+        var utmHtml = o.utm1k
+          ? '<code style="font-size:0.85em;background:var(--cinza-bg);padding:0.1em 0.4em;border-radius:4px;">' + esc(o.utm1k) + '</code>'
+          : '—';
+
+        tr.innerHTML =
+          '<td style="padding:0.5rem 0.75rem;white-space:nowrap;">' + esc(o.data || '') + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;">' + nomeHtml + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;color:var(--cinza-suave);">' + esc(familia || '—') + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;">' + utmHtml + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;text-align:right;">' + qtd + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;">' + esc(o.observador || '—') + '</td>' +
+          '<td style="padding:0.5rem 0.75rem;color:var(--cinza-suave);">' + esc(o.notas || '—') + '</td>';
+
+        frag.appendChild(tr);
+      });
+
+      tbody.innerHTML = '';
+      tbody.appendChild(frag);
+
+      // Pagination controls
+      var total = filteredData.length;
+      var totalPages = Math.ceil(total / PAGE_SIZE);
+      if (totalPages > 1) {
+        paginacao.style.display = 'flex';
+        pagInfo.textContent = 'Página ' + (currentPage + 1) + ' de ' + totalPages;
+        pagAnterior.disabled = currentPage === 0;
+        pagSeguinte.disabled = currentPage >= totalPages - 1;
+      } else {
+        paginacao.style.display = 'none';
+      }
+    }
+
+    function filtrar() {
+      var vEsp = selEspecie.value;
+      var vFam = selFamilia.value;
+      var vAno = selAno.value;
+      var vObs = selObservador.value;
+      var temFiltro = vEsp || vFam || vAno || vObs;
+
+      btnLimpar.style.display = temFiltro ? '' : 'none';
+
+      filteredData = allData.filter(function (o) {
+        return (!vEsp || o.nome_cientifico === vEsp)
+            && (!vFam || FAMILIA_MAP[o.nome_cientifico] === vFam)
+            && (!vAno || (o.data && o.data.substring(0, 4) === vAno))
+            && (!vObs || o.observador === vObs);
+      });
+
+      currentPage = 0;
+      renderPage();
+
+      var visiveis = filteredData.length;
+      contagemEl.textContent = temFiltro
+        ? visiveis + ' observaç' + (visiveis !== 1 ? 'ões' : 'ão')
+        : '';
+
+      semResultados.style.display = visiveis === 0 ? '' : 'none';
+
+      // Totais por espécie
+      if (temFiltro && visiveis > 0) {
         var totais = {};
-
-        linhas.forEach(function (tr) {
-          var ok = (!vEsp || tr.dataset.especie === vEsp)
-                && (!vFam || tr.dataset.familia === vFam)
-                && (!vAno || tr.dataset.ano === vAno)
-                && (!vObs || tr.dataset.observador === vObs);
-          tr.style.display = ok ? '' : 'none';
-          if (ok) {
-            visiveis++;
-            var sp = tr.dataset.especie;
-            var qtd = parseInt(tr.querySelector('td:nth-child(5)').textContent, 10) || 1;
-            totais[sp] = (totais[sp] || 0) + qtd;
-          }
+        filteredData.forEach(function (o) {
+          totais[o.nome_cientifico] = (totais[o.nome_cientifico] || 0) + (o.quantidade || 1);
         });
-
-        contagem.textContent = temFiltro
-          ? visiveis + ' observaç' + (visiveis !== 1 ? 'ões' : 'ão')
-          : '';
-
-        semResultados.style.display = visiveis === 0 ? '' : 'none';
-
-        // Totais por espécie (só quando há filtro e mais de uma espécie)
-        var nomesSp = Object.keys(totais);
-        if (temFiltro && nomesSp.length > 0) {
-          totaisDiv.style.display = '';
-          totaisLista.innerHTML = '';
-          nomesSp.sort(function(a, b) { return totais[b] - totais[a]; }).forEach(function (sp) {
-            var chip = document.createElement('span');
-            chip.style.cssText = 'padding:0.25rem 0.75rem; background:var(--cinza-bg); border-radius:20px; font-size:0.85rem;';
-            chip.innerHTML = '<em>' + sp + '</em> <strong>' + totais[sp] + '</strong>';
-            totaisLista.appendChild(chip);
-          });
-        } else {
-          totaisDiv.style.display = 'none';
-        }
+        totaisDiv.style.display = '';
+        totaisLista.innerHTML = '';
+        Object.keys(totais).sort(function (a, b) { return totais[b] - totais[a]; }).forEach(function (sp) {
+          var chip = document.createElement('span');
+          chip.style.cssText = 'padding:0.25rem 0.75rem;background:var(--cinza-bg);border-radius:20px;font-size:0.85rem;';
+          chip.innerHTML = '<em>' + esc(sp) + '</em> <strong>' + totais[sp] + '</strong>';
+          totaisLista.appendChild(chip);
+        });
+      } else {
+        totaisDiv.style.display = 'none';
       }
+    }
 
-      function limpar() {
-        selEspecie.value = '';
-        selFamilia.value = '';
-        selAno.value = '';
-        selObservador.value = '';
-        filtrar();
-      }
+    function esc(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
 
-      selEspecie.addEventListener('change', filtrar);
-      selFamilia.addEventListener('change', filtrar);
-      selAno.addEventListener('change', filtrar);
-      selObservador.addEventListener('change', filtrar);
-      btnLimpar.addEventListener('click', limpar);
+    pagAnterior.addEventListener('click', function () {
+      if (currentPage > 0) { currentPage--; renderPage(); window.scrollTo(0, 0); }
+    });
+    pagSeguinte.addEventListener('click', function () {
+      if (currentPage < Math.ceil(filteredData.length / PAGE_SIZE) - 1) { currentPage++; renderPage(); window.scrollTo(0, 0); }
+    });
+    selEspecie.addEventListener('change', filtrar);
+    selFamilia.addEventListener('change', filtrar);
+    selAno.addEventListener('change', filtrar);
+    selObservador.addEventListener('change', filtrar);
+    btnLimpar.addEventListener('click', function () {
+      selEspecie.value = '';
+      selFamilia.value = '';
+      selAno.value = '';
+      selObservador.value = '';
       filtrar();
-    })();
+    });
+
+    fetch('/dados/observacoes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        // Ordenar por data decrescente
+        data.sort(function (a, b) {
+          return (b.data || '').localeCompare(a.data || '');
+        });
+        allData = data;
+        filteredData = data;
+        populateSelects(data);
+        filtrar();
+
+        // Actualizar contador no cabeçalho
+        var header = document.querySelector('header p');
+        if (header) header.textContent = 'Registo de campo do Grupo icarus — ' + data.length + ' observações.';
+      })
+      .catch(function (err) {
+        tbody.innerHTML = '<tr><td colspan="7" style="padding:2rem;text-align:center;color:var(--cinza-suave);">Erro ao carregar observações.</td></tr>';
+        console.error(err);
+      });
+  })();
   </script>
-  {% else %}
-  <p style="color:var(--cinza-suave); font-style:italic;">Ainda não há observações registadas.</p>
-  {% endif %}
 </div>

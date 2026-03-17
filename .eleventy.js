@@ -35,6 +35,7 @@ async function imageShortcode(src, alt, className = "", sizes = "100vw") {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   // Passthrough copies
+  eleventyConfig.addPassthroughCopy({"src/_data/observacoes.json": "dados/observacoes.json"});
   eleventyConfig.addPassthroughCopy("imagens");
   eleventyConfig.addPassthroughCopy("src/assets/places");
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -76,6 +77,28 @@ module.exports = function (eleventyConfig) {
 
   // Filter: slice genérico
   eleventyConfig.addFilter("slice", (arr, n) => (arr || []).slice(0, n));
+
+  // Filter: gera JSON {nome_cientifico: url} para as espécies (usado em observacoes.njk)
+  eleventyConfig.addFilter("especieUrlsJson", (colecao) => {
+    const map = {};
+    (colecao || []).forEach(esp => {
+      if (esp.data && esp.data.tipo === "especie" && esp.data.nome_cientifico) {
+        map[esp.data.nome_cientifico] = esp.url;
+      }
+    });
+    return JSON.stringify(map);
+  });
+
+  // Filter: gera JSON {nome_cientifico: familia} para as espécies (usado em observacoes.njk)
+  eleventyConfig.addFilter("familiaMapJson", (colecao) => {
+    const map = {};
+    (colecao || []).forEach(esp => {
+      if (esp.data && esp.data.tipo === "especie" && esp.data.nome_cientifico && esp.data.familia) {
+        map[esp.data.nome_cientifico] = esp.data.familia;
+      }
+    });
+    return JSON.stringify(map);
+  });
 
   // Filter: filtra observações por espécie
   eleventyConfig.addFilter("observacoesPorEspecie", (obs, nome) => {
