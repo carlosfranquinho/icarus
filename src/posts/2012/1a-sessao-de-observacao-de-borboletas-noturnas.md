@@ -16,7 +16,7 @@ O vale da Ribeira de São Pedro parece constituir um paradoxo em termos de conse
 
 Este foi o primeiro encontro “real” de um grupo que, até à data, era meramente virtual. O evento contou com a participação de 7 pessoas.
 
-![](/imagens/2021/07/IMG_4788.jpg)
+![](/imagens/2021/07/IMG_4788-scaled.jpg)
 ![](/imagens/2012/06/1008748_390561881048202_1781200853_o.jpg)
 ![](/imagens/2021/07/981653_390561071048283_635677711_o.jpg)
 
