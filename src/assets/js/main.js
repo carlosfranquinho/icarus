@@ -1,3 +1,17 @@
+// Theme toggle
+const temaToggle = document.getElementById('tema-toggle');
+if (temaToggle) {
+  temaToggle.addEventListener('click', () => {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = current === 'dark' || (!current && systemDark);
+    const next = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('icarus-tema', next);
+  });
+}
+
 // Nav mobile toggle
 const toggle = document.querySelector('.nav-toggle');
 const lista = document.querySelector('.nav-lista');
@@ -14,14 +28,29 @@ if (toggle && lista) {
       toggle.setAttribute('aria-expanded', 'false');
     }
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lista.classList.contains('aberta')) {
+      lista.classList.remove('aberta');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
 }
 
-// Sticky nav transparency toggle for homepage
+// Sticky nav transparency toggle for homepage (with rAF throttle)
 const nav = document.querySelector('.nav-principal');
 if (nav && document.body.classList.contains('is-home')) {
+  let rafPending = false;
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    if (!rafPending) {
+      rafPending = true;
+      requestAnimationFrame(() => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+        rafPending = false;
+      });
+    }
+  }, { passive: true });
 }
 
 // Rotacao aleatoria das silhuetas nos cards de familia
@@ -31,8 +60,8 @@ document.querySelectorAll('.card-familia-ficha-img img').forEach(img => {
 });
 
 // Legendas nas fotos dos posts (parágrafo em itálico a seguir a imagem → figcaption)
-// Nota: o plugin de imagens envolve <img> em <picture>, por isso pesquisamos
-// tanto "p > picture > img" como "p > img" para compatibilidade futura.
+// Nota: o plugin de otimização envolve img em <picture>; display:contents
+// torna-o transparente ao layout, restaurando o comportamento original.
 // Nas páginas de espécies, .post-corpo tem também a classe .content-especie:
 // nesse caso ignoramos aqui e deixamos o handler de espécies tratar do conteúdo.
 document.addEventListener("DOMContentLoaded", () => {

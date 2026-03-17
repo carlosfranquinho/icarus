@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} — {{ site.nome }}{% else %}{{ site.nome }} — Borboletas da Marinha Grande e Leiria{% endif %}</title>
   <meta name="description" content="{{ descricao or site.descricao }}">
+  <meta name="theme-color" content="#0891b2">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.nome }} — Atividades" href="{{ site.url }}/feed.xml">
 
   <!-- Open Graph -->
   <meta property="og:locale" content="{{ site.lingua }}">
@@ -20,14 +22,64 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- JSON-LD Structured Data -->
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.nome }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}{{ site.logo }}",
+    "description": "{{ site.descricao }}",
+    "sameAs": ["{{ site.facebook }}"]
+  }
+  </script>
+  {% elif nome_cientifico %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Taxon",
+    "name": {{ nome_cientifico | dump | safe }},
+    {% if nome_comum %}"alternateName": {{ nome_comum | dump | safe }},{% endif %}
+    {% if imagem %}"image": "{{ site.url }}{{ imagem }}",{% endif %}
+    "isPartOf": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "{{ site.nome }}", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "{{ familia }}", "item": "{{ site.url }}/borboletas-{{ grupo }}/{{ familia | lower }}/" },
+        { "@type": "ListItem", "position": 3, "name": {{ nome_cientifico | dump | safe }}, "item": "{{ site.url }}{{ page.url }}" }
+      ]
+    }
+  }
+  </script>
+  {% elif ogType == "article" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ title | dump | safe }},
+    "datePublished": "{{ date | htmlDateString }}",
+    "image": "{{ site.url }}{{ imagem or site.imagem_padrao }}",
+    "author": { "@type": "Organization", "name": "{{ site.nome }}" },
+    "publisher": { "@type": "Organization", "name": "{{ site.nome }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}{{ site.logo }}" } }
+  }
+  </script>
+  {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Anti-flash: aplicar tema guardado antes de renderizar -->
+  <script>(function(){var t=localStorage.getItem('icarus-tema');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="/assets/logo/logo-icarus.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo/logo-icarus.svg">
 </head>
 <body class="{% if page.url == '/' %}is-home{% endif %}">
 
   {% include "partials/nav.njk" %}
 
-  <main>
+  <main id="conteudo-principal">
     {{ content | safe }}
   </main>
 

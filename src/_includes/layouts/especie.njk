@@ -103,9 +103,9 @@ ogType: article
         </table>
       </div>
       <div id="obs-paginacao" style="display:none; align-items:center; justify-content:flex-end; gap:1rem; margin-top:0.75rem; font-size:0.88rem; color:var(--cinza-suave);">
-        <button id="obs-ant" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">← Anteriores</button>
-        <span id="obs-info"></span>
-        <button id="obs-seg" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">Seguintes →</button>
+        <button id="obs-ant" aria-label="Página anterior" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">← Anteriores</button>
+        <span id="obs-info" aria-live="polite" aria-atomic="true"></span>
+        <button id="obs-seg" aria-label="Página seguinte" style="background:none; border:1px solid var(--cinza-borda); border-radius:var(--raio); padding:0.25rem 0.75rem; cursor:pointer;">Seguintes →</button>
       </div>
     </div>
 

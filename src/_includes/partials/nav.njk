@@ -1,3 +1,4 @@
+<a href="#conteudo-principal" class="skip-to-content">Saltar para o conteúdo</a>
 <nav class="nav-principal" aria-label="Navegação principal">
   <div class="container">
     <div class="nav-inner">
@@ -5,9 +6,6 @@
         <img src="/assets/logo/logo-icarus.svg" alt="{{ site.nome }}" class="logo-dark" loading="eager">
         <img src="/assets/logo/logo-icarus-light.svg" alt="{{ site.nome }}" class="logo-light" loading="eager">
       </a>
-      <button class="nav-toggle" aria-controls="nav-lista" aria-expanded="false" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-lista" id="nav-lista">
         {% for item in navegacao %}
         <li>
@@ -15,6 +13,15 @@
         </li>
         {% endfor %}
       </ul>
+      <div class="nav-acoes">
+        <button class="tema-toggle" id="tema-toggle" aria-label="Alternar tema escuro/claro">
+          <svg class="icon-lua" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sol" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav-toggle" aria-controls="nav-lista" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </div>
 </nav>

@@ -54,6 +54,10 @@ layout: layouts/base.njk
         {% if especie.data.nome_comum %}
         <p class="card-especie-comum">{{ especie.data.nome_comum }}</p>
         {% endif %}
+        {% set obsCount = observacoes | observacoesPorEspecie(especie.data.nome_cientifico) %}
+        {% if obsCount.length > 0 %}
+        <p class="card-especie-obs">{{ obsCount.length }} obs.</p>
+        {% endif %}
       </div>
     </article>
     {% endfor %}
