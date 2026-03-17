@@ -27,6 +27,15 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Restore processed images cache
+        uses: actions/cache@v4
+        with:
+          path: _site/img
+          key: eleventy-img-${{ hashFiles('imagens/**') }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            eleventy-img-${{ hashFiles('imagens/**') }}-
+            eleventy-img-
+
       - name: Install dependencies
         run: npm ci
 
