@@ -260,7 +260,8 @@ html[data-theme="dark"] .nav-logo .logo-light { display: block; }
   html:not([data-theme="light"]) .nav-logo .logo-light { display: block; }
 }
 
-.tema-toggle {
+.tema-toggle,
+.pesquisa-btn {
   background: none;
   border: 1.5px solid var(--cinza-borda);
   border-radius: var(--raio);
@@ -272,9 +273,11 @@ html[data-theme="dark"] .nav-logo .logo-light { display: block; }
   justify-content: center;
   line-height: 1;
   transition: border-color .2s, color .2s;
+  text-decoration: none;
 }
 
-.tema-toggle:hover {
+.tema-toggle:hover,
+.pesquisa-btn:hover {
   border-color: var(--verde);
   color: var(--verde);
 }
@@ -293,8 +296,9 @@ html[data-theme="dark"] .tema-toggle .icon-lua { display: none; }
 html[data-theme="light"] .tema-toggle .icon-sol { display: none; }
 html[data-theme="light"] .tema-toggle .icon-lua { display: block; }
 
-/* Botão visível na hero transparente */
-.is-home .nav-principal:not(.scrolled) .tema-toggle {
+/* Botões visíveis na hero transparente */
+.is-home .nav-principal:not(.scrolled) .tema-toggle,
+.is-home .nav-principal:not(.scrolled) .pesquisa-btn {
   border-color: rgba(255, 255, 255, .5);
   color: #fff;
 }
