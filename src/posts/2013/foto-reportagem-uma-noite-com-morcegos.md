@@ -4,7 +4,7 @@ title: "Foto-reportagem - Uma noite com morcegos"
 date: 2013-08-04
 descricao: "Vale dos Pirilampos, Pinhal do Rei, Marinha Grande"
 categoria: observações
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Aurélio Diniz, Bruno Silva, Carlos Franquinho, Cristina Dinis, Dina Correia, Felisbela Morgado, Fernanda Grácio, Hugo Areal, Ivone Santo, José Gonçalves, Licínia Diogo, Manuel (reporter), Paulo Simões, Sílvia Barreiro"
 imagem: /imagens/2013/08/morcegos.jpg
 permalink: /2013/08/04/foto-reportagem-uma-noite-com-morcegos/
 ---
