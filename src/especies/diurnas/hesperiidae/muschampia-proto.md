@@ -7,7 +7,7 @@ familia: Hesperiidae
 subfamilia: Pyrginae
 grupo: diurnas
 imagem: /imagens/2020/07/mproto_i1.jpg
-descricao: "A Muschampia proto é uma pequena borboleta da família Hesperiidae que ocorre na região."
+descricao: "A *Muschampia proto* é uma pequena borboleta da família Hesperiidae, com distribuição na Europa mediterrânica e no sul de Portugal. Prefere habitats rústicos como prados e terrenos secos e quentes, voando entre a primavera e o outono."
 permalink: /borboletas-diurnas/hesperiidae/muschampia-proto/
 especies_semelhantes:
   - "Spialia sertorius"
@@ -40,8 +40,6 @@ links_externos:
 **Portugal:** Sul do país
 
 **Região**: aparentemente pouco comum
-
-![Mapa de distribuição de Muschampia proto na região](/imagens/2020/07/mproto.png)
 
 ![Muschampia proto, adulto](/imagens/2020/07/mproto_i1.jpg)
 
