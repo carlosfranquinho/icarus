@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "4ª sessão de observação de borboletas noturnas"
-date: 2012-08-18
+date: 2012-08-17
 descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Alida Santos, Armando Neto, Ascensão Marques, Carlos Franquinho, Felisbela Morgado, Fernanda Grácio, Gonçalo Lemos, Ivone Santo, José Gonçalves"
 imagem: /imagens/2012/08/4.jpg
 permalink: /2012/08/18/4a-sessao-de-observacao-de-borboletas-noturnas/
 ---

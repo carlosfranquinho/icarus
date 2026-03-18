@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: "30ª sessão de observação de borboletas diurnas"
-date: 2021-07-10
+date: 2021-07-04
 descricao: "Dois anos volvidos desde a nossa última caminhada para observação de borboletas, e aproveitando uma trégua na situação pandémica que atravessamos, o grupo decidiu sair do seu casulo e pôr-se à estrada."
 categoria: diurnas
 local: "Chão do Falcão, Alqueidão da Serra, Porto de Mós"

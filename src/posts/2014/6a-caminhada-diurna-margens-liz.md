@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "6ª caminhada diurna: pelas margens do Liz"
-date: 2014-03-25
+date: 2014-03-23
 descricao: "Margens do Lis, Vieira de Leiria, Marinha Grande"
 categoria: diurnas
 local: "Margens do Lis, Vieira de Leiria, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Felisbela Morgado, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2014/03/6.jpg
 permalink: /2014/03/25/6a-caminhada-diurna-margens-liz/
 ---

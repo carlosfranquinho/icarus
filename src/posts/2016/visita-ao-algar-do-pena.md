@@ -5,7 +5,7 @@ date: 2016-07-16
 descricao: "Algar do Pena, PNSAC, Alcanede, Santarém"
 categoria: outras-atividades
 local: "Algar do Pena, PNSAC, Alcanede, Santarém"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Carlo Santos, Carlos Franquinho, Dina Fortunato, Fernando T., Henrique Baluga, Leonor Santos, Natalina, Paulo Simões, Renato Baluga"
 imagem: /imagens/2020/06/algar.jpg
 permalink: /2016/07/16/visita-ao-algar-do-pena/
 ---

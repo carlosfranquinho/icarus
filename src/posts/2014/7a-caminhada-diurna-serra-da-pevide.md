@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "7ª caminhada diurna: Serra da Pevide"
-date: 2014-04-14
+date: 2014-04-13
 descricao: "Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós"
-participantes: "Carlos Franquinho"
+participantes: "Adília Gonçalves, Alexandrina Morgado, Ascensão Marques, Carlos Franquinho, Dina Correia, Fernanda Grácio, Hugo Areal, José Gonçalves, Paulo Simões"
 imagem: /imagens/2014/04/7.jpg
 permalink: /2014/04/14/7a-caminhada-diurna-serra-da-pevide/
 ---

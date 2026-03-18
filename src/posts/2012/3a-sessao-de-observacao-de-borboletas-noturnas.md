@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "3ª sessão de observação de borboletas noturnas"
-date: 2012-06-18
+date: 2012-06-17
 descricao: "Rio Tinto, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Rio Tinto, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Ascensão Marques, Carla Liberato, Carlos Franquinho, Fernanda Grácio, Ivone Santo, José Gonçalves, Ricardo Machado"
 imagem: /imagens/2012/06/3.jpg
 permalink: /2012/06/18/3a-sessao-de-observacao-de-borboletas-noturnas/
 ---

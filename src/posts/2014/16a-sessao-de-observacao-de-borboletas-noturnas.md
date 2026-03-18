@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "16ª sessão de observação de borboletas noturnas"
-date: 2014-03-13
+date: 2014-03-08
 descricao: "Pombal do Rei, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Pombal do Rei, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
 imagem: /imagens/2014/03/16.jpg
 permalink: /2014/03/13/16a-sessao-de-observacao-de-borboletas-noturnas/
 ---

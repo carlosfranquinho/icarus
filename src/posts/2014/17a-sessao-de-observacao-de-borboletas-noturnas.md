@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "17ª sessão de observação de borboletas noturnas"
-date: 2014-03-30
+date: 2014-03-29
 descricao: "Água Formosa, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Água Formosa, Pinhal do Rei, Marinha Grande"
-participantes: "Carlos Franquinho"
+participantes: "Alexandrina Morgado, Aurélio Diniz, Carla Liberato, Carlos Felicio, Carlos Franquinho, Dina Correia, Felisbela Morgado, Hugo Areal, José Gonçalves, Paulo Simões, Ricardo Machado"
 imagem: /imagens/2014/03/17.jpg
 permalink: /2014/03/30/17a-sessao-de-observacao-de-borboletas-noturnas/
 ---
