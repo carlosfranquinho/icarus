@@ -44,7 +44,6 @@ A **Pieris napi** é uma borboleta da família Pieridae.
 
 **Região**: todos os concelhos
 
-![mapa de distribuição de Pieris napi na região](/imagens/2020/07/pnapi.png)
 
 ![](/imagens/2020/07/pnapi_i1.jpg)
 

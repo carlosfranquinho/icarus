@@ -39,7 +39,6 @@ links_externos:
 
 **Região**: relativamente incomum, mas pontualmente abundante em galerias ripícolas bem preservadas
 
-![distribuição regional de Anthocharis cardamines](/imagens/2020/07/acardamines.png)
 
 ![](/imagens/2020/07/acardamines_i1.jpg)
 

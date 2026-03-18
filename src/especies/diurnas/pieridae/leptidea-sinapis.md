@@ -41,7 +41,6 @@ A **Leptidea sinapis** é uma pequena borboleta branca da família Pieridae.
 
 **Região**: presente em todos os concelhos
 
-![mapa de distribuição de L. sinapis](/imagens/2020/07/lsinapis.png)
 
 ![Leptidea sinapis, adulto](/imagens/2020/07/lsinapis_i1.jpg)
 

@@ -43,7 +43,6 @@ Os indivíduos mais velhos vão perdendo as escamas de cores mais vivas, sendo f
 
 **Região**: relativamente rara na faixa litoral. Comum, chegando a ser pontualmente muito abundante, no interior.
 
-![mapa de distribuição de Zerynthia rumina na região](/imagens/2020/07/zrumina.png)
 
 ![Zerynthia rumina, adulto](/imagens/2020/07/rumina_i1.jpg)
 

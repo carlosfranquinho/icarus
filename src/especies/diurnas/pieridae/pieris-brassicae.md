@@ -44,7 +44,6 @@ A **Pieris brassicae** é uma borboleta da família Pieridae, perfeitamente adap
 
 **Região**: todos os concelhos em diferentes habitats
 
-![distribuição de P. brassicae na região](/imagens/2020/07/pbrassicae.png)
 
 ![Pieris brassicae, adulto](/imagens/2020/07/pbrassicae_i1.jpg)
 

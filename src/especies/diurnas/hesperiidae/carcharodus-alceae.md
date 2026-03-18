@@ -41,7 +41,6 @@ Em Portugal aparece também uma espécie gémea, a ***Carcharodus tripolina* (VE
 
 **Região**: Presente em todos os concelhos
 
-![mapa de distribuição de Carcharodus alceae na região](/imagens/2020/07/calceae.png)
 
 ![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i1.jpg)
 

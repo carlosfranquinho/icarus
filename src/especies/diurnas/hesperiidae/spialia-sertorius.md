@@ -41,7 +41,6 @@ links_externos:
 
 **Região**: aparentemente, mais comum nos concelhos do interior
 
-![Mapa de distribuição de Spialia sertorius na região](/imagens/2020/07/ssertorius.png)
 
 ![Spialia sertorius, adulto.](/imagens/2020/07/spialia_i1.jpg)
 

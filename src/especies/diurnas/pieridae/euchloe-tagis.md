@@ -44,7 +44,6 @@ A *Euchloe tagis* é uma borboleta pouco comum, da família Pieridae.
 
 **Região**: presente exclusivamente em determinados locais do PNSAC, em Porto de Mós, onde chega a ser localmente abundante
 
-![mapa de distribuição de Euchloe tagis na região](/imagens/2020/07/etagis.png)
 
 crameri, daplidice, cardamines
 

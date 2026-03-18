@@ -44,7 +44,6 @@ A **Pieris rapae** é uma borboleta da família Pieridae, perfeitamente adaptada
 
 **Região**: todos os concelhos em diferentes habitats
 
-![mapa de distribuição de Pieris rapae na região](/imagens/2020/07/prapae.png)
 
 ![Pieris rapae, adulto](/imagens/2020/07/prapae.jpg)
 

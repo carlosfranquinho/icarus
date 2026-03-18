@@ -57,7 +57,6 @@ As lagartas crisalidam entre a vegetação e a cor da crisálida pode variar do 
 
 **Região**: presente em todos os concelhos e habitats
 
-![Mapa de distribuição de P. machaon na região](/imagens/2020/07/pmachaon-7.png)
 
 ![Papilio machaon, adulto](/imagens/2020/06/1.jpg)
 
