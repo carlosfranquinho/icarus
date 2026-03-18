@@ -5,7 +5,7 @@ nome_cientifico: "Pararge aegeria"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1758) "
 subfamilia: Satyrinae
-descricao: "A *Pararge aegeria* tem asas castanhas com manchas amarelas e ocelos; típica de bosques sombreados onde o macho defende um raio de sol, com larvas em gramíneas."
+descricao: "A *Pararge aegeria* tem asas castanhas com manchas amarelas e ocelos; típica de bosques sombreados onde o macho defende um raio de sol, com lagartas em gramíneas."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

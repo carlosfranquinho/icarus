@@ -5,7 +5,7 @@ nome_cientifico: "Callophrys avis"
 familia: Lycaenidae
 autoridade: "Chapman, 1909"
 subfamilia: Theclinae
-descricao: "A *Callophrys avis* é um pequeno licenídeo de asas verde-esmeralda por baixo, endémico da Península Ibérica e sul de França, com larvas exclusivas no medronheiro."
+descricao: "A *Callophrys avis* é um pequeno licenídeo de asas verde-esmeralda por baixo, endémico da Península Ibérica e sul de França, com lagartas exclusivas no medronheiro."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

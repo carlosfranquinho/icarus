@@ -5,7 +5,7 @@ nome_cientifico: "Aricia cramera"
 familia: Lycaenidae
 autoridade: "(Eschscholtz, 1821) "
 subfamilia: Polyommatinae
-descricao: "A *Aricia cramera* é um licenídeo de cor castanha com pontos alaranjados submarginais; voa em encostas secas e prados do sul ibérico, com larvas em gerânios e erodios."
+descricao: "A *Aricia cramera* é um licenídeo de cor castanha com pontos alaranjados submarginais; voa em encostas secas e prados do sul ibérico, com lagartas em gerânios e erodios."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

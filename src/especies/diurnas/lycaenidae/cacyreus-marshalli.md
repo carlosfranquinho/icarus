@@ -5,7 +5,7 @@ nome_cientifico: "Cacyreus marshalli"
 familia: Lycaenidae
 autoridade: "Butler, 1897"
 subfamilia: Polyommatinae
-descricao: "A *Cacyreus marshalli*, originária da África do Sul, é uma praga invasora de pelargónios e gerânios de jardim, comum em áreas urbanas e rurais do Mediterrâneo."
+descricao: "A *Cacyreus marshalli*, originária da África do Sul, é uma invasora de gerânios de jardim, comum em áreas urbanas e rurais do Mediterrâneo."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

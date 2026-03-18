@@ -5,7 +5,7 @@ nome_cientifico: "Colias croceus"
 familia: Pieridae
 autoridade: "(Geoffroy, 1785) "
 subfamilia: Coliadinae
-descricao: "A *Colias croceus* tem asas amarelo-laranja com bordos negros; migrante comum e multivoltina, voa de março a novembro em prados e campos agrícolas com larvas em leguminosas."
+descricao: "A *Colias croceus* tem asas amarelo-laranja com bordos negros; migrante comum e multivoltina, voa de março a novembro em prados e campos agrícolas com lagartas em leguminosas."
 grupo: diurnas
 imagem: /assets/silhuetas/pieridae.svg
 placeholder: true

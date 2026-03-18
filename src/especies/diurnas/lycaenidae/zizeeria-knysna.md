@@ -5,7 +5,7 @@ nome_cientifico: "Zizeeria knysna"
 familia: Lycaenidae
 autoridade: "(Trimen, 1862) "
 subfamilia: Polyommatinae
-descricao: "A *Zizeeria knysna* é um dos menores licenídeos europeus, azul-acinzentado, multivoltino, frequente em zonas húmidas e prados costeiros onde as larvas vivem em Oxalis."
+descricao: "A *Zizeeria knysna* é um dos menores licenídeos europeus, azul-acinzentado, multivoltino, frequente em zonas húmidas e prados costeiros onde as lagartas vivem em Oxalis."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

@@ -5,7 +5,7 @@ nome_cientifico: "Polygonia c-album"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1758) "
 subfamilia: Nymphalinae
-descricao: "A *Polygonia c-album* tem margens recortadas e um 'C' branco característico no verso das asas; hiberna como adulto em bosques mistos, com larvas em urtigas e lúpulo."
+descricao: "A *Polygonia c-album* tem margens recortadas e um 'C' branco característico no verso das asas; hiberna como adulto em bosques mistos, com lagartas em urtigas e lúpulo."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

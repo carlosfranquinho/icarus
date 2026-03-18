@@ -5,7 +5,7 @@ nome_cientifico: "Leptotes pirithous"
 familia: Lycaenidae
 autoridade: "(Linnaeus, 1767) "
 subfamilia: Polyommatinae
-descricao: "A *Leptotes pirithous* é um licenídeo azul-acinzentado listrado por baixo, multivoltino, frequente em zonas quentes onde as larvas se alimentam de plumbagos e leguminosas."
+descricao: "A *Leptotes pirithous* é um licenídeo azul-acinzentado listrado por baixo, multivoltino, frequente em zonas quentes onde as lagartas se alimentam de plumbagos e leguminosas."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true
