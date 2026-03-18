@@ -68,23 +68,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const corpo = document.querySelector(".post-corpo");
   if (!corpo || corpo.classList.contains("content-especie")) return;
 
-  corpo.querySelectorAll("p > picture > img, p > img").forEach(img => {
-    const pImg = img.closest("p");
-    // Mover o <picture> wrapper se existir, ou o <img> diretamente
-    const imgToMove = (img.parentElement.tagName === "PICTURE") ? img.parentElement : img;
+  // Iterar por parágrafo, não por imagem — evita perder imagens quando
+  // várias estão no mesmo <p>.
+  Array.from(corpo.querySelectorAll("p")).filter(p =>
+    p.querySelector("picture > img, img")
+  ).forEach(pImg => {
+    const imgEls = Array.from(pImg.querySelectorAll("picture > img, img"));
     const nextEl = pImg.nextElementSibling;
-    const figure = document.createElement("figure");
-    figure.className = "post-figura";
-    pImg.parentNode.insertBefore(figure, pImg);
-    figure.appendChild(imgToMove);
-    pImg.remove();
-    if (nextEl && nextEl.tagName === "P" &&
-        nextEl.children.length === 1 && nextEl.children[0].tagName === "EM") {
+
+    // Criar uma <figure> por imagem
+    imgEls.forEach(img => {
+      const imgToMove = img.parentElement.tagName === "PICTURE" ? img.parentElement : img;
+      const figure = document.createElement("figure");
+      figure.className = "post-figura";
+      pImg.before(figure);
+      figure.appendChild(imgToMove);
+    });
+
+    // Legenda: só se houver uma imagem e o parágrafo seguinte contiver
+    // APENAS texto em itálico (sem mais texto à volta).
+    if (imgEls.length === 1 && nextEl && nextEl.tagName === "P" &&
+        nextEl.children.length === 1 && nextEl.children[0].tagName === "EM" &&
+        nextEl.textContent.trim() === nextEl.children[0].textContent.trim()) {
+      const figure = pImg.previousElementSibling;
       const figcaption = document.createElement("figcaption");
       figcaption.innerHTML = nextEl.children[0].innerHTML;
       figure.appendChild(figcaption);
       nextEl.remove();
     }
+
+    pImg.remove();
   });
 });
 
