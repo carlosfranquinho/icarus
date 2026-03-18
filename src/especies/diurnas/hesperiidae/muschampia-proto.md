@@ -18,8 +18,6 @@ links_externos:
     nome: "lepiforum.de"
 ---
 
-A **Muschampia proto** é uma pequena borboleta da família Hesperiidae.
-
 ### Guia rápido
 
 **Nome comum:** –

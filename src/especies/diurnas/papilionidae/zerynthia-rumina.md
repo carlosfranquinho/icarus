@@ -16,8 +16,6 @@ links_externos:
     nome: "lepiforum.de"
 ---
 
-A *Zerynthia rumina* é uma borboleta de tamanho médio com cores muito vistosas, onde predominam o branco a creme claro, negro e vermelho.
-
 Existe apenas uma geração, primaveril, chegando a ser localmente abundante em zonas propícias ao desenvolvimento da sua planta hospedeira: *Aristolochia*.
 
 Os indivíduos mais velhos vão perdendo as escamas de cores mais vivas, sendo fácil avistá-las apenas em tons de preto e branco.

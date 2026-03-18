@@ -16,8 +16,6 @@ links_externos:
     nome: "lepiforum.de"
 ---
 
-A **Anthocharis cardamines** é uma borboleta da família Pieridae. O macho da espécie tem as pontas das asas laranja.
-
 ### Guia rápido
 
 **Nome comum:** –

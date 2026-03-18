@@ -1,5 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
+const markdownIt = require("markdown-it");
+const md = markdownIt({ html: false });
 
 async function imageShortcode(src, alt, className = "", sizes = "100vw") {
   if (!src) return "";
@@ -73,6 +75,12 @@ module.exports = function (eleventyConfig) {
       if (!item.data || !item.data.familia) return false;
       return String(item.data.familia).toLowerCase().trim() === fStr;
     });
+  });
+
+  // Filter: renderiza Markdown inline (para descricao no frontmatter)
+  eleventyConfig.addFilter("markdownify", (str) => {
+    if (!str) return "";
+    return md.renderInline(String(str));
   });
 
   // Filter: slice genérico

@@ -7,7 +7,7 @@ familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
 imagem: /imagens/2020/06/1.jpg
-descricao: "A Papilio machaon é uma borboleta grande que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul."
+descricao: "A *Papilio machaon* é uma borboleta grande e vistosa que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul ao longo da margem."
 permalink: /borboletas-diurnas/papilionidae/papilio-machaon/
 especies_semelhantes:
   - "Iphiclides feisthamelii"
@@ -17,8 +17,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon"
     nome: "lepiforum.de"
 ---
-
-A *Papilio machaon* é uma borboleta grande e vistosa que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul ao longo da margem.
 
 Em Portugal é possível observar a espécie durante praticamente todo o ano. Avistam-se, com alguma frequência, no topo de pequenas colinas ou outras elevações que dominem a paisagem. Os machos procuram estes pontos estratégicos de onde patrulham a região em busca de fêmeas – um comportamento designado por *hill topping*.
 

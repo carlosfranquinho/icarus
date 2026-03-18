@@ -47,7 +47,7 @@ extraCSS:
           {% endif %}
           {% if descricao %}
           <div class="dado-linha" style="display:block; padding-top:1rem; margin-top:0.5rem;">
-            <p class="dado-valor" style="text-align:left; font-weight:400; font-size:0.95rem; line-height:1.6; color:var(--cinza-texto); margin:0;">{{ descricao }}</p>
+            <p class="dado-valor" style="text-align:left; font-weight:400; font-size:0.95rem; line-height:1.6; color:var(--cinza-texto); margin:0;">{{ descricao | markdownify | safe }}</p>
           </div>
           {% endif %}
         </div>

@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/ecrameri_i1.jpg
-descricao: "A Euchloe crameri é uma borboleta da família Pieridae."
+descricao: "A *Euchloe crameri* é uma borboleta da família Pieridae, comum na Península Ibérica. Distingue-se pelos padrões esverdeados e brancos na face inferior das asas posteriores, sendo frequentemente observada em áreas abertas e soalheiras durante a primavera."
 permalink: /borboletas-diurnas/pieridae/euchloe-crameri/
 especies_semelhantes:
   - "Euchloe tagis"
@@ -19,8 +19,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon"
     nome: "lepiforum.de"
 ---
-
-A *Euchloe crameri* é uma borboleta da família Pieridae.
 
 ### Guia rápido
 
