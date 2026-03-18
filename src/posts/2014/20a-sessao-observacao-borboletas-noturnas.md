@@ -6,8 +6,8 @@ descricao: "Crastinha, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Crastinha, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Carlos Franquinho, Dina Correia, Hugo Areal, Paulo Simões"
-imagem: /imagens/2014/06/20.jpg
+imagem: /imagens/2014/06/201406-598E71W.jpg
 permalink: /2014/06/28/20a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](/imagens/2017/02/10359014_917747328252054_4713353169262486027_o.jpg)
+![](/imagens/2017/02/201702-300TXKB.jpg)

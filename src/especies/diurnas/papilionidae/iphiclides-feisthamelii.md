@@ -6,7 +6,7 @@ autoridade: "(Duponchel, 1832)"
 familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
-imagem: /imagens/2020/07/feisthamelii1.jpg
+imagem: /imagens/2020/07/202007-6B731JE.jpg
 descricao: "A Iphiclides feisthamelii possui asas brancas (ou creme claro) com listas negras. Lúnulas azuis na margem da asa posterior. As impressionantes caudas e o típico voo planado da espécie são inconfundíveis."
 permalink: /borboletas-diurnas/papilionidae/iphiclides-feisthamelii/
 especies_semelhantes:
@@ -50,22 +50,22 @@ Tal como outras espécies da família Papilionidae, possuem um mecanismo de defe
 **Região**: presente em todos os concelhos
 
 
-![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii1.jpg)
+![Iphiclides feisthamelii, adulto](/imagens/2020/07/202007-6B731JE.jpg)
 
 **Iphiclides feisthamelii**, adulto. Foto de Carlos Franquinho (2019)
 
-![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii_i2.jpg)
+![Iphiclides feisthamelii, adulto](/imagens/2020/07/202007-3GWLGZV.jpg)
 
 Adulto. Foto de Carlos Franquinho (2006)
 
-![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii_i3.jpg)
+![Iphiclides feisthamelii, adulto](/imagens/2020/07/202007-4RWQ42Z.jpg)
 
 Adulto. Foto de Paulo Simões (2019)
 
-![Iphiclides feisthamelii, adulto](/imagens/2020/07/feisthamelii_i4.jpg)
+![Iphiclides feisthamelii, adulto](/imagens/2020/07/202007-CBWNTJE.jpg)
 
 Adulto. Foto de Carlos Franquinho (2014)
 
-![Iphiclides feisthamelii, lagarta](/imagens/2020/07/feisthamelii_l1.jpg)
+![Iphiclides feisthamelii, lagarta](/imagens/2020/07/202007-3F2K0Y2.jpg)
 
 *Iphiclides feisthamelii*, lagarta. Foto de Carlos Franquinho (2004)

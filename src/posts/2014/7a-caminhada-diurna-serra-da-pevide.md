@@ -6,7 +6,7 @@ descricao: "Serra da Pevide, Porto de Mós"
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós"
 participantes: "Adília Gonçalves, Alexandrina Morgado, Ascensão Marques, Carlos Franquinho, Dina Correia, Fernanda Grácio, Hugo Areal, José Gonçalves, Paulo Simões"
-imagem: /imagens/2014/04/7.jpg
+imagem: /imagens/2014/04/201404-71DD4VE.jpg
 permalink: /2014/04/14/7a-caminhada-diurna-serra-da-pevide/
 ---
 

@@ -6,7 +6,7 @@ descricao: "Praia das Pedras Negras, Marinha Grande"
 categoria: noturnas
 local: "Praia das Pedras Negras, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
-imagem: /imagens/2013/07/12.jpg
+imagem: /imagens/2013/07/201307-1I34508.jpg
 permalink: /2013/07/14/12a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -18,7 +18,7 @@ Na quarta noite das [European Moth Nights](http://euromothnights.uw.hu/) 2013, i
 
 - *Arnia nervosalis* Guenée, 1849
 
-![Arnia nervosalis](/imagens/2013/07/IMG_3333.jpg)
+![Arnia nervosalis](/imagens/2013/07/201307-13PSCRD.jpg)
 
 Arnia nervosalis
 
@@ -26,7 +26,7 @@ Arnia nervosalis
 
 - *Euproctis chrysorrhoea* (Linnaeus, 1758)
 
-![Euproctis chrysorrhoea](/imagens/2013/07/IMG_3280.jpg)
+![Euproctis chrysorrhoea](/imagens/2013/07/201307-5LC94TZ.jpg)
 
 Euproctis chrysorrhoea
 
@@ -36,7 +36,7 @@ Euproctis chrysorrhoea
 - *Pachycnemia hippocastanaria* (Hübner, 1799)
 - *Rhodometra sacraria* (Linnaeus, 1767)
 
-![Rhodometra sacraria](/imagens/2013/07/IMG_3362.jpg)
+![Rhodometra sacraria](/imagens/2013/07/201307-17TVWEV.jpg)
 
 Rhodometra sacraria
 
@@ -44,7 +44,7 @@ Rhodometra sacraria
 
 - *Psilogaster loti* (Ochsenheimer, 1810)
 
-![Psilogaster loti](/imagens/2013/07/IMG_3277.jpg)
+![Psilogaster loti](/imagens/2013/07/201307-2H1V25D.jpg)
 
 Psilogaster loti
 
@@ -59,7 +59,7 @@ Psilogaster loti
 - *Noctua pronuba* (Linnaeus, 1758)
 - *Peridroma saucia* (Hübner, 1808)
 
-![Agrotis alexandriensis](/imagens/2013/07/IMG_3309.jpg)
+![Agrotis alexandriensis](/imagens/2013/07/201307-2I1UYJI.jpg)
 
 Agrotis alexandriensis
 

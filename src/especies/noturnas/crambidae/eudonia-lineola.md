@@ -6,7 +6,7 @@ autoridade: "(CURTIS, 1827)"
 familia: Crambidae
 subfamilia: Scopariinae
 grupo: noturnas
-imagem: /imagens/2021/04/elineola-scaled.jpg
+imagem: /imagens/2021/04/202104-1H1X4EP.jpg
 permalink: /borboletas-noturnas/crambidae/eudonia-lineola/
 ---
 

@@ -6,7 +6,7 @@ autoridade: "(Hübner, 1804)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
-imagem: /imagens/2020/07/etagis_i1.jpg
+imagem: /imagens/2020/07/202007-46ZMKGY.jpg
 descricao: "A *Euchloe tagis* é uma borboleta pouco comum da família Pieridae. Em Portugal, ocorre em populações isoladas, tipicamente associada a zonas calcárias, encostas rochosas e matos mediterrânicos, voando entre fevereiro e maio."
 permalink: /borboletas-diurnas/pieridae/euchloe-tagis/
 especies_semelhantes:
@@ -45,14 +45,14 @@ links_externos:
 
 crameri, daplidice, cardamines
 
-![Euchloe tagis, adulto](/imagens/2020/07/etagis_i1.jpg)
+![Euchloe tagis, adulto](/imagens/2020/07/202007-46ZMKGY.jpg)
 
 *Euchloe tagis*, adulto. Foto de Carlos Franquinho (2019)
 
-![Euchloe tagis, adulto](/imagens/2020/07/etagis_i2.jpg)
+![Euchloe tagis, adulto](/imagens/2020/07/202007-5XC1RPP.jpg)
 
 Adulto. Foto de Carlos Franquinho (2019)
 
-![Euchloe tagis, adulto](/imagens/2020/07/etagis_i3.jpg)
+![Euchloe tagis, adulto](/imagens/2020/07/202007-3V5SEVE.jpg)
 
 Adulto. Foto de Hugo Areal (2015)

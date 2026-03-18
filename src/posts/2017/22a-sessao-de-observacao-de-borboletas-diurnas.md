@@ -6,8 +6,8 @@ descricao: "Pinhal do Rei, Marinha Grande"
 categoria: diurnas
 local: "Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Dina Fortunato, Henrique Baluga, Ivone Santo, José Gonçalves, Leonor Santos, Luísa Fonseca, Miguel Claro, Paulo Simões, Pedro Claro, Raquel Pisco, Renato Baluga, Rodrigo Claro, Rui"
-imagem: /imagens/2020/06/22.jpg
+imagem: /imagens/2020/06/202006-39H07NG.jpg
 permalink: /2017/05/21/22a-sessao-de-observacao-de-borboletas-diurnas/
 ---
 
-![](/imagens/2020/06/IMG_1126.jpg)
+![](/imagens/2020/06/202006-3XP72SF.jpg)

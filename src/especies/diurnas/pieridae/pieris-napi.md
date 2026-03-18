@@ -6,7 +6,7 @@ autoridade: "(Linnaeus, 1758)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
-imagem: /imagens/2020/07/pnapi_i1.jpg
+imagem: /imagens/2020/07/202007-2G8Q1LE.jpg
 descricao: "A *Pieris napi* é uma borboleta da família Pieridae, distribuída por toda a Europa, mas menos comum a sul do Tejo em Portugal. Observa-se frequentemente em prados, campos e florestas abertas, voando em múltiplas gerações de janeiro a outubro."
 permalink: /borboletas-diurnas/pieridae/pieris-napi/
 especies_semelhantes:
@@ -43,14 +43,14 @@ links_externos:
 **Região**: todos os concelhos
 
 
-![](/imagens/2020/07/pnapi_i1.jpg)
+![](/imagens/2020/07/202007-2G8Q1LE.jpg)
 
 *Pieris napi*, adulto. Foto de Carlos Franquinho (2014)
 
-![](/imagens/2020/07/pnapi_i2.jpg)
+![](/imagens/2020/07/202007-4VLVJU5.jpg)
 
 Adulto. Foto de Carlos Franquinho (2014)
 
-![](/imagens/2020/07/pnapi_i3.jpg)
+![](/imagens/2020/07/202007-5SM9MC4.jpg)
 
 Adulto. Foto de Carlos Franquinho (2020)

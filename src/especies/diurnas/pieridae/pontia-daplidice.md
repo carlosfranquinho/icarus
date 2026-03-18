@@ -6,7 +6,7 @@ autoridade: "(Linnaeus, 1758)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
-imagem: /imagens/2021/02/pdaplidice1.jpg
+imagem: /imagens/2021/02/202102-41XJBMN.jpg
 descricao: "A *Pontia daplidice* é uma borboleta da família Pieridae com distribuição abrangente por todo o país. Prefere habitats rústicos como solos arenosos e prados floridos, voando em sucessivas gerações de fevereiro a novembro."
 permalink: /borboletas-diurnas/pieridae/pontia-daplidice/
 especies_semelhantes:
@@ -44,18 +44,18 @@ links_externos:
 **Região**: presente em todos os concelhos
 
 
-![](/imagens/2021/02/pdaplidice1.jpg)
+![](/imagens/2021/02/202102-41XJBMN.jpg)
 
 *Pontia daplidice*, adulto. Foto de Carlos Franquinho (2018)
 
-![Pieris rapae, adulto](/imagens/2020/07/prapae_i2.jpg)
+![Pieris rapae, adulto](/imagens/2020/07/202007-4O2IB5M.jpg)
 
 Adulto. Foto de Carlos Franquinho (2013)
 
-![Pieris rapae, adulto](/imagens/2020/07/prapae_i3.jpg)
+![Pieris rapae, adulto](/imagens/2020/07/202007-56AP14A.jpg)
 
 Adulto. Foto de Carlos Franquinho (2013)
 
-![](/imagens/2020/07/prapae_i4.jpg)
+![](/imagens/2020/07/202007-66CDH91.jpg)
 
 Adulto. Foto de Paulo Simões (2017)

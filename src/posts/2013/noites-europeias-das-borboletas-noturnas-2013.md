@@ -5,11 +5,11 @@ date: 2013-07-10
 descricao: "No âmbito da iniciativa European Moth Nights, o grupo Borboletas da Marinha Grande, irá realizar uma série de sessões de observação de borboletas noturnas em diferentes pontos do concelho: 5ª feira, dia 11: Junto à Ler mais…"
 categoria: noticias
 participantes: "Carlos Franquinho"
-imagem: /imagens/2013/07/1052370_392644824173241_938652091_o.jpg
+imagem: /imagens/2013/07/201307-1MM8WM7.jpg
 permalink: /2013/07/10/noites-europeias-das-borboletas-noturnas-2013/
 ---
 
-![Os participantes aplicados](/imagens/2013/07/1052370_392644824173241_938652091_o.jpg)
+![Os participantes aplicados](/imagens/2013/07/201307-1MM8WM7.jpg)
 
 Os participantes aplicados
 

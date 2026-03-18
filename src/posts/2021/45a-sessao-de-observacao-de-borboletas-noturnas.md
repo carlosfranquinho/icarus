@@ -6,6 +6,6 @@ descricao: "Casal Novo, Amor"
 categoria: noturnas
 local: "Casal Novo, Amor"
 participantes: "Alexandrina Morgado, António Graça, Armando Neto, Carlos Franquinho, Ivone Santo, Maria Soares, Preciosa Franquinho"
-imagem: /imagens/2021/09/487187827_10162725740491280_6085517125759424530_n.jpg
+imagem: /imagens/2021/09/202109-5SGJ9YU.jpg
 permalink: /2021/09/11/45a-sessao-de-observacao-de-borboletas-noturnas/
 ---

@@ -6,7 +6,7 @@ descricao: "A caminhada do grupo Borboletas da Marinha Grande pelo Vale do Laped
 categoria: diurnas
 local: "Vale do Lapedo, Santa Eufémia, Leiria"
 participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Felisbela Morgado, Fernanda Grácio, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
-imagem: /imagens/2014/07/9.jpg
+imagem: /imagens/2014/07/201407-179QH2Q.jpg
 permalink: /2014/07/13/9a-caminhada-diurna-o-vale-do-lapedo/
 ---
 
@@ -20,11 +20,11 @@ Enquanto é tempo, partimos à descoberta deste local mágico!
 
 No que a borboletas diz respeito, o destaque vai para a *Zygaena fausta*, uma espécie marcadamente calcícola que, na nossa região, parece aparecer apenas na zona do Lapedo e na Serra do Sicó.
 
-![Zygaena fausta](/imagens/2014/07/IMG_2907-001.jpg)
+![Zygaena fausta](/imagens/2014/07/201407-41LT3SB.jpg)
 
 Zygaena fausta
 
-![Zygaena fausta](/imagens/2014/07/10556990_927426560617464_4613197657189129966_o.jpg)
+![Zygaena fausta](/imagens/2014/07/201407-42FXUAD.jpg)
 
 Zygaena fausta
 

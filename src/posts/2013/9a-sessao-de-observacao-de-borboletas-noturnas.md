@@ -6,7 +6,7 @@ descricao: "Albergaria, Marinha Grande"
 categoria: noturnas
 local: "Albergaria, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
-imagem: /imagens/2013/07/9.jpg
+imagem: /imagens/2013/07/201307-3HFRDXI.jpg
 permalink: /2013/07/11/9a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -14,8 +14,8 @@ A nossa 9ª sessão de observação de borboletas noturnas realizou-se em Alberg
 
 ## O ambiente
 
-![](/imagens/2020/06/Albergaria_2013-4.jpg)
-![](/imagens/2020/06/Albergaria_2013-1.jpg)
+![](/imagens/2020/06/202006-334NC0T.jpg)
+![](/imagens/2020/06/202006-2QRMKDU.jpg)
 
 ## As borboletas
 
@@ -25,7 +25,7 @@ A nossa 9ª sessão de observação de borboletas noturnas realizou-se em Alberg
 - *Nomophila noctuella*(Denis & Schiffermüller, 1775)
 - *Udea ferrugalis* (Hübner, 1796)
 
-![Diasemia reticularis](/imagens/2013/07/IMG_2694-001.jpg)
+![Diasemia reticularis](/imagens/2013/07/201307-1KQEOH7.jpg)
 
 Diasemia reticularis
 
@@ -34,7 +34,7 @@ Diasemia reticularis
 - *Drepana curvatula* (Borkhausen, 1790)
 - *Tethea ocularis* (Linnaeus, 1767)
 
-![Tethea ocularis](/imagens/2013/07/IMG_2632-001.jpg)
+![Tethea ocularis](/imagens/2013/07/201307-2Y729BL.jpg)
 
 Tethea ocularis
 
@@ -49,7 +49,7 @@ Tethea ocularis
 - *Phragmatobia fuliginosa* (Linnaeus, 1758)
 - *Spilosoma lubricipeda* (Linnaeus, 1758)
 
-![Spilosoma lubricipeda](/imagens/2013/07/IMG_2682-001.jpg)
+![Spilosoma lubricipeda](/imagens/2013/07/201307-GZD2H5H.jpg)
 
 Spilosoma lubricipeda
 
@@ -69,7 +69,7 @@ Spilosoma lubricipeda
 - *Rhoptria asperaria* (Hübner, 1817)
 - *Stegania trimaculata* (de Villers, 1789)
 
-![Chloroclystis v-ata](/imagens/2013/07/IMG_2706-001.jpg)
+![Chloroclystis v-ata](/imagens/2013/07/201307-4P8DAL2.jpg)
 
 Chloroclystis v-ata
 
@@ -84,7 +84,7 @@ Chloroclystis v-ata
 - *Polyphaenis sericata* (Esper, 1787)
 - *Xestia c-nigrum* (Linnaeus, 1758)
 
-![Xestia c-nigrum](/imagens/2013/07/IMG_2623-001.jpg)
+![Xestia c-nigrum](/imagens/2013/07/201307-5YIQ43P.jpg)
 
 Xestia c-nigrum
 
@@ -92,7 +92,7 @@ Xestia c-nigrum
 
 - *Earias albovenosana* Oberthür, 1917
 
-![Earias albovenosana](/imagens/2013/07/IMG_2643.jpg)
+![Earias albovenosana](/imagens/2013/07/201307-2U6Y26B.jpg)
 
 Earias albovenosana
 
@@ -100,7 +100,7 @@ Earias albovenosana
 
 - *Drymonia querna* (Denis & Schiffermüller, 1775)
 
-![Drymonia querna](/imagens/2013/07/IMG_2679.jpg)
+![Drymonia querna](/imagens/2013/07/201307-16SKSIJ.jpg)
 
 Drymonia querna
 

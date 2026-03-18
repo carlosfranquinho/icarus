@@ -6,7 +6,7 @@ descricao: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Carla Liberato, Carlos Franquinho, Fernanda Grácio, Ivone Santo, Ricardo Machado"
-imagem: /imagens/2012/06/1.jpg
+imagem: /imagens/2012/06/201206-EIMAI6T.jpg
 permalink: /2012/06/15/1a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -16,9 +16,9 @@ O vale da Ribeira de São Pedro parece constituir um paradoxo em termos de conse
 
 Este foi o primeiro encontro “real” de um grupo que, até à data, era meramente virtual. O evento contou com a participação de 7 pessoas.
 
-![](/imagens/2021/07/IMG_4788-scaled.jpg)
-![](/imagens/2012/06/1008748_390561881048202_1781200853_o.jpg)
-![](/imagens/2021/07/981653_390561071048283_635677711_o.jpg)
+![](/imagens/2021/07/202107-65E0TYQ.jpg)
+![](/imagens/2012/06/201206-53WUKZR.jpg)
+![](/imagens/2021/07/202107-3PMVPD8.jpg)
 
 Foi uma noite bastante animada, com largas centenas de borboletas de cerca de 20 espécies a esvoaçar no local: surgiram cerca de 20 espécies distintas, com um claro destaque para a processionária, *Thaumetopoea pityocampa* (Treitschke, 1834), da qual surgiram 200 a 300 indivíduos.
 
@@ -57,16 +57,16 @@ Foi uma noite bastante animada, com largas centenas de borboletas de cerca de 20
 - *Phalera bucephala* (Linnaeus, 1758)
 - *Thaumetopoea pityocampa* (Treitschke, 1834)
 
-![](/imagens/2021/07/IMG_4834-scaled.jpg)
-![](/imagens/2021/07/IMG_4814-1-scaled.jpg)
-![](/imagens/2021/07/IMG_4862-scaled.jpg)
-![](/imagens/2021/07/IMG_4876-scaled.jpg)
-![](/imagens/2021/07/IMG_4823-scaled.jpg)
-![](/imagens/2021/07/IMG_4848-scaled.jpg)
-![](/imagens/2021/07/IMG_4791-scaled.jpg)
-![](/imagens/2021/07/IMG_4830-scaled.jpg)
-![](/imagens/2021/07/IMG_4853-scaled.jpg)
-![](/imagens/2021/07/IMG_4879-scaled.jpg)
+![](/imagens/2021/07/202107-5O2DJJ0.jpg)
+![](/imagens/2021/07/202107-1FIMP2C.jpg)
+![](/imagens/2021/07/202107-5IF78X2.jpg)
+![](/imagens/2021/07/202107-266IZHV.jpg)
+![](/imagens/2021/07/202107-1KQTTBU.jpg)
+![](/imagens/2021/07/202107-WD23R6X.jpg)
+![](/imagens/2021/07/202107-5FFQQXS.jpg)
+![](/imagens/2021/07/202107-1OGFW6H.jpg)
+![](/imagens/2021/07/202107-6646AWM.jpg)
+![](/imagens/2021/07/202107-52Q0OX2.jpg)
 
 
 ---

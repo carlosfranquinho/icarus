@@ -6,9 +6,9 @@ descricao: "Serra da Pevide, Porto de Mós e Cabeço das Pombas, São Bento, Por
 categoria: diurnas
 local: "Serra da Pevide, Porto de Mós e Cabeço das Pombas, São Bento, Porto de Mós"
 participantes: "Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Dina Fortunato, Henrique Baluga, Hugo Areal, Renato Baluga"
-imagem: /imagens/2020/06/26.jpg
+imagem: /imagens/2020/06/202006-67ZIVYY.jpg
 permalink: /2019/05/04/26a-sessao-de-observacao-de-borboletas-diurnas/
 ---
 
-![](/imagens/2020/06/pevide.jpg)
-![](/imagens/2020/06/elias-1.jpg)
+![](/imagens/2020/06/202006-4TJPPY3.jpg)
+![](/imagens/2020/06/202006-2JH7BAS.jpg)

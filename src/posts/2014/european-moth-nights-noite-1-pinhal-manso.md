@@ -6,7 +6,7 @@ descricao: "Relato da primeira noite das Noites Europeias de Borboletas Noturnas
 categoria: noturnas
 local: "Pinhal Manso, no Pinhal do Rei, Marinha Grande"
 participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Cristina Dinis, Dina Correia, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões, Pedro Alves"
-imagem: /imagens/2014/07/21.jpg
+imagem: /imagens/2014/07/201407-434FP0C.jpg
 permalink: /2014/07/17/european-moth-nights-noite-1-pinhal-manso/
 ---
 
@@ -14,11 +14,11 @@ Como vem sendo habitual, o nosso grupo aderiu, uma vez mais, às [Noites Europei
 
 ## O ambiente
 
-![o ambiente](/imagens/2014/07/Pessoal-3.jpg)
+![o ambiente](/imagens/2014/07/201407-3CFR049.jpg)
 
-![carlos](/imagens/2014/07/10464068_671456729611844_4968576326017463324_n-1.jpg)
+![carlos](/imagens/2014/07/201407-13T9LTE.jpg)
 
-![o ambiente](/imagens/2014/07/Pessoal-4.jpg)
+![o ambiente](/imagens/2014/07/201407-5F8ERLS.jpg)
 
 ## As borboletas
 

@@ -6,8 +6,8 @@ descricao: "Vale da Ribeira do Mogo, Chiqueda, Alcobaça"
 categoria: diurnas
 local: "Vale da Ribeira do Mogo, Chiqueda, Alcobaça"
 participantes: "Adília Gonçalves, Alexandrina Morgado, Armando Neto, Ascensão Marques, Carlos Felicio, Carlos Franquinho, Cristóvão Costa, Henrique Baluga, Ivone Santo, José Gonçalves, Licínia Pedrosa, Paulo Simões"
-imagem: /imagens/2015/05/13.jpg
+imagem: /imagens/2015/05/201505-1AMUF9M.jpg
 permalink: /2015/05/10/13a-sessao-observacao-borboletas-diurnas/
 ---
 
-![](/imagens/2017/02/DSC_3799.jpg)
+![](/imagens/2017/02/201702-6961MHJ.jpg)

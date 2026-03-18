@@ -6,7 +6,7 @@ autoridade: "(LINNAEUS, 1758)"
 familia: Noctuidae
 subfamilia: Hadeninae
 grupo: noturnas
-imagem: /imagens/2021/04/mbrassicae-scaled.jpg
+imagem: /imagens/2021/04/202104-12R0RNK.jpg
 permalink: /borboletas-noturnas/noctuidae/mamestra-brassicae/
 ---
 

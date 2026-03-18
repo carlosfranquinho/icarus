@@ -5,13 +5,13 @@ date: 2014-03-16
 descricao: "Hoje o Paulo Simões avistou uma espécie que ainda não tínhamos encontrado no concelho: a Euchloe crameri Butler, 1869. O número de espécies diurnas que ocorrem na Marinha Grande eleva-se, desta forma, para 35. Relembro que Ler mais…"
 categoria: noticias
 participantes: "Carlos Franquinho"
-imagem: /imagens/2014/03/1412280_847699841923470_1023180228_o.jpg
+imagem: /imagens/2014/03/201403-2XHOHC1.jpg
 permalink: /2014/03/16/nova-especie-diurna-euchloe-crameri/
 ---
 
 Hoje o Paulo Simões avistou uma espécie que ainda não tínhamos encontrado no concelho: a *Euchloe crameri* Butler, 1869. O número de espécies diurnas que ocorrem na Marinha Grande eleva-se, desta forma, para 35. Relembro que atualmente, a nível nacional, são conhecidas 137 espécies de lepidópteros diurnos.
 
-![Euchloe crameri Butler, 1869](/imagens/2014/03/1412280_847699841923470_1023180228_o.jpg)
+![Euchloe crameri Butler, 1869](/imagens/2014/03/201403-2XHOHC1.jpg)
 
 Euchloe crameri Butler, 1869
 

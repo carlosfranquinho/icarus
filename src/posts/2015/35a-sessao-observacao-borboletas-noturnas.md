@@ -6,8 +6,8 @@ descricao: "Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Ribeira da Lagoa das Éguas, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Cristina Gomes, Dina Correia, Dina Fortunato, Fernanda Grácio, Gonçalo Lemos, Henrique Baluga, Hugo Areal, José Gonçalves, Leonor Santos, Paulo Simões, Renato Baluga, Sandra, Sónia Duarte"
-imagem: /imagens/2015/07/35.jpg
+imagem: /imagens/2015/07/201507-4496BY1.jpg
 permalink: /2015/07/18/35a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](/imagens/2017/02/IMG_7305.jpg)
+![](/imagens/2017/02/201702-3QRBD20.jpg)

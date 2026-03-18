@@ -6,8 +6,8 @@ descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Felisbela Morgado, Gonçalo Lemos, Henrique Baluga, Ivone Santo, José Gonçalves, Paulo Simões, Ricardo Nogueira"
-imagem: /imagens/2015/03/30.jpg
+imagem: /imagens/2015/03/201503-31J6KVE.jpg
 permalink: /2015/03/14/30a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](/imagens/2017/02/11069875_821647031259479_87750333484009350_n.jpg)
+![](/imagens/2017/02/201702-2J6T8HN.jpg)

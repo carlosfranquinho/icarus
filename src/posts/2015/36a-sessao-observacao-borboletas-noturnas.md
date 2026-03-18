@@ -6,8 +6,8 @@ descricao: "Ponte Nova, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Ponte Nova, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Ascensão Marques, Aurélio Diniz, Carlos Franquinho, Cristina Roque, Gonçalo Lemos, Graciete, Henrique Baluga, Ivone Santo, José C., José Gonçalves, João, Mário Alves Roque, Paulo Simões, Rabeca, Renato Baluga, Sónia Duarte, Teresa Santos"
-imagem: /imagens/2015/08/36.jpg
+imagem: /imagens/2015/08/201508-5FAMGGV.jpg
 permalink: /2015/08/07/36a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](/imagens/2017/02/IMG_7449.jpg)
+![](/imagens/2017/02/201702-AMQ77XQ.jpg)

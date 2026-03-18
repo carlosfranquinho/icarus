@@ -6,8 +6,8 @@ descricao: "Valdimeira, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Valdimeira, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Dina Correia, Guida Dinis, Henrique Baluga, Hugo Areal, José Gonçalves, Rómulo Arrais"
-imagem: /imagens/2014/10/27.jpg
+imagem: /imagens/2014/10/201410-5H2AOTG.jpg
 permalink: /2014/10/25/27a-sessao-observacao-borboletas-noturnas/
 ---
 
-![](/imagens/2017/02/154548_734604399963743_5009510285828158300_n.jpg)
+![](/imagens/2017/02/201702-5I6D7KB.jpg)

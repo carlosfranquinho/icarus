@@ -6,7 +6,7 @@ descricao: "Caminhada do grupo Borboletas da Marinha Grande pela Pateira de Ferm
 categoria: diurnas
 local: "Pateira de Fermentelos, Óis da Ribeira, Águeda"
 participantes: "Adília Gonçalves, Alexandrina Morgado, Aurélio Diniz, Carlos Franquinho, Carlos Silva, Cristina Dinis, Felisbela Morgado, Fernanda Grácio, José Gonçalves, Paulo Simões, Tatiana Moreira"
-imagem: /imagens/2014/06/8.jpg
+imagem: /imagens/2014/06/201406-58EEWVZ.jpg
 permalink: /2014/06/15/8a-caminhada-diurna-pateira-de-fermentelos/
 ---
 

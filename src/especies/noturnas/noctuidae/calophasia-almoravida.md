@@ -6,7 +6,7 @@ autoridade: "DE GRASLIN, 1863"
 familia: Noctuidae
 subfamilia: Oncocnemidinae
 grupo: noturnas
-imagem: /imagens/2021/04/calmoravida-scaled.jpg
+imagem: /imagens/2021/04/202104-2IWNB3P.jpg
 permalink: /borboletas-noturnas/noctuidae/calophasia-almoravida/
 ---
 

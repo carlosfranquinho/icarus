@@ -6,7 +6,7 @@ descricao: "Rio Tinto, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Rio Tinto, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Ascensão Marques, Carla Liberato, Carlos Franquinho, Fernanda Grácio, Ivone Santo, José Gonçalves, Ricardo Machado"
-imagem: /imagens/2012/06/3.jpg
+imagem: /imagens/2012/06/201206-4EH8AY7.jpg
 permalink: /2012/06/18/3a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 

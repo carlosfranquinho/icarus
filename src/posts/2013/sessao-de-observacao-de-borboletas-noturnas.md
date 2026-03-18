@@ -6,7 +6,7 @@ descricao: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Pinhal Manso, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Alida Santos, Armando Neto, Aurélio Diniz, Carla Liberato, Carlos Franquinho, Cristina Dinis, Fernanda Grácio, Ivone Santo, José Gonçalves, Leonor Santos, Ricardo Machado, Rómulo Arrais"
-imagem: /imagens/2013/04/6-scaled.jpg
+imagem: /imagens/2013/04/201304-1FD8KV5.jpg
 permalink: /2013/04/20/sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -16,11 +16,11 @@ O ponto escolhido para a sessão foi o Pinhal Manso, no centro do Pinhal do Rei.
 
 Os 14 participantes nesta atividade foram chegando ao longo da noite, trazendo consigo animação suficiente para nos fazerem esquecer o frio.
 
-![A Ivone e o Armando tentam capturar mais uma borboleta, sob o olhar atento dos restantes participantes.](/imagens/2013/02/921545_559893307366115_644928557_o.jpg)
+![A Ivone e o Armando tentam capturar mais uma borboleta, sob o olhar atento dos restantes participantes.](/imagens/2013/02/201302-12GYLGS.jpg)
 
 A Ivone e o Armando capturam mais uma borboleta, sob o olhar atento dos restantes participantes. © Aurélio Rosa Diniz
 
-![O bolo verde servido pela Leonor foi um dos pontos altos da noite.](/imagens/2013/02/903793_559894147366031_215144750_o.jpg)
+![O bolo verde servido pela Leonor foi um dos pontos altos da noite.](/imagens/2013/02/201302-1EMA7P2.jpg)
 
 O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
 
@@ -52,14 +52,14 @@ O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
 - **Notodontidae:**
   - *Harpyia milhauseri* (Fabricius, 1775)
 
-![Campaea honoraria (Denis & Schiffermüller, 1775)](/imagens/2013/04/IMG_0337-002.jpg)
+![Campaea honoraria (Denis & Schiffermüller, 1775)](/imagens/2013/04/201304-3DNJKDE.jpg)
 
 *Campaea honoraria* (Denis & Schiffermüller, 1775)
 
-![Agrotis ipsilon (Hufnagel, 1766)](/imagens/2013/04/IMG_0421-001.jpg)
+![Agrotis ipsilon (Hufnagel, 1766)](/imagens/2013/04/201304-2WWUN7M.jpg)
 
 Agrotis ipsilon (Hufnagel, 1766)
 
-![Harpyia milhauseri (Fabricius, 1775)](/imagens/2013/04/IMG_0395.jpg)
+![Harpyia milhauseri (Fabricius, 1775)](/imagens/2013/04/201304-2F6VY12.jpg)
 
 Harpyia milhauseri (Fabricius, 1775)

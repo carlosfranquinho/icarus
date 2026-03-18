@@ -6,7 +6,7 @@ descricao: "Tremelgo, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Tremelgo, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Carlos Franquinho, Dina Correia, Henrique Baluga, Hugo Areal, Ivone Santo, José Gonçalves, Paulo Simões"
-imagem: /imagens/2015/03/28.jpg
+imagem: /imagens/2015/03/201503-5LJEMFP.jpg
 permalink: /2015/02/28/28a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -14,7 +14,7 @@ Com o (quase) regresso da primavera, regressam também as atividades do nosso gr
 
 Infelizmente, nesta primeira noite de busca, a “Pavonia” não nos brindou com a sua presença. A noite amena, o ambiente descontraído e o regresso do grupo à ação, foram fatores suficientes para nos animar durante as três horas que durou a sessão.
 
-![O ambiente desta noite. © JM Gonçalves 2015](/imagens/2015/03/11034174_811162125641303_7094444823587441076_n.jpg)
+![O ambiente desta noite. © JM Gonçalves 2015](/imagens/2015/03/201503-1ERNQUW.jpg)
 
 O ambiente desta noite. © JM Gonçalves 2015
 

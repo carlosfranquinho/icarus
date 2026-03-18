@@ -5,13 +5,13 @@ date: 2013-08-03
 descricao: "Com o avistamento deste indivíduo de Hipparchia statilinus (Hufnagel, 1766), o Hugo Areal elevou o número de espécies diurnas do concelho para 34 (a nível nacional são conhecidas 137 espécies). Trata-se de um satirídeo (família Ler mais…"
 categoria: noticias
 participantes: "Carlos Franquinho"
-imagem: /imagens/2014/03/47715_158868830968754_1753805453_n.jpg
+imagem: /imagens/2014/03/201403-10NKLQ7.jpg
 permalink: /2013/08/03/nova-especie-diurna-hipparchia-statilinus/
 ---
 
 Com o avistamento deste indivíduo de *Hipparchia statilinus* (Hufnagel, 1766), o Hugo Areal elevou o número de espécies diurnas do concelho para 34 (a nível nacional são conhecidas 137 espécies).
 
-![Hipparchia statilinus](/imagens/2014/03/47715_158868830968754_1753805453_n.jpg)
+![Hipparchia statilinus](/imagens/2014/03/201403-10NKLQ7.jpg)
 
 Hipparchia statilinus
 

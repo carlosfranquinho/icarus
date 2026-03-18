@@ -6,7 +6,7 @@ autoridade: "(Esper, [1780])"
 familia: Hesperiidae
 subfamilia: Pyrginae
 grupo: diurnas
-imagem: /imagens/2020/07/calceae_i1.jpg
+imagem: /imagens/2020/07/202007-MHG2ZQI.jpg
 descricao: "A *Carcharodus alceae* é uma pequena borboleta da família Hesperiidae com tons acastanhados. Frequenta principalmente áreas ruderais, prados floridos e margens de florestas, voando entre a primavera e o outono."
 permalink: /borboletas-diurnas/hesperiidae/carcharodus-alceae/
 links_externos:
@@ -42,18 +42,18 @@ Em Portugal aparece também uma espécie gémea, a ***Carcharodus tripolina* (VE
 **Região**: Presente em todos os concelhos
 
 
-![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i1.jpg)
+![Carcharodus alceae, adulto](/imagens/2020/07/202007-MHG2ZQI.jpg)
 
 **Carcharodus alceae**, adulto. Foto de Carlos Franquinho (2014)
 
-![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i2.jpg)
+![Carcharodus alceae, adulto](/imagens/2020/07/202007-2BWCP4M.jpg)
 
 Adulto. Foto de Paulo Simões (2017)
 
-![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i3-1.jpg)
+![Carcharodus alceae, adulto](/imagens/2020/07/202007-1CSTJ5D.jpg)
 
 Adulto. Foto de Carlos Franquinho (2006)
 
-![Carcharodus alceae, adulto](/imagens/2020/07/calceae_i4.jpg)
+![Carcharodus alceae, adulto](/imagens/2020/07/202007-672VYLI.jpg)
 
 Adulto. Foto de Carlos Franquinho (2017)

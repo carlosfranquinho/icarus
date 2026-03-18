@@ -6,7 +6,7 @@ autoridade: "(Linnaeus, 1758)"
 familia: Papilionidae
 subfamilia: Parnassiinae
 grupo: diurnas
-imagem: /imagens/2020/07/rumina_i1.jpg
+imagem: /imagens/2020/07/202007-VCCZZXB.jpg
 descricao: "A Zerynthia rumina é uma borboleta de tamanho médio com cores muito vistosas, onde predominam o branco a creme claro, negro e vermelho."
 permalink: /borboletas-diurnas/papilionidae/zerynthia-rumina/
 links_externos:
@@ -44,22 +44,22 @@ Os indivíduos mais velhos vão perdendo as escamas de cores mais vivas, sendo f
 **Região**: relativamente rara na faixa litoral. Comum, chegando a ser pontualmente muito abundante, no interior.
 
 
-![Zerynthia rumina, adulto](/imagens/2020/07/rumina_i1.jpg)
+![Zerynthia rumina, adulto](/imagens/2020/07/202007-VCCZZXB.jpg)
 
 **Zerynthia rumina**, adulto. Foto de Carlos Franquinho (2015)
 
-![Zerynthia rumina, adulto](/imagens/2020/07/rumina_i2.jpg)
+![Zerynthia rumina, adulto](/imagens/2020/07/202007-38DDW7L.jpg)
 
 Adulto. Foto de Hugo Areal (2017)
 
-![Zerynthia rumina, cópula](/imagens/2020/07/rumina_i5.jpg)
+![Zerynthia rumina, cópula](/imagens/2020/07/202007-5TJ3U0V.jpg)
 
 Cópula. Foto de Hugo Areal (2019)
 
-![Zerynthia rumina, adulto](/imagens/2020/07/rumina_i4.jpg)
+![Zerynthia rumina, adulto](/imagens/2020/07/202007-5NTF5GJ.jpg)
 
 Adulto. Foto de Carlos Franquinho (2011)
 
-![Zerynthia rumina, lagarta](/imagens/2020/07/rumina_l1.jpg)
+![Zerynthia rumina, lagarta](/imagens/2020/07/202007-96S85BG.jpg)
 
 ***Zerynthia rumina***, lagarta. Foto de Carlos Franquinho (2015)

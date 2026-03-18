@@ -6,7 +6,7 @@ autoridade: "Linnaeus, 1758"
 familia: Papilionidae
 subfamilia: Papilioninae
 grupo: diurnas
-imagem: /imagens/2020/06/1.jpg
+imagem: /imagens/2020/06/202006-48PJKBB.jpg
 descricao: "A *Papilio machaon* é uma borboleta grande e vistosa que raramente passa despercebida. Asas de um amarelo pálido com veias a negro. Asa posterior com uma faixa azul ao longo da margem."
 permalink: /borboletas-diurnas/papilionidae/papilio-machaon/
 especies_semelhantes:
@@ -58,30 +58,30 @@ As lagartas crisalidam entre a vegetação e a cor da crisálida pode variar do 
 **Região**: presente em todos os concelhos e habitats
 
 
-![Papilio machaon, adulto](/imagens/2020/06/1.jpg)
+![Papilio machaon, adulto](/imagens/2020/06/202006-48PJKBB.jpg)
 
 *Papilio machaon*, adulto. Foto de Carlos Franquinho (2015)
 
-![Papilio machaon, adulto](/imagens/2020/06/pmachaon-7.jpg)
+![Papilio machaon, adulto](/imagens/2020/06/202006-1CPE7H7.jpg)
 
 Adulto. Foto de Carlos Franquinho (2012)
 
-![Papilio machaon, adulto](/imagens/2020/06/pmachaon2-6.jpg)
+![Papilio machaon, adulto](/imagens/2020/06/202006-32U6JHP.jpg)
 
 Adulto. Foto de Carlos Franquinho (2015)
 
-![Papilio machaon, adulto](/imagens/2020/06/2.jpg)
+![Papilio machaon, adulto](/imagens/2020/06/202006-55XCBBY.jpg)
 
 Adulto. Foto de Carlos Franquinho (2020)
 
-![Papilio machaon, lagarta](/imagens/2020/06/l1.jpg)
+![Papilio machaon, lagarta](/imagens/2020/06/202006-3T4SRWF.jpg)
 
 *Papilio machaon*, lagarta. Foto de Carlos Franquinho
 
-![Papilio machaon, crisálida](/imagens/2020/07/pmachanon_c1.jpg)
+![Papilio machaon, crisálida](/imagens/2020/07/202007-28QSX7E.jpg)
 
 Crisálida. Foto de Carlos Franquinho (2012)
 
-![Papilio machaon, ovo](/imagens/2020/07/pmachaon_o1.jpg)
+![Papilio machaon, ovo](/imagens/2020/07/202007-1FTNYDN.jpg)
 
 Ovo. Foto de Carlos Franquinho (2012)

@@ -6,7 +6,7 @@ descricao: "Samouco, Marinha Grande"
 categoria: noturnas
 local: "Samouco, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Aurélio Diniz, Carlos Franquinho, Gonçalo Lemos, Ivone Santo, José Gonçalves"
-imagem: /imagens/2012/10/5.jpg
+imagem: /imagens/2012/10/201210-5P2V2UQ.jpg
 permalink: /2012/10/31/5a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -14,8 +14,8 @@ A nossa 5ª sessão de observação de borboletas noturnas contou com 7 particip
 
 ## O ambiente
 
-![](/imagens/2012/10/30998_449200838450488_1119374249_n.jpg)
-![](/imagens/2012/10/379154_449200791783826_1280914115_n.jpg)
+![](/imagens/2012/10/201210-3Z9MSSD.jpg)
+![](/imagens/2012/10/201210-14ZQSIZ.jpg)
 
 ## As borboletas
 
@@ -24,7 +24,7 @@ A nossa 5ª sessão de observação de borboletas noturnas contou com 7 particip
 - *Arnia nervosalis* Guenée, 1849
 - *Mecyna asinalis* (Hübner, 1819)
 
-![Arnia nervosalis](/imagens/2012/10/IMG_8740.jpg)
+![Arnia nervosalis](/imagens/2012/10/201210-ESPCD61.jpg)
 
 Arnia nervosalis
 
@@ -33,7 +33,7 @@ Arnia nervosalis
 - *Eilema caniola* (Hübner, 1808)
 - *Lithosia quadra* (Linnaeus, 1758)
 
-![Lithosia quadra](/imagens/2012/10/IMG_8752.jpg)
+![Lithosia quadra](/imagens/2012/10/201210-5BUCWWZ.jpg)
 
 Lithosia quadra
 
@@ -45,7 +45,7 @@ Lithosia quadra
 - *Peribatodes rhomboidaria* (Denis & Schiffermüller, 1775)
 - *Rhoptria asperaria* (Hübner, 1817)
 
-![Menophra abruptaria](/imagens/2012/10/IMG_8730.jpg)
+![Menophra abruptaria](/imagens/2012/10/201210-32IDB9V.jpg)
 
 Menophra abruptaria
 
@@ -58,11 +58,11 @@ Menophra abruptaria
 - *Polymixis argillaceago* (Hübner, 1822)
 - *Pseudenargia ulicis* (Staudinger, 1859)
 
-![Ammopolia witzenmanni](/imagens/2012/10/IMG_8716-001.jpg)
+![Ammopolia witzenmanni](/imagens/2012/10/201210-4GS1IAZ.jpg)
 
 Ammopolia witzenmanni
 
-![Polymixis argillaceago](/imagens/2012/10/IMG_8756.jpg)
+![Polymixis argillaceago](/imagens/2012/10/201210-5AQRYZW.jpg)
 
 Polymixis argillaceago
 

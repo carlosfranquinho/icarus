@@ -6,7 +6,7 @@ autoridade: "Butler, 1869"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
-imagem: /imagens/2020/07/ecrameri_i1.jpg
+imagem: /imagens/2020/07/202007-4X5QR0Z.jpg
 descricao: "A *Euchloe crameri* é uma borboleta da família Pieridae, comum na Península Ibérica. Distingue-se pelos padrões esverdeados e brancos na face inferior das asas posteriores, sendo frequentemente observada em áreas abertas e soalheiras durante a primavera."
 permalink: /borboletas-diurnas/pieridae/euchloe-crameri/
 especies_semelhantes:
@@ -43,18 +43,18 @@ links_externos:
 
 **Região**: presente em todos os concelhos
 
-![Euchloe crameri, adulto](/imagens/2020/07/ecrameri_i1.jpg)
+![Euchloe crameri, adulto](/imagens/2020/07/202007-4X5QR0Z.jpg)
 
 *Euchloe crameri*, adulto. Foto de Carlos Franquinho (2012)
 
-![Euchloe crameri, adulto](/imagens/2020/07/ecrameri_i2.jpg)
+![Euchloe crameri, adulto](/imagens/2020/07/202007-5X9ELJQ.jpg)
 
 Adulto. Foto de Dina Fortunato (2019)
 
-![Euchloe crameri, adulto](/imagens/2020/07/ecrameri_i3.jpg)
+![Euchloe crameri, adulto](/imagens/2020/07/202007-676SED7.jpg)
 
 Adulto. Foto de Paulo Simões (2015)
 
-![Euchloe crameri, adulto](/imagens/2020/07/ecrameri_i4.jpg)
+![Euchloe crameri, adulto](/imagens/2020/07/202007-R84AXLZ.jpg)
 
 Adulto. Foto de Paulo Simões (2015)

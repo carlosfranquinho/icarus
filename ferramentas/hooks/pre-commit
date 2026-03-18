@@ -1,12 +1,34 @@
 #!/bin/sh
 # ferramentas/hooks/pre-commit
-# Optimiza automaticamente imagens staged em imagens/ antes de cada commit.
+# 1. Renomeia imagens staged para formato YYYYMM-HASH (se necessário)
+# 2. Optimiza imagens staged
 # Instalar: node ferramentas/instalar-hooks.js
 
-IMAGENS=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^imagens/.*\.(jpe?g|png)$')
+IMAGENS_STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^imagens/.*\.(jpe?g|png)$')
 
-if [ -n "$IMAGENS" ]; then
-  echo "[icarus] Optimizando imagens staged..."
-  node ferramentas/otimizar-imagens.js $IMAGENS
-  git add $IMAGENS
+if [ -z "$IMAGENS_STAGED" ]; then
+  exit 0
+fi
+
+# Passo 1: Renomear imagens que não estejam no formato YYYYMM-HASH
+if echo "$IMAGENS_STAGED" | grep -qvE '/[0-9]{6}-[0-9A-Z]{7}\.(jpe?g|png)$'; then
+  echo "[icarus] Renomeando imagens para formato YYYYMM-HASH..."
+  node ferramentas/renomear-imagens.js
+  # Actualizar index: remover paths antigos, adicionar novos
+  git add -u imagens/
+  git add imagens/
+  # Stagiar .md que o script modificou (referências actualizadas)
+  MD_ALTERADOS=$(git diff --name-only | grep '\.md$')
+  if [ -n "$MD_ALTERADOS" ]; then
+    git add $MD_ALTERADOS
+  fi
+fi
+
+# Passo 2: Optimizar todas as imagens staged (após possível renomeação)
+IMAGENS_FINAIS=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^imagens/.*\.(jpe?g|png)$')
+
+if [ -n "$IMAGENS_FINAIS" ]; then
+  echo "[icarus] Optimizando imagens..."
+  node ferramentas/otimizar-imagens.js $IMAGENS_FINAIS
+  git add -u imagens/
 fi

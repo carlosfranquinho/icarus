@@ -6,7 +6,7 @@ autoridade: "(Linnaeus, 1758)"
 familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
-imagem: /imagens/2020/07/pbrassicae_i1.jpg
+imagem: /imagens/2020/07/202007-1KBZD5E.jpg
 descricao: "A Pieris brassicae é uma borboleta da família Pieridae, perfeitamente adaptada às paisagens humanizadas e com uma distribuição muito alargada."
 permalink: /borboletas-diurnas/pieridae/pieris-brassicae/
 especies_semelhantes:
@@ -43,30 +43,30 @@ links_externos:
 **Região**: todos os concelhos em diferentes habitats
 
 
-![Pieris brassicae, adulto](/imagens/2020/07/pbrassicae_i1.jpg)
+![Pieris brassicae, adulto](/imagens/2020/07/202007-1KBZD5E.jpg)
 
 *Pieris brassicae*, adulto. Foto de Paulo Simões (2020)
 
-![Borboleta-grande-da-couve, adulto](/imagens/2020/07/pbrassicae_i2.jpg)
+![Borboleta-grande-da-couve, adulto](/imagens/2020/07/202007-30Q4Z6Z.jpg)
 
 Adulto. Foto de Ascensão Marques (2013)
 
-![Borboleta-grande-da-couve, adulto](/imagens/2020/07/pbrassicae_i3.jpg)
+![Borboleta-grande-da-couve, adulto](/imagens/2020/07/202007-4SJ994V.jpg)
 
 Adulto. Foto de Paulo Simões (2014)
 
-![P. brassicae, crisálida](/imagens/2020/07/pbrassicae_p1-1.jpg)
+![P. brassicae, crisálida](/imagens/2020/07/202007-V9GO1AW.jpg)
 
 Crisálida. Foto de Henrique Baluga (2019)
 
-![P. brassicae, lagarta parasitada](/imagens/2020/07/pbrassicae_l1-1.jpg)
+![P. brassicae, lagarta parasitada](/imagens/2020/07/202007-3SWJ2T5.jpg)
 
 Lagarta parasitada. Foto de Hugo Areal (2019)
 
-![P. brassicae, recém eclodida](/imagens/2020/07/pbrassicae_e1-1.jpg)
+![P. brassicae, recém eclodida](/imagens/2020/07/202007-215NBUM.jpg)
 
 *Pieris brassicae* recém eclodida. Foto de Carlos Franquinho (2011)
 
-![P. brassicae, ovos](/imagens/2020/07/pbrassicae_o1-1.jpg)
+![P. brassicae, ovos](/imagens/2020/07/202007-3EL2GUF.jpg)
 
 Ovos. Foto de Henrique Baluga (2019)

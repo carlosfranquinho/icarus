@@ -5,7 +5,7 @@ nome_cientifico: "Pyronia tithonus"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1771) "
 subfamilia: Satyrinae
-descricao: "A *Pyronia tithonus* tem asas laranja com margens castanhas e um ocelo bicolor nas anteriores; frequenta sebes e orlas de bosque de julho a setembro, com lagartas em gramíneas."
+descricao: "A *Pyronia tithonus* tem asas laranja com margens castanhas e um ocelo bicolor nas asas anteriores; frequenta sebes e orlas de bosque de julho a setembro, com lagartas em gramíneas."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true
