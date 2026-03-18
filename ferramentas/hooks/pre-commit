@@ -1,0 +1,12 @@
+#!/bin/sh
+# ferramentas/hooks/pre-commit
+# Optimiza automaticamente imagens staged em imagens/ antes de cada commit.
+# Instalar: node ferramentas/instalar-hooks.js
+
+IMAGENS=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^imagens/.*\.(jpe?g|png)$')
+
+if [ -n "$IMAGENS" ]; then
+  echo "[icarus] Optimizando imagens staged..."
+  node ferramentas/otimizar-imagens.js $IMAGENS
+  git add $IMAGENS
+fi
