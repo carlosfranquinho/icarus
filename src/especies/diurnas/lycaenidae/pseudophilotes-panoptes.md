@@ -5,6 +5,7 @@ nome_cientifico: "Pseudophilotes panoptes"
 familia: Lycaenidae
 autoridade: "(Hübner, 1813) "
 subfamilia: Polyommatinae
+descricao: "A *Pseudophilotes panoptes* é um minúsculo licenídeo azul endémico ibérico, estreitamente ligado ao tomilho (Thymus), sua única planta hospedeira, em habitats secos e rochosos."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

@@ -5,6 +5,7 @@ nome_cientifico: "Euphydryas aurinia"
 familia: Nymphalidae
 autoridade: "(Rottemburg, 1775) "
 subfamilia: Nymphalinae
+descricao: "A *Euphydryas aurinia* tem asas com padrão xadrez laranja, amarelo e negro; voa em maio e junho em prados húmidos e clareiras, com larvas gregárias em escabiosas e loniceras."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

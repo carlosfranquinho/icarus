@@ -5,6 +5,7 @@ nome_cientifico: "Celastrina argiolus"
 familia: Lycaenidae
 autoridade: "(Linnaeus, 1758) "
 subfamilia: Polyommatinae
+descricao: "A *Celastrina argiolus* apresenta asas azul-pálido orladas de branco; frequenta orlas de bosque e jardins na primavera, com larvas em flores de diversas plantas arbustivas."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

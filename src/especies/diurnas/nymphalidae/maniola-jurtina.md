@@ -5,6 +5,7 @@ nome_cientifico: "Maniola jurtina"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1758) "
 subfamilia: Satyrinae
+descricao: "A *Maniola jurtina* é uma das borboletas mais comuns da Europa; castanha com ocelo apical nas asas anteriores, voa de junho a setembro em prados e orlas de bosque."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

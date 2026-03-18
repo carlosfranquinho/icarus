@@ -5,6 +5,7 @@ nome_cientifico: "Charaxes jasius"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1767) "
 subfamilia: Charaxinae
+descricao: "A *Charaxes jasius* é a maior borboleta ibérica, com asas castanho-escuro orladas de laranja; voa em matos de medronheiro, sua planta hospedeira, com voo rápido e territorial."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

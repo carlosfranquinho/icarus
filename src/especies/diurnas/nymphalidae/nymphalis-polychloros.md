@@ -5,6 +5,7 @@ nome_cientifico: "Nymphalis polychloros"
 familia: Nymphalidae
 autoridade: "(Linnaeus, 1758) "
 subfamilia: Nymphalinae
+descricao: "A *Nymphalis polychloros* é uma borboleta grande, laranja-acastanhada com bordos escuros e pintas azuis; hiberna como adulto e tem larvas gregárias em salgueiros e ulmeiros."
 grupo: diurnas
 imagem: /assets/silhuetas/nymphalidae.svg
 placeholder: true

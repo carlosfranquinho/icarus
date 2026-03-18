@@ -5,6 +5,7 @@ nome_cientifico: "Satyrium esculi"
 familia: Lycaenidae
 autoridade: "(Hübner, 1804) "
 subfamilia: Theclinae
+descricao: "A *Satyrium esculi* é um licenídeo pardo com linha laranja na face ventral; voa em julho e agosto em matagais mediterrânicos de azinheira e carvalho, suas plantas hospedeiras."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

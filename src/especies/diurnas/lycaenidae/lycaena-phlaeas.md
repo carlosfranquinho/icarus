@@ -5,6 +5,7 @@ nome_cientifico: "Lycaena phlaeas"
 familia: Lycaenidae
 autoridade: "(Linnaeus, 1761) "
 subfamilia: Lycaeninae
+descricao: "A *Lycaena phlaeas* tem asas anteriores cor de cobre brilhante com bordos escuros; voa durante quase todo o ano em prados abertos, com larvas em azedas (Rumex)."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

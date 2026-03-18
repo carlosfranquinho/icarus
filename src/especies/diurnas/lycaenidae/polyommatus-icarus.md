@@ -5,6 +5,7 @@ nome_cientifico: "Polyommatus icarus"
 familia: Lycaenidae
 autoridade: "(von Rottemburg, 1775) "
 subfamilia: Polyommatinae
+descricao: "A *Polyommatus icarus* é o licenídeo azul mais comum da Europa; os machos são azul-violeta, as fêmeas castanhas, e as larvas alimentam-se de leguminosas em prados abertos."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true

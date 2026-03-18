@@ -5,6 +5,7 @@ nome_cientifico: "Tomares ballus"
 familia: Lycaenidae
 autoridade: "(Fabricius, 1787) "
 subfamilia: Theclinae
+descricao: "A *Tomares ballus* tem asas com laranja-vivo e bordos negros, voando muito cedo na primavera em prados secos ibéricos; as larvas alimentam-se de Astragalus e Dorycnium."
 grupo: diurnas
 imagem: /assets/silhuetas/lycaenidae.svg
 placeholder: true
