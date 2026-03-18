@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/pnapi_i1.jpg
-descricao: "A Pieris napi é uma borboleta da família Pieridae que ocorre na nossa região."
+descricao: "A *Pieris napi* é uma borboleta da família Pieridae, distribuída por toda a Europa, mas menos comum a sul do Tejo em Portugal. Observa-se frequentemente em prados, campos e florestas abertas, voando em múltiplas gerações de janeiro a outubro."
 permalink: /borboletas-diurnas/pieridae/pieris-napi/
 especies_semelhantes:
   - "Pieris brassicae"
@@ -18,8 +18,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Pieris_Napi"
     nome: "lepiforum.de"
 ---
-
-A **Pieris napi** é uma borboleta da família Pieridae.
 
 ### Guia rápido
 

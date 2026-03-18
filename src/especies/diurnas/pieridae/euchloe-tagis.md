@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/etagis_i1.jpg
-descricao: "A Euchloe tagis é uma borboleta pouco comum, da família Pieridae."
+descricao: "A *Euchloe tagis* é uma borboleta pouco comum da família Pieridae. Em Portugal, ocorre em populações isoladas, tipicamente associada a zonas calcárias, encostas rochosas e matos mediterrânicos, voando entre fevereiro e maio."
 permalink: /borboletas-diurnas/pieridae/euchloe-tagis/
 especies_semelhantes:
   - "Euchloe crameri"
@@ -18,8 +18,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Iberochloe_Tagis"
     nome: "lepiforum.de"
 ---
-
-A *Euchloe tagis* é uma borboleta pouco comum, da família Pieridae.
 
 ### Guia rápido
 

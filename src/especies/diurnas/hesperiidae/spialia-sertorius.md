@@ -7,7 +7,7 @@ familia: Hesperiidae
 subfamilia: Pyrginae
 grupo: diurnas
 imagem: /imagens/2020/07/spialia_i1.jpg
-descricao: "A Spialia sertorius é uma pequena borboleta da família Hesperiidae que ocorre na região."
+descricao: "A *Spialia sertorius* é uma pequena borboleta da família Hesperiidae, com distribuição por todo o território de Portugal. Frequenta sobretudo encostas e prados secos ou matagais, podendo ser observada a voar entre a primavera e o outono."
 permalink: /borboletas-diurnas/hesperiidae/spialia-sertorius/
 especies_semelhantes:
   - "Muschampia proto"

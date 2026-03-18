@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Dismorphinae
 grupo: diurnas
 imagem: /imagens/2020/07/lsinapis_i1.jpg
-descricao: "A Leptidea sinapis é uma pequena borboleta branca da família Pieridae que ocorre na região."
+descricao: "A *Leptidea sinapis* é uma pequena borboleta branca da família Pieridae, distribuída por quase todo o país, embora menos comum a sul. Frequenta principalmente floridos bosques soalheiros, clareiras e galerias ripícolas, voando entre março e agosto."
 permalink: /borboletas-diurnas/pieridae/leptidea-sinapis/
 links_externos:
   - url: "https://lepidoptera.eu/species/18"
@@ -15,8 +15,6 @@ links_externos:
   - url: "http://www.lepiforum.de/lepiwiki.pl?Leptidea_Sinapis"
     nome: "lepiforum.de"
 ---
-
-A **Leptidea sinapis** é uma pequena borboleta branca da família Pieridae.
 
 ### Guia rápido
 

@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2020/07/acardamines_i1.jpg
-descricao: "A Anthocharis cardamines é uma borboleta da família Pieridae. O macho da espécie tem as pontas das asas laranja."
+descricao: "A *Anthocharis cardamines* é uma borboleta da família Pieridae cujos machos se destacam pelas características pontas cor de laranja nas asas anteriores. Frequenta principalmente galerias ripícolas e prados húmidos, voando numa única geração durante a primavera."
 permalink: /borboletas-diurnas/pieridae/anthocharis-cardamines/
 links_externos:
   - url: "https://lepidoptera.eu/species/20"

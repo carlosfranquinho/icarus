@@ -19,8 +19,6 @@ links_externos:
     nome: "lepiforum.de"
 ---
 
-A **Pieris rapae** é uma borboleta da família Pieridae, perfeitamente adaptada às paisagens humanizadas.
-
 ### Guia rápido
 
 **Nome comum:** borboleta-pequena-da-couve

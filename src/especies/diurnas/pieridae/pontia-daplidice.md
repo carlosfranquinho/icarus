@@ -7,7 +7,7 @@ familia: Pieridae
 subfamilia: Pierinae
 grupo: diurnas
 imagem: /imagens/2021/02/pdaplidice1.jpg
-descricao: "A Pieris rapae é uma borboleta da família Pieridae, perfeitamente adaptada às paisagens humanizadas e com uma distribuição muito alargada."
+descricao: "A *Pontia daplidice* é uma borboleta da família Pieridae com distribuição abrangente por todo o país. Prefere habitats rústicos como solos arenosos e prados floridos, voando em sucessivas gerações de fevereiro a novembro."
 permalink: /borboletas-diurnas/pieridae/pontia-daplidice/
 especies_semelhantes:
   - "Pieris brassicae"
@@ -19,7 +19,6 @@ links_externos:
     nome: "lepiforum.de"
 ---
 
-A **Pontia daplidice** é uma borboleta da família Pieridae.
 
 ### Guia rápido
 
