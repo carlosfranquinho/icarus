@@ -704,6 +704,10 @@ button:disabled {
   object-fit: cover;
 }
 
+.lista-top-especies strong {
+  display: inline;
+}
+
 .top-obs-total {
   font-size: .82rem;
   font-weight: 400;
