@@ -69,34 +69,30 @@ title: "Borboletas da Marinha Grande e Leiria"
 
   <section class="secao-familias">
     <div class="secao-header">
-      <h2>Fichas de espécies</h2>
+      <h2>Top espécies observadas</h2>
     </div>
     <div class="familias-dois-grupos">
       <div>
-        <h3 class="grupo-titulo">☀ Diurnas</h3>
-        <div class="grelha-familias-home">
-          {% for familia in collections.familiasDiurnas | sort(false, false, 'data.title') %}
-          <a href="{{ familia.url }}" class="card-familia-home">
-            {% if familia.data.imagem %}
-            {% image familia.data.imagem, familia.data.title, "", "(max-width: 480px) 100vw, 150px" %}
-            {% endif %}
-            <span>{{ familia.data.title }}</span>
-          </a>
+        <h3 class="grupo-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Diurnas</h3>
+        <ol class="top-especies-lista">
+          {% for esp in topEspecies.diurnas %}
+          <li>
+            <a href="{{ esp.url }}"><em>{{ esp.nome }}</em></a>
+            <span class="top-especies-count">{{ esp.total }}</span>
+          </li>
           {% endfor %}
-        </div>
+        </ol>
       </div>
       <div>
-        <h3 class="grupo-titulo">☾ Noturnas</h3>
-        <div class="grelha-familias-home">
-          {% for familia in collections.familiasNoturnas | sort(false, false, 'data.title') %}
-          <a href="{{ familia.url }}" class="card-familia-home">
-            {% if familia.data.imagem %}
-            {% image familia.data.imagem, familia.data.title, "", "(max-width: 480px) 100vw, 150px" %}
-            {% endif %}
-            <span>{{ familia.data.title }}</span>
-          </a>
+        <h3 class="grupo-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Noturnas</h3>
+        <ol class="top-especies-lista">
+          {% for esp in topEspecies.noturnas %}
+          <li>
+            <a href="{{ esp.url }}"><em>{{ esp.nome }}</em></a>
+            <span class="top-especies-count">{{ esp.total }}</span>
+          </li>
           {% endfor %}
-        </div>
+        </ol>
       </div>
     </div>
   </section>

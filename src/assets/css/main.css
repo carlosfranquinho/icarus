@@ -666,6 +666,55 @@ button:disabled {
   color: var(--cinza-texto);
 }
 
+/* --- Top espécies na homepage --- */
+.top-especies-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: top-rank;
+}
+
+.top-especies-lista li {
+  counter-increment: top-rank;
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--cinza-borda);
+  font-size: .93rem;
+}
+
+.top-especies-lista li:last-child {
+  border-bottom: none;
+}
+
+.top-especies-lista li::before {
+  content: counter(top-rank);
+  min-width: 1.4rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--cinza-suave);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.top-especies-lista a {
+  flex: 1;
+  color: var(--cinza-texto);
+  text-decoration: none;
+}
+
+.top-especies-lista a:hover {
+  color: var(--verde-escuro);
+  text-decoration: underline;
+}
+
+.top-especies-count {
+  font-size: .78rem;
+  color: var(--cinza-suave);
+  white-space: nowrap;
+}
+
 /* --- Página diurnas/noturnas: cards de família com imagem --- */
 .pagina-cabecalho {
   margin-bottom: 2rem;
