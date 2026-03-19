@@ -27,18 +27,9 @@ A diversidade também surpreendeu, com cerca de 30 espécies a voar, entre as qu
 - *Eilema caniola* (Hübner, 1808)
 - *Eilema depressa* (Esper, 1787)
 - *Eilema sororcula* (Hufnagel, 1766)
-- *Euproctis similis* (Fuessly, 1775)
+- *Sphrageidus similis* (Fuessly, 1775)
 - *Lithosia quadra* (Linnaeus, 1758)
-- *Spilosoma lutea* (Hufnagel, 1766)
-
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+- *Spilarctia lutea* (Hufnagel, 1766)
 
 **Geometridae**
 
@@ -54,16 +45,6 @@ A diversidade também surpreendeu, com cerca de 30 espécies a voar, entre as qu
 - *Peribatodes rhomboidaria* (Denis & Schiffermüller, 1775)
 - *Pseudoterpna coronillaria* (Hübner, 1817)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-
 **Limacodidae**
 
 - *Hoyosia codeti* (Oberthür, 1883)
@@ -76,13 +57,6 @@ A diversidade também surpreendeu, com cerca de 30 espécies a voar, entre as qu
 - *Mythimna sicula* (Treitschke, 1835)
 - *Thysanoplusia orichalcea* (Fabricius, 1775)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-
 **Nolidae**
 
 - *Bena bicolorana* (Fuessly, 1775)
@@ -91,13 +65,7 @@ A diversidade também surpreendeu, com cerca de 30 espécies a voar, entre as qu
 
 - *Phalera bucephala* (Linnaeus, 1758)
 
-![]()
-![]()
-
 **Sphingidae**
 
 - *Laothoe populi* (Linnaeus, 1758)
 - *Sphinx ligustri* Linnaeus, 1758
-
-![]()
-![]()

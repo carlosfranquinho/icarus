@@ -16,7 +16,7 @@ Infelizmente, nesta primeira noite de busca, a “Pavonia” não nos brindou co
 
 ![O ambiente desta noite. © JM Gonçalves 2015](/imagens/2015/03/201503-1ERNQUW.jpg)
 
-O ambiente desta noite. © JM Gonçalves 2015
+*O ambiente desta noite. © JM Gonçalves 2015*
 
 ## As borboletas
 
@@ -42,16 +42,8 @@ Fomos visitados por cerca de 15 espécies, algumas das quais avistamos pela pri
 - *Conistra staudingeri* (Graslin, 1863)
 - *Orthosia gothica* (Linnaeus, 1758)
 - *Orthosia incerta* (Hufnagel, 1766)
-- *Xanthia ruticilla* (Esper, 1791)
+- *Agrochola ruticilla* (Esper, 1791)
 - *Xylocampa areola* (Esper, 1789)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
 
 Um agradecimento final ao Eduardo Marabuto pela inestimável ajuda na identificação de algumas espécies.

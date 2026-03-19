@@ -26,19 +26,13 @@ A nossa 4ª sessão de observação de borboletas noturnas realizou-se no dia 17
 - *Catoptria pinella* (Linnaeus, 1758)
 - *Palpita vitrealis* (Rossi, 1794)
 
-![]()
-![]()
-![]()
 
 ### Erebidae
 
 - *Eilema depressa* (Esper, 1787)
 - *Eilema sororcula* (Hufnagel, 1766)
-- *Spilosoma lutea* (Hufnagel, 1766)
+- *Spilarctia lutea* (Hufnagel, 1766)
 
-![]()
-![]()
-![]()
 
 ### Geometridae
 
@@ -50,9 +44,6 @@ A nossa 4ª sessão de observação de borboletas noturnas realizou-se no dia 17
 - *Pseudoterpna coronillaria* (Hübner, 1817)
 - *Rhoptria asperaria* (Hübner, 1817)
 
-![]()
-![]()
-![]()
 
 ### Limacodidae
 
@@ -65,13 +56,8 @@ A nossa 4ª sessão de observação de borboletas noturnas realizou-se no dia 17
 - *Hoplodrina hesperica* Dufay & Boursin, 1960
 - *Mythimna sicula* (Treitschke, 1835)
 
-![]()
-![]()
-![]()
 
 Para trazer alguma animação extra a esta noite quente, parece que causamos algum transtorno a um ninho de *Vespa crabro* Linnaeus, 1758 ali próximo. Uma a uma, elas foram atraídas para a nossa lâmpada e ao fim da noite, por razões de segurança, tínhamos coletado quase uma dezena delas. Felizmente não provocaram qualquer incidente!
 
-![]()
-![]()
 
 Um agradecimento especial ao Eduardo Marabuto pela colaboração na identificação das diferentes espécies.

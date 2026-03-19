@@ -13,7 +13,7 @@ Durante a 6ª caminhada diurna do nosso grupo, nas margens do Liz, avistámos um
 
 ![Pieris napi](/imagens/2014/03/201403-4AUY9P5.jpg)
 
-Pieris napi
+*Pieris napi*
 
 Por se tratar de mais uma espécie do género Pieris, onde se incluem as “banais” borboletas das couves, é possível que a espécie seja mais comum do que aparenta: podemos, eventualmente, estar a ignorá-la porque, ao primeiro olhar, *é apenas mais uma das brancas!*
 
@@ -21,12 +21,12 @@ A distinção entre estas espécies, particularmente em voo, pode não ser fáci
 
 ![Pieris napi, Picos da Europa, Espanha, Agosto de 2012](/imagens/2014/03/201403-1JVPDT6.jpg)
 
-Pieris napi. Picos da Europa, Espanha, Agosto de 2012
+*Pieris napi. Picos da Europa, Espanha, Agosto de 2012*
 
 ![Pieris napi, Amor, Leiria. Abril de 2005](/imagens/2014/03/201403-2R6HINE.jpg)
 
-Pieris napi. Amor, Leiria. Abril de 2005
+*Pieris napi. Amor, Leiria. Abril de 2005*
 
 ![Pieris napi. Amor, Leiria. Março de 2002](/imagens/2014/03/201403-4K3R4RE.jpg)
 
-Pieris napi. Amor, Leiria. Março de 2002
+*Pieris napi. Amor, Leiria. Março de 2002*

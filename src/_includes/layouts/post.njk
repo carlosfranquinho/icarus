@@ -36,6 +36,29 @@ ogType: article
       <div class="post-corpo">
         {{ content | safe }}
       </div>
+
+      {% set eventoAnterior = collections.posts | getNextCollectionItem %}
+      {% set eventoSeguinte = collections.posts | getPreviousCollectionItem %}
+      {% if eventoAnterior or eventoSeguinte %}
+      <nav class="post-nav" aria-label="Navegação entre eventos">
+        <div class="post-nav-anterior">
+          {% if eventoAnterior %}
+          <a href="{{ eventoAnterior.url }}">
+            <span class="post-nav-label">← Evento anterior</span>
+            <span class="post-nav-titulo">{{ eventoAnterior.data.title }}</span>
+          </a>
+          {% endif %}
+        </div>
+        <div class="post-nav-seguinte">
+          {% if eventoSeguinte %}
+          <a href="{{ eventoSeguinte.url }}">
+            <span class="post-nav-label">Evento seguinte →</span>
+            <span class="post-nav-titulo">{{ eventoSeguinte.data.title }}</span>
+          </a>
+          {% endif %}
+        </div>
+      </nav>
+      {% endif %}
     </article>
   </div>
 </div>

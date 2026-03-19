@@ -17,17 +17,17 @@ Mesmo sem o elevado número de borboletas que o excelente dia prometia, foi poss
 ![](/imagens/2017/03/201703-DVDWKTY.jpg)
 
 - **Papilionidae**
-  - *[Papilio machaon](http://mg.borboletas.net/borboletas-diurnas/papilionidae/papilio-machaon/): 2*
-  - *[Zerynthia rumina](http://mg.borboletas.net/borboletas-diurnas/papilionidae/zerynthia-rumina/): ~8*
+  - *Papilio machaon*: 2
+  - *Zerynthia rumina*: ~8
 - **Pieridae**
-  - *[Pieris brassicae](http://mg.borboletas.net/borboletas-diurnas/pieridae/pieris-brassicae/): ~7*
-  - *[Colias croceus](http://mg.borboletas.net/borboletas-diurnas/pieridae/colias-croceus/): ~4*
-  - *[Gonepteryx cleopatra](http://mg.borboletas.net/borboletas-diurnas/pieridae/gonepteryx-cleopatra/): ~5*
+  - *Pieris brassicae*: ~7
+  - *Colias croceus*: ~4
+  - *Gonepteryx cleopatra*: ~5
 - **Nymphalidae**
-  - *[Pararge aegeria:](http://mg.borboletas.net/borboletas-diurnas/nymphalidae/pararge-aegeria/) ~5*
-  - *[Vanessa atalanta](http://mg.borboletas.net/borboletas-diurnas/nymphalidae/vanessa-atalanta/)*: 1
+  - *Pararge aegeria*: ~5
+  - *Vanessa atalanta*: 1
 - **Lycaenidae**
-  - *[Lycaena phlaeas](http://mg.borboletas.net/borboletas-diurnas/lycaenidae/lycaena-phlaeas/): ~5*
-  - *[Callophrys rubi](http://mg.borboletas.net/borboletas-diurnas/lycaenidae/callophrys-rubi/): ~8*
-  - *[Cacyreus marshalli](http://mg.borboletas.net/borboletas-diurnas/lycaenidae/cacyreus-marshalli/): 2*
-  - *[Celastrina argiolus](http://mg.borboletas.net/borboletas-diurnas/lycaenidae/celastrina-argiolus/): ~2*
+  - *Lycaena phlaeas*: ~5
+  - *Callophrys rubi*: ~8
+  - *Cacyreus marshalli*: 2
+  - *Celastrina argiolus*: ~2

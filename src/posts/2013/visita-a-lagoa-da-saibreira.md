@@ -12,21 +12,4 @@ permalink: /2013/07/27/visita-a-lagoa-da-saibreira/
 
 Uma rápida visita à Lagoa da Saibreira.
 
-![](/imagens/2013/07/201307-2M0X1XY.jpg)![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+![](/imagens/2013/07/201307-2M0X1XY.jpg)

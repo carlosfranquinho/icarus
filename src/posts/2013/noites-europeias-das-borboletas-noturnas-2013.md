@@ -13,7 +13,7 @@ permalink: /2013/07/10/noites-europeias-das-borboletas-noturnas-2013/
 
 Os participantes aplicados
 
-No âmbito da iniciativa European Moth Nights, o grupo [Borboletas da Marinha Grande](https://www.facebook.com/groups/borboletasmg/), irá realizar uma série de sessões de observação de borboletas noturnas em diferentes pontos do concelho:
+No âmbito da iniciativa European Moth Nights, o grupo [Borboletas da Marinha Grande](https://www.facebook.com/groups/grupo.icarus), irá realizar uma série de sessões de observação de borboletas noturnas em diferentes pontos do concelho:
 
 - 5ª feira, dia 11: Junto à Fonte de Albergaria. Entre as 21h00 e as 24h00.
 - 6ª feira, dia 12: Na margem do Rio Liz, junto a Vieira de Leiria. Com inicio às 21h00 e sem hora de término.

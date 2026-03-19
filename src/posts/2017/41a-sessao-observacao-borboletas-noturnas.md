@@ -41,7 +41,7 @@ Uma noite de fevereiro que se revelou mais amena que o previsto, com as temperat
 
 #### Noctuidae
 
-- *Spudaea ruticilla* (Esper, 1791)
+- *Agrochola ruticilla* (Esper, 1791)
 - *Conistra staudingeri* (Graslin, 1863)
 - *Cerastis rubricosa* (Denis & Schiffermüller, 1775)
 - *Lycophotia erythrina* (Herrich-Schäffer, 1852)

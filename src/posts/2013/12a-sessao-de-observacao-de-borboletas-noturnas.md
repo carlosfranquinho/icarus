@@ -20,7 +20,7 @@ Na quarta noite das [European Moth Nights](http://euromothnights.uw.hu/) 2013, i
 
 ![Arnia nervosalis](/imagens/2013/07/201307-13PSCRD.jpg)
 
-Arnia nervosalis
+*Arnia nervosalis*
 
 ### Erebidae
 
@@ -28,7 +28,7 @@ Arnia nervosalis
 
 ![Euproctis chrysorrhoea](/imagens/2013/07/201307-5LC94TZ.jpg)
 
-Euproctis chrysorrhoea
+*Euproctis chrysorrhoea*
 
 ### Geometridae
 
@@ -38,7 +38,7 @@ Euproctis chrysorrhoea
 
 ![Rhodometra sacraria](/imagens/2013/07/201307-17TVWEV.jpg)
 
-Rhodometra sacraria
+*Rhodometra sacraria*
 
 ### Lasiocampidae
 
@@ -46,7 +46,7 @@ Rhodometra sacraria
 
 ![Psilogaster loti](/imagens/2013/07/201307-2H1V25D.jpg)
 
-Psilogaster loti
+*Psilogaster loti*
 
 ### Noctuidae
 
@@ -61,6 +61,6 @@ Psilogaster loti
 
 ![Agrotis alexandriensis](/imagens/2013/07/201307-2I1UYJI.jpg)
 
-Agrotis alexandriensis
+*Agrotis alexandriensis*
 
 Um agradecimento especial ao [Eduardo Marabuto](http://eduardomarabutonature.blogspot.pt/) pela colaboração na identificação das espécies!

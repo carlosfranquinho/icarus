@@ -16,11 +16,11 @@ Desta vez, o local escolhido foi junto à fonte da Água Formosa, no Pinhal do R
 
 ![O ambiente (frio) e os participantes](/imagens/2014/03/201403-2CI5XNL.jpg)
 
-O ambiente (frio) e os participantes
+*O ambiente (frio) e os participantes*
 
 ![Estranhas luzes na noite](/imagens/2014/03/201403-5GJKRWV.jpg)
 
-Estranhas luzes na noite
+*Estranhas luzes nanoite*
 
 ## As borboletas
 
@@ -33,9 +33,6 @@ Estranhas luzes na noite
 - *Rhoptria asperaria* (Hübner, 1817)
 - *Stegania trimaculata* (de Villers, 1789)
 
-![]()
-![]()
-![]()
 
 ### Noctuidae
 
@@ -45,8 +42,5 @@ Estranhas luzes na noite
 - *Peridroma saucia* (Hübner, 1808)
 - *Xestia c-nigrum* (Linnaeus, 1758)
 
-![]()
-![]()
-![]()
 
 …e um agradecimento ao Eduardo Marabuto pela colaboração na identificação das espécies!

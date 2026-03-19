@@ -16,34 +16,15 @@ Além do convívio e da observação das espécies mais ou menos comuns no local
 
 Nesta nossa segunda visita a este local, optámos por evitar o percurso, algo restritivo, da ecopista. Subimos, então, o trilho que leva aos moinhos abandonados e ao marco geodésico da Pevide.
 
-![]()
-![]()
-![]()
 
 Assim, sem o constrangimento da cerca da ecopista, pudemos dispersar a nossa atenção por toda a área e, consoante as borboletas e as flores foram surgindo, lá fomos registando o momento.
 
-![]()
-![]()
-![]()
 
 Para além das muitas borboletas que esvoaçavam pelo local, a nossa atenção foi sendo atraída para as inúmeras orquídeas que nascem por ali.
 
-![]()
-![]()
 
 Obviamente, porém, as borboletas foram o centro das atenções! Observámos cerca de 10 espécies, incluindo os três papilionídeos que ocorrem em Portugal.
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
 
 E, finalmente, a esquiva *Euchloe tagis* apareceu. Na verdade, seria uma das espécies mais abundantes no local. Infelizmente o bicho revelou-se bastante irrequieto e particularmente difícil de fotografar. Ficam os registos possíveis!
 
-![]()
-![]()
-![]()

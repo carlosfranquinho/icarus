@@ -1,7 +1,32 @@
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
+const fs = require("fs");
 const markdownIt = require("markdown-it");
 const md = markdownIt({ html: false });
+
+// Mapa nome_cientifico → permalink, construído uma vez no arranque
+function buildEspeciesMap() {
+  const map = new Map();
+  for (const grupo of ["diurnas", "noturnas"]) {
+    const base = `src/especies/${grupo}`;
+    if (!fs.existsSync(base)) continue;
+    for (const familia of fs.readdirSync(base)) {
+      const dir = path.join(base, familia);
+      if (!fs.statSync(dir).isDirectory()) continue;
+      for (const file of fs.readdirSync(dir)) {
+        if (!file.endsWith(".md")) continue;
+        const raw = fs.readFileSync(path.join(dir, file), "utf8");
+        const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
+        const nome = fm.match(/nome_cientifico:\s*["']?([^"'\n]+)["']?/)?.[1]?.trim();
+        const permalink = fm.match(/permalink:\s*["']?([^"'\n]+)["']?/)?.[1]?.trim();
+        const tipo = fm.match(/tipo:\s*["']?([^"'\n]+)["']?/)?.[1]?.trim();
+        if (nome && permalink && tipo === "especie") map.set(nome, permalink);
+      }
+    }
+  }
+  return map;
+}
+const especiesMap = buildEspeciesMap();
 
 async function imageShortcode(src, alt, className = "", sizes = "100vw") {
   if (!src) return "";
@@ -188,6 +213,48 @@ module.exports = function (eleventyConfig) {
       rects += `<rect x="${x}" y="${y}" width="${cellPx}" height="${cellPx}" fill="#06b6d4" stroke="#0891b2" stroke-width="0.5"><title>${count} obs.</title></rect>`;
     });
     return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Mapa UTM de observações" style="max-width:100%;height:auto;">${rects}</svg>`;
+  });
+
+  // Transform: converte pares <p><img></p> + <p>legenda</p> em <figure> + <figcaption>
+  eleventyConfig.addTransform("figcaptions", function(content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+
+    // Posts: figcaptions + substituição de links antigos + auto-linkagem de espécies
+    if (this.inputPath && this.inputPath.includes("src/posts/")) {
+      // 1. Figcaptions
+      content = content.replace(
+        /<p>\s*(<img[^>]+>)\s*<\/p>\s*<p><em>([^<]+)<\/em><\/p>/g,
+        '<figure class="post-figura">$1<figcaption>$2</figcaption></figure>'
+      );
+      // 2. Auto-ligar nomes de espécies em <em> ainda não dentro de <a>
+      //    Alternação: consome <a>…</a> intactos; só substitui <em> soltos
+      content = content.replace(
+        /(<a\b[\s\S]*?<\/a>)|<em>([^<]+)<\/em>/g,
+        (match, anchor, nome) => {
+          if (anchor) return anchor;
+          const permalink = especiesMap.get(nome);
+          return permalink ? `<a href="${permalink}"><em>${nome}</em></a>` : match;
+        }
+      );
+      return content;
+    }
+
+    // Espécies: legenda é qualquer parágrafo seguinte sem imagem
+    if (this.inputPath && this.inputPath.includes("src/especies/")) {
+      // Pass 1: imagem + legenda
+      content = content.replace(
+        /<p>\s*(<img[^>]+>)\s*<\/p>\s*<p>((?!<img|<picture)[^\n]+)<\/p>/g,
+        '<div class="especie-figura-wrap"><figure class="especie-figura">$1<figcaption>$2</figcaption></figure></div>'
+      );
+      // Pass 2: imagem sem legenda
+      content = content.replace(
+        /<p>\s*(<img[^>]+>)\s*<\/p>/g,
+        '<div class="especie-figura-wrap"><figure class="especie-figura">$1</figure></div>'
+      );
+      return content;
+    }
+
+    return content;
   });
 
   // Collections

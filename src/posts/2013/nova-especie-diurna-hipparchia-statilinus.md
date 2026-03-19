@@ -13,8 +13,8 @@ Com o avistamento deste indivíduo de *Hipparchia statilinus* (Hufnagel, 1766), 
 
 ![Hipparchia statilinus](/imagens/2014/03/201403-10NKLQ7.jpg)
 
-Hipparchia statilinus
+*Hipparchia statilinus*
 
-Trata-se de um satirídeo (família [Nymphalidae](http://mg.borboletas.net/borboletas-diurnas/nymphalidae/), subfamília Satyridae) com uma ampla distribuição europeia. As lagartas alimentam-se de [gramíneas](http://flora-on.pt/#/1Poaceae) e o adulto pode ser avistado entre abril e setembro, em terrenos secos, entre a vegetação rasteira.
+Trata-se de um satirídeo (família Nymphalidae, subfamília Satyridae) com uma ampla distribuição europeia. As lagartas alimentam-se de [gramíneas](http://flora-on.pt/#/1Poaceae) e o adulto pode ser avistado entre abril e setembro, em terrenos secos, entre a vegetação rasteira.
 
 Ver: [Bestimmungshilfe für die in Europa nachgewiesenen Schmetterlingsarten](http://www.lepiforum.de/lepiwiki.pl?Hipparchia_Statilinus)

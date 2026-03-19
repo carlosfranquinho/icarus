@@ -23,6 +23,6 @@ Entretanto, muito mais abundante e frequente, é a sua espécie irmã, a *Callo
 
 ![C. rubi vs C. avis](/imagens/2014/03/201403-5LLMKAX.jpg)
 
-C. rubi vs C. avis
+*C. rubi vs C. avis*
 
 Ver: [Butterflies of France](http://www.butterfliesoffrance.com/html/Callophrys%20avis.htm)

@@ -30,11 +30,11 @@ Foi uma noite bastante animada, com largas centenas de borboletas de cerca de 20
 - *Eilema sororcula* (Hufnagel, 1766)
 - *Lithosia quadra* (Linnaeus, 1758)
 - *Lymantria monacha* (Linnaeus, 1758)
-- *Spilosoma lutea* (Hufnagel, 1766)
+- *Spilarctia lutea* (Hufnagel, 1766)
 
 **Geometridae**
 
-- *Campaea honoraria* (Denis & Schiffermüller, 1775)
+- *Gerinia honoraria* (Denis & Schiffermüller, 1775)
 - *Campaea margaritaria* (Linnaeus, 1761)
 - *Comibaena bajularia* (Denis & Schiffermüller, 1775)
 - *Hemithea aestivaria* (Hübner, 1789)
@@ -42,7 +42,7 @@ Foi uma noite bastante animada, com largas centenas de borboletas de cerca de 20
 - *Pachycnemia hippocastanaria* (Hübner, 1799)
 - *Peribatodes rhomboidaria* (Denis & Schiffermüller, 1775)
 - *Pseudoterpna coronillaria* (Hübner, 1817)
-- *Tephronia lhomaria* (Oberthür, 1881)
+- *Tephronia lhommaria* (Oberthür, 1881)
 
 **Limacodidae**
 

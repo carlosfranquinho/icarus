@@ -22,7 +22,7 @@ Logo nos primeiros metros do percurso, parece que fizemos uma viagem no tempo: u
 
 ![Uma caminhada muito participada!](/imagens/2014/03/201403-2JS6NNO.jpg)
 
-Uma caminhada muito participada!
+*Uma caminhada muito participada!*
 
 Esta zona revela-se um ecossistema ribeirinho único em todo o concelho. Apesar das águas poluídas, neste local o Liz apresenta uma galeria ripícola em relativo bom estado e, em redor, uma planície aluvial ocupada por campos agrícolas semi-abandonados. Um habitat bastante diferente dos espaços florestais ou urbanos que caraterizam a quase totalidade do nosso concelho.
 
@@ -32,28 +32,28 @@ Então, timidamente, aparece o primeiro raio de sol. De um momento para o outro,
 
 ![A primeira Colias croceus do dia colaborou e nós aproveitámos...](/imagens/2014/03/201403-10Z00VH.jpg)
 
-A primeira Colias croceus do dia colaborou e os fotógrafos de serviço aproveitaram…
+*A primeira Colias croceus do dia colaborou e os fotógrafos de serviço aproveitaram…*
 
 Com as borboletas a voar e o sol a brilhar, o dia foi ficando animado e as descobertas sucediam-se.
 
 ![Uma lagarta de Cucullia calendulae Treitschke, 1835](/imagens/2014/03/201403-5NQKGDE.jpg)
 
-Uma lagarta de Cucullia calendulae Treitschke, 1835
+*Uma lagarta de Cucullia calendulae Treitschke, 1835*
 
 ![Uma Carcharodus tripolina/alceae](/imagens/2014/03/201403-53CPNEI.jpg)
 
-Uma Carcharodus tripolina/alceae
+*Uma Carcharodus tripolina/alceae*
 
 ![Uma pequena libelinha: Calopteryx xanthostoma (Charpentier, 1840)](/imagens/2014/03/201403-4ZM36IC.jpg)
 
-Uma pequena libelinha: Calopteryx xanthostoma (Charpentier, 1840)
+*Uma pequena libelinha: Calopteryx xanthostoma (Charpentier, 1840)*
 
 Depois de atravessarmos para a margem norte do Liz, iniciamos o caminho de regresso. Enquanto os loureiros nos atraem pelo seu cheiro, algumas árvores de fruto atraem várias *Vanessa atalanta* que por ali esvoaçam sem parar.
 
-O dia não terminaria sem encontrarmos uma espécie nova para o concelho, a *Pieris napi* (Linnaeus, 1758). Afinal, também é esse um dos objetivos destas caminhadas! 🙂
+O dia não terminaria sem encontrarmos uma espécie nova para o concelho, a *Pieris napi* (Linnaeus, 1758). Afinal, também é esse um dos objetivos destas caminhadas! 🙂
 
 ![Pieris napi (Linnaeus, 1758)](/imagens/2014/03/201403-59F0XQM.jpg)
 
-Pieris napi (Linnaeus, 1758)
+*Pieris napi (Linnaeus, 1758)*
 
 Agora que já sabe o que perdeu, não se esqueça, para a próxima, junte-se a nós!

@@ -22,23 +22,11 @@ No que a borboletas diz respeito, o destaque vai para a *Zygaena fausta*, uma es
 
 ![Zygaena fausta](/imagens/2014/07/201407-41LT3SB.jpg)
 
-Zygaena fausta
+*Zygaena fausta*
 
 ![Zygaena fausta](/imagens/2014/07/201407-42FXUAD.jpg)
 
-Zygaena fausta
+*Zygaena fausta*
 
 Mas, não foi apenas a *Z. fausta* a captar a atenção das nossas objetivas… 🙂
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()

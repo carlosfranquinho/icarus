@@ -18,18 +18,18 @@ Os 14 participantes nesta atividade foram chegando ao longo da noite, trazendo c
 
 ![A Ivone e o Armando tentam capturar mais uma borboleta, sob o olhar atento dos restantes participantes.](/imagens/2013/02/201302-12GYLGS.jpg)
 
-A Ivone e o Armando capturam mais uma borboleta, sob o olhar atento dos restantes participantes. © Aurélio Rosa Diniz
+*A Ivone e o Armando capturam mais uma borboleta, sob o olhar atento dos restantes participantes. © Aurélio Rosa Diniz*
 
 ![O bolo verde servido pela Leonor foi um dos pontos altos da noite.](/imagens/2013/02/201302-1EMA7P2.jpg)
 
-O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
+*O bolo verde servido pela Leonor. © Aurélio Rosa Diniz*
 
 ### As espécies observadas
 
 - **Drepanidae:**
   - *Watsonalla uncinula* (Borkhausen, 1790)
 - **Geometridae:**
-  - *Campaea honoraria* (Denis & Schiffermüller, 1775)
+  - *Gerinia honoraria* (Denis & Schiffermüller, 1775)
   - *Catarhoe basochesiata* (Duponchel, 1831)
   - *Chesias isabella* Schawerda, 1915
   - *Cyclophora puppillaria* (Hübner, 1799)
@@ -50,16 +50,16 @@ O bolo verde servido pela Leonor. © Aurélio Rosa Diniz
 - **Noctuidae:**
   - *Agrotis ipsilon* (Hufnagel, 1766)
 - **Notodontidae:**
-  - *Harpyia milhauseri* (Fabricius, 1775)
+  - *Harpyia milhauseri* (Fabricius, 1775)
 
-![Campaea honoraria (Denis & Schiffermüller, 1775)](/imagens/2013/04/201304-3DNJKDE.jpg)
+![Gerinia honoraria (Denis & Schiffermüller, 1775)](/imagens/2013/04/201304-3DNJKDE.jpg)
 
-*Campaea honoraria* (Denis & Schiffermüller, 1775)
+*Gerinia honoraria (Denis & Schiffermüller, 1775)*
 
 ![Agrotis ipsilon (Hufnagel, 1766)](/imagens/2013/04/201304-2WWUN7M.jpg)
 
-Agrotis ipsilon (Hufnagel, 1766)
+*Agrotis ipsilon (Hufnagel, 1766)*
 
 ![Harpyia milhauseri (Fabricius, 1775)](/imagens/2013/04/201304-2F6VY12.jpg)
 
-Harpyia milhauseri (Fabricius, 1775)
+*Harpyia milhauseri (Fabricius, 1775)*

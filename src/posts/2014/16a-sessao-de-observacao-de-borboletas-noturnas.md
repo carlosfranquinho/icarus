@@ -18,27 +18,25 @@ O local escolhido foi junto à base da duna onde se situa o “[Pombal do Rei](h
 
 ![O local](/imagens/2014/03/201403-2X8ZGTF.jpg)
 
-O local
+*O local*
 
 ## O ambiente
 
 ![Estranhas luzes na noite...](/imagens/2014/03/201403-1P4CNEE.jpg)
 
-Estranhas luzes na noite…
+*Estranhas luzes na noite…*
 
 ![Uns trabalham, outros supervisionam. ;-)](/imagens/2014/03/201403-VSM1I27.jpg)
 
-Uns trabalham, outros supervisionam. 😉
-
----
+*Uns trabalham, outros supervisionam. 😉*
 
 ![Esta já não escapa.](/imagens/2014/03/201403-43F1XRB.jpg)
 
-Esta já não escapa.
+*Esta já não escapa.*
 
 ![Que piquenique mais estranho!](/imagens/2014/03/201403-5ILQNLD.jpg)
 
-Que piquenique mais estranho!
+*Que piquenique mais estranho!*
 
 No final da noite, contabilizamos cerca de 20 espécies diferentes. Veremos o que nos reserva o resto do ano!
 
@@ -51,11 +49,11 @@ No final da noite, contabilizamos cerca de 20 espécies diferentes. Veremos o qu
 
 ![Tiatira batis](/imagens/2014/03/201403-59W10V3.jpg)
 
-Tiatira batis
+*Tiatira batis*
 
 ### Geometridae
 
-- *Campaea honoraria* (Denis & Schiffermüller, 1775)
+- *Gerinia honoraria* (Denis & Schiffermüller, 1775)
 - *Catarhoe basochesiata* (Duponchel, 1831)
 - *Chloroclysta siterata* (Hufnagel, 1767)
 - *Cyclophora puppillaria* (Hübner, 1799)
@@ -70,7 +68,7 @@ Tiatira batis
 
 ![Lycia hirtaria](/imagens/2014/03/201403-6B36COE.jpg)
 
-Lycia hirtaria
+*Lycia hirtaria*
 
 ### Noctuidae
 
@@ -83,7 +81,7 @@ Lycia hirtaria
 
 ![Orthosia gothica](/imagens/2014/03/201403-4E9T3ZV.jpg)
 
-Orthosia gothica
+*Orthosia gothica*
 
 ### Nolidae
 

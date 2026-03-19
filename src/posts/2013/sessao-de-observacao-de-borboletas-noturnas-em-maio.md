@@ -17,7 +17,7 @@ Durante as primeiras horas da noite, o vento impediu que aparecesse uma grande q
 A contabilidade final desta sessão aponta para cerca de 20 espécies observadas, 8 das quais são novidade para o nosso concelho:
 
 - **Erebidae:**
-  - *Spilosoma lutea* (Hufnagel, 1766)
+  - *Spilarctia lutea* (Hufnagel, 1766)
 - **Geometridae:**
   - *Gymnoscelis rufifasciata* (Haworth, 1809)
   - *Idaea minuscularia* (Ribbe, 1912)
@@ -45,23 +45,23 @@ A contabilidade final desta sessão aponta para cerca de 20 espécies observadas
 
 ![S. lutea](/imagens/2013/05/201305-50JFP2H.jpg)
 
-*Spilosoma lutea* (Hufnagel, 1766)
+*Spilarctia lutea (Hufnagel, 1766)*
 
 ![Scopula imitaria (Hübner, 1799)](/imagens/2013/05/201305-3O2E10W.jpg)
 
-*Scopula imitaria* (Hübner, 1799)
+*Scopula imitaria (Hübner, 1799)*
 
 ![Psilogaster loti (Ochsenheimer, 1810)](/imagens/2013/05/201305-MA8VW2Q.jpg)
 
-*Psilogaster loti* (Ochsenheimer, 1810)
+*Psilogaster loti (Ochsenheimer, 1810)*
 
 ![Hadena sancta (Staudinger, 1859)](/imagens/2013/05/201305-51WYXDY.jpg)
 
-*Hadena sancta* (Staudinger, 1859)
+*Hadena sancta (Staudinger, 1859)*
 
 ![A processionária dos pinheiros: Thaumetopoea pityocampa (Treitschke, 1834)](/imagens/2013/05/201305-2MI34TW.jpg)
 
-A processionária dos pinheiros: *Thaumetopoea pityocampa* (Treitschke, 1834)
+*A processionária dos pinheiros: Thaumetopoea pityocampa (Treitschke, 1834)*
 
 Ver também o post de [Gonçalo Lemos](http://goncalolemos.blogspot.pt/2013/05/sessao-de-borboletas-nocturnas.html) e a observação extra relatada por [JM Gonçalves](http://opinhaldorei.blogspot.pt/2013/05/marco-oitavado-no-pinhal-do-rei.html).
 

@@ -16,14 +16,14 @@ Relativamente às borboletas, este local tem a particularidade de ser uma das po
 
 ![Cópula de Maniola jurtina](/imagens/2013/06/201306-24XDH34.jpg)
 
-Cópula de Maniola jurtina
+*Cópula de Maniola jurtina*
 
 ![Pieris rapae](/imagens/2013/06/201306-JEJ18O0.jpg)
 
-Pieris rapae
+*Pieris rapae*
 
 ![Satyrium esculi](/imagens/2013/06/201306-10M5YI7.jpg)
 
-Satyrium esculi
+*Satyrium esculi*
 
 Valeu pelo convívio e pela descoberta do local. Em 2014 voltaremos! 🙂

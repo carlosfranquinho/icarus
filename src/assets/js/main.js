@@ -59,47 +59,7 @@ document.querySelectorAll('.card-familia-ficha-img img').forEach(img => {
   img.style.transform = `rotate(${deg}deg)`;
 });
 
-// Legendas nas fotos dos posts (parágrafo em itálico a seguir a imagem → figcaption)
-// Nota: o plugin de otimização envolve img em <picture>; display:contents
-// torna-o transparente ao layout, restaurando o comportamento original.
-// Nas páginas de espécies, .post-corpo tem também a classe .content-especie:
-// nesse caso ignoramos aqui e deixamos o handler de espécies tratar do conteúdo.
-document.addEventListener("DOMContentLoaded", () => {
-  const corpo = document.querySelector(".post-corpo");
-  if (!corpo || corpo.classList.contains("content-especie")) return;
-
-  // Iterar por parágrafo, não por imagem — evita perder imagens quando
-  // várias estão no mesmo <p>.
-  Array.from(corpo.querySelectorAll("p")).filter(p =>
-    p.querySelector("picture > img, img")
-  ).forEach(pImg => {
-    const imgEls = Array.from(pImg.querySelectorAll("picture > img, img"));
-    const nextEl = pImg.nextElementSibling;
-
-    // Criar uma <figure> por imagem
-    imgEls.forEach(img => {
-      const imgToMove = img.parentElement.tagName === "PICTURE" ? img.parentElement : img;
-      const figure = document.createElement("figure");
-      figure.className = "post-figura";
-      pImg.before(figure);
-      figure.appendChild(imgToMove);
-    });
-
-    // Legenda: só se houver uma imagem e o parágrafo seguinte contiver
-    // APENAS texto em itálico (sem mais texto à volta).
-    if (imgEls.length === 1 && nextEl && nextEl.tagName === "P" &&
-        nextEl.children.length === 1 && nextEl.children[0].tagName === "EM" &&
-        nextEl.textContent.trim() === nextEl.children[0].textContent.trim()) {
-      const figure = pImg.previousElementSibling;
-      const figcaption = document.createElement("figcaption");
-      figcaption.innerHTML = nextEl.children[0].innerHTML;
-      figure.appendChild(figcaption);
-      nextEl.remove();
-    }
-
-    pImg.remove();
-  });
-});
+// Legendas nas fotos dos posts: tratadas em build time (.eleventy.js addTransform)
 
 // Formatacao do conteudo das especies
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,26 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Converter pares imagem + parágrafo seguinte em <figure> + <figcaption>
-  isEspecie.querySelectorAll("p > picture > img:not(.mapa-distribuicao), p > img:not(.mapa-distribuicao)").forEach(img => {
-    const pImg = img.closest("p");
-    const imgToMove = (img.parentElement.tagName === "PICTURE") ? img.parentElement : img;
-    const nextEl = pImg.nextElementSibling;
-    const wrap = document.createElement("div");
-    wrap.className = "especie-figura-wrap";
-    const figure = document.createElement("figure");
-    figure.className = "especie-figura";
-    pImg.parentNode.insertBefore(wrap, pImg);
-    wrap.appendChild(figure);
-    figure.appendChild(imgToMove);
-    pImg.remove();
-    if (nextEl && nextEl.tagName === "P" && !nextEl.querySelector("img, picture")) {
-      const figcaption = document.createElement("figcaption");
-      figcaption.innerHTML = nextEl.innerHTML;
-      figure.appendChild(figcaption);
-      nextEl.remove();
-    }
-  });
+  // Figuras das espécies: tratadas em build time (.eleventy.js addTransform)
 
   // Paginação da tabela de observações (20 por página)
   const tbody = document.getElementById('obs-tbody');

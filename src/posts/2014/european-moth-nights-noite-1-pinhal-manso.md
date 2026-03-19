@@ -10,7 +10,7 @@ imagem: /imagens/2014/07/201407-434FP0C.jpg
 permalink: /2014/07/17/european-moth-nights-noite-1-pinhal-manso/
 ---
 
-Como vem sendo habitual, o nosso grupo aderiu, uma vez mais, às [Noites Europeias de Borboletas Noturnas](http://mg.borboletas.net/11as-noites-europeias-de-borboletas-noturnas/) ([European Moth Nights](https://www.google.pt/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCAQFjAA&url=http%3A%2F%2Feuromothnights.uw.hu%2F&ei=dnrWU5iRO8ib1AWQ-4DwAg&usg=AFQjCNGj5vZgX1-kuozPufQEQZWqhBvueQ&sig2=zANQtY1Zrkuml8LUbHCzsQ&bvm=bv.71778758,d.d2k)), com a realização de uma série de sessões de observação na região. A primeira delas foi no Pinhal Manso, no Pinhal do Rei. Foi uma noite serena, sem nenhum animal particularmente impressionante mas, ainda assim, com algumas novidades para a lepidopterofauna da nossa região.
+Como vem sendo habitual, o nosso grupo aderiu, uma vez mais, às Noites Europeias de Borboletas Noturnas ([European Moth Nights](https://www.google.pt/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCAQFjAA&url=http%3A%2F%2Feuromothnights.uw.hu%2F&ei=dnrWU5iRO8ib1AWQ-4DwAg&usg=AFQjCNGj5vZgX1-kuozPufQEQZWqhBvueQ&sig2=zANQtY1Zrkuml8LUbHCzsQ&bvm=bv.71778758,d.d2k)), com a realização de uma série de sessões de observação na região. A primeira delas foi no Pinhal Manso, no Pinhal do Rei. Foi uma noite serena, sem nenhum animal particularmente impressionante mas, ainda assim, com algumas novidades para a lepidopterofauna da nossa região.
 
 ## O ambiente
 
@@ -29,12 +29,12 @@ Contabilizamos 32 espécies de macroheteróceros (os micro não foram contabiliz
 - *Coscinia cribraria* (Linnaeus, 1758)
 - *Eilema depressa* (Esper, 1787)
 - *Euproctis chrysorrhoea* (Linnaeus, 1758)
-- *Euproctis similis* (Fuessly, 1775)
+- *Sphrageidus similis* (Fuessly, 1775)
 - *Lithosia quadra* (Linnaeus, 1758)
 - *Lymantria monacha* (Linnaeus, 1758)
 - *Miltochrista miniata* (Forster, 1771)
 - ***Parascotia nisseni*** Turati, 1905
-- *Spilosoma lutea* (Hufnagel, 1766)
+- *Spilarctia lutea* (Hufnagel, 1766)
 
 #### Geometridae
 
@@ -74,12 +74,3 @@ Contabilizamos 32 espécies de macroheteróceros (os micro não foram contabiliz
 - *Phalera bucephala* (Linnaeus, 1758)
 - *Thaumetopoea pityocampa* (Treitschke, 1834)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()

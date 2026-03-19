@@ -10,7 +10,7 @@ imagem: /imagens/2012/06/201206-4EH8AY7.jpg
 permalink: /2012/06/18/3a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
-A nossa terceira sessão de observação de borboletas noturnas foi na última noite das EMN 2012. Escolhemos a [zona do Rio Tinto](http://goo.gl/maps/1WWsr), junto à base daquele que era, na altura, o maior pinheiro da Península Ibérica.
+A nossa terceira sessão de observação de borboletas noturnas foi na última noite das EMN 2012. Escolhemos a zona do Rio Tinto, junto à base daquele que era, na altura, o maior pinheiro da Península Ibérica.
 
 O cansaço das noites anteriores já se fazia sentir e esta sessão acabou relativamente cedo. Apesar de tudo, contámos com 10 participantes e observámos cerca de 20 espécies distintas.
 
@@ -20,7 +20,6 @@ O cansaço das noites anteriores já se fazia sentir e esta sessão acabou relat
 
 - *Drepana curvatula* (Borkhausen, 1790)
 
-![]()
 
 **Erebidae**
 
@@ -28,15 +27,9 @@ O cansaço das noites anteriores já se fazia sentir e esta sessão acabou relat
 - *Eilema depressa* (Esper, 1787)
 - *Eilema sororcula* (Hufnagel, 1766)
 - *Orgyia antiqua* (Linnaeus, 1758)
-- *Pechipogo plumigeralis* Hübner, 1825
-- *Spilosoma lutea* (Hufnagel, 1766)
+- *Polypogon plumigeralis* Hübner, 1825
+- *Spilarctia lutea* (Hufnagel, 1766)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
 
 **Geometridae**
 
@@ -48,12 +41,6 @@ O cansaço das noites anteriores já se fazia sentir e esta sessão acabou relat
 - *Peribatodes rhomboidaria* (Denis & Schiffermüller, 1775)
 - *Pseudoterpna coronillaria* (Hübner, 1817)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
 
 **Lasiocampidae**
 
@@ -67,15 +54,7 @@ O cansaço das noites anteriores já se fazia sentir e esta sessão acabou relat
 - *Lycophotia erythrina* (Herrich-Schäffer, 1852)
 - *Ochropleura plecta* (Linnaeus, 1761)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
 
 **Pyralidae**
 
 - *Endotricha flammealis* (Denis & Schiffermüller, 1775)
-
-Com: .

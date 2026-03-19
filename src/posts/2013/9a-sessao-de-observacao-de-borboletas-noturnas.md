@@ -27,7 +27,7 @@ A nossa 9ª sessão de observação de borboletas noturnas realizou-se em Alberg
 
 ![Diasemia reticularis](/imagens/2013/07/201307-1KQEOH7.jpg)
 
-Diasemia reticularis
+*Diasemia reticularis*
 
 ### Drepanidae
 
@@ -36,7 +36,7 @@ Diasemia reticularis
 
 ![Tethea ocularis](/imagens/2013/07/201307-2Y729BL.jpg)
 
-Tethea ocularis
+*Tethea ocularis*
 
 ### Erebidae
 
@@ -44,14 +44,14 @@ Tethea ocularis
 - *Dysgonia algira* (Linnaeus, 1767)
 - *Eilema caniola* (Hübner, 1808)
 - *Eilema depressa* (Esper, 1787)
-- *Euproctis similis* (Fuessly, 1775)
+- *Sphrageidus similis* (Fuessly, 1775)
 - *Ocneria rubea* (Denis & Schiffermüller, 1775)
 - *Phragmatobia fuliginosa* (Linnaeus, 1758)
 - *Spilosoma lubricipeda* (Linnaeus, 1758)
 
 ![Spilosoma lubricipeda](/imagens/2013/07/201307-GZD2H5H.jpg)
 
-Spilosoma lubricipeda
+*Spilosoma lubricipeda*
 
 ### Geometridae
 
@@ -71,7 +71,7 @@ Spilosoma lubricipeda
 
 ![Chloroclystis v-ata](/imagens/2013/07/201307-4P8DAL2.jpg)
 
-Chloroclystis v-ata
+*Chloroclystis v-ata*
 
 ### Noctuidae
 
@@ -86,15 +86,15 @@ Chloroclystis v-ata
 
 ![Xestia c-nigrum](/imagens/2013/07/201307-5YIQ43P.jpg)
 
-Xestia c-nigrum
+*Xestia c-nigrum*
 
 ### Nolidae
 
-- *Earias albovenosana* Oberthür, 1917
+- *Earias albovenosana* Oberthür, 1917
 
 ![Earias albovenosana](/imagens/2013/07/201307-2U6Y26B.jpg)
 
-Earias albovenosana
+*Earias albovenosana*
 
 ### Notodontidae
 
@@ -102,7 +102,7 @@ Earias albovenosana
 
 ![Drymonia querna](/imagens/2013/07/201307-16SKSIJ.jpg)
 
-Drymonia querna
+*Drymonia querna*
 
 ### Pyralidae
 
