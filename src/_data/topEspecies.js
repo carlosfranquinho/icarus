@@ -13,13 +13,16 @@ function lerFichas(dir, grupo) {
     for (const f of fs.readdirSync(familiaDir)) {
       if (!f.endsWith('.md')) continue;
       const txt = fs.readFileSync(path.join(familiaDir, f), 'utf8');
-      const nome = txt.match(/nome_cientifico:\s*["']?([^"'\n]+)["']?/)?.[1]?.trim();
-      if (nome) {
-        map[nome] = {
-          grupo,
-          url: `${urlBase}/${familia}/${f.replace('.md', '')}/`,
-        };
-      }
+      const get = (campo) =>
+        txt.match(new RegExp(`${campo}:\\s*["']?([^"'\\n]+)["']?`))?.[1]?.trim();
+      const nome = get('nome_cientifico');
+      if (!nome) continue;
+      map[nome] = {
+        grupo,
+        url:         `${urlBase}/${familia}/${f.replace('.md', '')}/`,
+        imagem:      get('imagem') || null,
+        placeholder: /placeholder:\s*true/.test(txt),
+      };
     }
   }
   return map;
@@ -31,23 +34,42 @@ const fichas = {
   ...lerFichas(path.join(BASE, 'especies/noturnas'), 'noturnas'),
 };
 
-// Contagem de observações por espécie (só as que têm ficha para saber o grupo)
-const counts = {};
+// Acumular por espécie: contagem, primeira e última observação (data+observador)
+const acum = {};
 for (const o of obs) {
   const f = fichas[o.nome_cientifico];
-  if (!f) continue;
+  if (!f || !o.data) continue;
   const k = `${f.grupo}|${o.nome_cientifico}`;
-  counts[k] = (counts[k] || 0) + (o.quantidade || 1);
+  if (!acum[k]) {
+    acum[k] = { total: 0, primeira: null, ultima: null };
+  }
+  const a = acum[k];
+  a.total += (o.quantidade || 1);
+  if (!a.primeira || o.data < a.primeira.data) {
+    a.primeira = { data: o.data, observador: o.observador || '' };
+  }
+  if (!a.ultima || o.data > a.ultima.data) {
+    a.ultima = { data: o.data, observador: o.observador || '' };
+  }
 }
 
 function top10(grupo) {
-  return Object.entries(counts)
+  return Object.entries(acum)
     .filter(([k]) => k.startsWith(`${grupo}|`))
-    .sort((a, b) => b[1] - a[1])
+    .sort((a, b) => b[1].total - a[1].total)
     .slice(0, 10)
-    .map(([k, total]) => {
+    .map(([k, a]) => {
       const nome = k.slice(grupo.length + 1);
-      return { nome, total, url: fichas[nome].url };
+      const f = fichas[nome];
+      return {
+        nome,
+        url:         f.url,
+        imagem:      f.imagem,
+        placeholder: f.placeholder,
+        total:       a.total,
+        primeira:    { ...a.primeira, ano: a.primeira.data.slice(0, 4) },
+        ultima:      { ...a.ultima,   ano: a.ultima.data.slice(0, 4) },
+      };
     });
 }
 

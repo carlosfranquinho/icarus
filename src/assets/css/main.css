@@ -667,52 +667,33 @@ button:disabled {
 }
 
 /* --- Top espécies na homepage --- */
-.top-especies-lista {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  counter-reset: top-rank;
-}
-
-.top-especies-lista li {
-  counter-increment: top-rank;
-  display: flex;
-  align-items: baseline;
-  gap: .5rem;
-  padding: .45rem 0;
-  border-bottom: 1px solid var(--cinza-borda);
-  font-size: .93rem;
-}
-
-.top-especies-lista li:last-child {
-  border-bottom: none;
-}
-
-.top-especies-lista li::before {
-  content: counter(top-rank);
-  min-width: 1.4rem;
-  font-size: .78rem;
+.lista-top-especies .top-rank {
+  min-width: 1.3rem;
+  font-size: .72rem;
   font-weight: 700;
   color: var(--cinza-suave);
   text-align: right;
   flex-shrink: 0;
+  align-self: center;
 }
 
-.top-especies-lista a {
-  flex: 1;
-  color: var(--cinza-texto);
-  text-decoration: none;
+.lista-top-especies .top-silhueta,
+.lista-top-especies .top-foto {
+  width: 76px;
+  height: 56px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: var(--sombra-s);
 }
 
-.top-especies-lista a:hover {
-  color: var(--verde-escuro);
-  text-decoration: underline;
+.lista-top-especies .top-silhueta {
+  object-fit: contain;
+  background: var(--cinza-borda);
+  padding: 6px;
 }
 
-.top-especies-count {
-  font-size: .78rem;
-  color: var(--cinza-suave);
-  white-space: nowrap;
+.lista-top-especies .top-foto {
+  object-fit: cover;
 }
 
 /* --- Página diurnas/noturnas: cards de família com imagem --- */

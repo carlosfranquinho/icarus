@@ -74,25 +74,47 @@ title: "Borboletas da Marinha Grande e Leiria"
     <div class="familias-dois-grupos">
       <div>
         <h3 class="grupo-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Diurnas</h3>
-        <ol class="top-especies-lista">
+        <ul class="lista-posts-home lista-top-especies">
           {% for esp in topEspecies.diurnas %}
           <li>
-            <a href="{{ esp.url }}"><em>{{ esp.nome }}</em></a>
-            <span class="top-especies-count">{{ esp.total }}</span>
+            <a href="{{ esp.url }}">
+              <span class="top-rank">{{ loop.index }}</span>
+              {% if esp.placeholder %}
+              <img src="{{ esp.imagem }}" alt="{{ esp.nome }}" class="top-silhueta">
+              {% else %}
+              {% image esp.imagem, esp.nome, "top-foto", "(max-width: 480px) 100vw, 76px" %}
+              {% endif %}
+              <div>
+                <strong><em>{{ esp.nome }}</em></strong>
+                <span class="local">{{ esp.primeira.ano }}–{{ esp.ultima.ano }} · {{ esp.total }} obs.</span>
+                <span class="local">{{ esp.primeira.observador }}{% if esp.ultima.observador != esp.primeira.observador %} → {{ esp.ultima.observador }}{% endif %}</span>
+              </div>
+            </a>
           </li>
           {% endfor %}
-        </ol>
+        </ul>
       </div>
       <div>
         <h3 class="grupo-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Noturnas</h3>
-        <ol class="top-especies-lista">
+        <ul class="lista-posts-home lista-top-especies">
           {% for esp in topEspecies.noturnas %}
           <li>
-            <a href="{{ esp.url }}"><em>{{ esp.nome }}</em></a>
-            <span class="top-especies-count">{{ esp.total }}</span>
+            <a href="{{ esp.url }}">
+              <span class="top-rank">{{ loop.index }}</span>
+              {% if esp.placeholder %}
+              <img src="{{ esp.imagem }}" alt="{{ esp.nome }}" class="top-silhueta">
+              {% else %}
+              {% image esp.imagem, esp.nome, "top-foto", "(max-width: 480px) 100vw, 76px" %}
+              {% endif %}
+              <div>
+                <strong><em>{{ esp.nome }}</em></strong>
+                <span class="local">{{ esp.primeira.ano }}–{{ esp.ultima.ano }} · {{ esp.total }} obs.</span>
+                <span class="local">{{ esp.primeira.observador }}{% if esp.ultima.observador != esp.primeira.observador %} → {{ esp.ultima.observador }}{% endif %}</span>
+              </div>
+            </a>
           </li>
           {% endfor %}
-        </ol>
+        </ul>
       </div>
     </div>
   </section>
