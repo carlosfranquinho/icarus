@@ -32,6 +32,22 @@ jobs:
           DEPOIS=$(node -e "console.log(require('./src/_data/observacoes.json').length)")
           NOVAS=$((DEPOIS - ANTES))
           echo "NOVAS=$NOVAS" >> $GITHUB_ENV
+          node -e "
+            const fs = require('fs');
+            const obs = require('./src/_data/observacoes.json');
+            const novas = obs.slice($ANTES);
+            const linhas = novas.map(o =>
+              '| ' + o.data + ' | ' + o.nome_cientifico + ' | ' + o.utm1k + ' | ' + (o.observador || '') + ' |'
+            ).join('\n');
+            const corpo = [
+              'A sincronização de $(date -u +%Y-%m-%d) adicionou **' + novas.length + ' observações** ao \`observacoes.json\`.',
+              '',
+              '| Data | Espécie | UTM1k | Observador |',
+              '|------|---------|-------|------------|',
+              linhas
+            ].join('\n');
+            fs.writeFileSync('/tmp/issue_body.md', corpo);
+          "
 
       - name: Commit se houver alterações
         run: |
@@ -51,10 +67,10 @@ jobs:
           DATA=$(date -u +%Y-%m-%d)
           gh issue create \
             --title "iNaturalist: ${{ env.NOVAS }} novas observações ($DATA)" \
-            --body "A sincronização semanal de $DATA adicionou **${{ env.NOVAS }} observações** ao \`observacoes.json\`." \
+            --body-file /tmp/issue_body.md \
             --label "dados" || \
           gh issue create \
             --title "iNaturalist: ${{ env.NOVAS }} novas observações ($DATA)" \
-            --body "A sincronização semanal de $DATA adicionou **${{ env.NOVAS }} observações** ao \`observacoes.json\`."
+            --body-file /tmp/issue_body.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
