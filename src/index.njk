@@ -85,9 +85,9 @@ title: "Borboletas da Marinha Grande e Leiria"
               {% image esp.imagem, esp.nome, "top-foto", "(max-width: 480px) 100vw, 76px" %}
               {% endif %}
               <div>
-                <strong><em>{{ esp.nome }}</em></strong>
-                <span class="local">{{ esp.primeira.ano }}–{{ esp.ultima.ano }} · {{ esp.total }} obs.</span>
-                <span class="local">{{ esp.primeira.observador }}{% if esp.ultima.observador != esp.primeira.observador %} → {{ esp.ultima.observador }}{% endif %}</span>
+                <strong><em>{{ esp.nome }}</em></strong><span class="top-obs-total">, {{ esp.total }} obs.</span>
+                <span class="local">1ª obs: {{ esp.primeira.observador }} {{ esp.primeira.ano }}</span>
+                <span class="local">última obs: {{ esp.ultima.observador }} {{ esp.ultima.ano }}</span>
               </div>
             </a>
           </li>
@@ -107,9 +107,9 @@ title: "Borboletas da Marinha Grande e Leiria"
               {% image esp.imagem, esp.nome, "top-foto", "(max-width: 480px) 100vw, 76px" %}
               {% endif %}
               <div>
-                <strong><em>{{ esp.nome }}</em></strong>
-                <span class="local">{{ esp.primeira.ano }}–{{ esp.ultima.ano }} · {{ esp.total }} obs.</span>
-                <span class="local">{{ esp.primeira.observador }}{% if esp.ultima.observador != esp.primeira.observador %} → {{ esp.ultima.observador }}{% endif %}</span>
+                <strong><em>{{ esp.nome }}</em></strong><span class="top-obs-total">, {{ esp.total }} obs.</span>
+                <span class="local">1ª obs: {{ esp.primeira.observador }} {{ esp.primeira.ano }}</span>
+                <span class="local">última obs: {{ esp.ultima.observador }} {{ esp.ultima.ano }}</span>
               </div>
             </a>
           </li>

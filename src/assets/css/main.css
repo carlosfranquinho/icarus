@@ -677,6 +677,13 @@ button:disabled {
   align-self: center;
 }
 
+.lista-top-especies picture {
+  width: 76px;
+  height: 56px;
+  flex-shrink: 0;
+  display: block;
+}
+
 .lista-top-especies .top-silhueta,
 .lista-top-especies .top-foto {
   width: 76px;
@@ -684,6 +691,7 @@ button:disabled {
   border-radius: 10px;
   flex-shrink: 0;
   box-shadow: var(--sombra-s);
+  display: block;
 }
 
 .lista-top-especies .top-silhueta {
@@ -694,6 +702,13 @@ button:disabled {
 
 .lista-top-especies .top-foto {
   object-fit: cover;
+}
+
+.top-obs-total {
+  font-size: .82rem;
+  font-weight: 400;
+  color: var(--cinza-suave);
+  font-family: var(--fonte-sc);
 }
 
 /* --- Página diurnas/noturnas: cards de família com imagem --- */
