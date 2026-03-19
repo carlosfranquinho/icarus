@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   sincronizar:
@@ -25,7 +26,12 @@ jobs:
         run: npm ci
 
       - name: Sincronizar observações
-        run: node ferramentas/sincronizar-inat.js --apply
+        run: |
+          ANTES=$(node -e "console.log(require('./src/_data/observacoes.json').length)")
+          node ferramentas/sincronizar-inat.js --apply
+          DEPOIS=$(node -e "console.log(require('./src/_data/observacoes.json').length)")
+          NOVAS=$((DEPOIS - ANTES))
+          echo "NOVAS=$NOVAS" >> $GITHUB_ENV
 
       - name: Commit se houver alterações
         run: |
@@ -35,7 +41,20 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sem novas observações — nada a commitar."
           else
-            COUNT=$(git diff --cached --stat | grep -oP '\d+ insertion' | grep -oP '\d+' || echo '?')
             git commit -m "chore: sincronizar observações iNaturalist ($(date -u +%Y-%m-%d))"
             git push
           fi
+
+      - name: Criar issue de notificação
+        if: env.NOVAS != '0'
+        run: |
+          DATA=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --title "iNaturalist: ${{ env.NOVAS }} novas observações ($DATA)" \
+            --body "A sincronização semanal de $DATA adicionou **${{ env.NOVAS }} observações** ao \`observacoes.json\`." \
+            --label "dados" || \
+          gh issue create \
+            --title "iNaturalist: ${{ env.NOVAS }} novas observações ($DATA)" \
+            --body "A sincronização semanal de $DATA adicionou **${{ env.NOVAS }} observações** ao \`observacoes.json\`."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
