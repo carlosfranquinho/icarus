@@ -1988,10 +1988,14 @@ a.est-col-nome em,
 }
 
 /* --- Página Observações --- */
+#obs-subtitulo {
+  margin-bottom: 0.2rem;
+}
+
 .obs-atualizado {
   font-size: 0.78rem;
   color: var(--cinza-suave);
-  margin-top: 0.15rem;
+  margin-bottom: 2rem;
 }
 
 .obs-header {
