@@ -47,13 +47,13 @@ permalink: /estatisticas/especies/
     <div class="est-grid">
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Top 5 diurnas mais observadas</p>
+        <p class="est-card-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Top 10 diurnas mais observadas</p>
         <p class="est-card-subtitulo">Espécies diurnas com maior número de registos</p>
         <div id="chart-diurnas" class="est-col-chart"></div>
       </div>
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Top 5 noturnas mais observadas</p>
+        <p class="est-card-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Top 10 noturnas mais observadas</p>
         <p class="est-card-subtitulo">Espécies noturnas com maior número de registos</p>
         <div id="chart-noturnas" class="est-col-chart"></div>
       </div>
@@ -182,7 +182,8 @@ permalink: /estatisticas/especies/
           .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
       }
 
-      // Fallback de imagem: outra espécie da mesma família
+      // Fallback de imagem: foto real de outra espécie da mesma família
+      // (usado apenas quando a espécie não tem nenhuma imagem)
       var familiaImagem = {};
       Object.entries(ESPECIE_META).forEach(function (entry) {
         var meta = entry[1];
@@ -192,19 +193,23 @@ permalink: /estatisticas/especies/
       });
 
       function getImagem(esp) {
+        // 1. Foto real da própria espécie
         if (esp.imagem && !esp.placeholder) return esp.imagem;
+        // 2. Silhueta SVG da espécie (placeholder) — mostra a silhueta da família
+        if (esp.imagem && esp.placeholder) return esp.imagem;
+        // 3. Sem imagem própria: foto de outra espécie da mesma família
         if (esp.familia && familiaImagem[esp.familia]) return familiaImagem[esp.familia];
         return null;
       }
 
-      function top5Grupo(grupo) {
+      function top10Grupo(grupo) {
         return Object.entries(porEspecie)
           .filter(function (e) {
             var meta = ESPECIE_META[e[0]];
             return meta && meta.grupo === grupo;
           })
           .sort(function (a, b) { return b[1] - a[1]; })
-          .slice(0, 5)
+          .slice(0, 10)
           .map(function (e) {
             var meta = ESPECIE_META[e[0]];
             return { nome: e[0], total: e[1], url: meta.url, imagem: meta.imagem,
@@ -258,8 +263,8 @@ permalink: /estatisticas/especies/
         container.appendChild(labelsDiv);
       }
 
-      renderColChart('chart-diurnas',  top5Grupo('diurnas'),  'diurnas');
-      renderColChart('chart-noturnas', top5Grupo('noturnas'), 'noturnas');
+      renderColChart('chart-diurnas',  top10Grupo('diurnas'),  'diurnas');
+      renderColChart('chart-noturnas', top10Grupo('noturnas'), 'noturnas');
 
       // Gráfico 2: famílias
       var topFam = Object.entries(porFamilia).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);
