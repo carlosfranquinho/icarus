@@ -30,15 +30,15 @@ permalink: /observacoes/
   <div class="obs-filtros">
     <div class="obs-filtros-linha">
       <label class="obs-filtro-grupo">
-        <span class="obs-filtro-label">Espécie</span>
-        <select id="filtro-especie" class="obs-select">
+        <span class="obs-filtro-label">Família</span>
+        <select id="filtro-familia" class="obs-select">
           <option value="">Todas</option>
         </select>
       </label>
       <label class="obs-filtro-grupo">
-        <span class="obs-filtro-label">Família</span>
-        <select id="filtro-familia" class="obs-select">
-          <option value="">Todas</option>
+        <span class="obs-filtro-label">Espécie</span>
+        <select id="filtro-especie" class="obs-select" disabled>
+          <option value="">— escolha uma família —</option>
         </select>
       </label>
       <label class="obs-filtro-grupo">
@@ -105,6 +105,7 @@ permalink: /observacoes/
     var allData = [];
     var filteredData = [];
     var currentPage = 0;
+    var familiaEspecies = {}; // familia → [nome_cientifico, ...]
 
     var selEspecie    = document.getElementById('filtro-especie');
     var selFamilia    = document.getElementById('filtro-familia');
@@ -136,11 +137,14 @@ permalink: /observacoes/
       data.forEach(function (o) {
         if (o.nome_cientifico) especies.add(o.nome_cientifico);
         var fam = FAMILIA_MAP[o.nome_cientifico];
-        if (fam) familias.add(fam);
+        if (fam) {
+          familias.add(fam);
+          if (!familiaEspecies[fam]) familiaEspecies[fam] = new Set();
+          familiaEspecies[fam].add(o.nome_cientifico);
+        }
         if (o.data) anos.add(o.data.substring(0, 4));
         if (o.observador) observadors.add(o.observador);
       });
-      Array.from(especies).sort().forEach(function (v) { addOption(selEspecie, v); });
       Array.from(familias).sort().forEach(function (v) { addOption(selFamilia, v); });
       Array.from(anos).sort().reverse().forEach(function (v) { addOption(selAno, v); });
       Array.from(observadors).sort().forEach(function (v) { addOption(selObservador, v); });
@@ -150,6 +154,21 @@ permalink: /observacoes/
       document.getElementById('stat-especies').textContent = especies.size;
       document.getElementById('stat-observadores').textContent = observadors.size;
       document.getElementById('obs-stats').style.display = '';
+    }
+
+    function atualizarSelectEspecies(familia) {
+      selEspecie.innerHTML = '';
+      if (!familia) {
+        addOption(selEspecie, '', '— escolha uma família —');
+        selEspecie.disabled = true;
+        return;
+      }
+      addOption(selEspecie, '', 'Todas');
+      var lista = familiaEspecies[familia];
+      if (lista) {
+        Array.from(lista).sort().forEach(function (v) { addOption(selEspecie, v); });
+      }
+      selEspecie.disabled = false;
     }
 
     function renderPage() {
@@ -258,12 +277,15 @@ permalink: /observacoes/
       if (currentPage < Math.ceil(filteredData.length / PAGE_SIZE) - 1) { currentPage++; renderPage(); window.scrollTo(0, 0); }
     });
     selEspecie.addEventListener('change', filtrar);
-    selFamilia.addEventListener('change', filtrar);
+    selFamilia.addEventListener('change', function () {
+      atualizarSelectEspecies(selFamilia.value);
+      filtrar();
+    });
     selAno.addEventListener('change', filtrar);
     selObservador.addEventListener('change', filtrar);
     btnLimpar.addEventListener('click', function () {
-      selEspecie.value = '';
       selFamilia.value = '';
+      atualizarSelectEspecies('');
       selAno.value = '';
       selObservador.value = '';
       filtrar();

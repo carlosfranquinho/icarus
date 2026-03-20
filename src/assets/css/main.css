@@ -1657,6 +1657,11 @@ button:disabled {
   outline-offset: 1px;
 }
 
+.obs-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .obs-filtros-acoes {
   display: flex;
   align-items: center;
