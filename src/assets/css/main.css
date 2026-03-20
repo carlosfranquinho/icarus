@@ -1906,7 +1906,7 @@ button:disabled {
 .est-col-thumb {
   width: 48px;
   height: 48px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5px;
   border: 1px solid var(--cinza-borda);
   display: block;
