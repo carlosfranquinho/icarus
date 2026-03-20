@@ -211,6 +211,8 @@ extraCSS:
       var maxTotal = lista[0].total;
       var corBase  = grupo === 'diurnas' ? '245,158,11' : '99,102,241';
 
+      var innerDiv  = document.createElement('div'); innerDiv.className = 'est-col-inner';
+      innerDiv.style.minWidth = (lista.length * 72) + 'px';
       var barsDiv = document.createElement('div'); barsDiv.className = 'est-col-bars-area';
       var axisDiv = document.createElement('div'); axisDiv.className = 'est-col-axis';
       var labelsDiv = document.createElement('div'); labelsDiv.className = 'est-col-labels';
@@ -240,9 +242,10 @@ extraCSS:
         labelsDiv.appendChild(label);
       });
 
-      container.appendChild(barsDiv);
-      container.appendChild(axisDiv);
-      container.appendChild(labelsDiv);
+      innerDiv.appendChild(barsDiv);
+      innerDiv.appendChild(axisDiv);
+      innerDiv.appendChild(labelsDiv);
+      container.appendChild(innerDiv);
     }
 
     function top10Grupo(grupo) {

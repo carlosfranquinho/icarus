@@ -1858,6 +1858,11 @@ button:disabled {
 
 /* Gráfico de colunas verticais top 5 em estatisticas/especies */
 .est-col-chart {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.est-col-inner {
   display: flex;
   flex-direction: column;
 }

@@ -104,6 +104,9 @@ permalink: /estatisticas/observadores/
       var maxTotal = lista[0][1];
       corRGB = corRGB || '8,145,178';
 
+      var innerDiv  = document.createElement('div');
+      innerDiv.className = 'est-col-inner';
+      innerDiv.style.minWidth = (lista.length * 72) + 'px';
       var barsDiv   = document.createElement('div');
       barsDiv.className = 'est-col-bars-area';
       var axisDiv   = document.createElement('div');
@@ -135,9 +138,10 @@ permalink: /estatisticas/observadores/
         labelsDiv.appendChild(label);
       });
 
-      container.appendChild(barsDiv);
-      container.appendChild(axisDiv);
-      container.appendChild(labelsDiv);
+      innerDiv.appendChild(barsDiv);
+      innerDiv.appendChild(axisDiv);
+      innerDiv.appendChild(labelsDiv);
+      container.appendChild(innerDiv);
     }
 
     function inicializar(dados) {
