@@ -3,6 +3,8 @@ layout: layouts/base.njk
 title: "Estatísticas — Espécies"
 descricao: "Análise estatística das espécies observadas pelo Grupo icarus: top espécies, famílias, taxa de descoberta e distribuição por grupo."
 permalink: /estatisticas/especies/
+extraCSS:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
 ---
 <div class="container">
 
@@ -70,16 +72,31 @@ permalink: /estatisticas/especies/
         <div id="chart-fam-noturnas" class="est-col-chart"></div>
       </div>
 
-      <div class="est-fila-cards">
-        <div class="est-card est-card-donut">
+    </div>
+
+    <div class="est-mapa-e-graficos">
+
+      <div class="est-card est-card-mapa">
+        <p class="est-card-titulo">Diversidade geográfica</p>
+        <p class="est-card-subtitulo">Espécies únicas por quadrícula UTM 1×1 km</p>
+        <div class="est-mapa-layout">
+          <div id="mapa-esp" class="est-mapa"></div>
+          <div class="est-mapa-legenda-lateral">
+            <p class="est-legenda-titulo">Espécies</p>
+            <div id="legenda-esp-items" class="est-legenda-items"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="est-graficos-coluna">
+        <div class="est-card">
           <p class="est-card-titulo">Diurnas vs Noturnas</p>
           <p class="est-card-subtitulo">Espécies únicas com ficha por grupo</p>
           <div class="est-chart-wrap">
             <canvas id="g-grupos"></canvas>
           </div>
         </div>
-
-        <div class="est-card est-card-flex">
+        <div class="est-card">
           <p class="est-card-titulo">Taxa de descoberta</p>
           <p class="est-card-subtitulo">Novas espécies registadas pela primeira vez por ano</p>
           <div class="est-chart-wrap">
@@ -89,6 +106,7 @@ permalink: /estatisticas/especies/
       </div>
 
     </div>
+
   </div>
 
   <script>
@@ -100,27 +118,33 @@ permalink: /estatisticas/especies/
       {{ collections.familiasNoturnas | familiaMetaJson | safe }}
     );
 
-    function carregarChartJS(cb) {
-      if (window.Chart) { cb(); return; }
+    var CHARTJS_URL = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
+    var LEAFLET_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+
+    function carregarScript(src, testFn, cb) {
+      if (testFn()) { cb(); return; }
       var s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
-      s.onload = cb;
+      s.src = src; s.onload = cb;
       document.head.appendChild(s);
     }
 
-    carregarChartJS(function () {
-      fetch('/dados/observacoes.json')
-        .then(function (r) { return r.json(); })
-        .then(inicializar)
-        .catch(function () {
-          document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
-        });
-    });
+    fetch('/dados/observacoes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (dados) {
+        inicializarDados(dados);
+        carregarScript(CHARTJS_URL, function () { return !!window.Chart; }, function () { inicializarChartJS(dados); });
+        carregarScript(LEAFLET_URL, function () { return !!window.L; },     function () { inicializarMapa(dados); });
+      })
+      .catch(function () {
+        document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+      });
 
-    function inicializar(dados) {
-      var porEspecie = {}, porFamilia = {}, primeiraObs = {};
-      var especiesDiurnas = new Set(), especiesNoturnas = new Set(), especiesSem = new Set();
-      var familiasSet = new Set();
+    // Dados partilhados entre funções
+    var porEspecie = {}, porFamilia = {}, novasPorAno = {};
+    var especiesDiurnas = new Set(), especiesNoturnas = new Set(), especiesSem = new Set();
+
+    function inicializarDados(dados) {
+      var familiasSet = new Set(), primeiraObs = {};
 
       dados.forEach(function (o) {
         if (!o.nome_cientifico) return;
@@ -129,41 +153,128 @@ permalink: /estatisticas/especies/
 
         var meta = ESPECIE_META[o.nome_cientifico];
         var fam = meta && meta.familia ? meta.familia : null;
-        if (fam) {
-          porFamilia[fam] = (porFamilia[fam] || 0) + qtd;
-          familiasSet.add(fam);
-        }
+        if (fam) { porFamilia[fam] = (porFamilia[fam] || 0) + qtd; familiasSet.add(fam); }
+
         if (meta && meta.grupo === 'diurnas')       especiesDiurnas.add(o.nome_cientifico);
         else if (meta && meta.grupo === 'noturnas') especiesNoturnas.add(o.nome_cientifico);
         else                                         especiesSem.add(o.nome_cientifico);
 
-        if (o.data) {
-          var ano = o.data.substring(0, 4);
-          if (!primeiraObs[o.nome_cientifico] || o.data < primeiraObs[o.nome_cientifico]) {
-            primeiraObs[o.nome_cientifico] = o.data;
-          }
+        if (o.data && (!primeiraObs[o.nome_cientifico] || o.data < primeiraObs[o.nome_cientifico])) {
+          primeiraObs[o.nome_cientifico] = o.data;
         }
       });
 
-      // Novas espécies por ano
-      var novasPorAno = {};
       Object.entries(primeiraObs).forEach(function (e) {
         var ano = e[1].substring(0, 4);
         novasPorAno[ano] = (novasPorAno[ano] || 0) + 1;
       });
 
       var primeiroAno = Object.keys(novasPorAno).sort()[0] || '—';
-
-      // Hero
-      document.getElementById('sh-total').textContent      = Object.keys(porEspecie).length;
-      document.getElementById('sh-diurnas').textContent    = especiesDiurnas.size;
-      document.getElementById('sh-noturnas').textContent   = especiesNoturnas.size;
-      document.getElementById('sh-familias').textContent   = familiasSet.size;
+      document.getElementById('sh-total').textContent        = Object.keys(porEspecie).length;
+      document.getElementById('sh-diurnas').textContent      = especiesDiurnas.size;
+      document.getElementById('sh-noturnas').textContent     = especiesNoturnas.size;
+      document.getElementById('sh-familias').textContent     = familiasSet.size;
       document.getElementById('sh-primeiro-ano').textContent = primeiroAno;
-      document.getElementById('est-hero').style.display    = '';
-      document.getElementById('est-loading').style.display = 'none';
-      document.getElementById('est-conteudo').style.display = '';
+      document.getElementById('est-hero').style.display      = '';
+      document.getElementById('est-loading').style.display   = 'none';
+      document.getElementById('est-conteudo').style.display  = '';
 
+      // Column charts não precisam de Chart.js
+      inicializarColCharts();
+    }
+
+    // ── Column charts ──────────────────────────────────────────────────
+    function esc(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    var familiaImagem = {};
+    Object.entries(ESPECIE_META).forEach(function (entry) {
+      var meta = entry[1];
+      if (meta.familia && meta.imagem && !meta.placeholder && !familiaImagem[meta.familia])
+        familiaImagem[meta.familia] = meta.imagem;
+    });
+
+    function getImagem(esp) {
+      if (esp.imagem && !esp.placeholder) return esp.imagem;
+      if (esp.imagem && esp.placeholder)  return esp.imagem;
+      if (esp.familia && familiaImagem[esp.familia]) return familiaImagem[esp.familia];
+      return null;
+    }
+
+    var CHART_H = 180;
+
+    function renderColChart(containerId, lista, grupo) {
+      var container = document.getElementById(containerId);
+      if (!lista.length) return;
+      var maxTotal = lista[0].total;
+      var corBase  = grupo === 'diurnas' ? '245,158,11' : '99,102,241';
+
+      var barsDiv = document.createElement('div'); barsDiv.className = 'est-col-bars-area';
+      var axisDiv = document.createElement('div'); axisDiv.className = 'est-col-axis';
+      var labelsDiv = document.createElement('div'); labelsDiv.className = 'est-col-labels';
+
+      lista.forEach(function (esp, i) {
+        var barH  = Math.max(4, Math.round(esp.total / maxTotal * CHART_H));
+        var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
+        var cor   = 'rgba(' + corBase + ',' + alpha + ')';
+        var imgSrc = getImagem(esp);
+        var bgStyle = esp.corFundo ? ' style="background:' + esc(esp.corFundo) + '"' : '';
+        var thumbHtml = imgSrc
+          ? '<img class="est-col-thumb" src="' + esc(imgSrc) + '" alt=""' + bgStyle + ' loading="lazy">'
+          : '<div class="est-col-thumb-vazio"' + bgStyle + '></div>';
+        var nomeInner = esp.italic !== false ? '<em>' + esc(esp.nome) + '</em>' : esc(esp.nome);
+        var nomeHtml  = esp.url
+          ? '<a class="est-col-nome" href="' + esc(esp.url) + '">' + nomeInner + '</a>'
+          : '<span class="est-col-nome">' + nomeInner + '</span>';
+
+        var bwrap = document.createElement('div'); bwrap.className = 'est-col-bar-wrap';
+        bwrap.innerHTML = '<span class="est-col-spacer"></span>' +
+          '<span class="est-col-count">' + esp.total + '</span>' +
+          '<div class="est-col-bar" style="height:' + barH + 'px;background:' + cor + '"></div>';
+        barsDiv.appendChild(bwrap);
+
+        var label = document.createElement('div'); label.className = 'est-col-label';
+        label.innerHTML = thumbHtml + nomeHtml;
+        labelsDiv.appendChild(label);
+      });
+
+      container.appendChild(barsDiv);
+      container.appendChild(axisDiv);
+      container.appendChild(labelsDiv);
+    }
+
+    function top10Grupo(grupo) {
+      return Object.entries(porEspecie)
+        .filter(function (e) { var m = ESPECIE_META[e[0]]; return m && m.grupo === grupo; })
+        .sort(function (a, b) { return b[1] - a[1]; }).slice(0, 10)
+        .map(function (e) {
+          var m = ESPECIE_META[e[0]];
+          return { nome: e[0], total: e[1], url: m.url, imagem: m.imagem, placeholder: m.placeholder, familia: m.familia };
+        });
+    }
+
+    function top5FamiliaGrupo(grupo) {
+      return Object.entries(porFamilia)
+        .filter(function (e) { var m = FAMILIA_META[e[0]]; return m && m.grupo === grupo; })
+        .sort(function (a, b) { return b[1] - a[1]; }).slice(0, 5)
+        .map(function (e) {
+          var fam = e[0], m = FAMILIA_META[fam] || {};
+          return { nome: fam, total: e[1], url: m.url || null, imagem: m.imagem || null,
+                   placeholder: false, familia: null, italic: false, corFundo: m.corFundo || null };
+        });
+    }
+
+    function inicializarColCharts() {
+      renderColChart('chart-diurnas',     top10Grupo('diurnas'),        'diurnas');
+      renderColChart('chart-noturnas',    top10Grupo('noturnas'),       'noturnas');
+      renderColChart('chart-fam-diurnas', top5FamiliaGrupo('diurnas'),  'diurnas');
+      renderColChart('chart-fam-noturnas',top5FamiliaGrupo('noturnas'), 'noturnas');
+    }
+
+    // ── Chart.js ───────────────────────────────────────────────────────
+    function inicializarChartJS(dados) {
       Chart.defaults.font.family = 'system-ui, sans-serif';
       Chart.defaults.font.size   = 11;
       var grid = 'rgba(100,116,139,0.12)', tick = '#94a3b8';
@@ -171,130 +282,11 @@ permalink: /estatisticas/especies/
       function optsVBar() {
         return { responsive: true, maintainAspectRatio: false,
           plugins: { legend: { display: false } },
-          scales: {
-            x: { grid: { display: false }, ticks: { color: tick } },
-            y: { grid: { color: grid },    ticks: { color: tick } }
-          }
+          scales: { x: { grid: { display: false }, ticks: { color: tick } },
+                    y: { grid: { color: grid },    ticks: { color: tick } } }
         };
       }
 
-      function esc(str) {
-        return String(str)
-          .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-      }
-
-      // Fallback de imagem: foto real de outra espécie da mesma família
-      // (usado apenas quando a espécie não tem nenhuma imagem)
-      var familiaImagem = {};
-      Object.entries(ESPECIE_META).forEach(function (entry) {
-        var meta = entry[1];
-        if (meta.familia && meta.imagem && !meta.placeholder && !familiaImagem[meta.familia]) {
-          familiaImagem[meta.familia] = meta.imagem;
-        }
-      });
-
-      function getImagem(esp) {
-        // 1. Foto real da própria espécie
-        if (esp.imagem && !esp.placeholder) return esp.imagem;
-        // 2. Silhueta SVG da espécie (placeholder) — mostra a silhueta da família
-        if (esp.imagem && esp.placeholder) return esp.imagem;
-        // 3. Sem imagem própria: foto de outra espécie da mesma família
-        if (esp.familia && familiaImagem[esp.familia]) return familiaImagem[esp.familia];
-        return null;
-      }
-
-      function top10Grupo(grupo) {
-        return Object.entries(porEspecie)
-          .filter(function (e) {
-            var meta = ESPECIE_META[e[0]];
-            return meta && meta.grupo === grupo;
-          })
-          .sort(function (a, b) { return b[1] - a[1]; })
-          .slice(0, 10)
-          .map(function (e) {
-            var meta = ESPECIE_META[e[0]];
-            return { nome: e[0], total: e[1], url: meta.url, imagem: meta.imagem,
-                     placeholder: meta.placeholder, familia: meta.familia };
-          });
-      }
-
-      var CHART_H = 180; // altura máxima das barras em px
-
-      function renderColChart(containerId, lista, grupo) {
-        var container = document.getElementById(containerId);
-        if (!lista.length) return;
-        var maxTotal = lista[0].total;
-        var corBase  = grupo === 'diurnas' ? '245,158,11' : '99,102,241';
-
-        var barsDiv   = document.createElement('div');
-        barsDiv.className = 'est-col-bars-area';
-        var axisDiv   = document.createElement('div');
-        axisDiv.className = 'est-col-axis';
-        var labelsDiv = document.createElement('div');
-        labelsDiv.className = 'est-col-labels';
-
-        lista.forEach(function (esp, i) {
-          var barH  = Math.max(4, Math.round(esp.total / maxTotal * CHART_H));
-          var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
-          var cor   = 'rgba(' + corBase + ',' + alpha + ')';
-          var imgSrc = getImagem(esp);
-          var bgStyle = esp.corFundo ? ' style="background:' + esc(esp.corFundo) + '"' : '';
-          var thumbHtml = imgSrc
-            ? '<img class="est-col-thumb" src="' + esc(imgSrc) + '" alt=""' + bgStyle + ' loading="lazy">'
-            : '<div class="est-col-thumb-vazio"' + bgStyle + '></div>';
-          var nomeInner = esp.italic !== false
-            ? '<em>' + esc(esp.nome) + '</em>'
-            : esc(esp.nome);
-          var nomeHtml = esp.url
-            ? '<a class="est-col-nome" href="' + esc(esp.url) + '">' + nomeInner + '</a>'
-            : '<span class="est-col-nome">' + nomeInner + '</span>';
-
-          var bwrap = document.createElement('div');
-          bwrap.className = 'est-col-bar-wrap';
-          bwrap.innerHTML =
-            '<span class="est-col-spacer"></span>' +
-            '<span class="est-col-count">' + esp.total + '</span>' +
-            '<div class="est-col-bar" style="height:' + barH + 'px;background:' + cor + '"></div>';
-          barsDiv.appendChild(bwrap);
-
-          var label = document.createElement('div');
-          label.className = 'est-col-label';
-          label.innerHTML = thumbHtml + nomeHtml;
-          labelsDiv.appendChild(label);
-        });
-
-        container.appendChild(barsDiv);
-        container.appendChild(axisDiv);
-        container.appendChild(labelsDiv);
-      }
-
-      renderColChart('chart-diurnas',  top10Grupo('diurnas'),  'diurnas');
-      renderColChart('chart-noturnas', top10Grupo('noturnas'), 'noturnas');
-
-      function top5FamiliaGrupo(grupo) {
-        return Object.entries(porFamilia)
-          .filter(function (e) {
-            var meta = FAMILIA_META[e[0]];
-            return meta && meta.grupo === grupo;
-          })
-          .sort(function (a, b) { return b[1] - a[1]; })
-          .slice(0, 5)
-          .map(function (e) {
-            var fam = e[0];
-            var meta = FAMILIA_META[fam] || {};
-            var img = meta.imagem || null;
-            var corFundo = meta.corFundo || null;
-            return { nome: fam, total: e[1], url: meta.url || null,
-                     imagem: img, placeholder: false, familia: null,
-                     italic: false, corFundo: corFundo };
-          });
-      }
-
-      renderColChart('chart-fam-diurnas',  top5FamiliaGrupo('diurnas'),  'diurnas');
-      renderColChart('chart-fam-noturnas', top5FamiliaGrupo('noturnas'), 'noturnas');
-
-      // Gráfico: diurnas vs noturnas
       new Chart(document.getElementById('g-grupos'), {
         type: 'doughnut',
         data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
@@ -306,7 +298,6 @@ permalink: /estatisticas/especies/
             labels: { color: '#64748b', padding: 14, font: { size: 12 } } } } }
       });
 
-      // Gráfico 4: novas espécies por ano
       var anosNovas = Object.keys(novasPorAno).sort();
       new Chart(document.getElementById('g-novas-ano'), {
         type: 'bar',
@@ -314,6 +305,125 @@ permalink: /estatisticas/especies/
           backgroundColor: '#22c55e', borderRadius: 4 }] },
         options: optsVBar()
       });
+    }
+
+    // ── Mapa Leaflet ───────────────────────────────────────────────────
+    var A = 6378137.0, E2 = 0.00669437999014, K0 = 0.9996;
+    var LON0 = -9 * Math.PI / 180;
+
+    function utmToLatLon(E, N) {
+      var e1  = (1 - Math.sqrt(1 - E2)) / (1 + Math.sqrt(1 - E2));
+      var e2p = E2 / (1 - E2);
+      var M   = N / K0;
+      var mu  = M / (A * (1 - E2/4 - 3*Math.pow(E2,2)/64 - 5*Math.pow(E2,3)/256));
+      var phi1 = mu
+        + (3*e1/2 - 27*Math.pow(e1,3)/32) * Math.sin(2*mu)
+        + (21*Math.pow(e1,2)/16 - 55*Math.pow(e1,4)/32) * Math.sin(4*mu)
+        + (151*Math.pow(e1,3)/96) * Math.sin(6*mu)
+        + (1097*Math.pow(e1,4)/512) * Math.sin(8*mu);
+      var N1 = A / Math.sqrt(1 - E2*Math.pow(Math.sin(phi1),2));
+      var T1 = Math.pow(Math.tan(phi1),2);
+      var C1 = e2p * Math.pow(Math.cos(phi1),2);
+      var R1 = A*(1-E2) / Math.pow(1-E2*Math.pow(Math.sin(phi1),2), 1.5);
+      var D  = (E - 500000) / (N1 * K0);
+      var lat = phi1 - (N1*Math.tan(phi1)/R1) * (
+        Math.pow(D,2)/2
+        - (5+3*T1+10*C1-4*Math.pow(C1,2)-9*e2p)*Math.pow(D,4)/24
+        + (61+90*T1+298*C1+45*Math.pow(T1,2)-252*e2p-3*Math.pow(C1,2))*Math.pow(D,6)/720
+      );
+      var lon = LON0 + (
+        D - (1+2*T1+C1)*Math.pow(D,3)/6
+        + (5-2*C1+28*T1-3*Math.pow(C1,2)+8*e2p+24*Math.pow(T1,2))*Math.pow(D,5)/120
+      ) / Math.cos(phi1);
+      return [lat * 180/Math.PI, lon * 180/Math.PI];
+    }
+
+    var COL = {J:0,K:1,L:2,M:3,N:4,P:5,Q:6,R:7};
+    var ROW = {A:0,B:1,C:2,D:3,E:4,F:5,G:6,H:7,J:8,K:9,L:10,M:11,N:12,P:13,Q:14,R:15,S:16,T:17,U:18,V:19};
+    var N_CYCLE = 4000000;
+
+    function utm1kToBounds(code) {
+      if (!code || code.length < 6) return null;
+      var colIdx = COL[code[0]], rowIdx = ROW[code[1]];
+      if (colIdx === undefined || rowIdx === undefined) return null;
+      var sqE = parseInt(code.substring(2, 4), 10);
+      var sqN = parseInt(code.substring(4, 6), 10);
+      var E_sw = (colIdx + 1) * 100000 + sqE * 1000;
+      var N_sw = N_CYCLE + rowIdx * 100000 + sqN * 1000;
+      return [utmToLatLon(E_sw, N_sw), utmToLatLon(E_sw + 1000, N_sw + 1000)];
+    }
+
+    // Paleta emerald — calibrada para contagens de espécies
+    var INTERVALOS_ESP = [
+      { max: 1,        cor: '#d1fae5', label: '1'      },
+      { max: 3,        cor: '#a7f3d0', label: '2–3'    },
+      { max: 5,        cor: '#6ee7b7', label: '4–5'    },
+      { max: 10,       cor: '#34d399', label: '6–10'   },
+      { max: 20,       cor: '#10b981', label: '11–20'  },
+      { max: 35,       cor: '#059669', label: '21–35'  },
+      { max: 55,       cor: '#047857', label: '36–55'  },
+      { max: 80,       cor: '#065f46', label: '56–80'  },
+      { max: 130,      cor: '#064e3b', label: '81–130' },
+      { max: Infinity, cor: '#022c22', label: '131+'   },
+    ];
+
+    function heatColorEsp(n) {
+      for (var i = 0; i < INTERVALOS_ESP.length; i++) {
+        if (n <= INTERVALOS_ESP[i].max) return INTERVALOS_ESP[i].cor;
+      }
+      return INTERVALOS_ESP[INTERVALOS_ESP.length - 1].cor;
+    }
+
+    (function gerarLegenda() {
+      var el = document.getElementById('legenda-esp-items');
+      if (!el) return;
+      INTERVALOS_ESP.forEach(function (iv) {
+        var div = document.createElement('div');
+        div.className = 'est-legenda-item';
+        div.innerHTML = '<span class="est-legenda-cor" style="background:' + iv.cor + '"></span>' + iv.label;
+        el.appendChild(div);
+      });
+    })();
+
+    function inicializarMapa(dados) {
+      // Contar espécies únicas por quadrícula
+      var squares = {};
+      dados.forEach(function (o) {
+        if (o.utm1k && o.utm1k.length >= 6 && o.nome_cientifico) {
+          var code = o.utm1k.substring(0, 6);
+          if (!squares[code]) squares[code] = new Set();
+          squares[code].add(o.nome_cientifico);
+        }
+      });
+
+      var AREA_ESTUDO = [[39.46, -9.05], [39.88, -8.61]];
+      var map = L.map('mapa-esp', { maxBounds: AREA_ESTUDO, maxBoundsViscosity: 1.0, minZoom: 9 });
+      map.fitBounds(AREA_ESTUDO);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 19
+      }).addTo(map);
+
+      fetch('/assets/places/concelhos.geojson')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          L.geoJSON(data, { style: { color: '#15803d', weight: 1, fillOpacity: 0 }, interactive: false }).addTo(map);
+        });
+
+      Object.keys(squares).forEach(function (code) {
+        var bounds = utm1kToBounds(code);
+        if (!bounds) return;
+        var n   = squares[code].size;
+        var cor = heatColorEsp(n);
+        L.rectangle(bounds, { color: cor, weight: 1, fillColor: cor, fillOpacity: 0.75 })
+          .bindTooltip(
+            '<strong>' + code + '</strong><br>' + n + ' espécie' + (n !== 1 ? 's' : ''),
+            { sticky: true }
+          ).addTo(map);
+      });
+
+      setTimeout(function () { map.invalidateSize(); map.fitBounds(AREA_ESTUDO); }, 150);
     }
   })();
   </script>
