@@ -338,6 +338,12 @@ extraCSS:
           { sticky: true }
         ).addTo(map);
       });
+
+      // Após o layout estabilizar, forçar recálculo e recentrar
+      setTimeout(function () {
+        map.invalidateSize();
+        map.fitBounds(AREA_ESTUDO);
+      }, 150);
     }
   })();
   </script>
