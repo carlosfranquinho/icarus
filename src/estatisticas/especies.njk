@@ -179,6 +179,12 @@ permalink: /estatisticas/especies/
         };
       }
 
+      function esc(str) {
+        return String(str)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
       // Top 5 por grupo — renderização visual com thumbs
       function top5Grupo(grupo) {
         return Object.entries(porEspecie)
