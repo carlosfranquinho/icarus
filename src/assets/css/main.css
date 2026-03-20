@@ -1750,6 +1750,24 @@ button:disabled {
   height: auto;
 }
 
+/* Fila de cards na mesma linha: donut fixo + card que preenche o resto */
+.est-fila-cards {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.est-card-donut {
+  min-width: 260px;
+  max-width: 320px;
+}
+
+.est-card-flex {
+  flex: 1;
+  min-width: 0;
+}
+
 /* Card do mapa: flex column para o layout interior crescer */
 .est-card-mapa {
   display: flex;
