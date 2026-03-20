@@ -60,9 +60,21 @@
     "@type": "Article",
     "headline": {{ title | dump | safe }},
     "datePublished": "{{ date | htmlDateString }}",
+    "dateModified": "{{ date | htmlDateString }}",
     "image": "{{ site.url }}{{ imagem or site.imagem_padrao }}",
     "author": { "@type": "Organization", "name": "{{ site.nome }}" },
     "publisher": { "@type": "Organization", "name": "{{ site.nome }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}{{ site.logo }}" } }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Atividades", "item": "{{ site.url }}/atividades/" },
+      { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "{{ site.url }}{{ page.url }}" }
+    ]
   }
   </script>
   {% endif %}

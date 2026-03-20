@@ -5,13 +5,15 @@
   "scripts": {
     "build": "ELEVENTY_RUN_MODE=build eleventy && npx pagefind --site _site",
     "serve": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "lighthouse": "lighthouse http://localhost:8080 --view --locale pt"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@tmcw/togeojson": "^7.1.2",
     "@xmldom/xmldom": "^0.8.11",
     "csv-parse": "^6.1.0",
+    "lighthouse": "^12",
     "pagefind": "^1.4.0"
   },
   "dependencies": {
