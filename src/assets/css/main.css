@@ -1719,17 +1719,22 @@ button:disabled {
   }
 }
 
+.est-card-mapa-wrap {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
 .est-mapa-layout {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
-  justify-content: center;
 }
 
 .est-mapa {
   width: 380px;
   flex-shrink: 0;
-  height: 480px;
+  height: 560px;
   border-radius: 8px;
   border: 1px solid var(--cinza-borda);
 }
@@ -1778,9 +1783,13 @@ button:disabled {
     align-items: stretch;
   }
 
+  .est-card-mapa-wrap {
+    width: 100%;
+  }
+
   .est-mapa {
     width: 100%;
-    height: 360px;
+    height: 400px;
   }
 
   .est-mapa-legenda-lateral {
