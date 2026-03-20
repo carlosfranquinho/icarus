@@ -59,11 +59,15 @@ permalink: /estatisticas/especies/
       </div>
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo">Famílias com mais observações</p>
-        <p class="est-card-subtitulo">Total de registos por família taxonómica (top 15)</p>
-        <div class="est-chart-wrap est-chart-wrap-alto">
-          <canvas id="g-familias"></canvas>
-        </div>
+        <p class="est-card-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Top 5 famílias diurnas</p>
+        <p class="est-card-subtitulo">Famílias diurnas com maior número de registos</p>
+        <div id="chart-fam-diurnas" class="est-col-chart"></div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Top 5 famílias noturnas</p>
+        <p class="est-card-subtitulo">Famílias noturnas com maior número de registos</p>
+        <div id="chart-fam-noturnas" class="est-col-chart"></div>
       </div>
 
       <div class="est-card">
@@ -88,6 +92,11 @@ permalink: /estatisticas/especies/
   <script>
   (function () {
     var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+    var FAMILIA_META = Object.assign(
+      {},
+      {{ collections.familiasDiurnas | familiaMetaJson | safe }},
+      {{ collections.familiasNoturnas | familiaMetaJson | safe }}
+    );
 
     function carregarChartJS(cb) {
       if (window.Chart) { cb(); return; }
@@ -166,15 +175,6 @@ permalink: /estatisticas/especies/
           }
         };
       }
-      function optsHBar(maxItems) {
-        return { responsive: true, maintainAspectRatio: false, indexAxis: 'y',
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { grid: { color: grid }, ticks: { color: tick } },
-            y: { grid: { display: false }, ticks: { color: tick, font: { size: 10 } } }
-          }
-        };
-      }
 
       function esc(str) {
         return String(str)
@@ -237,12 +237,16 @@ permalink: /estatisticas/especies/
           var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
           var cor   = 'rgba(' + corBase + ',' + alpha + ')';
           var imgSrc = getImagem(esp);
+          var bgStyle = esp.corFundo ? ' style="background:' + esc(esp.corFundo) + '"' : '';
           var thumbHtml = imgSrc
-            ? '<img class="est-col-thumb" src="' + esc(imgSrc) + '" alt="" loading="lazy">'
-            : '<div class="est-col-thumb-vazio"></div>';
+            ? '<img class="est-col-thumb" src="' + esc(imgSrc) + '" alt=""' + bgStyle + ' loading="lazy">'
+            : '<div class="est-col-thumb-vazio"' + bgStyle + '></div>';
+          var nomeInner = esp.italic !== false
+            ? '<em>' + esc(esp.nome) + '</em>'
+            : esc(esp.nome);
           var nomeHtml = esp.url
-            ? '<a class="est-col-nome" href="' + esc(esp.url) + '"><em>' + esc(esp.nome) + '</em></a>'
-            : '<span class="est-col-nome"><em>' + esc(esp.nome) + '</em></span>';
+            ? '<a class="est-col-nome" href="' + esc(esp.url) + '">' + nomeInner + '</a>'
+            : '<span class="est-col-nome">' + nomeInner + '</span>';
 
           var bwrap = document.createElement('div');
           bwrap.className = 'est-col-bar-wrap';
@@ -266,21 +270,29 @@ permalink: /estatisticas/especies/
       renderColChart('chart-diurnas',  top10Grupo('diurnas'),  'diurnas');
       renderColChart('chart-noturnas', top10Grupo('noturnas'), 'noturnas');
 
-      // Gráfico 2: famílias
-      var topFam = Object.entries(porFamilia).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);
-      var paleta = ['#0891b2','#0ea5e9','#38bdf8','#7dd3fc','#bae6fd',
-                    '#06b6d4','#22d3ee','#67e8f9','#a5f3fc','#e0f2fe',
-                    '#0284c7','#0369a1','#075985','#0c4a6e','#082f49'];
-      new Chart(document.getElementById('g-familias'), {
-        type: 'bar',
-        data: { labels: topFam.map(function (e) { return e[0]; }),
-          datasets: [{ data: topFam.map(function (e) { return e[1]; }),
-            backgroundColor: topFam.map(function (e, i) { return paleta[i % paleta.length]; }),
-            borderRadius: 4 }] },
-        options: optsHBar()
-      });
+      function top5FamiliaGrupo(grupo) {
+        return Object.entries(porFamilia)
+          .filter(function (e) {
+            var meta = FAMILIA_META[e[0]];
+            return meta && meta.grupo === grupo;
+          })
+          .sort(function (a, b) { return b[1] - a[1]; })
+          .slice(0, 5)
+          .map(function (e) {
+            var fam = e[0];
+            var meta = FAMILIA_META[fam] || {};
+            var img = familiaImagem[fam] || meta.imagem || null;
+            var corFundo = meta.corFundo || null;
+            return { nome: fam, total: e[1], url: meta.url || null,
+                     imagem: img, placeholder: false, familia: null,
+                     italic: false, corFundo: corFundo };
+          });
+      }
 
-      // Gráfico 3: diurnas vs noturnas
+      renderColChart('chart-fam-diurnas',  top5FamiliaGrupo('diurnas'),  'diurnas');
+      renderColChart('chart-fam-noturnas', top5FamiliaGrupo('noturnas'), 'noturnas');
+
+      // Gráfico: diurnas vs noturnas
       new Chart(document.getElementById('g-grupos'), {
         type: 'doughnut',
         data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
