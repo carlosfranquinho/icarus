@@ -46,45 +46,48 @@ extraCSS:
   <p class="est-loading" id="est-loading">A carregar dados…</p>
 
   <div id="est-conteudo" style="display:none;">
-    <div class="est-grid">
 
-      <div class="est-card est-card-largo">
-        <p class="est-card-titulo">Observações por ano</p>
-        <p class="est-card-subtitulo">Evolução do número de registos ao longo do tempo</p>
-        <div class="est-chart-wrap">
-          <canvas id="g-por-ano"></canvas>
+    <div class="est-card est-obs-por-ano">
+      <p class="est-card-titulo">Observações por ano</p>
+      <p class="est-card-subtitulo">Evolução do número de registos ao longo do tempo</p>
+      <div class="est-chart-wrap">
+        <canvas id="g-por-ano"></canvas>
+      </div>
+    </div>
+
+    <div class="est-mapa-e-graficos">
+
+      <div class="est-card">
+        <p class="est-card-titulo">Distribuição geográfica</p>
+        <p class="est-card-subtitulo">Quadrículas UTM 1×1 km — cada cor corresponde a um intervalo de observações</p>
+        <div class="est-mapa-layout">
+          <div id="mapa-obs" class="est-mapa"></div>
+          <div class="est-mapa-legenda-lateral">
+            <p class="est-legenda-titulo">Observações</p>
+            <div id="legenda-items" class="est-legenda-items"></div>
+          </div>
         </div>
       </div>
 
-      <div class="est-card">
-        <p class="est-card-titulo">Actividade mensal</p>
-        <p class="est-card-subtitulo">Padrão sazonal — total acumulado por mês do ano</p>
-        <div class="est-chart-wrap">
-          <canvas id="g-por-mes"></canvas>
+      <div class="est-graficos-coluna">
+        <div class="est-card">
+          <p class="est-card-titulo">Actividade mensal</p>
+          <p class="est-card-subtitulo">Padrão sazonal — total acumulado por mês do ano</p>
+          <div class="est-chart-wrap">
+            <canvas id="g-por-mes"></canvas>
+          </div>
         </div>
-      </div>
-
-      <div class="est-card">
-        <p class="est-card-titulo">Diurnas vs noturnas</p>
-        <p class="est-card-subtitulo">Distribuição das observações por grupo</p>
-        <div class="est-chart-wrap">
-          <canvas id="g-grupos"></canvas>
+        <div class="est-card">
+          <p class="est-card-titulo">Diurnas vs noturnas</p>
+          <p class="est-card-subtitulo">Distribuição das observações por grupo</p>
+          <div class="est-chart-wrap">
+            <canvas id="g-grupos"></canvas>
+          </div>
         </div>
       </div>
 
     </div>
-  </div>
 
-  <div class="est-card est-card-mapa-wrap">
-    <p class="est-card-titulo">Distribuição geográfica</p>
-    <p class="est-card-subtitulo">Quadrículas UTM 1×1 km — cada cor corresponde a um intervalo de observações</p>
-    <div class="est-mapa-layout">
-      <div id="mapa-obs" class="est-mapa"></div>
-      <div class="est-mapa-legenda-lateral">
-        <p class="est-legenda-titulo">Observações</p>
-        <div id="legenda-items" class="est-legenda-items"></div>
-      </div>
-    </div>
   </div>
 
   <script>

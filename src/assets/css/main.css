@@ -1719,10 +1719,35 @@ button:disabled {
   }
 }
 
-.est-card-mapa-wrap {
-  width: fit-content;
-  max-width: 100%;
+.est-obs-por-ano {
+  margin-bottom: 1.25rem;
+}
+
+.est-mapa-e-graficos {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
   margin-bottom: 3rem;
+}
+
+.est-graficos-coluna {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.est-graficos-coluna .est-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.est-graficos-coluna .est-chart-wrap {
+  flex: 1;
+  min-height: 180px;
+  height: auto;
 }
 
 .est-mapa-layout {
@@ -1783,8 +1808,8 @@ button:disabled {
     align-items: stretch;
   }
 
-  .est-card-mapa-wrap {
-    width: 100%;
+  .est-mapa-e-graficos {
+    flex-direction: column;
   }
 
   .est-mapa {
