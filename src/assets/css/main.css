@@ -1726,7 +1726,7 @@ button:disabled {
 .est-mapa-e-graficos {
   display: flex;
   gap: 1.25rem;
-  align-items: flex-start;
+  align-items: stretch;
   margin-bottom: 3rem;
 }
 
