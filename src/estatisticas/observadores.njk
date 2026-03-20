@@ -60,20 +60,10 @@ permalink: /estatisticas/observadores/
         </div>
       </div>
 
-      <div class="est-card">
-        <p class="est-card-titulo">Partilha das observações</p>
-        <p class="est-card-subtitulo">Top 5 observadores vs restante comunidade</p>
-        <div class="est-chart-wrap">
-          <canvas id="g-partilha"></canvas>
-        </div>
-      </div>
-
       <div class="est-card est-card-largo">
         <p class="est-card-titulo">Diversidade por observador</p>
-        <p class="est-card-subtitulo">Espécies únicas registadas — top 15 observadores</p>
-        <div class="est-chart-wrap est-chart-wrap-alto">
-          <canvas id="g-diversidade"></canvas>
-        </div>
+        <p class="est-card-subtitulo">Espécies únicas registadas por cada participante (top 10)</p>
+        <div id="chart-diversidade" class="est-col-chart"></div>
       </div>
 
     </div>
@@ -108,10 +98,11 @@ permalink: /estatisticas/observadores/
                      '#14b8a6','#ef4444','#f97316','#8b5cf6','#0284c7'];
     var CHART_H = 180;
 
-    function renderTopObs(containerId, lista) {
+    function renderTopObs(containerId, lista, corRGB) {
       var container = document.getElementById(containerId);
       if (!lista.length) return;
       var maxTotal = lista[0][1];
+      corRGB = corRGB || '8,145,178';
 
       var barsDiv   = document.createElement('div');
       barsDiv.className = 'est-col-bars-area';
@@ -123,8 +114,8 @@ permalink: /estatisticas/observadores/
       lista.forEach(function (e, i) {
         var nome  = e[0], total = e[1];
         var barH  = Math.max(4, Math.round(total / maxTotal * CHART_H));
-        var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
-        var corBarra  = 'rgba(8,145,178,' + alpha + ')';
+        var alpha    = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
+        var corBarra = 'rgba(' + corRGB + ',' + alpha + ')';
         var corAvatar = CORES_OBS[i % CORES_OBS.length];
         var inicial   = (nome || '?')[0].toUpperCase();
 
@@ -199,19 +190,7 @@ permalink: /estatisticas/observadores/
           }
         };
       }
-      function optsHBar() {
-        return { responsive: true, maintainAspectRatio: false, indexAxis: 'y',
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { grid: { color: grid }, ticks: { color: tick } },
-            y: { grid: { display: false }, ticks: { color: tick, font: { size: 10 } } }
-          }
-        };
-      }
-
       var obsSorted = Object.entries(porObs).sort(function (a, b) { return b[1] - a[1]; });
-      var top5 = obsSorted.slice(0, 5);
-      var coresPaleta = ['#0891b2','#f59e0b','#22c55e','#f43f5e','#a855f7','#cbd5e1'];
 
       // Gráfico 1: top 10 observadores (colunas verticais)
       renderTopObs('chart-top-obs', obsSorted.slice(0, 10));
@@ -230,49 +209,12 @@ permalink: /estatisticas/observadores/
         options: optsVBar()
       });
 
-      // Gráfico 3: partilha das observações (donut)
-      var totalGeral = contagens.reduce(function (s, v) { return s + v; }, 0);
-      var top5Total  = top5.reduce(function (s, e) { return s + e[1]; }, 0);
-      new Chart(document.getElementById('g-partilha'), {
-        type: 'doughnut',
-        data: {
-          labels: top5.map(function (e) { return e[0]; }).concat(['Outros']),
-          datasets: [{ data: top5.map(function (e) { return e[1]; }).concat([totalGeral - top5Total]),
-            backgroundColor: coresPaleta, borderWidth: 2, borderColor: '#ffffff' }]
-        },
-        options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
-          plugins: { legend: { position: 'bottom',
-            labels: { color: '#64748b', padding: 10, font: { size: 11 },
-              generateLabels: function (chart) {
-                return Chart.defaults.plugins.legend.labels.generateLabels(chart).map(function (l) {
-                  var pct = ((chart.data.datasets[0].data[l.index] / totalGeral) * 100).toFixed(1);
-                  l.text = l.text + ' (' + pct + '%)';
-                  return l;
-                });
-              }
-            } } } }
-      });
-
-      // Gráfico 4: diversidade (espécies únicas por observador, top 15)
+      // Gráfico 3: diversidade (espécies únicas por observador, top 10, colunas verticais)
       var divTop = Object.entries(especiesPorObs)
         .map(function (e) { return [e[0], e[1].size]; })
         .sort(function (a, b) { return b[1] - a[1]; })
-        .slice(0, 15);
-      new Chart(document.getElementById('g-diversidade'), {
-        type: 'bar',
-        data: { labels: divTop.map(function (e) { return e[0]; }),
-          datasets: [{ data: divTop.map(function (e) { return e[1]; }),
-            backgroundColor: divTop.map(function (e) {
-              return 'rgba(34,197,94,' + (0.4 + 0.6 * e[1] / divTop[0][1]).toFixed(2) + ')';
-            }),
-            borderRadius: 4 }] },
-        options: Object.assign(optsHBar(), {
-          plugins: { legend: { display: false },
-            tooltip: { callbacks: { label: function (ctx) {
-              return ' ' + ctx.parsed.x + ' espécies únicas';
-            } } } }
-        })
-      });
+        .slice(0, 10);
+      renderTopObs('chart-diversidade', divTop, '34,197,94');
     }
   })();
   </script>
