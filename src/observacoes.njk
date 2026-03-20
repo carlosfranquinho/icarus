@@ -5,71 +5,95 @@ descricao: Registo de todas as observações de campo do Grupo icarus.
 permalink: /observacoes/
 ---
 <div class="container">
-  <header style="margin-bottom: 2rem;">
-    <h1>Observações</h1>
-    <p style="color: var(--cinza-suave);">Registo de campo do Grupo icarus.</p>
+
+  <header class="obs-header">
+    <div>
+      <h1 class="titulo-secao">Observações de campo</h1>
+      <p class="subtitulo" id="obs-subtitulo">Registo do Grupo icarus.</p>
+    </div>
+    <div class="obs-stats" id="obs-stats" style="display:none;">
+      <div class="obs-stat">
+        <span class="obs-stat-valor" id="stat-total">—</span>
+        <span class="obs-stat-label">observações</span>
+      </div>
+      <div class="obs-stat">
+        <span class="obs-stat-valor" id="stat-especies">—</span>
+        <span class="obs-stat-label">espécies</span>
+      </div>
+      <div class="obs-stat">
+        <span class="obs-stat-valor" id="stat-observadores">—</span>
+        <span class="obs-stat-label">observadores</span>
+      </div>
+    </div>
   </header>
 
-  <div style="margin-bottom: 1.5rem; display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap;">
-    <label for="filtro-especie" class="visually-hidden">Filtrar por espécie</label>
-    <select id="filtro-especie" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
-      <option value="">Todas as espécies</option>
-    </select>
-
-    <label for="filtro-familia" class="visually-hidden">Filtrar por família</label>
-    <select id="filtro-familia" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
-      <option value="">Todas as famílias</option>
-    </select>
-
-    <label for="filtro-ano" class="visually-hidden">Filtrar por ano</label>
-    <select id="filtro-ano" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
-      <option value="">Todos os anos</option>
-    </select>
-
-    <label for="filtro-observador" class="visually-hidden">Filtrar por observador</label>
-    <select id="filtro-observador" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:var(--branco); color:var(--cinza-texto); cursor:pointer;">
-      <option value="">Todos os observadores</option>
-    </select>
-
-    <button id="limpar-filtros" style="padding:0.4rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.9rem; background:none; color:var(--cinza-suave); cursor:pointer; display:none;">✕ Limpar</button>
-    <span id="contagem-obs" style="font-size:0.85rem; color:var(--cinza-suave);"></span>
+  <div class="obs-filtros">
+    <div class="obs-filtros-linha">
+      <label class="obs-filtro-grupo">
+        <span class="obs-filtro-label">Espécie</span>
+        <select id="filtro-especie" class="obs-select">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <label class="obs-filtro-grupo">
+        <span class="obs-filtro-label">Família</span>
+        <select id="filtro-familia" class="obs-select">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <label class="obs-filtro-grupo">
+        <span class="obs-filtro-label">Ano</span>
+        <select id="filtro-ano" class="obs-select">
+          <option value="">Todos</option>
+        </select>
+      </label>
+      <label class="obs-filtro-grupo">
+        <span class="obs-filtro-label">Observador</span>
+        <select id="filtro-observador" class="obs-select">
+          <option value="">Todos</option>
+        </select>
+      </label>
+    </div>
+    <div class="obs-filtros-acoes">
+      <span id="contagem-obs" class="obs-contagem"></span>
+      <button id="limpar-filtros" class="obs-btn-limpar" style="display:none;">✕ Limpar filtros</button>
+    </div>
   </div>
 
-  <div style="overflow-x:auto;">
-    <table id="tabela-obs" style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+  <div class="obs-tabela-wrapper">
+    <table id="tabela-obs" class="obs-tabela">
       <thead>
-        <tr style="border-bottom:2px solid var(--cinza-borda);">
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Data</th>
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Espécie</th>
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Família</th>
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Quadrícula</th>
-          <th style="text-align:right; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Qtd.</th>
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Observador</th>
-          <th style="text-align:left; padding:0.6rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
+        <tr>
+          <th>Data</th>
+          <th>Espécie</th>
+          <th>Família</th>
+          <th>Quadrícula</th>
+          <th class="obs-col-num">Qtd.</th>
+          <th>Observador</th>
+          <th>Notas</th>
         </tr>
       </thead>
       <tbody id="obs-tbody">
         <tr id="obs-loading">
-          <td colspan="7" style="padding:2rem; text-align:center; color:var(--cinza-suave); font-style:italic;">A carregar observações…</td>
+          <td colspan="7" class="obs-estado">A carregar observações…</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div id="sem-resultados" style="display:none; padding:2rem; text-align:center; color:var(--cinza-suave); font-style:italic;">
+  <p id="sem-resultados" class="obs-estado" style="display:none;">
     Nenhuma observação corresponde aos filtros seleccionados.
-  </div>
+  </p>
 
-  <div id="paginacao" style="display:none; margin-top:1rem; display:flex; gap:0.5rem; align-items:center; justify-content:center; flex-wrap:wrap;">
-    <button id="pag-anterior" style="padding:0.35rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.85rem; background:none; cursor:pointer;">‹ Anterior</button>
-    <span id="pag-info" style="font-size:0.85rem; color:var(--cinza-suave);"></span>
-    <button id="pag-seguinte" style="padding:0.35rem 0.75rem; border:1px solid var(--cinza-borda); border-radius:8px; font-size:0.85rem; background:none; cursor:pointer;">Seguinte ›</button>
-  </div>
+  <nav id="paginacao" class="obs-paginacao" style="display:none;" aria-label="Paginação">
+    <button id="pag-anterior" class="obs-pag-btn">‹ Anterior</button>
+    <span id="pag-info" class="obs-pag-info"></span>
+    <button id="pag-seguinte" class="obs-pag-btn">Seguinte ›</button>
+  </nav>
 
-  <!-- Totais por espécie (visível quando filtros activos) -->
-  <div id="totais-especie" style="display:none; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--cinza-borda);">
-    <h2 style="font-size:1rem; font-weight:600; color:var(--cinza-suave); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.75rem;">Totais por espécie</h2>
-    <div id="totais-lista" style="display:flex; flex-wrap:wrap; gap:0.5rem;"></div>
+  <div id="totais-especie" class="obs-totais" style="display:none;">
+    <h2 class="obs-totais-titulo">Totais por espécie</h2>
+    <div id="totais-lista" class="obs-chips"></div>
   </div>
 
   <script>
@@ -120,6 +144,12 @@ permalink: /observacoes/
       Array.from(familias).sort().forEach(function (v) { addOption(selFamilia, v); });
       Array.from(anos).sort().reverse().forEach(function (v) { addOption(selAno, v); });
       Array.from(observadors).sort().forEach(function (v) { addOption(selObservador, v); });
+
+      // Stats
+      document.getElementById('stat-total').textContent = data.length;
+      document.getElementById('stat-especies').textContent = especies.size;
+      document.getElementById('stat-observadores').textContent = observadors.size;
+      document.getElementById('obs-stats').style.display = '';
     }
 
     function renderPage() {
@@ -129,7 +159,6 @@ permalink: /observacoes/
 
       slice.forEach(function (o) {
         var tr = document.createElement('tr');
-        tr.style.borderBottom = '1px solid var(--cinza-borda)';
 
         var familia = FAMILIA_MAP[o.nome_cientifico] || '';
         var url     = ESPECIE_URLS[o.nome_cientifico];
@@ -140,17 +169,17 @@ permalink: /observacoes/
           : '<em>' + esc(o.nome_cientifico) + '</em>';
 
         var utmHtml = o.utm1k
-          ? '<code style="font-size:0.85em;background:var(--cinza-bg);padding:0.1em 0.4em;border-radius:4px;">' + esc(o.utm1k) + '</code>'
+          ? '<code class="obs-utm">' + esc(o.utm1k) + '</code>'
           : '—';
 
         tr.innerHTML =
-          '<td style="padding:0.5rem 0.75rem;white-space:nowrap;">' + esc(o.data || '') + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;">' + nomeHtml + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;color:var(--cinza-suave);">' + esc(familia || '—') + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;">' + utmHtml + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;text-align:right;">' + qtd + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;">' + esc(o.observador || '—') + '</td>' +
-          '<td style="padding:0.5rem 0.75rem;color:var(--cinza-suave);">' + esc(o.notas || '—') + '</td>';
+          '<td class="obs-col-data">' + esc(o.data || '') + '</td>' +
+          '<td>' + nomeHtml + '</td>' +
+          '<td class="obs-col-secundario">' + esc(familia || '—') + '</td>' +
+          '<td>' + utmHtml + '</td>' +
+          '<td class="obs-col-num">' + qtd + '</td>' +
+          '<td>' + esc(o.observador || '—') + '</td>' +
+          '<td class="obs-col-secundario">' + esc(o.notas || '—') + '</td>';
 
         frag.appendChild(tr);
       });
@@ -158,7 +187,6 @@ permalink: /observacoes/
       tbody.innerHTML = '';
       tbody.appendChild(frag);
 
-      // Pagination controls
       var total = filteredData.length;
       var totalPages = Math.ceil(total / PAGE_SIZE);
       if (totalPages > 1) {
@@ -197,7 +225,6 @@ permalink: /observacoes/
 
       semResultados.style.display = visiveis === 0 ? '' : 'none';
 
-      // Totais por espécie
       if (temFiltro && visiveis > 0) {
         var totais = {};
         filteredData.forEach(function (o) {
@@ -207,7 +234,7 @@ permalink: /observacoes/
         totaisLista.innerHTML = '';
         Object.keys(totais).sort(function (a, b) { return totais[b] - totais[a]; }).forEach(function (sp) {
           var chip = document.createElement('span');
-          chip.style.cssText = 'padding:0.25rem 0.75rem;background:var(--cinza-bg);border-radius:20px;font-size:0.85rem;';
+          chip.className = 'obs-chip';
           chip.innerHTML = '<em>' + esc(sp) + '</em> <strong>' + totais[sp] + '</strong>';
           totaisLista.appendChild(chip);
         });
@@ -245,7 +272,6 @@ permalink: /observacoes/
     fetch('/dados/observacoes.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        // Ordenar por data decrescente
         data.sort(function (a, b) {
           return (b.data || '').localeCompare(a.data || '');
         });
@@ -253,15 +279,13 @@ permalink: /observacoes/
         filteredData = data;
         populateSelects(data);
         filtrar();
-
-        // Actualizar contador no cabeçalho
-        var header = document.querySelector('header p');
-        if (header) header.textContent = 'Registo de campo do Grupo icarus — ' + data.length + ' observações.';
+        document.getElementById('obs-subtitulo').textContent = 'Registo do Grupo icarus — ' + data.length + ' observações.';
       })
       .catch(function (err) {
-        tbody.innerHTML = '<tr><td colspan="7" style="padding:2rem;text-align:center;color:var(--cinza-suave);">Erro ao carregar observações.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" class="obs-estado">Erro ao carregar observações.</td></tr>';
         console.error(err);
       });
   })();
   </script>
+
 </div>
