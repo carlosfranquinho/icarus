@@ -1719,19 +1719,48 @@ button:disabled {
   }
 }
 
+.est-mapa-layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .est-mapa {
-  height: 460px;
+  width: 380px;
+  flex-shrink: 0;
+  height: 480px;
   border-radius: 8px;
   border: 1px solid var(--cinza-borda);
 }
 
-.est-mapa-legenda {
+.est-mapa-legenda-lateral {
+  width: 120px;
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.est-legenda-titulo {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--cinza-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.est-legenda-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.est-legenda-item {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.6rem;
-  font-size: 0.78rem;
-  color: var(--cinza-suave);
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--cinza-texto);
 }
 
 .est-legenda-cor {
@@ -1740,6 +1769,30 @@ button:disabled {
   height: 14px;
   border-radius: 3px;
   flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+@media (max-width: 640px) {
+  .est-mapa-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .est-mapa {
+    width: 100%;
+    height: 360px;
+  }
+
+  .est-mapa-legenda-lateral {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+  }
+
+  .est-legenda-titulo {
+    width: 100%;
+  }
 }
 
 /* Stat cards clicáveis em /observacoes/ */
