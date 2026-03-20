@@ -47,10 +47,17 @@ permalink: /estatisticas/especies/
     <div class="est-grid">
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo">Top 20 espécies mais observadas</p>
-        <p class="est-card-subtitulo">Total de registos por espécie (todas as observações)</p>
-        <div class="est-chart-wrap est-chart-wrap-muito-alto">
-          <canvas id="g-top-especies"></canvas>
+        <p class="est-card-titulo">Top 5 espécies mais observadas</p>
+        <p class="est-card-subtitulo">Espécies com maior número de registos, por grupo</p>
+        <div class="est-top-grupos">
+          <div>
+            <h3 class="est-top-grupo-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Diurnas</h3>
+            <ol class="est-top-lista" id="top-diurnas"></ol>
+          </div>
+          <div>
+            <h3 class="est-top-grupo-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Noturnas</h3>
+            <ol class="est-top-lista" id="top-noturnas"></ol>
+          </div>
         </div>
       </div>
 
@@ -172,26 +179,44 @@ permalink: /estatisticas/especies/
         };
       }
 
-      // Gráfico 1: top 20 espécies
-      var topEsp = Object.entries(porEspecie).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 20);
-      new Chart(document.getElementById('g-top-especies'), {
-        type: 'bar',
-        data: { labels: topEsp.map(function (e) { return e[0]; }),
-          datasets: [{ data: topEsp.map(function (e) { return e[1]; }),
-            backgroundColor: topEsp.map(function (e, i) {
-              return 'rgba(8,145,178,' + (0.4 + 0.6 * e[1] / topEsp[0][1]).toFixed(2) + ')';
-            }),
-            borderRadius: 4 }] },
-        options: Object.assign(optsHBar(), {
-          plugins: { legend: { display: false },
-            tooltip: { callbacks: { label: function (ctx) {
-              return ' ' + ctx.parsed.x + ' observações';
-            }, title: function (items) {
-              return items[0].label;
-            } } }
-          }
-        })
-      });
+      // Top 5 por grupo — renderização visual com thumbs
+      function top5Grupo(grupo) {
+        return Object.entries(porEspecie)
+          .filter(function (e) {
+            var meta = ESPECIE_META[e[0]];
+            return meta && meta.grupo === grupo;
+          })
+          .sort(function (a, b) { return b[1] - a[1]; })
+          .slice(0, 5)
+          .map(function (e) {
+            var meta = ESPECIE_META[e[0]];
+            return { nome: e[0], total: e[1], url: meta.url, imagem: meta.imagem, placeholder: meta.placeholder };
+          });
+      }
+
+      function renderTop5(elId, lista) {
+        var el = document.getElementById(elId);
+        lista.forEach(function (esp, i) {
+          var li = document.createElement('li');
+          li.className = 'est-top-item';
+          var thumbHtml = (esp.imagem && !esp.placeholder)
+            ? '<img class="est-top-thumb" src="' + esc(esp.imagem) + '" alt="" loading="lazy">'
+            : '<div class="est-top-thumb-vazio"></div>';
+          var nomeHtml = esp.url
+            ? '<a href="' + esc(esp.url) + '"><em>' + esc(esp.nome) + '</em></a>'
+            : '<em>' + esc(esp.nome) + '</em>';
+          li.innerHTML =
+            '<span class="est-top-rank">' + (i + 1) + '</span>' +
+            thumbHtml +
+            '<div class="est-top-info">' + nomeHtml +
+              '<span class="est-top-count">' + esp.total + ' obs.</span>' +
+            '</div>';
+          el.appendChild(li);
+        });
+      }
+
+      renderTop5('top-diurnas',  top5Grupo('diurnas'));
+      renderTop5('top-noturnas', top5Grupo('noturnas'));
 
       // Gráfico 2: famílias
       var topFam = Object.entries(porFamilia).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);

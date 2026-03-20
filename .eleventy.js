@@ -130,8 +130,11 @@ module.exports = function (eleventyConfig) {
     (colecao || []).forEach(esp => {
       if (esp.data && esp.data.tipo === "especie" && esp.data.nome_cientifico) {
         map[esp.data.nome_cientifico] = {
-          grupo:   esp.data.grupo   || null,
-          familia: esp.data.familia || null,
+          grupo:       esp.data.grupo        || null,
+          familia:     esp.data.familia      || null,
+          url:         esp.url               || null,
+          imagem:      esp.data.imagem       || null,
+          placeholder: esp.data.placeholder  || false,
         };
       }
     });

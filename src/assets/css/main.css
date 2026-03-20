@@ -1838,6 +1838,98 @@ button:disabled {
   }
 }
 
+/* Top 5 espécies em estatisticas/especies */
+.est-top-grupos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+}
+
+.est-top-grupo-titulo {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cinza-suave);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cinza-borda);
+}
+
+.est-top-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.est-top-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.est-top-rank {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cinza-suave);
+  width: 1.25rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.est-top-item:nth-child(1) .est-top-rank { color: #c47a00; }
+.est-top-item:nth-child(2) .est-top-rank { color: #64748b; }
+.est-top-item:nth-child(3) .est-top-rank { color: #8b5e3c; }
+
+.est-top-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid var(--cinza-borda);
+  display: block;
+}
+
+.est-top-thumb-vazio {
+  width: 56px;
+  height: 56px;
+  background: var(--cinza-bg);
+  border-radius: 6px;
+  border: 1px solid var(--cinza-borda);
+  flex-shrink: 0;
+}
+
+.est-top-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.est-top-info em {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--cinza-texto);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.est-top-info a em {
+  color: var(--verde-escuro);
+}
+
+.est-top-count {
+  font-size: 0.75rem;
+  color: var(--cinza-suave);
+}
+
+@media (max-width: 600px) {
+  .est-top-grupos {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Stat cards clicáveis em /observacoes/ */
 .obs-stat-link {
   text-decoration: none;
