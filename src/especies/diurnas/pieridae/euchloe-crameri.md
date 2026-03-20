@@ -16,7 +16,7 @@ especies_semelhantes:
 links_externos:
   - url: "http://www.lepidoptera.eu/show.php?ID=5&country=PT"
     nome: "lepidoptera.eu"
-  - url: "http://www.lepiforum.de/lepiwiki.pl?Papilio_Machaon"
+  - url: "https://www.lepiforum.de/lepiwiki.pl?Euchloe_Crameri"
     nome: "lepiforum.de"
 ---
 

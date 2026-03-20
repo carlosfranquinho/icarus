@@ -78,15 +78,6 @@ module.exports = function (eleventyConfig) {
     return `${d.getUTCDate()} de ${meses[d.getUTCMonth()]} de ${d.getUTCFullYear()}`;
   });
 
-  eleventyConfig.addFilter("anoMes", (dateObj) => {
-    const d = new Date(dateObj);
-    return `${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
-  });
-
-  eleventyConfig.addFilter("ano", (dateObj) => {
-    return new Date(dateObj).getUTCFullYear();
-  });
-
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     const d = new Date(dateObj);
     return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
@@ -164,55 +155,6 @@ module.exports = function (eleventyConfig) {
       }
     });
     return `<svg width="${W}" height="${H + labelH}" viewBox="0 0 ${W} ${H + labelH}" role="img" aria-label="Fenograma de observações"><title>Fenograma mensal</title>${bars}</svg>`;
-  });
-
-  // Filter: gera SVG do mapa UTM 1×1km (retorna string SVG)
-  eleventyConfig.addFilter("svgMapaUTM", (obs) => {
-    const COL = {J:0,K:1,L:2,M:3,N:4,P:5,Q:6,R:7};
-    const ROW = {A:0,B:1,C:2,D:3,E:4,F:5,G:6,H:7,J:8,K:9,L:10,M:11,N:12,P:13,Q:14,R:15,S:16,T:17,U:18,V:19};
-    const squareCounts = {};
-    (obs || []).forEach(o => {
-      if (o.utm1k && o.utm1k.length >= 6) {
-        const col = o.utm1k[0];
-        const row = o.utm1k[1];
-        const e = parseInt(o.utm1k.substring(2, 4), 10);
-        const n = parseInt(o.utm1k.substring(4, 6), 10);
-        if (col in COL && row in ROW) {
-          const absE = COL[col] * 100 + e;
-          const absN = ROW[row] * 100 + n;
-          const key = `${absE},${absN}`;
-          squareCounts[key] = (squareCounts[key] || 0) + 1;
-        }
-      }
-    });
-    const keys = Object.keys(squareCounts);
-    if (!keys.length) return "";
-    const allE = keys.map(k => parseInt(k.split(",")[0]));
-    const allN = keys.map(k => parseInt(k.split(",")[1]));
-    const minE = Math.min(...allE) - 2;
-    const maxE = Math.max(...allE) + 2;
-    const minN = Math.min(...allN) - 2;
-    const maxN = Math.max(...allN) + 2;
-    const cellPx = 10;
-    const cols = maxE - minE + 1;
-    const rows = maxN - minN + 1;
-    const W = cols * cellPx;
-    const H = rows * cellPx;
-    let rects = `<rect x="0" y="0" width="${W}" height="${H}" fill="#f8fafc"/>`;
-    for (let e = minE; e <= maxE; e++) {
-      for (let n = minN; n <= maxN; n++) {
-        const x = (e - minE) * cellPx;
-        const y = (maxN - n) * cellPx;
-        rects += `<rect x="${x}" y="${y}" width="${cellPx}" height="${cellPx}" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>`;
-      }
-    }
-    Object.entries(squareCounts).forEach(([key, count]) => {
-      const [ae, an] = key.split(",").map(Number);
-      const x = (ae - minE) * cellPx;
-      const y = (maxN - an) * cellPx;
-      rects += `<rect x="${x}" y="${y}" width="${cellPx}" height="${cellPx}" fill="#06b6d4" stroke="#0891b2" stroke-width="0.5"><title>${count} obs.</title></rect>`;
-    });
-    return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Mapa UTM de observações" style="max-width:100%;height:auto;">${rects}</svg>`;
   });
 
   // Transform: converte pares <p><img></p> + <p>legenda</p> em <figure> + <figcaption>

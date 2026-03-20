@@ -630,42 +630,6 @@ button:disabled {
   font-family: var(--fonte-sc);
 }
 
-.grelha-familias-home {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: .75rem;
-}
-
-.card-familia-home {
-  display: block;
-  text-decoration: none;
-  border-radius: var(--raio);
-  overflow: hidden;
-  background: var(--branco);
-  border: 1px solid var(--cinza-borda);
-  box-shadow: var(--sombra-s);
-  transition: box-shadow .2s, transform .2s;
-}
-
-.card-familia-home:hover {
-  box-shadow: var(--sombra-m);
-  transform: translateY(-2px);
-}
-
-.card-familia-home img {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
-}
-
-.card-familia-home span {
-  display: block;
-  padding: .5rem .6rem;
-  font-family: var(--fonte-sc);
-  font-size: .82rem;
-  color: var(--cinza-texto);
-}
-
 /* --- Top espécies na homepage --- */
 .lista-top-especies .top-rank {
   min-width: 1.3rem;

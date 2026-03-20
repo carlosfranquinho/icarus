@@ -31,7 +31,7 @@ permalink: "/atividades/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumb
             {% endif %}
           </div>
           <p class="lista-post-card-titulo">{{ post.data.title }}</p>
-          {% if post.data.descricao %}
+          {% if post.data.descricao and post.data.descricao != post.data.local %}
           <p class="lista-post-card-resumo">{{ post.data.descricao }}</p>
           {% endif %}
           {% if post.data.local %}

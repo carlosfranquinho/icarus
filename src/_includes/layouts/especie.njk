@@ -5,7 +5,7 @@ extraCSS:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
 ---
 <div class="container">
-  <nav aria-label="Caminho" style="font-size:0.85rem; color: var(--cor-texto-suave); margin-bottom:1.5rem;">
+  <nav aria-label="Caminho" style="font-size:0.85rem; color: var(--cinza-suave); margin-bottom:1.5rem;">
     <a href="/">Início</a> ›
     {% if grupo == "diurnas" %}
     <a href="/borboletas-diurnas/">Borboletas diurnas</a> ›
@@ -261,11 +261,11 @@ carregarPerimetro(map);
     {% endif %}
 
     {% if links_externos and links_externos.length > 0 %}
-    <div class="secao-links-externos" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-claro);">
+    <div class="secao-links-externos" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cinza-borda);">
       <h2>Ver também / Links</h2>
       <ul style="list-style-type: none; padding: 0; display:flex; gap:1rem; flex-wrap:wrap;">
         {% for link in links_externos %}
-        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:0.5rem 1rem; background:var(--branco); border-radius:30px; border:1px solid var(--cinza-claro); font-size:0.95rem; font-weight:500;">↗ {{ link.nome }}</a></li>
+        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:0.5rem 1rem; background:var(--branco); border-radius:30px; border:1px solid var(--cinza-borda); font-size:0.95rem; font-weight:500;">↗ {{ link.nome }}</a></li>
         {% endfor %}
       </ul>
     </div>
