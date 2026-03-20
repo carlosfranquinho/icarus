@@ -10,6 +10,9 @@ permalink: /observacoes/
     <div>
       <h1 class="titulo-secao">Observações de campo</h1>
       <p class="subtitulo" id="obs-subtitulo">Registo do Grupo icarus.</p>
+      {% if observacoesInfo.ultimaAtualizacao %}
+      <p class="obs-atualizado">Última actualização: {{ observacoesInfo.ultimaAtualizacao | dataPortugues }}</p>
+      {% endif %}
     </div>
     <div class="obs-stats" id="obs-stats" style="display:none;">
       <a href="/estatisticas/observacoes/" class="obs-stat obs-stat-link" title="Ver estatísticas de observações">
