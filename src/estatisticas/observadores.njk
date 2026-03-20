@@ -47,11 +47,9 @@ permalink: /estatisticas/observadores/
     <div class="est-grid">
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo">Top 20 observadores</p>
+        <p class="est-card-titulo">Top 10 observadores</p>
         <p class="est-card-subtitulo">Total de observações registadas por cada participante</p>
-        <div class="est-chart-wrap est-chart-wrap-muito-alto">
-          <canvas id="g-top-obs"></canvas>
-        </div>
+        <div id="chart-top-obs" class="est-col-chart"></div>
       </div>
 
       <div class="est-card">
@@ -99,6 +97,57 @@ permalink: /estatisticas/observadores/
           document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
         });
     });
+
+    function esc(str) {
+      return String(str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    var CORES_OBS = ['#0891b2','#f59e0b','#22c55e','#f43f5e','#a855f7',
+                     '#14b8a6','#ef4444','#f97316','#8b5cf6','#0284c7'];
+    var CHART_H = 180;
+
+    function renderTopObs(containerId, lista) {
+      var container = document.getElementById(containerId);
+      if (!lista.length) return;
+      var maxTotal = lista[0][1];
+
+      var barsDiv   = document.createElement('div');
+      barsDiv.className = 'est-col-bars-area';
+      var axisDiv   = document.createElement('div');
+      axisDiv.className = 'est-col-axis';
+      var labelsDiv = document.createElement('div');
+      labelsDiv.className = 'est-col-labels';
+
+      lista.forEach(function (e, i) {
+        var nome  = e[0], total = e[1];
+        var barH  = Math.max(4, Math.round(total / maxTotal * CHART_H));
+        var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.65).toFixed(2);
+        var corBarra  = 'rgba(8,145,178,' + alpha + ')';
+        var corAvatar = CORES_OBS[i % CORES_OBS.length];
+        var inicial   = (nome || '?')[0].toUpperCase();
+
+        var bwrap = document.createElement('div');
+        bwrap.className = 'est-col-bar-wrap';
+        bwrap.innerHTML =
+          '<span class="est-col-spacer"></span>' +
+          '<span class="est-col-count">' + total + '</span>' +
+          '<div class="est-col-bar" style="height:' + barH + 'px;background:' + corBarra + '"></div>';
+        barsDiv.appendChild(bwrap);
+
+        var label = document.createElement('div');
+        label.className = 'est-col-label';
+        label.innerHTML =
+          '<div class="est-col-avatar" style="background:' + corAvatar + '">' + esc(inicial) + '</div>' +
+          '<span class="est-col-nome">' + esc(nome) + '</span>';
+        labelsDiv.appendChild(label);
+      });
+
+      container.appendChild(barsDiv);
+      container.appendChild(axisDiv);
+      container.appendChild(labelsDiv);
+    }
 
     function inicializar(dados) {
       var porObs = {}, obsPorAno = {}, especiesPorObs = {};
@@ -160,21 +209,12 @@ permalink: /estatisticas/observadores/
         };
       }
 
-      // Cores para donut (top 5 + outros)
+      var obsSorted = Object.entries(porObs).sort(function (a, b) { return b[1] - a[1]; });
+      var top5 = obsSorted.slice(0, 5);
       var coresPaleta = ['#0891b2','#f59e0b','#22c55e','#f43f5e','#a855f7','#cbd5e1'];
 
-      // Gráfico 1: top 20 observadores
-      var topObs = Object.entries(porObs).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 20);
-      new Chart(document.getElementById('g-top-obs'), {
-        type: 'bar',
-        data: { labels: topObs.map(function (e) { return e[0]; }),
-          datasets: [{ data: topObs.map(function (e) { return e[1]; }),
-            backgroundColor: topObs.map(function (e, i) {
-              return i < 5 ? coresPaleta[i] : 'rgba(8,145,178,0.45)';
-            }),
-            borderRadius: 4 }] },
-        options: optsHBar()
-      });
+      // Gráfico 1: top 10 observadores (colunas verticais)
+      renderTopObs('chart-top-obs', obsSorted.slice(0, 10));
 
       // Gráfico 2: observadores activos por ano
       var anos = Object.keys(obsPorAno).sort();
@@ -191,7 +231,6 @@ permalink: /estatisticas/observadores/
       });
 
       // Gráfico 3: partilha das observações (donut)
-      var top5 = topObs.slice(0, 5);
       var totalGeral = contagens.reduce(function (s, v) { return s + v; }, 0);
       var top5Total  = top5.reduce(function (s, e) { return s + e[1]; }, 0);
       new Chart(document.getElementById('g-partilha'), {
@@ -223,7 +262,7 @@ permalink: /estatisticas/observadores/
         type: 'bar',
         data: { labels: divTop.map(function (e) { return e[0]; }),
           datasets: [{ data: divTop.map(function (e) { return e[1]; }),
-            backgroundColor: divTop.map(function (e, i) {
+            backgroundColor: divTop.map(function (e) {
               return 'rgba(34,197,94,' + (0.4 + 0.6 * e[1] / divTop[0][1]).toFixed(2) + ')';
             }),
             borderRadius: 4 }] },
