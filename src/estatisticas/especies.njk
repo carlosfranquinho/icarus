@@ -47,18 +47,15 @@ permalink: /estatisticas/especies/
     <div class="est-grid">
 
       <div class="est-card est-card-largo">
-        <p class="est-card-titulo">Top 5 espécies mais observadas</p>
-        <p class="est-card-subtitulo">Espécies com maior número de registos, por grupo</p>
-        <div class="est-top-grupos">
-          <div>
-            <h3 class="est-top-grupo-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Diurnas</h3>
-            <ol class="est-top-lista" id="top-diurnas"></ol>
-          </div>
-          <div>
-            <h3 class="est-top-grupo-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Noturnas</h3>
-            <ol class="est-top-lista" id="top-noturnas"></ol>
-          </div>
-        </div>
+        <p class="est-card-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Top 5 diurnas mais observadas</p>
+        <p class="est-card-subtitulo">Espécies diurnas com maior número de registos</p>
+        <div id="chart-diurnas" class="est-col-chart"></div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo"><span class="badge-tipo badge-noturnas-lg">☾</span> Top 5 noturnas mais observadas</p>
+        <p class="est-card-subtitulo">Espécies noturnas com maior número de registos</p>
+        <div id="chart-noturnas" class="est-col-chart"></div>
       </div>
 
       <div class="est-card est-card-largo">
@@ -185,7 +182,21 @@ permalink: /estatisticas/especies/
           .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
       }
 
-      // Top 5 por grupo — renderização visual com thumbs
+      // Fallback de imagem: outra espécie da mesma família
+      var familiaImagem = {};
+      Object.entries(ESPECIE_META).forEach(function (entry) {
+        var meta = entry[1];
+        if (meta.familia && meta.imagem && !meta.placeholder && !familiaImagem[meta.familia]) {
+          familiaImagem[meta.familia] = meta.imagem;
+        }
+      });
+
+      function getImagem(esp) {
+        if (esp.imagem && !esp.placeholder) return esp.imagem;
+        if (esp.familia && familiaImagem[esp.familia]) return familiaImagem[esp.familia];
+        return null;
+      }
+
       function top5Grupo(grupo) {
         return Object.entries(porEspecie)
           .filter(function (e) {
@@ -196,33 +207,59 @@ permalink: /estatisticas/especies/
           .slice(0, 5)
           .map(function (e) {
             var meta = ESPECIE_META[e[0]];
-            return { nome: e[0], total: e[1], url: meta.url, imagem: meta.imagem, placeholder: meta.placeholder };
+            return { nome: e[0], total: e[1], url: meta.url, imagem: meta.imagem,
+                     placeholder: meta.placeholder, familia: meta.familia };
           });
       }
 
-      function renderTop5(elId, lista) {
-        var el = document.getElementById(elId);
+      var CHART_H = 180; // altura máxima das barras em px
+
+      function renderColChart(containerId, lista, grupo) {
+        var container = document.getElementById(containerId);
+        if (!lista.length) return;
+        var maxTotal = lista[0].total;
+        var corBase  = grupo === 'diurnas' ? '245,158,11' : '99,102,241';
+
+        var barsDiv   = document.createElement('div');
+        barsDiv.className = 'est-col-bars-area';
+        var axisDiv   = document.createElement('div');
+        axisDiv.className = 'est-col-axis';
+        var labelsDiv = document.createElement('div');
+        labelsDiv.className = 'est-col-labels';
+
         lista.forEach(function (esp, i) {
-          var li = document.createElement('li');
-          li.className = 'est-top-item';
-          var thumbHtml = (esp.imagem && !esp.placeholder)
-            ? '<img class="est-top-thumb" src="' + esc(esp.imagem) + '" alt="" loading="lazy">'
-            : '<div class="est-top-thumb-vazio"></div>';
+          var barH  = Math.max(4, Math.round(esp.total / maxTotal * CHART_H));
+          var alpha = (1 - i * 0.14).toFixed(2);
+          var cor   = 'rgba(' + corBase + ',' + alpha + ')';
+          var imgSrc = getImagem(esp);
+          var thumbHtml = imgSrc
+            ? '<img class="est-col-thumb" src="' + esc(imgSrc) + '" alt="" loading="lazy">'
+            : '<div class="est-col-thumb-vazio"></div>';
           var nomeHtml = esp.url
-            ? '<a href="' + esc(esp.url) + '"><em>' + esc(esp.nome) + '</em></a>'
-            : '<em>' + esc(esp.nome) + '</em>';
-          li.innerHTML =
-            '<span class="est-top-rank">' + (i + 1) + '</span>' +
-            thumbHtml +
-            '<div class="est-top-info">' + nomeHtml +
-              '<span class="est-top-count">' + esp.total + ' obs.</span>' +
-            '</div>';
-          el.appendChild(li);
+            ? '<a class="est-col-nome" href="' + esc(esp.url) + '"><em>' + esc(esp.nome) + '</em></a>'
+            : '<span class="est-col-nome"><em>' + esc(esp.nome) + '</em></span>';
+
+          var bwrap = document.createElement('div');
+          bwrap.className = 'est-col-bar-wrap';
+          bwrap.innerHTML =
+            '<span class="est-col-spacer"></span>' +
+            '<span class="est-col-count">' + esp.total + '</span>' +
+            '<div class="est-col-bar" style="height:' + barH + 'px;background:' + cor + '"></div>';
+          barsDiv.appendChild(bwrap);
+
+          var label = document.createElement('div');
+          label.className = 'est-col-label';
+          label.innerHTML = thumbHtml + nomeHtml;
+          labelsDiv.appendChild(label);
         });
+
+        container.appendChild(barsDiv);
+        container.appendChild(axisDiv);
+        container.appendChild(labelsDiv);
       }
 
-      renderTop5('top-diurnas',  top5Grupo('diurnas'));
-      renderTop5('top-noturnas', top5Grupo('noturnas'));
+      renderColChart('chart-diurnas',  top5Grupo('diurnas'),  'diurnas');
+      renderColChart('chart-noturnas', top5Grupo('noturnas'), 'noturnas');
 
       // Gráfico 2: famílias
       var topFam = Object.entries(porFamilia).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);
