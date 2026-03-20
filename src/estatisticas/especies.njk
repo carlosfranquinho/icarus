@@ -281,7 +281,7 @@ permalink: /estatisticas/especies/
           .map(function (e) {
             var fam = e[0];
             var meta = FAMILIA_META[fam] || {};
-            var img = familiaImagem[fam] || meta.imagem || null;
+            var img = meta.imagem || null;
             var corFundo = meta.corFundo || null;
             return { nome: fam, total: e[1], url: meta.url || null,
                      imagem: img, placeholder: false, familia: null,
