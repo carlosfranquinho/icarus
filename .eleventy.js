@@ -124,6 +124,20 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(map);
   });
 
+  // Filter: gera JSON {nome_cientifico: {grupo, familia}} para as páginas de estatísticas
+  eleventyConfig.addFilter("especieMetaJson", (colecao) => {
+    const map = {};
+    (colecao || []).forEach(esp => {
+      if (esp.data && esp.data.tipo === "especie" && esp.data.nome_cientifico) {
+        map[esp.data.nome_cientifico] = {
+          grupo:   esp.data.grupo   || null,
+          familia: esp.data.familia || null,
+        };
+      }
+    });
+    return JSON.stringify(map);
+  });
+
   // Filter: filtra observações por espécie
   eleventyConfig.addFilter("observacoesPorEspecie", (obs, nome) => {
     return (obs || []).filter(o => o.nome_cientifico === nome);

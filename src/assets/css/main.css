@@ -1570,6 +1570,171 @@ button:disabled {
   }
 }
 
+/* --- Páginas de Estatísticas --- */
+.est-header {
+  margin-bottom: 0.25rem;
+}
+
+.est-volta {
+  font-size: 0.82rem;
+  color: var(--cinza-suave);
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.est-volta:hover {
+  color: var(--cinza-texto);
+}
+
+.est-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--cinza-borda);
+  margin-bottom: 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.est-nav-tab {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cinza-suave);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.est-nav-tab:hover {
+  color: var(--cinza-texto);
+}
+
+.est-nav-tab.activo {
+  color: var(--verde-escuro);
+  border-bottom-color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+.est-hero {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.est-hero-stat {
+  flex: 1;
+  min-width: 120px;
+  background: var(--cinza-bg);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.est-hero-stat-valor {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+  line-height: 1.1;
+}
+
+.est-hero-stat-label {
+  font-size: 0.7rem;
+  color: var(--cinza-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.2rem;
+}
+
+.est-loading {
+  text-align: center;
+  color: var(--cinza-suave);
+  font-style: italic;
+  padding: 3rem 0;
+}
+
+.est-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.est-card {
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.est-card-largo {
+  grid-column: 1 / -1;
+}
+
+.est-card-titulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  margin: 0 0 0.15rem;
+}
+
+.est-card-subtitulo {
+  font-size: 0.78rem;
+  color: var(--cinza-suave);
+  margin: 0 0 1.25rem;
+}
+
+.est-chart-wrap {
+  position: relative;
+  height: 260px;
+}
+
+.est-chart-wrap-alto {
+  height: 400px;
+}
+
+.est-chart-wrap-muito-alto {
+  height: 540px;
+}
+
+@media (max-width: 640px) {
+  .est-hero {
+    gap: 0.5rem;
+  }
+
+  .est-hero-stat {
+    min-width: calc(50% - 0.25rem);
+    flex: none;
+    width: calc(50% - 0.25rem);
+  }
+
+  .est-hero-stat-valor {
+    font-size: 1.35rem;
+  }
+
+  .est-nav-tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Stat cards clicáveis em /observacoes/ */
+.obs-stat-link {
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+
+.obs-stat-link:hover {
+  border-color: var(--verde-escuro);
+  box-shadow: 0 2px 8px rgba(8,145,178,0.15);
+  transform: translateY(-2px);
+}
+
+.obs-stat-link:hover .obs-stat-valor {
+  color: var(--verde-escuro);
+}
+
 /* --- Página Observações --- */
 .obs-header {
   display: flex;

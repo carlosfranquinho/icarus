@@ -1,0 +1,234 @@
+---
+layout: layouts/base.njk
+title: "Estatísticas — Espécies"
+descricao: "Análise estatística das espécies observadas pelo Grupo icarus: top espécies, famílias, taxa de descoberta e distribuição por grupo."
+permalink: /estatisticas/especies/
+---
+<div class="container">
+
+  <header class="est-header">
+    <div>
+      <a href="/observacoes/" class="est-volta">← Observações</a>
+      <h1 class="titulo-secao">Estatísticas</h1>
+    </div>
+    <nav class="est-nav" aria-label="Secções de estatísticas">
+      <a href="/estatisticas/observacoes/" class="est-nav-tab">Observações</a>
+      <a href="/estatisticas/especies/" class="est-nav-tab activo">Espécies</a>
+      <a href="/estatisticas/observadores/" class="est-nav-tab">Observadores</a>
+    </nav>
+  </header>
+
+  <div class="est-hero" id="est-hero" style="display:none;">
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-total">—</span>
+      <span class="est-hero-stat-label">espécies observadas</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-diurnas">—</span>
+      <span class="est-hero-stat-label">diurnas com ficha</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-noturnas">—</span>
+      <span class="est-hero-stat-label">noturnas com ficha</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-familias">—</span>
+      <span class="est-hero-stat-label">famílias distintas</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-primeiro-ano">—</span>
+      <span class="est-hero-stat-label">1ª observação</span>
+    </div>
+  </div>
+
+  <p class="est-loading" id="est-loading">A carregar dados…</p>
+
+  <div id="est-conteudo" style="display:none;">
+    <div class="est-grid">
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Top 20 espécies mais observadas</p>
+        <p class="est-card-subtitulo">Total de registos por espécie (todas as observações)</p>
+        <div class="est-chart-wrap est-chart-wrap-muito-alto">
+          <canvas id="g-top-especies"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Famílias com mais observações</p>
+        <p class="est-card-subtitulo">Total de registos por família taxonómica (top 15)</p>
+        <div class="est-chart-wrap est-chart-wrap-alto">
+          <canvas id="g-familias"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Diurnas vs Noturnas</p>
+        <p class="est-card-subtitulo">Espécies únicas com ficha por grupo</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-grupos"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Taxa de descoberta</p>
+        <p class="est-card-subtitulo">Novas espécies registadas pela primeira vez por ano</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-novas-ano"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+
+    function carregarChartJS(cb) {
+      if (window.Chart) { cb(); return; }
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
+      s.onload = cb;
+      document.head.appendChild(s);
+    }
+
+    carregarChartJS(function () {
+      fetch('/dados/observacoes.json')
+        .then(function (r) { return r.json(); })
+        .then(inicializar)
+        .catch(function () {
+          document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+        });
+    });
+
+    function inicializar(dados) {
+      var porEspecie = {}, porFamilia = {}, primeiraObs = {};
+      var especiesDiurnas = new Set(), especiesNoturnas = new Set(), especiesSem = new Set();
+      var familiasSet = new Set();
+
+      dados.forEach(function (o) {
+        if (!o.nome_cientifico) return;
+        var qtd = o.quantidade || 1;
+        porEspecie[o.nome_cientifico] = (porEspecie[o.nome_cientifico] || 0) + qtd;
+
+        var meta = ESPECIE_META[o.nome_cientifico];
+        var fam = meta && meta.familia ? meta.familia : null;
+        if (fam) {
+          porFamilia[fam] = (porFamilia[fam] || 0) + qtd;
+          familiasSet.add(fam);
+        }
+        if (meta && meta.grupo === 'diurnas')       especiesDiurnas.add(o.nome_cientifico);
+        else if (meta && meta.grupo === 'noturnas') especiesNoturnas.add(o.nome_cientifico);
+        else                                         especiesSem.add(o.nome_cientifico);
+
+        if (o.data) {
+          var ano = o.data.substring(0, 4);
+          if (!primeiraObs[o.nome_cientifico] || o.data < primeiraObs[o.nome_cientifico]) {
+            primeiraObs[o.nome_cientifico] = o.data;
+          }
+        }
+      });
+
+      // Novas espécies por ano
+      var novasPorAno = {};
+      Object.entries(primeiraObs).forEach(function (e) {
+        var ano = e[1].substring(0, 4);
+        novasPorAno[ano] = (novasPorAno[ano] || 0) + 1;
+      });
+
+      var primeiroAno = Object.keys(novasPorAno).sort()[0] || '—';
+
+      // Hero
+      document.getElementById('sh-total').textContent      = Object.keys(porEspecie).length;
+      document.getElementById('sh-diurnas').textContent    = especiesDiurnas.size;
+      document.getElementById('sh-noturnas').textContent   = especiesNoturnas.size;
+      document.getElementById('sh-familias').textContent   = familiasSet.size;
+      document.getElementById('sh-primeiro-ano').textContent = primeiroAno;
+      document.getElementById('est-hero').style.display    = '';
+      document.getElementById('est-loading').style.display = 'none';
+      document.getElementById('est-conteudo').style.display = '';
+
+      Chart.defaults.font.family = 'system-ui, sans-serif';
+      Chart.defaults.font.size   = 11;
+      var grid = 'rgba(100,116,139,0.12)', tick = '#94a3b8';
+
+      function optsVBar() {
+        return { responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: tick } },
+            y: { grid: { color: grid },    ticks: { color: tick } }
+          }
+        };
+      }
+      function optsHBar(maxItems) {
+        return { responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: grid }, ticks: { color: tick } },
+            y: { grid: { display: false }, ticks: { color: tick, font: { size: 10 } } }
+          }
+        };
+      }
+
+      // Gráfico 1: top 20 espécies
+      var topEsp = Object.entries(porEspecie).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 20);
+      new Chart(document.getElementById('g-top-especies'), {
+        type: 'bar',
+        data: { labels: topEsp.map(function (e) { return e[0]; }),
+          datasets: [{ data: topEsp.map(function (e) { return e[1]; }),
+            backgroundColor: topEsp.map(function (e, i) {
+              return 'rgba(8,145,178,' + (0.4 + 0.6 * e[1] / topEsp[0][1]).toFixed(2) + ')';
+            }),
+            borderRadius: 4 }] },
+        options: Object.assign(optsHBar(), {
+          plugins: { legend: { display: false },
+            tooltip: { callbacks: { label: function (ctx) {
+              return ' ' + ctx.parsed.x + ' observações';
+            }, title: function (items) {
+              return items[0].label;
+            } } }
+          }
+        })
+      });
+
+      // Gráfico 2: famílias
+      var topFam = Object.entries(porFamilia).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);
+      var paleta = ['#0891b2','#0ea5e9','#38bdf8','#7dd3fc','#bae6fd',
+                    '#06b6d4','#22d3ee','#67e8f9','#a5f3fc','#e0f2fe',
+                    '#0284c7','#0369a1','#075985','#0c4a6e','#082f49'];
+      new Chart(document.getElementById('g-familias'), {
+        type: 'bar',
+        data: { labels: topFam.map(function (e) { return e[0]; }),
+          datasets: [{ data: topFam.map(function (e) { return e[1]; }),
+            backgroundColor: topFam.map(function (e, i) { return paleta[i % paleta.length]; }),
+            borderRadius: 4 }] },
+        options: optsHBar()
+      });
+
+      // Gráfico 3: diurnas vs noturnas
+      new Chart(document.getElementById('g-grupos'), {
+        type: 'doughnut',
+        data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
+          datasets: [{ data: [especiesDiurnas.size, especiesNoturnas.size, especiesSem.size],
+            backgroundColor: ['#f59e0b', '#6366f1', '#e2e8f0'],
+            borderWidth: 2, borderColor: '#ffffff' }] },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '65%',
+          plugins: { legend: { position: 'bottom',
+            labels: { color: '#64748b', padding: 14, font: { size: 12 } } } } }
+      });
+
+      // Gráfico 4: novas espécies por ano
+      var anosNovas = Object.keys(novasPorAno).sort();
+      new Chart(document.getElementById('g-novas-ano'), {
+        type: 'bar',
+        data: { labels: anosNovas, datasets: [{ data: anosNovas.map(function (a) { return novasPorAno[a]; }),
+          backgroundColor: '#22c55e', borderRadius: 4 }] },
+        options: optsVBar()
+      });
+    }
+  })();
+  </script>
+
+</div>

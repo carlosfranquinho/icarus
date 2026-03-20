@@ -1,0 +1,217 @@
+---
+layout: layouts/base.njk
+title: "Estatísticas — Observações"
+descricao: "Análise estatística das observações de campo do Grupo icarus: evolução anual, sazonalidade, quadrículas e grupos."
+permalink: /estatisticas/observacoes/
+---
+<div class="container">
+
+  <header class="est-header">
+    <div>
+      <a href="/observacoes/" class="est-volta">← Observações</a>
+      <h1 class="titulo-secao">Estatísticas</h1>
+    </div>
+    <nav class="est-nav" aria-label="Secções de estatísticas">
+      <a href="/estatisticas/observacoes/" class="est-nav-tab activo">Observações</a>
+      <a href="/estatisticas/especies/" class="est-nav-tab">Espécies</a>
+      <a href="/estatisticas/observadores/" class="est-nav-tab">Observadores</a>
+    </nav>
+  </header>
+
+  <div class="est-hero" id="est-hero" style="display:none;">
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-total">—</span>
+      <span class="est-hero-stat-label">observações totais</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-anos">—</span>
+      <span class="est-hero-stat-label">anos de actividade</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-quadriculas">—</span>
+      <span class="est-hero-stat-label">quadrículas visitadas</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-obs">—</span>
+      <span class="est-hero-stat-label">observadores</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-mes-pico">—</span>
+      <span class="est-hero-stat-label">mês de pico</span>
+    </div>
+  </div>
+
+  <p class="est-loading" id="est-loading">A carregar dados…</p>
+
+  <div id="est-conteudo" style="display:none;">
+    <div class="est-grid">
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Observações por ano</p>
+        <p class="est-card-subtitulo">Evolução do número de registos ao longo do tempo</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-por-ano"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Actividade mensal</p>
+        <p class="est-card-subtitulo">Padrão sazonal — total acumulado por mês do ano</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-por-mes"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Diurnas vs noturnas</p>
+        <p class="est-card-subtitulo">Distribuição das observações por grupo</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-grupos"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Quadrículas mais visitadas</p>
+        <p class="est-card-subtitulo">Top 15 quadrículas UTM 1×1 km por número de observações</p>
+        <div class="est-chart-wrap est-chart-wrap-alto">
+          <canvas id="g-quadriculas"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+    var MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    var MESES_LONGO = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+    function carregarChartJS(cb) {
+      if (window.Chart) { cb(); return; }
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
+      s.onload = cb;
+      document.head.appendChild(s);
+    }
+
+    carregarChartJS(function () {
+      fetch('/dados/observacoes.json')
+        .then(function (r) { return r.json(); })
+        .then(inicializar)
+        .catch(function () {
+          document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+        });
+    });
+
+    function inicializar(dados) {
+      var porAno = {}, porMes = Array(12).fill(0), porUtm = {};
+      var porGrupo = { diurnas: 0, noturnas: 0, outro: 0 };
+      var anosSet = new Set(), utmSet = new Set(), obsSet = new Set();
+
+      dados.forEach(function (o) {
+        var qtd = o.quantidade || 1;
+        if (o.data) {
+          var ano = o.data.substring(0, 4);
+          var mes = parseInt(o.data.substring(5, 7), 10) - 1;
+          porAno[ano] = (porAno[ano] || 0) + qtd;
+          if (mes >= 0 && mes < 12) porMes[mes] += qtd;
+          anosSet.add(ano);
+        }
+        if (o.utm1k) {
+          var utm4 = o.utm1k.substring(0, 4);
+          porUtm[utm4] = (porUtm[utm4] || 0) + qtd;
+          utmSet.add(utm4);
+        }
+        if (o.observador) obsSet.add(o.observador);
+        var meta = ESPECIE_META[o.nome_cientifico];
+        if (meta && meta.grupo === 'diurnas')       porGrupo.diurnas += qtd;
+        else if (meta && meta.grupo === 'noturnas') porGrupo.noturnas += qtd;
+        else                                         porGrupo.outro += qtd;
+      });
+
+      var mesPicoIdx = porMes.indexOf(Math.max.apply(null, porMes));
+
+      // Hero
+      document.getElementById('sh-total').textContent       = dados.length.toLocaleString('pt-PT');
+      document.getElementById('sh-anos').textContent        = anosSet.size;
+      document.getElementById('sh-quadriculas').textContent = utmSet.size;
+      document.getElementById('sh-obs').textContent         = obsSet.size;
+      document.getElementById('sh-mes-pico').textContent    = MESES_LONGO[mesPicoIdx];
+      document.getElementById('est-hero').style.display     = '';
+      document.getElementById('est-loading').style.display  = 'none';
+      document.getElementById('est-conteudo').style.display = '';
+
+      Chart.defaults.font.family = 'system-ui, sans-serif';
+      Chart.defaults.font.size   = 11;
+      var grid = 'rgba(100,116,139,0.12)', tick = '#94a3b8';
+
+      function optsVBar() {
+        return { responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: tick } },
+            y: { grid: { color: grid },    ticks: { color: tick } }
+          }
+        };
+      }
+      function optsHBar() {
+        return { responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: grid }, ticks: { color: tick } },
+            y: { grid: { display: false }, ticks: { color: tick } }
+          }
+        };
+      }
+
+      // Gráfico 1: por ano
+      var anos = Object.keys(porAno).sort();
+      new Chart(document.getElementById('g-por-ano'), {
+        type: 'bar',
+        data: { labels: anos, datasets: [{ data: anos.map(function (a) { return porAno[a]; }),
+          backgroundColor: '#0891b2', borderRadius: 4 }] },
+        options: optsVBar()
+      });
+
+      // Gráfico 2: por mês (intensidade proporcional ao valor)
+      var maxMes = Math.max.apply(null, porMes);
+      new Chart(document.getElementById('g-por-mes'), {
+        type: 'bar',
+        data: { labels: MESES, datasets: [{ data: porMes,
+          backgroundColor: porMes.map(function (v) {
+            return 'rgba(8,145,178,' + (0.25 + 0.75 * v / maxMes).toFixed(2) + ')';
+          }),
+          borderRadius: 4 }] },
+        options: optsVBar()
+      });
+
+      // Gráfico 3: diurnas vs noturnas
+      new Chart(document.getElementById('g-grupos'), {
+        type: 'doughnut',
+        data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
+          datasets: [{ data: [porGrupo.diurnas, porGrupo.noturnas, porGrupo.outro],
+            backgroundColor: ['#f59e0b', '#6366f1', '#e2e8f0'], borderWidth: 2,
+            borderColor: '#ffffff' }] },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '65%',
+          plugins: { legend: { position: 'bottom',
+            labels: { color: '#64748b', padding: 14, font: { size: 12 } } } } }
+      });
+
+      // Gráfico 4: top 15 quadrículas
+      var topUtm = Object.entries(porUtm).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 15);
+      new Chart(document.getElementById('g-quadriculas'), {
+        type: 'bar',
+        data: { labels: topUtm.map(function (e) { return e[0]; }),
+          datasets: [{ data: topUtm.map(function (e) { return e[1]; }),
+            backgroundColor: topUtm.map(function (e, i) {
+              return 'rgba(8,145,178,' + (0.4 + 0.6 * e[1] / topUtm[0][1]).toFixed(2) + ')';
+            }),
+            borderRadius: 4 }] },
+        options: optsHBar()
+      });
+    }
+  })();
+  </script>
+
+</div>

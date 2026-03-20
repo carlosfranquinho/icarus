@@ -1,0 +1,241 @@
+---
+layout: layouts/base.njk
+title: "Estatísticas — Observadores"
+descricao: "Análise estatística dos observadores do Grupo icarus: top contribuidores, actividade por ano, diversidade de espécies."
+permalink: /estatisticas/observadores/
+---
+<div class="container">
+
+  <header class="est-header">
+    <div>
+      <a href="/observacoes/" class="est-volta">← Observações</a>
+      <h1 class="titulo-secao">Estatísticas</h1>
+    </div>
+    <nav class="est-nav" aria-label="Secções de estatísticas">
+      <a href="/estatisticas/observacoes/" class="est-nav-tab">Observações</a>
+      <a href="/estatisticas/especies/" class="est-nav-tab">Espécies</a>
+      <a href="/estatisticas/observadores/" class="est-nav-tab activo">Observadores</a>
+    </nav>
+  </header>
+
+  <div class="est-hero" id="est-hero" style="display:none;">
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-total">—</span>
+      <span class="est-hero-stat-label">observadores</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-top">—</span>
+      <span class="est-hero-stat-label">obs. do top contribuidor</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-media">—</span>
+      <span class="est-hero-stat-label">média obs./observador</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-activos">—</span>
+      <span class="est-hero-stat-label">com 10 ou mais obs.</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-ano-pico">—</span>
+      <span class="est-hero-stat-label">ano com mais observadores</span>
+    </div>
+  </div>
+
+  <p class="est-loading" id="est-loading">A carregar dados…</p>
+
+  <div id="est-conteudo" style="display:none;">
+    <div class="est-grid">
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Top 20 observadores</p>
+        <p class="est-card-subtitulo">Total de observações registadas por cada participante</p>
+        <div class="est-chart-wrap est-chart-wrap-muito-alto">
+          <canvas id="g-top-obs"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Observadores activos por ano</p>
+        <p class="est-card-subtitulo">Número de observadores únicos em cada ano</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-obs-ano"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card">
+        <p class="est-card-titulo">Partilha das observações</p>
+        <p class="est-card-subtitulo">Top 5 observadores vs restante comunidade</p>
+        <div class="est-chart-wrap">
+          <canvas id="g-partilha"></canvas>
+        </div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo">Diversidade por observador</p>
+        <p class="est-card-subtitulo">Espécies únicas registadas — top 15 observadores</p>
+        <div class="est-chart-wrap est-chart-wrap-alto">
+          <canvas id="g-diversidade"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    function carregarChartJS(cb) {
+      if (window.Chart) { cb(); return; }
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
+      s.onload = cb;
+      document.head.appendChild(s);
+    }
+
+    carregarChartJS(function () {
+      fetch('/dados/observacoes.json')
+        .then(function (r) { return r.json(); })
+        .then(inicializar)
+        .catch(function () {
+          document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+        });
+    });
+
+    function inicializar(dados) {
+      var porObs = {}, obsPorAno = {}, especiesPorObs = {};
+
+      dados.forEach(function (o) {
+        if (!o.observador) return;
+        var qtd = o.quantidade || 1;
+        porObs[o.observador] = (porObs[o.observador] || 0) + qtd;
+
+        if (o.data) {
+          var ano = o.data.substring(0, 4);
+          if (!obsPorAno[ano]) obsPorAno[ano] = new Set();
+          obsPorAno[ano].add(o.observador);
+        }
+
+        if (o.nome_cientifico) {
+          if (!especiesPorObs[o.observador]) especiesPorObs[o.observador] = new Set();
+          especiesPorObs[o.observador].add(o.nome_cientifico);
+        }
+      });
+
+      var totalObs   = Object.keys(porObs).length;
+      var contagens  = Object.values(porObs);
+      var topCount   = Math.max.apply(null, contagens);
+      var media      = Math.round(contagens.reduce(function (s, v) { return s + v; }, 0) / totalObs);
+      var comDez     = contagens.filter(function (v) { return v >= 10; }).length;
+      var anoPicoEntry = Object.entries(obsPorAno).sort(function (a, b) { return b[1].size - a[1].size; })[0];
+
+      // Hero
+      document.getElementById('sh-total').textContent    = totalObs;
+      document.getElementById('sh-top').textContent      = topCount.toLocaleString('pt-PT');
+      document.getElementById('sh-media').textContent    = media;
+      document.getElementById('sh-activos').textContent  = comDez;
+      document.getElementById('sh-ano-pico').textContent = anoPicoEntry ? anoPicoEntry[0] + ' (' + anoPicoEntry[1].size + ')' : '—';
+      document.getElementById('est-hero').style.display  = '';
+      document.getElementById('est-loading').style.display  = 'none';
+      document.getElementById('est-conteudo').style.display = '';
+
+      Chart.defaults.font.family = 'system-ui, sans-serif';
+      Chart.defaults.font.size   = 11;
+      var grid = 'rgba(100,116,139,0.12)', tick = '#94a3b8';
+
+      function optsVBar() {
+        return { responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: tick } },
+            y: { grid: { color: grid },    ticks: { color: tick } }
+          }
+        };
+      }
+      function optsHBar() {
+        return { responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: grid }, ticks: { color: tick } },
+            y: { grid: { display: false }, ticks: { color: tick, font: { size: 10 } } }
+          }
+        };
+      }
+
+      // Cores para donut (top 5 + outros)
+      var coresPaleta = ['#0891b2','#f59e0b','#22c55e','#f43f5e','#a855f7','#cbd5e1'];
+
+      // Gráfico 1: top 20 observadores
+      var topObs = Object.entries(porObs).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 20);
+      new Chart(document.getElementById('g-top-obs'), {
+        type: 'bar',
+        data: { labels: topObs.map(function (e) { return e[0]; }),
+          datasets: [{ data: topObs.map(function (e) { return e[1]; }),
+            backgroundColor: topObs.map(function (e, i) {
+              return i < 5 ? coresPaleta[i] : 'rgba(8,145,178,0.45)';
+            }),
+            borderRadius: 4 }] },
+        options: optsHBar()
+      });
+
+      // Gráfico 2: observadores activos por ano
+      var anos = Object.keys(obsPorAno).sort();
+      new Chart(document.getElementById('g-obs-ano'), {
+        type: 'bar',
+        data: { labels: anos, datasets: [{ data: anos.map(function (a) { return obsPorAno[a].size; }),
+          backgroundColor: anos.map(function (a) {
+            var v = obsPorAno[a].size;
+            var maxV = Math.max.apply(null, anos.map(function (x) { return obsPorAno[x].size; }));
+            return 'rgba(8,145,178,' + (0.3 + 0.7 * v / maxV).toFixed(2) + ')';
+          }),
+          borderRadius: 4 }] },
+        options: optsVBar()
+      });
+
+      // Gráfico 3: partilha das observações (donut)
+      var top5 = topObs.slice(0, 5);
+      var totalGeral = contagens.reduce(function (s, v) { return s + v; }, 0);
+      var top5Total  = top5.reduce(function (s, e) { return s + e[1]; }, 0);
+      new Chart(document.getElementById('g-partilha'), {
+        type: 'doughnut',
+        data: {
+          labels: top5.map(function (e) { return e[0]; }).concat(['Outros']),
+          datasets: [{ data: top5.map(function (e) { return e[1]; }).concat([totalGeral - top5Total]),
+            backgroundColor: coresPaleta, borderWidth: 2, borderColor: '#ffffff' }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
+          plugins: { legend: { position: 'bottom',
+            labels: { color: '#64748b', padding: 10, font: { size: 11 },
+              generateLabels: function (chart) {
+                return Chart.defaults.plugins.legend.labels.generateLabels(chart).map(function (l) {
+                  var pct = ((chart.data.datasets[0].data[l.index] / totalGeral) * 100).toFixed(1);
+                  l.text = l.text + ' (' + pct + '%)';
+                  return l;
+                });
+              }
+            } } } }
+      });
+
+      // Gráfico 4: diversidade (espécies únicas por observador, top 15)
+      var divTop = Object.entries(especiesPorObs)
+        .map(function (e) { return [e[0], e[1].size]; })
+        .sort(function (a, b) { return b[1] - a[1]; })
+        .slice(0, 15);
+      new Chart(document.getElementById('g-diversidade'), {
+        type: 'bar',
+        data: { labels: divTop.map(function (e) { return e[0]; }),
+          datasets: [{ data: divTop.map(function (e) { return e[1]; }),
+            backgroundColor: divTop.map(function (e, i) {
+              return 'rgba(34,197,94,' + (0.4 + 0.6 * e[1] / divTop[0][1]).toFixed(2) + ')';
+            }),
+            borderRadius: 4 }] },
+        options: Object.assign(optsHBar(), {
+          plugins: { legend: { display: false },
+            tooltip: { callbacks: { label: function (ctx) {
+              return ' ' + ctx.parsed.x + ' espécies únicas';
+            } } } }
+        })
+      });
+    }
+  })();
+  </script>
+
+</div>
