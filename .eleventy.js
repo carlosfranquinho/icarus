@@ -7,7 +7,7 @@ const md = markdownIt({ html: false });
 // Mapa nome_cientifico → permalink, construído uma vez no arranque
 function buildEspeciesMap() {
   const map = new Map();
-  for (const grupo of ["diurnas", "noturnas"]) {
+  for (const grupo of ["diurnas", "noturnas", "micro"]) {
     const base = `src/especies/${grupo}`;
     if (!fs.existsSync(base)) continue;
     for (const familia of fs.readdirSync(base)) {
@@ -283,6 +283,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("familiasNoturnas", (collectionApi) => {
     return collectionApi
       .getFilteredByGlob("src/especies/noturnas/**/*.md")
+      .filter((p) => p.data.tipo === "familia");
+  });
+
+  eleventyConfig.addCollection("especiesMicro", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/especies/micro/**/*.md")
+      .filter((p) => p.data.tipo === "especie")
+      .sort((a, b) => (a.data.nome_cientifico || "").localeCompare(b.data.nome_cientifico || ""));
+  });
+
+  eleventyConfig.addCollection("familiasMicro", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/especies/micro/**/*.md")
       .filter((p) => p.data.tipo === "familia");
   });
 

@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: "Microborboletas"
+descricao: "Fichas de identificação das microborboletas observadas na Marinha Grande, Leiria, Batalha e Porto de Mós."
+permalink: /microborboletas/
+---
+<div class="container">
+  <header class="pagina-cabecalho">
+    <h1 class="titulo-secao">Microborboletas</h1>
+    <p class="subtitulo">Microlepidoptera — fichas de identificação por família</p>
+  </header>
+
+  <div class="grelha-familias-fichas">
+    {% for familia in collections.familiasMicro | sort(false, false, 'data.title') %}
+    {% set nespecies = collections.especiesMicro | porFamilia(familia.data.title) %}
+    {% if familia.data.placeholder %}
+    <div class="card-familia-ficha card-familia-ficha--placeholder">
+    {% else %}
+    <a href="{{ familia.url }}" class="card-familia-ficha">
+    {% endif %}
+      <div class="card-familia-ficha-img"{% if familia.data.cor_thumb %} style="background-color: {{ familia.data.cor_thumb }}"{% endif %}>
+        {% if familia.data.imagem %}<img src="{{ familia.data.imagem }}" alt="{{ familia.data.title }}" loading="eager"{% if familia.data.thumb_size %} style="width: {{ familia.data.thumb_size }}"{% endif %}>{% endif %}
+      </div>
+      <div class="card-familia-ficha-corpo">
+        <h2>{{ familia.data.title }}</h2>
+        {% if familia.data.placeholder %}
+        <p class="card-familia-ficha-num">em breve</p>
+        {% else %}
+        <p class="card-familia-ficha-num">{{ nespecies.length }} espécie{% if nespecies.length != 1 %}s{% endif %}</p>
+        {% endif %}
+        {% if familia.data.descricao %}<p class="card-familia-ficha-desc">{{ familia.data.descricao }}</p>{% endif %}
+      </div>
+    {% if familia.data.placeholder %}
+    </div>
+    {% else %}
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
