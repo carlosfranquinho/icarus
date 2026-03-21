@@ -194,6 +194,15 @@ permalink: /observacoes/
           ? '<code class="obs-utm">' + esc(o.utm1k) + '</code>'
           : '—';
 
+        var notasParts = [];
+        if (o.origem === 'inaturalist') {
+          notasParts.push('iNaturalist' + (o.licenca ? ', ' + esc(o.licenca) : ''));
+        } else if (o.origem === 'grupo icarus') {
+          notasParts.push('Grupo icarus');
+        }
+        if (o.notas) notasParts.push(esc(o.notas));
+        var notasHtml = notasParts.length ? notasParts.join('<br>') : '—';
+
         tr.innerHTML =
           '<td class="obs-col-data">' + esc(o.data || '') + '</td>' +
           '<td>' + nomeHtml + '</td>' +
@@ -201,7 +210,7 @@ permalink: /observacoes/
           '<td>' + utmHtml + '</td>' +
           '<td class="obs-col-num">' + qtd + '</td>' +
           '<td>' + esc(o.observador || '—') + '</td>' +
-          '<td class="obs-col-secundario">' + esc(o.notas || '—') + '</td>';
+          '<td class="obs-col-secundario">' + notasHtml + '</td>';
 
         frag.appendChild(tr);
       });
