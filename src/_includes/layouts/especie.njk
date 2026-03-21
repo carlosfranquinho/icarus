@@ -63,7 +63,7 @@ extraCSS:
     </div>
 
     <!-- ── Fenograma e mapa regional (movidos por JS para a secção correcta) -->
-    {% set obsEspecie = observacoes | observacoesPorEspecie(nome_cientifico) %}
+    {% set obsEspecie = observacoes | observacoesPorEspecie(nome_cientifico, sinonimos) %}
     {% if obsEspecie.length %}
     <div id="fenograma-regional" style="display:none; margin: 1rem 0 1.5rem;">
       <p><strong>Fenograma Regional:</strong></p>

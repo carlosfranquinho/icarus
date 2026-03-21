@@ -157,9 +157,19 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(map);
   });
 
-  // Filter: filtra observações por espécie
-  eleventyConfig.addFilter("observacoesPorEspecie", (obs, nome) => {
-    return (obs || []).filter(o => o.nome_cientifico === nome);
+  // Filter: filtra observações por espécie (inclui sinónimos opcionais)
+  eleventyConfig.addFilter("observacoesPorEspecie", (obs, nome, sinonimos) => {
+    const nomes = new Set([nome, ...(sinonimos || [])]);
+    return (obs || []).filter(o => nomes.has(o.nome_cientifico));
+  });
+
+  // Filter: total de observações de uma espécie incluindo sinónimos
+  eleventyConfig.addFilter("totalObsEspecie", (especie, obsCount) => {
+    let total = obsCount[especie.data.nome_cientifico] || 0;
+    for (const s of (especie.data.sinonimos || [])) {
+      total += obsCount[s] || 0;
+    }
+    return total;
   });
 
   // Filter: gera SVG do fenograma mensal (retorna string SVG)
