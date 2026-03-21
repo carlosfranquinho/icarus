@@ -13,6 +13,9 @@ extraCSS:
     {% elif grupo == "noturnas" %}
     <a href="/borboletas-noturnas/">Borboletas noturnas</a> ›
     <a href="/borboletas-noturnas/{{ familia | lower }}/">{{ familia }}</a>
+    {% elif grupo == "micro" %}
+    <a href="/microborboletas/">Microborboletas</a> ›
+    <a href="/microborboletas/{{ familia | lower }}/">{{ familia }}</a>
     {% endif %}
     › <em>{{ nome_cientifico }}</em>
   </nav>
@@ -37,7 +40,7 @@ extraCSS:
         <div class="especie-dados-ficha">
           <div class="dado-linha">
             <span class="dado-label">Família</span>
-            <span class="dado-valor"><a href="/borboletas-{{ grupo }}/{{ familia | lower }}/">{{ familia }}</a></span>
+            <span class="dado-valor"><a href="{% if grupo == 'micro' %}/microborboletas/{% else %}/borboletas-{{ grupo }}/{% endif %}{{ familia | lower }}/">{{ familia }}</a></span>
           </div>
           {% if subfamilia %}
           <div class="dado-linha">
