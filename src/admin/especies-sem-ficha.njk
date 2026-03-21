@@ -5,64 +5,103 @@ permalink: /admin/especies-sem-ficha/
 eleventyExcludeFromCollections: true
 ---
 <div class="container">
-  <div class="conteudo-central">
-    <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cinza-borda); padding-bottom:1rem;">
-      <h1>{{ title }}</h1>
-      <p style="color:var(--cinza-texto); margin:.5rem 0 0;">
-        Espécies presentes em <code>observacoes.json</code> sem ficha criada (ou apenas com ficha <em>placeholder</em>).
-        Total: <strong id="contagem">{{ especiesSemFicha | length }}</strong>
-      </p>
-      <label style="display:inline-flex; align-items:center; gap:.5rem; margin-top:.75rem; cursor:pointer; font-size:.9rem;">
-        <input type="checkbox" id="so-sem-ficha" style="cursor:pointer;">
-        Mostrar apenas sem ficha (excluir placeholders)
-      </label>
-    </header>
 
-    <table style="width:100%; border-collapse:collapse; font-size:.95rem;">
-      <thead>
-        <tr style="border-bottom:2px solid var(--cinza-borda); text-align:left;">
-          <th style="padding:.5rem .75rem;">#</th>
-          <th style="padding:.5rem .75rem;">Nome científico</th>
-          <th style="padding:.5rem .75rem; text-align:right;">Observações</th>
-          <th style="padding:.5rem .75rem;">Estado</th>
-        </tr>
-      </thead>
-      <tbody id="tabela-corpo">
-        {% for e in especiesSemFicha %}
-        <tr style="border-bottom:1px solid var(--cinza-borda);" data-estado="{% if e.placeholder %}placeholder{% else %}sem-ficha{% endif %}">
-          <td class="col-n" style="padding:.5rem .75rem; color:var(--cinza-texto);"></td>
-          <td style="padding:.5rem .75rem;"><em>{{ e.nome }}</em></td>
-          <td style="padding:.5rem .75rem; text-align:right;">{{ e.n }}</td>
-          <td style="padding:.5rem .75rem; font-size:.85rem; color:var(--cinza-texto);">
-            {% if e.placeholder %}placeholder{% else %}sem ficha{% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cinza-borda); padding-bottom:1rem;">
+    <h1>{{ title }}</h1>
+    <p style="color:var(--cinza-texto); margin:.5rem 0 0;">
+      Espécies com observações em <code>observacoes.json</code> sem ficha criada, ou apenas com ficha <em>placeholder</em>.
+      Total: <strong id="contagem">—</strong>
+    </p>
+    <label style="display:inline-flex; align-items:center; gap:.5rem; margin-top:.75rem; cursor:pointer; font-size:.9rem;">
+      <input type="checkbox" id="so-sem-ficha" style="cursor:pointer;">
+      Mostrar apenas sem ficha (excluir placeholders)
+    </label>
+  </header>
 
-    <script>
-      const checkbox = document.getElementById('so-sem-ficha');
-      const contagem = document.getElementById('contagem');
-      const linhas   = document.querySelectorAll('#tabela-corpo tr');
+  <p id="est-loading">A carregar dados…</p>
 
-      function atualizar() {
-        const apenasSesFicha = checkbox.checked;
-        let n = 0;
-        linhas.forEach(tr => {
-          const visivel = !apenasSesFicha || tr.dataset.estado === 'sem-ficha';
-          tr.style.display = visivel ? '' : 'none';
-          if (visivel) {
-            n++;
-            tr.querySelector('.col-n').textContent = n;
+  <table id="tabela" style="display:none; width:100%; border-collapse:collapse; font-size:.95rem;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--cinza-borda); text-align:left;">
+        <th style="padding:.5rem .75rem;">#</th>
+        <th style="padding:.5rem .75rem;">Nome científico</th>
+        <th style="padding:.5rem .75rem; text-align:right;">Observações</th>
+        <th style="padding:.5rem .75rem;">Estado</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-corpo"></tbody>
+  </table>
+
+  <script>
+  (function () {
+    var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    fetch('/dados/observacoes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (dados) {
+        // Contar observações por nome_cientifico
+        var contagens = {};
+        dados.forEach(function (o) {
+          if (!o.nome_cientifico) return;
+          contagens[o.nome_cientifico] = (contagens[o.nome_cientifico] || 0) + 1;
+        });
+
+        // Filtrar espécies sem ficha completa
+        var lista = [];
+        Object.entries(contagens).forEach(function (entry) {
+          var nome = entry[0], n = entry[1];
+          var meta = ESPECIE_META[nome];
+          if (!meta) {
+            lista.push({ nome: nome, n: n, estado: 'sem-ficha' });
+          } else if (meta.placeholder) {
+            lista.push({ nome: nome, n: n, estado: 'placeholder', url: meta.url });
           }
         });
-        contagem.textContent = n;
-      }
 
-      // Numerar linhas inicialmente
-      linhas.forEach((tr, i) => tr.querySelector('.col-n').textContent = i + 1);
-      checkbox.addEventListener('change', atualizar);
-    </script>
-  </div>
+        lista.sort(function (a, b) { return b.n - a.n; });
+
+        var tbody = document.getElementById('tabela-corpo');
+        lista.forEach(function (e) {
+          var tr = document.createElement('tr');
+          tr.style.borderBottom = '1px solid var(--cinza-borda)';
+          tr.dataset.estado = e.estado;
+          var nomeHtml = e.url
+            ? '<a href="' + esc(e.url) + '"><em>' + esc(e.nome) + '</em></a>'
+            : '<em>' + esc(e.nome) + '</em>';
+          tr.innerHTML =
+            '<td class="col-n" style="padding:.5rem .75rem; color:var(--cinza-texto);"></td>' +
+            '<td style="padding:.5rem .75rem;">' + nomeHtml + '</td>' +
+            '<td style="padding:.5rem .75rem; text-align:right;">' + e.n + '</td>' +
+            '<td style="padding:.5rem .75rem; font-size:.85rem; color:var(--cinza-texto);">' + esc(e.estado === 'placeholder' ? 'placeholder' : 'sem ficha') + '</td>';
+          tbody.appendChild(tr);
+        });
+
+        document.getElementById('est-loading').style.display = 'none';
+        document.getElementById('tabela').style.display = '';
+        atualizar();
+
+        document.getElementById('so-sem-ficha').addEventListener('change', atualizar);
+      })
+      .catch(function () {
+        document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+      });
+
+    function atualizar() {
+      var apenasSesFicha = document.getElementById('so-sem-ficha').checked;
+      var linhas = document.querySelectorAll('#tabela-corpo tr');
+      var n = 0;
+      linhas.forEach(function (tr) {
+        var visivel = !apenasSesFicha || tr.dataset.estado === 'sem-ficha';
+        tr.style.display = visivel ? '' : 'none';
+        if (visivel) tr.querySelector('.col-n').textContent = ++n;
+      });
+      document.getElementById('contagem').textContent = n;
+    }
+  })();
+  </script>
+
 </div>
