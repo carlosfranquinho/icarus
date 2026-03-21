@@ -55,12 +55,8 @@ eleventyExcludeFromCollections: true
         var lista = [];
         Object.entries(contagens).forEach(function (entry) {
           var nome = entry[0], n = entry[1];
-          // Se é sinónimo de uma espécie com ficha completa, ignorar
-          var nomePrincipal = SINONIMOS[nome];
-          if (nomePrincipal) {
-            var metaPrincipal = ESPECIE_META[nomePrincipal];
-            if (metaPrincipal && !metaPrincipal.placeholder) return;
-          }
+          // Se é sinónimo de uma espécie que já tem ficha (placeholder ou não), ignorar
+          if (SINONIMOS[nome] && ESPECIE_META[SINONIMOS[nome]]) return;
           var meta = ESPECIE_META[nome];
           if (!meta) {
             lista.push({ nome: nome, n: n, estado: 'sem-ficha' });
