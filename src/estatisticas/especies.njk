@@ -34,6 +34,10 @@ extraCSS:
       <span class="est-hero-stat-label">noturnas com ficha</span>
     </div>
     <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-micro">—</span>
+      <span class="est-hero-stat-label">micro com ficha</span>
+    </div>
+    <div class="est-hero-stat">
       <span class="est-hero-stat-valor" id="sh-familias">—</span>
       <span class="est-hero-stat-label">famílias distintas</span>
     </div>
@@ -72,6 +76,18 @@ extraCSS:
         <div id="chart-fam-noturnas" class="est-col-chart"></div>
       </div>
 
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo"><span class="badge-tipo badge-micro-lg">◌</span> Top 10 microborboletas mais observadas</p>
+        <p class="est-card-subtitulo">Espécies micro com maior número de registos</p>
+        <div id="chart-micro" class="est-col-chart"></div>
+      </div>
+
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo"><span class="badge-tipo badge-micro-lg">◌</span> Top 5 famílias micro</p>
+        <p class="est-card-subtitulo">Famílias micro com maior número de registos</p>
+        <div id="chart-fam-micro" class="est-col-chart"></div>
+      </div>
+
     </div>
 
     <div class="est-mapa-e-graficos">
@@ -90,7 +106,7 @@ extraCSS:
 
       <div class="est-graficos-coluna">
         <div class="est-card">
-          <p class="est-card-titulo">Diurnas vs Noturnas</p>
+          <p class="est-card-titulo">Distribuição por grupo</p>
           <p class="est-card-subtitulo">Espécies únicas com ficha por grupo</p>
           <div class="est-chart-wrap">
             <canvas id="g-grupos"></canvas>
@@ -115,7 +131,8 @@ extraCSS:
     var FAMILIA_META = Object.assign(
       {},
       {{ collections.familiasDiurnas | familiaMetaJson | safe }},
-      {{ collections.familiasNoturnas | familiaMetaJson | safe }}
+      {{ collections.familiasNoturnas | familiaMetaJson | safe }},
+      {{ collections.familiasMicro | familiaMetaJson | safe }}
     );
 
     var CHARTJS_URL = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js';
@@ -141,7 +158,7 @@ extraCSS:
 
     // Dados partilhados entre funções
     var porEspecie = {}, porFamilia = {}, novasPorAno = {};
-    var especiesDiurnas = new Set(), especiesNoturnas = new Set(), especiesSem = new Set();
+    var especiesDiurnas = new Set(), especiesNoturnas = new Set(), especiesMicro = new Set(), especiesSem = new Set();
 
     function inicializarDados(dados) {
       var familiasSet = new Set(), primeiraObs = {};
@@ -157,6 +174,7 @@ extraCSS:
 
         if (meta && meta.grupo === 'diurnas')       especiesDiurnas.add(o.nome_cientifico);
         else if (meta && meta.grupo === 'noturnas') especiesNoturnas.add(o.nome_cientifico);
+        else if (meta && meta.grupo === 'micro')    especiesMicro.add(o.nome_cientifico);
         else                                         especiesSem.add(o.nome_cientifico);
 
         if (o.data && (!primeiraObs[o.nome_cientifico] || o.data < primeiraObs[o.nome_cientifico])) {
@@ -173,6 +191,7 @@ extraCSS:
       document.getElementById('sh-total').textContent        = Object.keys(porEspecie).length;
       document.getElementById('sh-diurnas').textContent      = especiesDiurnas.size;
       document.getElementById('sh-noturnas').textContent     = especiesNoturnas.size;
+      document.getElementById('sh-micro').textContent        = especiesMicro.size;
       document.getElementById('sh-familias').textContent     = familiasSet.size;
       document.getElementById('sh-primeiro-ano').textContent = primeiroAno;
       document.getElementById('est-hero').style.display      = '';
@@ -209,7 +228,7 @@ extraCSS:
       var container = document.getElementById(containerId);
       if (!lista.length) return;
       var maxTotal = lista[0].total;
-      var corBase  = grupo === 'diurnas' ? '245,158,11' : '99,102,241';
+      var corBase  = grupo === 'diurnas' ? '245,158,11' : grupo === 'micro' ? '16,185,129' : '99,102,241';
 
       var innerDiv  = document.createElement('div'); innerDiv.className = 'est-col-inner';
       innerDiv.style.minWidth = (lista.length * 72) + 'px';
@@ -272,8 +291,10 @@ extraCSS:
     function inicializarColCharts() {
       renderColChart('chart-diurnas',     top10Grupo('diurnas'),        'diurnas');
       renderColChart('chart-noturnas',    top10Grupo('noturnas'),       'noturnas');
+      renderColChart('chart-micro',       top10Grupo('micro'),          'micro');
       renderColChart('chart-fam-diurnas', top5FamiliaGrupo('diurnas'),  'diurnas');
       renderColChart('chart-fam-noturnas',top5FamiliaGrupo('noturnas'), 'noturnas');
+      renderColChart('chart-fam-micro',   top5FamiliaGrupo('micro'),    'micro');
     }
 
     // ── Chart.js ───────────────────────────────────────────────────────
@@ -292,9 +313,9 @@ extraCSS:
 
       new Chart(document.getElementById('g-grupos'), {
         type: 'doughnut',
-        data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
-          datasets: [{ data: [especiesDiurnas.size, especiesNoturnas.size, especiesSem.size],
-            backgroundColor: ['#f59e0b', '#6366f1', '#e2e8f0'],
+        data: { labels: ['Diurnas', 'Noturnas', 'Micro', 'Sem ficha'],
+          datasets: [{ data: [especiesDiurnas.size, especiesNoturnas.size, especiesMicro.size, especiesSem.size],
+            backgroundColor: ['#f59e0b', '#6366f1', '#10b981', '#e2e8f0'],
             borderWidth: 2, borderColor: '#ffffff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '65%',
           plugins: { legend: { position: 'bottom',

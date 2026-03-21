@@ -605,6 +605,10 @@ button:disabled {
   color: #555;
 }
 
+.badge-micro-lg {
+  color: #059669;
+}
+
 /* --- Secção de famílias na homepage --- */
 .secao-familias {
   margin: 2rem 0 1rem;

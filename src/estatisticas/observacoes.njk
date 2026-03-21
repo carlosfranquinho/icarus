@@ -78,7 +78,7 @@ extraCSS:
           </div>
         </div>
         <div class="est-card">
-          <p class="est-card-titulo">Diurnas vs noturnas</p>
+          <p class="est-card-titulo">Distribuição por grupo</p>
           <p class="est-card-subtitulo">Distribuição das observações por grupo</p>
           <div class="est-chart-wrap">
             <canvas id="g-grupos"></canvas>
@@ -151,7 +151,7 @@ extraCSS:
     // ── Gráficos Chart.js ──────────────────────────────────────────────
     function inicializarGraficos(dados) {
       var porAno = {}, porMes = Array(12).fill(0);
-      var porGrupo = { diurnas: 0, noturnas: 0, outro: 0 };
+      var porGrupo = { diurnas: 0, noturnas: 0, micro: 0, outro: 0 };
       dados.forEach(function (o) {
         var qtd = o.quantidade || 1;
         if (o.data) {
@@ -163,6 +163,7 @@ extraCSS:
         var meta = ESPECIE_META[o.nome_cientifico];
         if (meta && meta.grupo === 'diurnas')       porGrupo.diurnas  += (o.quantidade || 1);
         else if (meta && meta.grupo === 'noturnas') porGrupo.noturnas += (o.quantidade || 1);
+        else if (meta && meta.grupo === 'micro')    porGrupo.micro    += (o.quantidade || 1);
         else                                         porGrupo.outro    += (o.quantidade || 1);
       });
 
@@ -201,12 +202,12 @@ extraCSS:
         options: optsVBar()
       });
 
-      // Gráfico 3: diurnas vs noturnas
+      // Gráfico 3: distribuição por grupo
       new Chart(document.getElementById('g-grupos'), {
         type: 'doughnut',
-        data: { labels: ['Diurnas', 'Noturnas', 'Sem ficha'],
-          datasets: [{ data: [porGrupo.diurnas, porGrupo.noturnas, porGrupo.outro],
-            backgroundColor: ['#f59e0b', '#6366f1', '#e2e8f0'],
+        data: { labels: ['Diurnas', 'Noturnas', 'Micro', 'Sem ficha'],
+          datasets: [{ data: [porGrupo.diurnas, porGrupo.noturnas, porGrupo.micro, porGrupo.outro],
+            backgroundColor: ['#f59e0b', '#6366f1', '#10b981', '#e2e8f0'],
             borderWidth: 2, borderColor: '#ffffff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '65%',
           plugins: { legend: { position: 'bottom',
