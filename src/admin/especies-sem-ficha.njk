@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+title: "Espécies sem ficha"
+permalink: /admin/especies-sem-ficha/
+eleventyExcludeFromCollections: true
+---
+<div class="container">
+  <div class="conteudo-central">
+    <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cinza-borda); padding-bottom:1rem;">
+      <h1>{{ title }}</h1>
+      <p style="color:var(--cinza-texto); margin:.5rem 0 0;">
+        Espécies presentes em <code>observacoes.json</code> sem ficha criada (ou apenas com ficha <em>placeholder</em>).
+        Total: <strong id="contagem">{{ especiesSemFicha | length }}</strong>
+      </p>
+      <label style="display:inline-flex; align-items:center; gap:.5rem; margin-top:.75rem; cursor:pointer; font-size:.9rem;">
+        <input type="checkbox" id="so-sem-ficha" style="cursor:pointer;">
+        Mostrar apenas sem ficha (excluir placeholders)
+      </label>
+    </header>
+
+    <table style="width:100%; border-collapse:collapse; font-size:.95rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--cinza-borda); text-align:left;">
+          <th style="padding:.5rem .75rem;">#</th>
+          <th style="padding:.5rem .75rem;">Nome científico</th>
+          <th style="padding:.5rem .75rem; text-align:right;">Observações</th>
+          <th style="padding:.5rem .75rem;">Estado</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-corpo">
+        {% for e in especiesSemFicha %}
+        <tr style="border-bottom:1px solid var(--cinza-borda);" data-estado="{% if e.placeholder %}placeholder{% else %}sem-ficha{% endif %}">
+          <td class="col-n" style="padding:.5rem .75rem; color:var(--cinza-texto);"></td>
+          <td style="padding:.5rem .75rem;"><em>{{ e.nome }}</em></td>
+          <td style="padding:.5rem .75rem; text-align:right;">{{ e.n }}</td>
+          <td style="padding:.5rem .75rem; font-size:.85rem; color:var(--cinza-texto);">
+            {% if e.placeholder %}placeholder{% else %}sem ficha{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script>
+      const checkbox = document.getElementById('so-sem-ficha');
+      const contagem = document.getElementById('contagem');
+      const linhas   = document.querySelectorAll('#tabela-corpo tr');
+
+      function atualizar() {
+        const apenasSesFicha = checkbox.checked;
+        let n = 0;
+        linhas.forEach(tr => {
+          const visivel = !apenasSesFicha || tr.dataset.estado === 'sem-ficha';
+          tr.style.display = visivel ? '' : 'none';
+          if (visivel) {
+            n++;
+            tr.querySelector('.col-n').textContent = n;
+          }
+        });
+        contagem.textContent = n;
+      }
+
+      // Numerar linhas inicialmente
+      linhas.forEach((tr, i) => tr.querySelector('.col-n').textContent = i + 1);
+      checkbox.addEventListener('change', atualizar);
+    </script>
+  </div>
+</div>

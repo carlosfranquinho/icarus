@@ -1,0 +1,245 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: primeiraObsAnos
+  size: 1
+  alias: ano
+permalink: /primeiras-observacoes/{{ ano }}/
+eleventyComputed:
+  title: "Primeiras observações — {{ ano }}"
+  descricao: "Quem registou primeiro cada borboleta diurna em {{ ano }}? Listagem por família com data e observador."
+---
+<div class="container">
+
+  <header class="est-header">
+    <div>
+      <a href="/observacoes/" class="est-volta">← Observações</a>
+      <h1 class="titulo-secao">Primeiras observações — {{ ano }}</h1>
+    </div>
+    <nav class="est-nav" aria-label="Anos" style="flex-wrap:wrap; gap:.25rem;">
+      {% for a in primeiraObsAnos %}
+      <a href="/primeiras-observacoes/{{ a }}/"
+         class="est-nav-tab{% if a == ano %} activo{% endif %}">{{ a }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  <div class="est-hero" id="est-hero" style="display:none;">
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-observadas">—</span>
+      <span class="est-hero-stat-label">espécies diurnas observadas</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-primeira-data">—</span>
+      <span class="est-hero-stat-label">1.º registo do ano</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-primeira-obs">—</span>
+      <span class="est-hero-stat-label">observador do 1.º registo</span>
+    </div>
+    <div class="est-hero-stat">
+      <span class="est-hero-stat-valor" id="sh-lider">—</span>
+      <span class="est-hero-stat-label">mais primeiras observações</span>
+    </div>
+  </div>
+
+  <p class="est-loading" id="est-loading">A carregar dados…</p>
+
+  <div id="est-conteudo" style="display:none;">
+
+    <div class="est-grid">
+      <div class="est-card est-card-largo">
+        <p class="est-card-titulo"><span class="badge-tipo badge-diurnas-lg">☀</span> Top 5 — mais primeiras observações</p>
+        <p class="est-card-subtitulo">Quem registou primeiro o maior número de espécies diurnas em {{ ano }}</p>
+        <div id="chart-top5" class="est-col-chart"></div>
+      </div>
+    </div>
+
+    <div class="est-card" style="margin-top:1.5rem;">
+      <p class="est-card-titulo">Primeiras observações por família</p>
+      <p class="est-card-subtitulo">1.ª vez que cada espécie foi registada em {{ ano }} — espécies sem registo aparecem a cinzento</p>
+      <div id="tabela-familias" style="margin-top:1rem;"></div>
+    </div>
+
+  </div>
+
+  <script>
+  (function () {
+    var ANO = '{{ ano }}';
+    var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+
+    var FMT_DATA = new Intl.DateTimeFormat('pt-PT', { day: 'numeric', month: 'long' });
+
+    function fmtData(iso) {
+      var p = iso.split('-');
+      return FMT_DATA.format(new Date(+p[0], +p[1] - 1, +p[2]));
+    }
+
+    function esc(str) {
+      return String(str)
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    var CORES_OBS = ['#f59e0b','#0891b2','#22c55e','#f43f5e','#a855f7'];
+    var CHART_H   = 180;
+
+    function renderTop5(containerId, lista) {
+      var container = document.getElementById(containerId);
+      if (!lista.length) {
+        container.style.padding = '.75rem 0';
+        container.textContent = 'Sem dados para este ano.';
+        return;
+      }
+      var maxVal = lista[0][1];
+
+      var innerDiv  = document.createElement('div'); innerDiv.className = 'est-col-inner';
+      innerDiv.style.minWidth = (lista.length * 72) + 'px';
+      var barsDiv   = document.createElement('div'); barsDiv.className = 'est-col-bars-area';
+      var axisDiv   = document.createElement('div'); axisDiv.className = 'est-col-axis';
+      var labelsDiv = document.createElement('div'); labelsDiv.className = 'est-col-labels';
+
+      lista.forEach(function (e, i) {
+        var nome = e[0], total = e[1];
+        var barH  = Math.max(4, Math.round(total / maxVal * CHART_H));
+        var alpha = (1 - (i / Math.max(lista.length - 1, 1)) * 0.55).toFixed(2);
+        var corAvatar = CORES_OBS[i % CORES_OBS.length];
+        var inicial   = (nome || '?')[0].toUpperCase();
+
+        var bwrap = document.createElement('div'); bwrap.className = 'est-col-bar-wrap';
+        bwrap.innerHTML =
+          '<span class="est-col-spacer"></span>' +
+          '<span class="est-col-count">' + total + '</span>' +
+          '<div class="est-col-bar" style="height:' + barH + 'px;background:rgba(245,158,11,' + alpha + ')"></div>';
+        barsDiv.appendChild(bwrap);
+
+        var label = document.createElement('div'); label.className = 'est-col-label';
+        label.innerHTML =
+          '<div class="est-col-avatar" style="background:' + corAvatar + '">' + esc(inicial) + '</div>' +
+          '<span class="est-col-nome">' + esc(nome) + '</span>';
+        labelsDiv.appendChild(label);
+      });
+
+      innerDiv.appendChild(barsDiv);
+      innerDiv.appendChild(axisDiv);
+      innerDiv.appendChild(labelsDiv);
+      container.appendChild(innerDiv);
+    }
+
+    function renderTabela(primeiras) {
+      // Construir lista completa de espécies diurnas do catálogo
+      var porFamilia = {};
+      Object.entries(ESPECIE_META).forEach(function (entry) {
+        var nome = entry[0], meta = entry[1];
+        if (meta.grupo !== 'diurnas') return;
+        var fam = meta.familia || 'Sem família';
+        if (!porFamilia[fam]) porFamilia[fam] = [];
+        var obs = primeiras[nome] || null;
+        porFamilia[fam].push({ nome: nome, meta: meta, obs: obs });
+      });
+
+      var container = document.getElementById('tabela-familias');
+      var familias = Object.keys(porFamilia).sort();
+
+      familias.forEach(function (fam) {
+        var especies = porFamilia[fam];
+        // Ordenar: observadas por data (mais cedo primeiro), depois não observadas alfabeticamente
+        especies.sort(function (a, b) {
+          if (a.obs && b.obs) return a.obs.data < b.obs.data ? -1 : 1;
+          if (a.obs) return -1;
+          if (b.obs) return 1;
+          return a.nome < b.nome ? -1 : 1;
+        });
+
+        var nObs = especies.filter(function (e) { return e.obs; }).length;
+
+        var section = document.createElement('div');
+        section.style.cssText = 'margin-bottom:2rem;';
+
+        var h3 = document.createElement('h3');
+        h3.style.cssText = 'font-size:1rem; text-transform:uppercase; letter-spacing:.05em; color:var(--cinza-texto); margin:0 0 .5rem; border-bottom:1px solid var(--cinza-borda); padding-bottom:.35rem;';
+        h3.textContent = fam + ' — ' + nObs + '/' + especies.length + ' observadas';
+        section.appendChild(h3);
+
+        var table = document.createElement('table');
+        table.style.cssText = 'width:100%; border-collapse:collapse; font-size:.9rem;';
+
+        especies.forEach(function (esp) {
+          var tr = document.createElement('tr');
+          tr.style.cssText = 'border-bottom:1px solid var(--cinza-borda);' + (esp.obs ? '' : ' opacity:.45;');
+
+          var tdData = document.createElement('td');
+          tdData.style.cssText = 'padding:.4rem .75rem .4rem 0; white-space:nowrap; color:var(--cinza-texto); width:9rem;';
+          tdData.textContent = esp.obs ? fmtData(esp.obs.data) : 'sem registos';
+
+          var tdNome = document.createElement('td');
+          tdNome.style.cssText = 'padding:.4rem .75rem;';
+          tdNome.innerHTML = esp.meta.url
+            ? '<a href="' + esc(esp.meta.url) + '"><em>' + esc(esp.nome) + '</em></a>'
+            : '<em>' + esc(esp.nome) + '</em>';
+
+          var tdObs = document.createElement('td');
+          tdObs.style.cssText = 'padding:.4rem 0 .4rem .75rem; text-align:right; white-space:nowrap;';
+          tdObs.textContent = esp.obs ? (esp.obs.observador || '—') : '';
+
+          tr.appendChild(tdData);
+          tr.appendChild(tdNome);
+          tr.appendChild(tdObs);
+          table.appendChild(tr);
+        });
+
+        section.appendChild(table);
+        container.appendChild(section);
+      });
+    }
+
+    fetch('/dados/observacoes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (dados) {
+        // 1.ª observação de cada espécie diurna no ano
+        var primeiras = {};
+        dados.forEach(function (o) {
+          if (!o.nome_cientifico || !o.data) return;
+          if (o.data.substring(0, 4) !== ANO) return;
+          var meta = ESPECIE_META[o.nome_cientifico];
+          if (!meta || meta.grupo !== 'diurnas') return;
+          var atual = primeiras[o.nome_cientifico];
+          if (!atual || o.data < atual.data) {
+            primeiras[o.nome_cientifico] = { data: o.data, observador: o.observador || '—' };
+          }
+        });
+
+        // Top 5 por número de primeiras
+        var firstsPorObs = {};
+        Object.values(primeiras).forEach(function (v) {
+          if (!v.observador || v.observador === '—') return;
+          firstsPorObs[v.observador] = (firstsPorObs[v.observador] || 0) + 1;
+        });
+        var top5 = Object.entries(firstsPorObs)
+          .sort(function (a, b) { return b[1] - a[1]; })
+          .slice(0, 5);
+
+        // 1.º registo do ano
+        var primeiraDoAno = Object.entries(primeiras)
+          .sort(function (a, b) { return a[1].data < b[1].data ? -1 : 1; })[0];
+
+        var lider = top5.length ? top5[0][0] + ' (' + top5[0][1] + ')' : '—';
+
+        document.getElementById('sh-observadas').textContent    = Object.keys(primeiras).length;
+        document.getElementById('sh-primeira-data').textContent = primeiraDoAno ? fmtData(primeiraDoAno[1].data) : '—';
+        document.getElementById('sh-primeira-obs').textContent  = primeiraDoAno ? primeiraDoAno[1].observador : '—';
+        document.getElementById('sh-lider').textContent         = lider;
+        document.getElementById('est-hero').style.display       = '';
+        document.getElementById('est-loading').style.display    = 'none';
+        document.getElementById('est-conteudo').style.display   = '';
+
+        renderTop5('chart-top5', top5);
+        renderTabela(primeiras);
+      })
+      .catch(function () {
+        document.getElementById('est-loading').textContent = 'Erro ao carregar dados.';
+      });
+  })();
+  </script>
+
+</div>

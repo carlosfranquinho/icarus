@@ -69,6 +69,19 @@ permalink: /estatisticas/observadores/
     </div>
   </div>
 
+  <div id="est-conteudo-extra" style="margin-top:1.5rem;">
+    <div class="est-card">
+      <p class="est-card-titulo">Primeiras observações do ano</p>
+      <p class="est-card-subtitulo">Para cada ano, quem registou primeiro cada espécie diurna — o passatempo anual do grupo</p>
+      <div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem;">
+        {% for a in primeiraObsAnos | reverse %}
+        <a href="/primeiras-observacoes/{{ a }}/"
+           style="display:inline-block; padding:.35rem .8rem; border:1px solid var(--cinza-borda); border-radius:.375rem; font-size:.9rem; text-decoration:none; color:inherit;">{{ a }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
   <script>
   (function () {
     function carregarChartJS(cb) {
