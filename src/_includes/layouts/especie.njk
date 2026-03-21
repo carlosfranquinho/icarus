@@ -97,7 +97,18 @@ extraCSS:
               <td style="padding:0.5rem 0.75rem;"><code style="font-size:0.85em; background:var(--cinza-bg); padding:0.1em 0.4em; border-radius:4px;">{{ obs.utm1k if obs.utm1k else "—" }}</code></td>
               <td style="padding:0.5rem 0.75rem; text-align:right;">{{ obs.quantidade if obs.quantidade else 1 }}</td>
               <td style="padding:0.5rem 0.75rem;">{{ obs.observador if obs.observador else "—" }}</td>
-              <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">{{ obs.notas if obs.notas else "—" }}</td>
+              <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">
+                {%- set notasParts = [] -%}
+                {%- if obs.origem == "inaturalist" -%}
+                  {%- set notasParts = notasParts.concat(["iNaturalist" + (", " + obs.licenca if obs.licenca else "")]) -%}
+                {%- elif obs.origem == "grupo icarus" -%}
+                  {%- set notasParts = notasParts.concat(["Grupo icarus"]) -%}
+                {%- endif -%}
+                {%- if obs.notas -%}
+                  {%- set notasParts = notasParts.concat([obs.notas]) -%}
+                {%- endif -%}
+                {{ notasParts | join("<br>") | safe if notasParts.length else "—" }}
+              </td>
             </tr>
             {% endfor %}
           </tbody>
