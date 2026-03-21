@@ -6,7 +6,7 @@ descricao: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
 categoria: noturnas
 local: "Fonte da Felícia, Pinhal do Rei, Marinha Grande"
 participantes: "Alexandrina Morgado, Armando Neto, Carla Liberato, Carlos Franquinho, Fernanda Grácio, Ivone Santo, Ricardo Machado"
-imagem: /imagens/2012/06/201206-EIMAI6T.jpg
+imagem: /imagens/2012/06/201206-2I02WE9.jpg
 permalink: /2012/06/15/1a-sessao-de-observacao-de-borboletas-noturnas/
 ---
 
@@ -16,7 +16,6 @@ O vale da Ribeira de São Pedro parece constituir um paradoxo em termos de conse
 
 Este foi o primeiro encontro “real” de um grupo que, até à data, era meramente virtual. O evento contou com a participação de 7 pessoas.
 
-![](/imagens/2012/06/201206-65E0TYQ.jpg)
 ![](/imagens/2012/06/201206-53WUKZR.jpg)
 ![](/imagens/2012/06/201206-3PMVPD8.jpg)
 

@@ -8,8 +8,7 @@ autoridade: "(Hufnagel, 1766)"
 sinonimos:
   - "Spilosoma lutea"
 grupo: noturnas
-imagem: /assets/silhuetas/erebidae.svg
-placeholder: true
+imagem: /imagens/2012/06/201206-2OMBNQK.jpg
 permalink: /borboletas-noturnas/erebidae/spilarctia-lutea/
 ---
 
