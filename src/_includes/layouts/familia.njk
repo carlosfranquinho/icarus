@@ -8,6 +8,8 @@ layout: layouts/base.njk
     <a href="/borboletas-diurnas/">Borboletas diurnas</a>
     {% elif grupo == "noturnas" %}
     <a href="/borboletas-noturnas/">Borboletas noturnas</a>
+    {% elif grupo == "micro" %}
+    <a href="/microborboletas/">Microborboletas</a>
     {% endif %}
     › {{ title }}
   </nav>
@@ -33,6 +35,8 @@ layout: layouts/base.njk
 
   {% if grupo == "diurnas" %}
     {% set especiesAqui = collections.especiesDiurnas | porFamilia(title) %}
+  {% elif grupo == "micro" %}
+    {% set especiesAqui = collections.especiesMicro | porFamilia(title) %}
   {% else %}
     {% set especiesAqui = collections.especiesNoturnas | porFamilia(title) %}
   {% endif %}
