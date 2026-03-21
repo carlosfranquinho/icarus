@@ -3,6 +3,7 @@ layout: layouts/especie.njk
 tipo: especie
 nome_cientifico: "Ethmia bipunctella"
 familia: Ethmiidae
+subfamilia: Ethmiinae
 autoridade: "Fabricius, 1775"
 grupo: micro
 imagem: /assets/silhuetas/ethmiidae.svg
