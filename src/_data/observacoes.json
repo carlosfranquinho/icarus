@@ -1,5 +1,13 @@
 [
   {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "1999-05-23",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Euphydryas aurinia",
     "data": "2001-05-10",
     "utm1k": "NE1104",
@@ -9,6 +17,14 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Rhoptria asperaria",
+    "data": "2001-06-30",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Thalera fimbrialis",
     "data": "2001-07-29",
     "utm1k": "ND1597",
@@ -16,6 +32,14 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Thalera fimbrialis",
+    "data": "2001-07-29",
+    "utm1k": "ND1497",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Pararge aegeria",
@@ -54,6 +78,14 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Charissa obscurata",
+    "data": "2001-09-23",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Pieris napi",
     "data": "2002-03-02",
     "utm1k": "NE1004",
@@ -63,6 +95,22 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Pieris napi",
+    "data": "2002-03-02",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pieris brassicae",
+    "data": "2002-03-02",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Pararge aegeria",
     "data": "2003-06-28",
     "utm1k": "NE1004",
@@ -70,6 +118,22 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2003-06-28",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Melanargia lachesis",
+    "data": "2003-06-28",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Melanargia lachesis",
@@ -93,6 +157,14 @@
   },
   {
     "nome_cientifico": "Euphydryas aurinia",
+    "data": "2004-04-03",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Euphydryas aurinia",
     "data": "2004-04-20",
     "utm1k": "NE1104",
     "quantidade": 1,
@@ -102,12 +174,36 @@
   },
   {
     "nome_cientifico": "Euphydryas aurinia",
+    "data": "2004-04-20",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Euphydryas aurinia",
     "data": "2004-05-01",
     "utm1k": "NE1104",
     "quantidade": 1,
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Euphydryas aurinia",
+    "data": "2004-05-01",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Colias croceus",
+    "data": "2004-05-02",
+    "utm1k": "ND0664",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Pyronia bathseba",
@@ -146,6 +242,38 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-05-06",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Euphydryas aurinia",
+    "data": "2004-05-06",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2004-05-06",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Vanessa cardui",
+    "data": "2004-05-06",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Idaea incisaria",
     "data": "2004-05-07",
     "utm1k": "NE1104",
@@ -171,6 +299,38 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-05-15",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Euphydryas aurinia",
+    "data": "2004-05-15",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-05-15",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Hemaris fuciformis",
+    "data": "2004-05-15",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Autographa gamma",
@@ -245,6 +405,38 @@
     "origem": "grupo icarus"
   },
   {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-05-22",
+    "utm1k": "NE10",
+    "quantidade": 3,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-05-22",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pachycnemia hippocastanaria",
+    "data": "2004-05-22",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-05-22",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Pieris rapae",
     "data": "2004-05-23",
     "utm1k": "NE1004",
@@ -252,6 +444,14 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Pieris rapae",
+    "data": "2004-05-23",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Lycaena phlaeas",
@@ -326,6 +526,54 @@
     "origem": "grupo icarus"
   },
   {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-05-26",
+    "utm1k": "NE1004",
+    "quantidade": 3,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2004-05-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Thymelicus sylvestris",
+    "data": "2004-05-26",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-05-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Vanessa cardui",
+    "data": "2004-05-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Colias croceus",
+    "data": "2004-05-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Thymelicus sylvestris",
     "data": "2004-05-27",
     "utm1k": "NE1004",
@@ -351,6 +599,14 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Thymelicus sylvestris",
+    "data": "2004-05-27",
+    "utm1k": "NE1104",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Melanargia lachesis",
@@ -426,6 +682,38 @@
   },
   {
     "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-05",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lycaena phlaeas",
+    "data": "2004-06-05",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Hipparchia semele",
+    "data": "2004-06-05",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Vanessa atalanta",
+    "data": "2004-06-05",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lasiommata megera",
     "data": "2004-06-11",
     "utm1k": "NE1004",
     "quantidade": 1,
@@ -459,6 +747,22 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-06-11",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-11",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Pararge aegeria",
@@ -533,6 +837,54 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lycaena phlaeas",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Melanargia lachesis",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Leptotes pirithous",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Macrothylacia digramma",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Thymelicus sylvestris",
+    "data": "2004-06-12",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Pararge aegeria",
     "data": "2004-06-14",
     "utm1k": "NE1104",
@@ -549,6 +901,14 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Pyronia tithonus",
+    "data": "2004-06-14",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Pararge aegeria",
@@ -614,6 +974,62 @@
     "licenca": "CC-BY-SA"
   },
   {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-18",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Idaea ochrata",
+    "data": "2004-06-18",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia tithonus",
+    "data": "2004-06-18",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia cecilia",
+    "data": "2004-06-18",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Macroglossum stellatarum",
+    "data": "2004-06-18",
+    "utm1k": "NE1004",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Psilogaster loti",
+    "data": "2004-06-18",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-06-18",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
     "nome_cientifico": "Psilogaster loti",
     "data": "2004-06-19",
     "utm1k": "NE1004",
@@ -657,6 +1073,46 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Melanargia lachesis",
+    "data": "2004-06-19",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Psilogaster loti",
+    "data": "2004-06-19",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-19",
+    "utm1k": "NE10",
+    "quantidade": 7,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lycaena phlaeas",
+    "data": "2004-06-19",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia tithonus",
+    "data": "2004-06-19",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Pyronia tithonus",
@@ -729,6 +1185,70 @@
     "observador": "Carlos Franquinho",
     "origem": "inaturalist",
     "licenca": "CC-BY-SA"
+  },
+  {
+    "nome_cientifico": "Hipparchia semele",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Melanargia lachesis",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 3,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lasiommata megera",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Stegania trimaculata",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia bathseba",
+    "data": "2004-06-26",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-06-27",
+    "utm1k": "MD9582",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Macroglossum stellatarum",
+    "data": "2004-06-27",
+    "utm1k": "MD9582",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
   },
   {
     "nome_cientifico": "Aricia cramera",
@@ -836,6 +1356,78 @@
     "observador": "Carlos Franquinho",
     "fonte": "iNaturalist",
     "inat_uuid": "02cfe779-d5b0-4a19-8f42-4c11fdb05fed",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Aricia cramera",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia cecilia",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 3,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Lycaena phlaeas",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pieris napi",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 4,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pyronia tithonus",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 2,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Leptotes pirithous",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Colias croceus",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Maniola jurtina",
+    "data": "2004-07-03",
+    "utm1k": "NE10",
+    "quantidade": 1,
+    "observador": "Carlos Franquinho",
     "origem": "grupo icarus"
   },
   {
@@ -2437,6 +3029,14 @@
   {
     "nome_cientifico": "Pararge aegeria",
     "data": "2012-06-04",
+    "quantidade": 1,
+    "observador": "Ricardo Machado",
+    "origem": "grupo icarus"
+  },
+  {
+    "nome_cientifico": "Pararge aegeria",
+    "data": "2012-06-04",
+    "utm1k": "ND09",
     "quantidade": 1,
     "observador": "Ricardo Machado",
     "origem": "grupo icarus"
