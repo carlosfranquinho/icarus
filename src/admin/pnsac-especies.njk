@@ -9,8 +9,9 @@ eleventyExcludeFromCollections: true
   <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cinza-borda); padding-bottom:1rem;">
     <h1>{{ title }}</h1>
     <p style="color:var(--cinza-texto); margin:.5rem 0 0;">
-      Espécies presentes na base de dados <em>BD_DCore_PNSAC_Lepidoptera.csv</em> com
-      quadrículas UTM coincidentes com a nossa área de estudo, e que ainda não têm ficha no site.
+      Espécies presentes nas bases de dados <em>BD_DCore_PNSAC_Lepidoptera.csv</em> e
+      <em>BD_DCore_PNSAC_Lepidoptera2.csv</em> com registos na nossa área de estudo
+      (UTM 10km ou coordenadas dentro da bounding box), sem ficha no site.
       Identificações incertas (cf., agg.) excluídas.
       Total: <strong>{{ pnsacEspecies | length }}</strong> espécies em
       <strong>{{ pnsacEspecies | groupby("familia") | length }}</strong> famílias.
