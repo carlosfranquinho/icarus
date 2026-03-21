@@ -157,6 +157,19 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(map);
   });
 
+  // Filter: gera JSON { sinónimo → nome_cientifico_principal } para todas as fichas
+  eleventyConfig.addFilter("sinonimosMapJson", (colecao) => {
+    const map = {};
+    (colecao || []).forEach(esp => {
+      if (esp.data && esp.data.tipo === "especie" && esp.data.nome_cientifico) {
+        for (const s of (esp.data.sinonimos || [])) {
+          map[s] = esp.data.nome_cientifico;
+        }
+      }
+    });
+    return JSON.stringify(map);
+  });
+
   // Filter: filtra observações por espécie (inclui sinónimos opcionais)
   eleventyConfig.addFilter("observacoesPorEspecie", (obs, nome, sinonimos) => {
     const nomes = new Set([nome, ...(sinonimos || [])]);

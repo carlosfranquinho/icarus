@@ -35,6 +35,7 @@ eleventyExcludeFromCollections: true
   <script>
   (function () {
     var ESPECIE_META = {{ collections.especies | especieMetaJson | safe }};
+    var SINONIMOS    = {{ collections.especies | sinonimosMapJson | safe }};
 
     function esc(s) {
       return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -50,10 +51,16 @@ eleventyExcludeFromCollections: true
           contagens[o.nome_cientifico] = (contagens[o.nome_cientifico] || 0) + 1;
         });
 
-        // Filtrar espécies sem ficha completa
+        // Filtrar espécies sem ficha completa (excluir sinónimos de fichas existentes)
         var lista = [];
         Object.entries(contagens).forEach(function (entry) {
           var nome = entry[0], n = entry[1];
+          // Se é sinónimo de uma espécie com ficha completa, ignorar
+          var nomePrincipal = SINONIMOS[nome];
+          if (nomePrincipal) {
+            var metaPrincipal = ESPECIE_META[nomePrincipal];
+            if (metaPrincipal && !metaPrincipal.placeholder) return;
+          }
           var meta = ESPECIE_META[nome];
           if (!meta) {
             lista.push({ nome: nome, n: n, estado: 'sem-ficha' });
