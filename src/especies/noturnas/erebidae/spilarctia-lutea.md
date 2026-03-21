@@ -4,7 +4,9 @@ tipo: especie
 nome_cientifico: "Spilarctia lutea"
 familia: Erebidae
 subfamilia: "Arctiinae"
-autoridade: "(Hufnagel, 1766) "
+autoridade: "(Hufnagel, 1766)"
+sinonimos:
+  - "Spilosoma lutea"
 grupo: noturnas
 imagem: /assets/silhuetas/erebidae.svg
 placeholder: true
