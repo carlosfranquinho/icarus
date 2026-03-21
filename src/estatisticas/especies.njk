@@ -313,9 +313,9 @@ extraCSS:
 
       new Chart(document.getElementById('g-grupos'), {
         type: 'doughnut',
-        data: { labels: ['Diurnas', 'Noturnas', 'Micro', 'Sem ficha'],
-          datasets: [{ data: [especiesDiurnas.size, especiesNoturnas.size, especiesMicro.size, especiesSem.size],
-            backgroundColor: ['#f59e0b', '#6366f1', '#10b981', '#e2e8f0'],
+        data: { labels: ['Diurnas', 'Noturnas', 'Micro'],
+          datasets: [{ data: [especiesDiurnas.size, especiesNoturnas.size, especiesMicro.size],
+            backgroundColor: ['#f59e0b', '#6366f1', '#10b981'],
             borderWidth: 2, borderColor: '#ffffff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '65%',
           plugins: { legend: { position: 'bottom',
