@@ -82,9 +82,7 @@ extraCSS:
           <thead>
             <tr style="border-bottom:2px solid var(--cinza-borda);">
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Data</th>
-              <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Hora</th>
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Quadrícula</th>
-              <th style="text-align:right; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Qtd.</th>
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Observador</th>
               <th style="text-align:left; padding:0.5rem 0.75rem; font-weight:600; color:var(--cinza-suave); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em;">Notas</th>
             </tr>
@@ -93,9 +91,7 @@ extraCSS:
             {% for obs in obsEspecie | sort(true, false, "data") %}
             <tr style="border-bottom:1px solid var(--cinza-borda);">
               <td style="padding:0.5rem 0.75rem; white-space:nowrap;">{{ obs.data }}</td>
-              <td style="padding:0.5rem 0.75rem;">{{ obs.hora if obs.hora else "—" }}</td>
               <td style="padding:0.5rem 0.75rem;"><code style="font-size:0.85em; background:var(--cinza-bg); padding:0.1em 0.4em; border-radius:4px;">{{ obs.utm1k if obs.utm1k else "—" }}</code></td>
-              <td style="padding:0.5rem 0.75rem; text-align:right;">{{ obs.quantidade if obs.quantidade else 1 }}</td>
               <td style="padding:0.5rem 0.75rem;">{{ obs.observador if obs.observador else "—" }}</td>
               <td style="padding:0.5rem 0.75rem; color:var(--cinza-suave);">
                 {%- set notasParts = [] -%}
