@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+title: "PNSAC — Espécies da área sem ficha"
+permalink: /admin/pnsac-especies/
+eleventyExcludeFromCollections: true
+---
+<div class="container">
+
+  <header style="margin-bottom:2rem; border-bottom: 2px solid var(--cinza-borda); padding-bottom:1rem;">
+    <h1>{{ title }}</h1>
+    <p style="color:var(--cinza-texto); margin:.5rem 0 0;">
+      Espécies presentes na base de dados <em>BD_DCore_PNSAC_Lepidoptera.csv</em> com
+      quadrículas UTM coincidentes com a nossa área de estudo, e que ainda não têm ficha no site.
+      Identificações incertas (cf., agg.) excluídas.
+      Total: <strong>{{ pnsacEspecies | length }}</strong> espécies em
+      <strong>{{ pnsacEspecies | groupby("familia") | length }}</strong> famílias.
+    </p>
+    <p style="color:var(--cinza-texto); font-size:.85rem; margin:.5rem 0 0;">
+      Obs. = número de indivíduos registados no CSV (não na nossa BD).
+    </p>
+  </header>
+
+  {% set familiaAtual = "" %}
+  <table style="width:100%; border-collapse:collapse; font-size:.9rem;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--cinza-borda); text-align:left;">
+        <th style="padding:.4rem .6rem; width:18%;">Família</th>
+        <th style="padding:.4rem .6rem; width:18%;">Subfamília</th>
+        <th style="padding:.4rem .6rem;">Espécie</th>
+        <th style="padding:.4rem .6rem; text-align:right; width:6%;">Obs.</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for esp in pnsacEspecies %}
+        {% if esp.familia != familiaAtual %}
+          {% set familiaAtual = esp.familia %}
+          <tr>
+            <td colspan="4" style="padding:.6rem .6rem .2rem; font-weight:600; font-size:.8rem; letter-spacing:.05em; text-transform:uppercase; color:var(--cinza-texto); border-top: 1px solid var(--cinza-borda);"></td>
+          </tr>
+        {% endif %}
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="padding:.35rem .6rem;">{{ esp.familia }}</td>
+          <td style="padding:.35rem .6rem; color:var(--cinza-texto);">{{ esp.subfamilia }}</td>
+          <td style="padding:.35rem .6rem;"><em>{{ esp.nome }}</em></td>
+          <td style="padding:.35rem .6rem; text-align:right;">{{ esp.obs }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
