@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Sincronizar iNaturalist"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -17,6 +20,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Em execuções por sync (workflow_run) só constrói se a sync teve sucesso.
+    # Em push/workflow_dispatch corre sempre (workflow_run vem vazio).
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
