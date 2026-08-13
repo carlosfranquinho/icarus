@@ -1352,6 +1352,12 @@ button:disabled {
   border: 1px solid #90c8e0;
 }
 
+.badge-outras {
+  background: #efe8f5;
+  color: #4a2a66;
+  border: 1px solid #cbb8e0;
+}
+
 /* --- Página estática --- */
 .pagina-conteudo,
 .pagina-conteudo p {
